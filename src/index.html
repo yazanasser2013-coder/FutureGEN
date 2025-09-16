@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Design Resources & Tools</title>
+  <meta name="theme-color" content="#401F71" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+
+  <style>
+    /* ========== THEME TOKENS ========== */
+    :root {
+      --primary-color: #401F71;
+      --secondary-color: #BE7B72;
+      --accent-color: #BE7B72;
+
+      --bg-page: #f8fafc;
+      --bg-white: #ffffff;
+      --text-dark: #111827;
+      --text-muted: #6b7280;
+      --border: #e5e7eb;
+
+      --radius-xs: 8px;
+      --radius-sm: 12px;
+      --radius-md: 16px;
+
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.06);
+      --shadow-md: 0 8px 20px -6px rgb(0 0 0 / 0.15);
+      --shadow-lg: 0 20px 40px -12px rgb(0 0 0 / 0.25);
+
+      --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      --easing: cubic-bezier(.2,.8,.2,1);
+      --header-h: 68px;
+    }
+
+    html[data-theme="dark"] {
+      --bg-page: #0b0f1a;
+      --bg-white: #0f172a;
+      --text-dark: #e5e7eb;
+      --text-muted: #9ca3af;
+      --border: #1f2937;
+
+      --shadow-sm: 0 1px 2px 0 rgb(255 255 255 / 0.04);
+      --shadow-md: 0 8px 20px -6px rgb(0 0 0 / 0.4);
+      --shadow-lg: 0 20px 40px -12px rgb(0 0 0 / 0.6);
+    }
+
+    /* ========== BASE ========== */
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background-color: var(--bg-page);
+      color: var(--text-dark);
+      line-height: 1.65;
+      margin: 0;
+      scroll-behavior: smooth;
+    }
+
+    /* Accessibility */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 8px;
+      background: var(--bg-white);
+      color: var(--text-dark);
+      padding: .5rem .75rem;
+      border-radius: var(--radius-xs);
+      z-index: 9999;
+    }
+    .skip-link:focus { left: 8px; }
+
+    /* ========== NAV ========== */
+    header.sticky-top { z-index: 1030; }
+    .glass-nav {
+      backdrop-filter: saturate(140%) blur(12px);
+      background: rgba(255,255,255,.9);
+      border-bottom: 1px solid var(--border);
+    }
+    html[data-theme="dark"] .glass-nav {
+      background: rgba(15, 23, 42, .75) !important;
+    }
+    .navbar { padding: .75rem 0; }
+    .brand-logo { height: 34px; width: auto; }
+    .nav-link {
+      font-weight: 600;
+      color: var(--text-dark) !important;
+      opacity: .9;
+    }
+    .nav-link.active,
+    .nav-link:hover { color: var(--primary-color) !important; opacity: 1; }
+
+    .nav-actions .btn { min-width: 44px; }
+    .nav-search { width: min(320px, 50vw); }
+    .nav-search .form-control {
+      border-radius: var(--radius-xs) 0 0 var(--radius-xs);
+      border: 1px solid var(--border);
+      padding: .7rem 1rem;
+      background: var(--bg-white);
+      color: var(--text-dark);
+    }
+    .nav-search .btn {
+      border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
+    }
+    .navbar-toggler {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xs);
+      color: var(--text-dark);
+    }
+    .navbar-toggler i { font-size: 1.25rem; }
+
+    /* ========== HERO ========== */
+    .hero-section {
+      position: relative;
+      min-height: 64vh;
+      display: grid;
+      align-items: center;
+      overflow: hidden;
+      isolation: isolate;
+      color: #fff;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: radial-gradient(1200px 600px at 10% -10%, rgba(190,123,114,.25), transparent 60%),
+                  radial-gradient(1200px 600px at 110% 10%, rgba(64,31,113,.35), transparent 60%),
+                  linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+      background-size: 200% 200%;
+      animation: gradientShift 18s var(--easing) infinite alternate;
+      z-index: 0;
+    }
+    .hero-grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px);
+      background-size: 32px 32px;
+      opacity: .35;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .blob {
+      position: absolute;
+      width: 420px; height: 420px;
+      border-radius: 50%;
+      filter: blur(40px);
+      opacity: .35;
+      mix-blend-mode: screen;
+      z-index: 0;
+      background: radial-gradient(circle at 30% 30%, #fff8, transparent 60%);
+      pointer-events: none;
+    }
+    .blob-1 { top: -120px; left: -120px; background: #be7b72; }
+    .blob-2 { bottom: -140px; right: -80px; background: #401f71; }
+    .blob-3 { top: 40%; left: 60%; background: #441f86; width: 320px; height: 320px; }
+
+    .hero-title {
+      letter-spacing: -0.02em;
+      max-width: 18ch;
+    }
+    .typewriter {
+      border-right: 2px solid rgba(255,255,255,.85);
+      overflow: hidden;
+      white-space: normal; /* allow wrapping so the line isn't cut off */
+    }
+
+    /* ========== SECTION / HEADINGS ========== */
+    .section { padding: 4rem 0; scroll-margin-top: calc(var(--header-h) + 14px); }
+    .section h2 { position: relative; }
+    .section-underline {
+      height: 3px; width: 64px;
+      background: var(--gradient);
+      border-radius: 2px;
+    }
+    .bg-white { background: var(--bg-white) !important; }
+
+    /* ========== CARDS ========== */
+    .card {
+      border: none;
+      border-radius: var(--radius-sm);
+      background: var(--bg-white);
+      box-shadow: var(--shadow-sm);
+      transition: transform .35s var(--easing), box-shadow .35s var(--easing);
+      overflow: hidden;
+      position: relative;
+    }
+    .card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+
+    .tool-card::after {
+      content: "";
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, var(--primary-color), transparent);
+      opacity: 0; transition: opacity .35s var(--easing);
+      pointer-events: none;
+    }
+    .tool-card:hover::after { opacity: .06; }
+
+    .card-body { padding: 1.25rem; }
+    .card-title { font-weight: 600; color: var(--text-dark); }
+    .card-text { color: var(--text-muted); }
+
+    .icon-wrap {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      display: grid; place-items: center;
+      color: #fff;
+      flex: 0 0 48px;
+    }
+    .tilt { will-change: transform; transform-style: preserve-3d; }
+
+    /* Badges */
+    .badge {
+      font-size: .75rem;
+      padding: .45rem .7rem;
+      border-radius: 999px;
+    }
+
+    /* Buttons */
+    .btn { border-radius: var(--radius-xs); font-weight: 600; transition: transform .2s var(--easing), box-shadow .2s var(--easing); }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--gradient); border: none; }
+    .btn-primary:hover { box-shadow: var(--shadow-md); }
+    .btn-outline-primary { border-color: var(--primary-color); color: var(--primary-color); }
+    .btn-outline-primary:hover { background: var(--primary-color); color: #fff; }
+    .btn-outline-light { border-color: #fff; color: #fff; }
+    .btn-outline-light:hover { background: #fff; color: #111; }
+
+    /* Filter pills */
+    .filter-btn { border-radius: 999px; padding: .5rem 1.25rem; }
+    .filter-btn.active { background: var(--gradient); color: #fff; border: none; }
+
+    /* Reveal on scroll */
+    .reveal { opacity: 0; transform: translateY(24px); transition: all .8s var(--easing); }
+    .reveal.in-view { opacity: 1; transform: none; }
+
+    /* No results */
+    .no-results-message { color: var(--text-muted); }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+      color: #f9fafb;
+    }
+    footer a { transition: color .25s var(--easing); }
+    footer a:hover { color: var(--secondary-color) !important; }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 10px; height: 10px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      border-radius: 999px;
+    }
+
+    /* Utilities */
+    .text-gradient {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-gradient-tile, .highlight-tile {
+      height: 200px; display: grid; place-items: center;
+    }
+    .hero-gradient-tile { background: var(--gradient); }
+    .highlight-tile { background: linear-gradient(135deg, #f59e0b, #f97316); }
+
+    /* ========== ANIMATIONS ========== */
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%;}
+      100% { background-position: 100% 50%;}
+    }
+    @keyframes ripple {
+      to { transform: scale(4); opacity: 0; }
+    }
+
+    /* Reduce motion preference */
+    @media (prefers-reduced-motion: reduce) {
+      .hero-bg { animation: none; }
+      .reveal, .card, .btn { transition: none !important; }
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 992px) {
+      :root { --header-h: 60px; }
+      .hero-section { min-height: 56vh; text-align: center; }
+      .blob-3 { display: none; }
+      .nav-search { width: 100%; }
+      .nav-actions { width: 100%; }
+    }
+    @media (max-width: 576px) {
+      .card-body { padding: 1rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky-top glass-nav">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a href="#" class="d-flex align-items-center gap-2 text-decoration-none">
+          <img src="../Images/Logo.png" alt="FutureGEN Logo" class="brand-logo" loading="lazy" />
+        </a>
+
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-lg-4">
+            <li class="nav-item"><a class="nav-link" href="#featured">Tools</a></li>
+            <li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
+            <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+          </ul>
+
+          <div class="ms-lg-auto d-lg-flex align-items-center gap-3 flex-column flex-lg-row mt-3 mt-lg-0 nav-actions">
+            <div class="input-group nav-search">
+              <input type="text" class="form-control" placeholder="Search tools..." id="searchInput" aria-label="Search tools" />
+              <button class="btn btn-outline-secondary" type="button" id="searchBtn" aria-label="Search">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+
+            <button class="btn btn-outline-primary" id="themeToggle" aria-label="Toggle theme">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <button class="btn btn-primary">Sign In</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-section position-relative overflow-hidden">
+    <!-- Animated gradient + blobs -->
+    <div class="hero-bg"></div>
+    <div class="blob blob-1" data-parallax data-speed="0.15"></div>
+    <div class="blob blob-2" data-parallax data-speed="0.25"></div>
+    <div class="blob blob-3" data-parallax data-speed="0.35"></div>
+
+    <div class="container position-relative z-1 py-5">
+      <div class="row align-items-center">
+        <div class="col-lg-9">
+          <h1 class="display-4 fw-bold hero-title typewriter" data-typewriter="Discover highly useful Design Resources & Tools">Discover highly useful Design Resources & Tools</h1>
+          <p class="lead mb-4 opacity-75">
+            A growing collection of <span class="counter" data-count="5000">0</span>+ design resources, freebies, and plugins for the community.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="#featured" class="btn btn-light btn-lg">Get Started</a>
+            <a href="#blog" class="btn btn-outline-light btn-lg">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Subtle grid texture -->
+    <div class="hero-grid"></div>
+  </section>
+
+  <!-- Category Navigation -->
+  <section class="py-4 bg-white">
+    <div class="container">
+      <div class="d-flex flex-wrap gap-2 gap-md-3 justify-content-center">
+        <button class="btn btn-outline-primary filter-btn active" data-filter="all">All</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="design">Design</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="development">Development</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="ai">AI Tools</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="productivity">Productivity</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="marketing">Marketing</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="resources">Resources</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="AI detection">AI detection</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="for fun">for fun</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="Image scanning">Image scanning</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="Productivity">Productivity</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="Text-to-speech">Text-to-speech</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="Aggregators">Aggregators</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="Gaming">Gaming</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="Inspiration">Inspiration</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="Prompt guides">Prompt guides</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="Text-to-video">Text-to-video</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="Avatar">Avatar</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="Generative Art">Generative Art</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="Motion Capture">Motion Capture</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="Self improvement">Self improvement</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="Video Editing">Video Editing</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="Copywriting">Copywriting</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="Generative Video">Generative Video</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="Music">Music</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="Social Media">Social Media</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="Voice modulation">Voice modulation</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="Research">Research</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="Finance">Finance</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="Image improvement">Image improvement</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="Podcasting">Podcasting</button>
+        <button class="btn btn-outline-primary filter-btn" data-filter="Speech-to-text">Speech-to-text</button>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+    <!-- Featured Tools -->
+    <section id="featured" class="section reveal">
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+          <h2 class="h3 fw-bold mb-0">Featured Tools</h2>
+          <div class="section-underline"></div>
+        </div>
+
+        <div class="row g-4 card-grid">
+          <!-- Cards -->
+          <div class="col-lg-3 col-md-6">
+            <div class="card tool-card tilt" data-category="design">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="icon-wrap bg-success"><i class="fas fa-vector-square"></i></div>
+                  <div class="ms-3">
+                    <h5 class="card-title mb-1">SketchFlow</h5>
+                    <small class="text-muted">Design</small>
+                  </div>
+                </div>
+                <p class="card-text">Create beautiful wireframes and prototypes with ease.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="badge bg-success">Free</span>
+                  <a href="https://www.sketchflow.ai/" class="btn btn-sm btn-outline-primary">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card tool-card tilt" data-category="ai">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="icon-wrap bg-primary"><i class="fas fa-brain"></i></div>
+                  <div class="ms-3">
+                    <h5 class="card-title mb-1">Imagen4</h5>
+                    <small class="text-muted">AI Tools</small>
+                  </div>
+                </div>
+                <p class="card-text">Generate stunning images with AI technology.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="badge bg-warning">Premium</span>
+                  <a href="https://deepmind.google/models/imagen/" class="btn btn-sm btn-outline-primary">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card tool-card tilt" data-category="development">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="icon-wrap bg-info"><i class="fas fa-code"></i></div>
+                  <div class="ms-3">
+                    <h5 class="card-title mb-1">CodeGen</h5>
+                    <small class="text-muted">Development</small>
+                  </div>
+                </div>
+                <p class="card-text">Automated code generation for faster development.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="badge bg-success">Free</span>
+                  <a href="https://codegen.com/" class="btn btn-sm btn-outline-primary">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card tool-card tilt" data-category="productivity">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="icon-wrap bg-warning"><i class="fas fa-tasks"></i></div>
+                  <div class="ms-3">
+                    <h5 class="card-title mb-1">TaskFlow</h5>
+                    <small class="text-muted">Productivity</small>
+                  </div>
+                </div>
+                <p class="card-text">Streamline your workflow with smart task management.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="badge bg-primary">Freemium</span>
+                  <a href="https://taskflowapp.com/" class="btn btn-sm btn-outline-primary">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top Picks -->
+    <section class="section bg-white reveal">
+      <div class="container">
+        <h2 class="h3 fw-bold mb-4">Top Picks</h2>
+        <div class="row g-4 card-grid">
+          <div class="col-lg-4 col-md-6">
+            <div class="card tool-card tilt" data-category="design">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="icon-wrap bg-dark"><i class="fas fa-mountain"></i></div>
+                  <div class="ms-3">
+                    <h5 class="card-title mb-1">Mockups</h5>
+                    <small class="text-muted">Design Resources</small>
+                  </div>
+                </div>
+                <p class="card-text">High-quality mockups for your design presentations.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="badge bg-success">Free</span>
+                  <a href="https://mockups-design.com/" class="btn btn-sm btn-outline-primary">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card tool-card tilt" data-category="ai">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="icon-wrap bg-primary"><i class="fas fa-robot"></i></div>
+                  <div class="ms-3">
+                    <h5 class="card-title mb-1">Midjourney</h5>
+                    <small class="text-muted">AI Image Generation</small>
+                  </div>
+                </div>
+                <p class="card-text">Create amazing artwork with AI-powered image generation.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="badge bg-warning">Premium</span>
+                  <a href="https://www.midjourney.com/home" class="btn btn-sm btn-outline-primary">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card tool-card tilt" data-category="resources">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="icon-wrap bg-secondary"><i class="fas fa-palette"></i></div>
+                  <div class="ms-3">
+                    <h5 class="card-title mb-1">Coolors</h5>
+                    <small class="text-muted">Color Palettes</small>
+                  </div>
+                </div>
+                <p class="card-text">Generate beautiful color palettes for your projects.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="badge bg-success">Free</span>
+                  <a href="https://coolors.co/" class="btn btn-sm btn-outline-primary">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Resources -->
+    <section id="resources" class="section reveal">
+      <div class="container">
+        <h2 class="h3 fw-bold mb-4">Latest Resources</h2>
+        <div class="row g-4 card-grid">
+          <div class="col-lg-3 col-md-6">
+            <div class="card tool-card tilt" data-category="design">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="icon-wrap bg-danger"><i class="fas fa-fire"></i></div>
+                  <div class="ms-3">
+                    <h5 class="card-title mb-1">Spline</h5>
+                    <small class="text-muted">3D Design</small>
+                  </div>
+                </div>
+                <p class="card-text">Create stunning 3D designs in your browser.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="badge bg-primary">Freemium</span>
+                  <a href="https://spline.design/" class="btn btn-sm btn-outline-primary">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card tool-card tilt" data-category="design">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="icon-wrap bg-success"><i class="fas fa-leaf"></i></div>
+                  <div class="ms-3">
+                    <h5 class="card-title mb-1">Veed</h5>
+                    <small class="text-muted">Video Editing</small>
+                  </div>
+                </div>
+                <p class="card-text">Online video editing made simple and powerful.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="badge bg-primary">Freemium</span>
+                  <a href="https://www.veed.io/" class="btn btn-sm btn-outline-primary">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add more cards here as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular AI Tools -->
+    <section class="section bg-white reveal">
+      <div class="container">
+        <h2 class="h3 fw-bold mb-4">Popular AI Tools</h2>
+        <div class="row g-4 card-grid">
+          <div class="col-lg-3 col-md-6">
+            <div class="card tool-card tilt" data-category="ai">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="icon-wrap bg-primary"><i class="fas fa-magic"></i></div>
+                  <div class="ms-3">
+                    <h5 class="card-title mb-1">ChatGPT</h5>
+                    <small class="text-muted">AI Assistant</small>
+                  </div>
+                </div>
+                <p class="card-text">Conversational AI for various tasks and assistance.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="badge bg-primary">Freemium</span>
+                  <a href="https://www.openai.com/chatgpt" class="btn btn-sm btn-outline-primary">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card tool-card tilt" data-category="ai">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="icon-wrap bg-info"><i class="fas fa-microphone"></i></div>
+                  <div class="ms-3">
+                    <h5 class="card-title mb-1">Loom</h5>
+                    <small class="text-muted">Screen Recording</small>
+                  </div>
+                </div>
+                <p class="card-text">Record and share your screen with AI-powered features.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="badge bg-primary">Freemium</span>
+                  <a href="https://www.loom.com/" class="btn btn-sm btn-outline-primary">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card tool-card tilt" data-category="ai">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="icon-wrap bg-dark"><i class="fas fa-cog"></i></div>
+                  <div class="ms-3">
+                    <h5 class="card-title mb-1">Framer</h5>
+                    <small class="text-muted">Design Tool</small>
+                  </div>
+                </div>
+                <p class="card-text">Design and prototype with AI-assisted features.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="badge bg-primary">Freemium</span>
+                  <a href="https://www.framer.com/" class="btn btn-sm btn-outline-primary">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card tool-card tilt" data-category="ai">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="icon-wrap bg-warning"><i class="fas fa-chart-line"></i></div>
+                  <div class="ms-3">
+                    <h5 class="card-title mb-1">Logos</h5>
+                    <small class="text-muted">Logo Generation</small>
+                  </div>
+                </div>
+                <p class="card-text">Create professional logos with AI assistance.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="badge bg-warning">Premium</span>
+                  <a href="https://www.logos.com/" class="btn btn-sm btn-outline-primary">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Must-Know Resources -->
+    <section class="section bg-white reveal">
+      <div class="container">
+        <h2 class="h3 fw-bold mb-4">Must-Know Resources</h2>
+        <div class="row g-4 card-grid">
+          <div class="col-lg-3 col-md-6">
+            <div class="card tool-card tilt" data-category="resources">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="icon-wrap bg-primary"><i class="fas fa-check"></i></div>
+                  <div class="ms-3">
+                    <h5 class="card-title mb-1">Lucidchart</h5>
+                    <small class="text-muted">Diagramming</small>
+                  </div>
+                </div>
+                <p class="card-text">Create flowcharts and diagrams collaboratively.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="badge bg-primary">Freemium</span>
+                  <a href="https://www.lucidchart.com/pages" class="btn btn-sm btn-outline-primary">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card tool-card tilt" data-category="design">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="icon-wrap bg-danger"><i class="fas fa-heart"></i></div>
+                  <div class="ms-3">
+                    <h5 class="card-title mb-1">Blush of UI</h5>
+                    <small class="text-muted">Illustrations</small>
+                  </div>
+                </div>
+                <p class="card-text">Beautiful illustrations for your design projects.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="badge bg-success">Free</span>
+                  <a href="https://blush.design/" class="btn btn-sm btn-outline-primary">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card tool-card tilt" data-category="resources">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="icon-wrap bg-warning"><i class="fas fa-image"></i></div>
+                  <div class="ms-3">
+                    <h5 class="card-title mb-1">ShotStuff Essentials</h5>
+                    <small class="text-muted">Photography</small>
+                  </div>
+                </div>
+                <p class="card-text">High-quality stock photos for your projects.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="badge bg-success">Free</span>
+                  <a class="btn btn-sm btn-outline-primary" href="https://shortstuffshop.com/">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="card tool-card tilt" data-category="development">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="icon-wrap bg-info"><i class="fas fa-edit"></i></div>
+                  <div class="ms-3">
+                    <h5 class="card-title mb-1">Font Maker</h5>
+                    <small class="text-muted">Typography</small>
+                  </div>
+                </div>
+                <p class="card-text">Create custom fonts for your brand identity.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="badge bg-warning">Premium</span>
+                  <a class="btn btn-sm btn-outline-primary" href="https://www.calligraphr.com/en/">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trending Blog Posts -->
+    <section id="blog" class="section reveal">
+      <div class="container">
+        <h2 class="h3 fw-bold mb-4">Trending Blog Posts</h2>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="card tool-card">
+              <div class="card-img-top hero-gradient-tile">
+                <i class="fas fa-chart-line fa-3x text-white"></i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">50 Best Figma Plugins for Designers</h5>
+                <p class="card-text">Discover the most useful Figma plugins that will boost your design workflow and productivity.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted">5 min read</small>
+                  <a class="btn btn-sm btn-outline-primary" href="https://www.toools.design/blog-posts/best-figma-plugins-for-designers">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="card tool-card">
+              <div class="card-img-top highlight-tile">
+                <i class="fas fa-lightbulb fa-3x text-white"></i>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Ultimate List: 100 Best Inspiration Sites for Designers in 2025</h5>
+                <p class="card-text">A comprehensive collection of the best design inspiration websites to spark your creativity.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted">12 min read</small>
+                  <a class="btn btn-sm btn-outline-primary" href="https://www.toools.design/blog-posts/ultimate-list-100-best-inspiration-sites-to-inspire-designers">Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add more blog cards if needed -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-white pt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold mb-3">Design Resources</h5>
+          <p class="text-light opacity-75">A growing collection of design resources, freebies, and tools for the creative community.</p>
+          <div class="d-flex gap-3 fs-5">
+            <a href="https://x.com" class="text-light"><i class="fab fa-twitter"></i></a>
+            <a href="https://facebook.com" class="text-light"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com" class="text-light"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com" class="text-light"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold mb-3">Categories</h6>
+          <ul class="list-unstyled">
+            <li><a href="#featured" class="text-light text-decoration-none">Design Tools</a></li>
+            <li><a href="#featured" class="text-light text-decoration-none">AI Tools</a></li>
+            <li><a href="#featured" class="text-light text-decoration-none">Development</a></li>
+            <li><a href="#featured" class="text-light text-decoration-none">Productivity</a></li>
+            <li><a href="#resources" class="text-light text-decoration-none">Resources</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold mb-3">Company</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-light text-decoration-none">About Us</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Contact</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Privacy Policy</a></li>
+            <li><a href="#" class="text-light text-decoration-none">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h6 class="fw-bold mb-3">Newsletter</h6>
+          <p class="text-light opacity-75">Stay updated with the latest design resources and tools.</p>
+          <div class="input-group">
+            <input type="email" class="form-control" placeholder="Enter your email" />
+            <button class="btn btn-primary" type="button">Subscribe</button>
+          </div>
+        </div>
+      </div>
+
+      <hr class="my-4 opacity-25" />
+      <div class="row align-items-center pb-4">
+        <div class="col-md-6">
+          <p class="mb-0 text-light opacity-75">&copy; 2025 Design Resources. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end"></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+  <script>
+    // Legendary UX: robust nav, section anchors, typewriter completion, search, filters, counters, parallax, theme toggle.
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initReveal();
+      initTilt();
+      initRipple();
+      initButtons();
+      initFilters();
+      initSearch();
+      initCounters();
+      initParallax();
+      initTypewriter();
+      initSmoothScroll();
+      initThemeToggle();
+      initActiveNav();
+      initCloseNavOnClick();
+    });
+
+    /* ===== Reveal on Scroll ===== */
+    function initReveal() {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('in-view');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -10% 0px' });
+
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    }
+
+    /* ===== Tilt Effect ===== */
+    function initTilt() {
+      const cards = document.querySelectorAll('.tilt');
+      cards.forEach(card => {
+        let raf = null;
+        const bounds = () => card.getBoundingClientRect();
+
+        card.addEventListener('mousemove', (e) => {
+          if (raf) cancelAnimationFrame(raf);
+          raf = requestAnimationFrame(() => {
+            const b = bounds();
+            const x = (e.clientX - b.left) / b.width;
+            const y = (e.clientY - b.top) / b.height;
+            const rx = (y - 0.5) * 8;
+            const ry = (0.5 - x) * 8;
+            card.style.transform = `perspective(700px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-4px)`;
+          });
+        });
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = '';
+        });
+      });
+    }
+
+    /* ===== Ripple on Card Click ===== */
+    function initRipple() {
+      document.querySelectorAll('.tool-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+          const r = document.createElement('div');
+          const rect = card.getBoundingClientRect();
+          const size = Math.max(rect.width, rect.height);
+          const x = e.clientX - rect.left - size / 2;
+          const y = e.clientY - rect.top - size / 2;
+          r.style.cssText = `
+            position:absolute; width:${size}px; height:${size}px; left:${x}px; top:${y}px;
+            background: radial-gradient(circle, rgba(190,123,114,.35) 0%, transparent 70%);
+            border-radius:50%; transform:scale(0); animation:ripple .6s ease-out;
+            pointer-events:none; z-index:5;
+          `;
+          card.style.position = 'relative';
+          card.appendChild(r);
+          setTimeout(() => r.remove(), 650);
+        });
+      });
+    }
+
+    /* ===== Buttons: magnetic hover ===== */
+    function initButtons() {
+      const btns = document.querySelectorAll('.btn');
+      btns.forEach(btn => {
+        let raf;
+        btn.addEventListener('mousemove', (e) => {
+          const rect = btn.getBoundingClientRect();
+          const x = (e.clientX - rect.left - rect.width / 2) * 0.08;
+          const y = (e.clientY - rect.top - rect.height / 2) * 0.08;
+          if (raf) cancelAnimationFrame(raf);
+          raf = requestAnimationFrame(() => {
+            btn.style.transform =  `translate(${x}px, ${y}px)`;
+            btn.style.boxShadow = '0 10px 25px rgba(190,123,114,.25)';
+          });
+        });
+        btn.addEventListener('mouseleave', () => {
+          btn.style.transform = '';
+          btn.style.boxShadow = '';
+        });
+      });
+    }
+
+    /* ===== Filters ===== */
+    function initFilters() {
+      const buttons = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.tool-card');
+
+      const applyFilter = (cat) => {
+        let index = 0;
+        cards.forEach(card => {
+          const matches = (cat === 'all') || (card.dataset.category === cat);
+          if (matches) {
+            card.parentElement.style.display = '';
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(16px) scale(.98)';
+            setTimeout(() => {
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0) scale(1)';
+            }, index * 60);
+            index++;
+          } else {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(-10px) scale(.98)';
+            setTimeout(() => {
+              card.parentElement.style.display = 'none';
+            }, 200);
+          }
+        });
+        buttons.forEach(b => b.classList.toggle('active', b.dataset.filter === cat));
+      };
+
+      buttons.forEach(btn => btn.addEventListener('click', () => applyFilter(btn.dataset.filter)));
+    }
+
+    /* ===== Search (live) ===== */
+    function initSearch() {
+      const input = document.querySelector('#searchInput');
+      const button = document.querySelector('#searchBtn');
+      const cards = [...document.querySelectorAll('.tool-card')];
+
+      if (!input) return;
+
+      const run = () => {
+        const q = input.value.trim().toLowerCase();
+        let visible = 0;
+        cards.forEach(c => {
+          const title = c.querySelector('.card-title')?.textContent.toLowerCase() || '';
+          const desc = c.querySelector('.card-text')?.textContent.toLowerCase() || '';
+          const cat = c.dataset.category || '';
+          const match = !q || title.includes(q) || desc.includes(q) || cat.includes(q);
+          c.parentElement.style.display = match ? '' : 'none';
+          if (match) visible++;
+        });
+        showNoResultsMessage(visible === 0 && q !== '');
+      };
+
+      const debounced = debounce(run, 120);
+      input.addEventListener('input', debounced);
+      button?.addEventListener('click', run);
+    }
+
+    function showNoResultsMessage(show) {
+      let el = document.querySelector('.no-results-message');
+      if (show && !el) {
+        const firstSection = document.querySelector('.section');
+        el = document.createElement('div');
+        el.className = 'no-results-message text-center py-5';
+        el.innerHTML = `
+          <div class="reveal in-view">
+            <i class="fas fa-search fa-3x mb-3" style="opacity:.4"></i>
+            <h4>No results found</h4>
+            <p class="text-muted">Try adjusting your search terms or browse all tools.</p>
+          </div>`;
+        firstSection?.appendChild(el);
+      } else if (!show && el) {
+        el.remove();
+      }
+    }
+
+    /* ===== Counters ===== */
+    function initCounters() {
+      const counters = document.querySelectorAll('.counter[data-count]');
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          const target = parseInt(el.getAttribute('data-count') || '0', 10);
+          const start = performance.now();
+          const duration = 1800;
+
+          function tick(now) {
+            const p = Math.min(1, (now - start) / duration);
+            const val = Math.floor(target * (1 - Math.pow(1 - p, 3)));
+            el.textContent = val.toLocaleString();
+            if (p < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+          io.unobserve(el);
+        });
+      }, { threshold: 0.5 });
+
+      counters.forEach(c => io.observe(c));
+    }
+
+    /* ===== Parallax blobs ===== */
+    function initParallax() {
+      const layers = document.querySelectorAll('[data-parallax]');
+      if (!layers.length) return;
+
+      const onScroll = () => {
+        const y = window.scrollY || window.pageYOffset;
+        layers.forEach(layer => {
+          const speed = parseFloat(layer.getAttribute('data-speed') || '0.2');
+          layer.style.transform = `translate3d(0, ${y * speed}px, 0)`;
+        });
+      };
+      onScroll();
+      window.addEventListener('scroll', throttle(onScroll, 16), { passive: true });
+    }
+
+    /* ===== Typewriter (complete speech) ===== */
+    function initTypewriter() {
+      const el = document.querySelector('.typewriter');
+      if (!el) return;
+
+      const text = el.getAttribute('data-typewriter') || el.textContent;
+      el.textContent = '';
+      let i = 0;
+
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) {
+        el.textContent = text;
+        el.style.borderRight = 'none';
+        return;
+      }
+
+      const step = () => {
+        if (i < text.length) {
+          el.textContent += text.charAt(i++);
+          setTimeout(step, 24);
+        } else {
+          setTimeout(() => { el.style.borderRight = 'none'; }, 600);
+        }
+      };
+      setTimeout(step, 200);
+    }
+
+    /* ===== Smooth scroll for anchors ===== */
+    function initSmoothScroll() {
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', (e) => {
+          const id = a.getAttribute('href');
+          const target = document.querySelector(id);
+          if (!target) return;
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          history.pushState(null, '', id);
+        });
+      });
+    }
+
+    /* ===== Theme Toggle (light/dark) ===== */
+    function initThemeToggle() {
+      const ROOT = document.documentElement;
+      const btn = document.getElementById('themeToggle');
+      if (!btn) return;
+
+      const stored = localStorage.getItem('theme');
+      if (stored) ROOT.setAttribute('data-theme', stored);
+      btn.innerHTML = ROOT.getAttribute('data-theme') === 'dark'
+        ? '<i class="fa-solid fa-sun"></i>'
+        : '<i class="fa-solid fa-moon"></i>';
+
+      btn.addEventListener('click', () => {
+        const current = ROOT.getAttribute('data-theme') || 'light';
+        const next = current === 'light' ? 'dark' : 'light';
+        ROOT.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        btn.innerHTML = next === 'dark'
+          ? '<i class="fa-solid fa-sun"></i>'
+          : '<i class="fa-solid fa-moon"></i>';
+      });
+    }
+
+    /* ===== Active nav highlighting ===== */
+    function initActiveNav() {
+      const links = Array.from(document.querySelectorAll('.nav-link[href^="#"]'));
+      const map = new Map(links.map(l => [l.getAttribute('href'), l]));
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const id = '#' + entry.target.id;
+          if (map.has(id)) {
+            if (entry.isIntersecting) {
+              links.forEach(l => l.classList.remove('active'));
+              map.get(id).classList.add('active');
+            }
+          }
+        });
+      }, { threshold: 0.6 });
+
+      document.querySelectorAll('section[id]').forEach(sec => observer.observe(sec));
+    }
+
+    /* ===== Collapse mobile nav after click ===== */
+    function initCloseNavOnClick() {
+      const nav = document.getElementById('navbarNav');
+      if (!nav) return;
+      nav.querySelectorAll('a.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          const bsCollapse = bootstrap.Collapse.getInstance(nav) || new bootstrap.Collapse(nav, { toggle: false });
+          if (window.getComputedStyle(nav).display !== 'none') {
+            bsCollapse.hide();
+          }
+        });
+      });
+    }
+
+    /* ===== Utils ===== */
+    function debounce(fn, wait = 150) {
+      let t; return (...args) => { clearTimeout(t); t = setTimeout(() => fn.apply(this, args), wait); };
+    }
+    function throttle(fn, limit = 16) {
+      let inThrottle, lastTime = 0;
+      return function(...args) {
+        const now = Date.now();
+        if (!inThrottle || now - lastTime >= limit) {
+          fn.apply(this, args); lastTime = now; inThrottle = true;
+          setTimeout(() => { inThrottle = false; }, limit);
+        }
+      };
+    }
+  </script>
+</body>
+</html>
