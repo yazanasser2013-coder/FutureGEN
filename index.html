@@ -176,28 +176,6 @@
         isolation: isolate;
         color: #fff;
       }
-      .hero-bg {
-        position: absolute;
-        inset: 0;
-        background: radial-gradient(
-            1200px 600px at 10% -10%,
-            rgba(190, 123, 114, 0.25),
-            transparent 60%
-          ),
-          radial-gradient(
-            1200px 600px at 110% 10%,
-            rgba(64, 31, 113, 0.35),
-            transparent 60%
-          ),
-          linear-gradient(
-            135deg,
-            var(--primary-color) 0%,
-            var(--secondary-color) 100%
-          );
-        background-size: 200% 200%;
-        animation: gradientShift 18s var(--easing) infinite alternate;
-        z-index: 0;
-      }
       .hero-grid {
         position: absolute;
         inset: 0;
@@ -211,35 +189,6 @@
         z-index: 0;
         pointer-events: none;
       }
-      .blob {
-        position: absolute;
-        width: 420px;
-        height: 420px;
-        border-radius: 50%;
-        filter: blur(40px);
-        opacity: 0.35;
-        mix-blend-mode: screen;
-        z-index: 0;
-        pointer-events: none;
-      }
-      .blob-1 {
-        top: -120px;
-        left: -120px;
-        background: #be7b72;
-      }
-      .blob-2 {
-        bottom: -140px;
-        right: -80px;
-        background: #401f71;
-      }
-      .blob-3 {
-        top: 40%;
-        left: 60%;
-        background: #441f86;
-        width: 320px;
-        height: 320px;
-      }
-
       .hero-title {
         letter-spacing: -0.02em;
         max-width: 18ch;
@@ -968,10 +917,7 @@
     <section class="hero-section position-relative overflow-hidden">
         <!-- Animated gradient + blobs -->
         <div class="hero-bg"></div>
-        <div class="blob blob-1" data-parallax data-speed="5"></div>
-        <div class="blob blob-2" data-parallax data-speed="5"></div>
-        <div class="blob blob-3" data-parallax data-speed="5"></div>
-
+        <div class="hero_inner padding-global_120 padding-hero"></div>
         <div class="container position-relative z-1 py-5">
             <div class="row align-items-center">
                 <div class="col-lg-9">
@@ -1027,10 +973,6 @@
                 <a href="https://principles.design/" class="nav-icon" target="_blank">
                     <img src="./Images/Strategy.png" />
                 </a>
-
-                <a href="https://webflow.com/?r=0" class="nav-icon" target="_blank">
-                    <img src="./Images/Webflow.png" />
-                </a>
             </div>
         </div>
 
@@ -1043,13 +985,6 @@
         <div class="container">
             <div class="d-flex flex-wrap gap-2 gap-md-3 justify-content-center"
                  id="category-filters">
-                <button class="btn btn-outline-primary filter-btn active"
-                        data-filter="all"
-                        data-en="All"
-                        data-ar="الكل">
-                    All
-                </button>
-                <!-- Categories will be dynamically inserted here -->
             </div>
         </div>
     </section>
@@ -1355,14 +1290,14 @@
     <script>
         const aiTools = [
 {
-                name: "PrometAIv5.1.0",
-                url: "https://prometai.app/",
+                name: "PrompTessor",
+                url: "https://promptessor.com/",
                 category: "CodeRabbitCode reviews",
-                description: "PrometAI is an online artificial intelligence tool that enables creation of detailed business plans. It is designed to assist users through each stage of business plan development, providing a comprehensive framework that lays the foundation for growth. PrometAI is primarily designed for professiona...",
-                description_ar: "أداة ذكاء اصطناعي في فئة CodeRabbitCode reviews. Pricing model",
+                description: "PrompTessor is a tool for enhancing AI interactions by analyzing and optimizing prompts. It evaluates strengths and weaknesses, provides actionable improvements, allows saving and tracking prompt history, generates multiple optimized versions, enables interactive refinements, monitors performance, and ensures strict data privacy. It’s ideal for AI enthusiasts and professionals seeking to craft better prompts and continuously improve their AI conversations.",
+                "description_ar": "PrompTessor أداة لتحسين تفاعل المستخدم مع الذكاء الاصطناعي عبر تحليل وتحسين الـ prompts، مع تقييم نقاط القوة والضعف، اقتراح تحسينات عملية، حفظ تاريخ الـ prompts، إنشاء نسخ محسّنة، تخصيص بناءً على ملاحظات المستخدم، متابعة الأداء، وضمان خصوصية البيانات.",
                 pricing: "Pricing model",
-                logo: "https://media.theresanaiforthat.com/prometai.png",
-                icon: "fa-robot",
+                logo: "https://media.theresanaiforthat.com/promptessor.png?height=768",
+                icon: "https://media.theresanaiforthat.com/icons/promptessor.svg?width=100",
                 featured: false,
             },
             {
