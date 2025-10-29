@@ -1,0 +1,782 @@
+{
+  "metadata": {
+    "totalTools": 50,
+    "scrapedAt": "2025-10-25T18:57:35.724Z",
+    "categories": {
+      "Productivity": {
+        "count": 50,
+        "free": 0,
+        "paid": 0,
+        "freemium": 50
+      }
+    },
+    "source": "FutureTools.io"
+  },
+  "toolsByCategory": {
+    "Productivity": [
+      {
+        "name": "sparks ai",
+        "url": "https://www.futuretools.io/tools/sparks-ai",
+        "category": "Productivity",
+        "description": "A tool to create custom AI agents and collaborative workspaces.",
+        "description_ar": "A tool to create custom AI agents and collaborative workspaces.",
+        "pricing": "Freemium",
+        "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68f9289d9f9006279f7d474c_logo2.jpeg",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity",
+          "ai"
+        ],
+        "timestamp": "2025-10-25T18:54:03.750Z"
+      },
+      {
+        "name": "getsparks ai",
+        "url": "https://futuretools.link/getsparks-ai",
+        "category": "Productivity",
+        "description": "AI tool for productivity - automate and enhance your workflow",
+        "description_ar": "AI tool for productivity - automate and enhance your workflow",
+        "pricing": "Freemium",
+        "logo": "./Images/placeholder.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.751Z"
+      },
+      {
+        "name": "sonura studio",
+        "url": "https://www.futuretools.io/tools/sonura-studio",
+        "category": "Productivity",
+        "description": "A tool to generate music, beats, and sound effects.",
+        "description_ar": "A tool to generate music, beats, and sound effects.",
+        "pricing": "Freemium",
+        "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68f9289c118107ab445cb82a_demo-image.jpeg",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.751Z"
+      },
+      {
+        "name": "sonurastudio com",
+        "url": "https://futuretools.link/sonurastudio-com",
+        "category": "Productivity",
+        "description": "AI tool for productivity - automate and enhance your workflow",
+        "description_ar": "AI tool for productivity - automate and enhance your workflow",
+        "pricing": "Freemium",
+        "logo": "./Images/placeholder.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.751Z"
+      },
+      {
+        "name": "jogg ai",
+        "url": "https://www.futuretools.io/tools/jogg-ai",
+        "category": "Productivity",
+        "description": "A tool to create avatar-based videos from text or photos.",
+        "description_ar": "A tool to create avatar-based videos from text or photos.",
+        "pricing": "Freemium",
+        "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68f9289bc2d4fdc8a403083b_fcdfc686daca4a17b2c2961086b6b361.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity",
+          "ai"
+        ],
+        "timestamp": "2025-10-25T18:54:03.751Z"
+      },
+      {
+        "name": "jogg ai",
+        "url": "https://futuretools.link/jogg-ai",
+        "category": "Productivity",
+        "description": "AI tool for productivity - automate and enhance your workflow",
+        "description_ar": "AI tool for productivity - automate and enhance your workflow",
+        "pricing": "Freemium",
+        "logo": "./Images/placeholder.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.751Z"
+      },
+      {
+        "name": "homefront",
+        "url": "https://www.futuretools.io/tools/homefront",
+        "category": "Productivity",
+        "description": "A CRM platform to manage calls, scheduling, invoicing, and social posts.",
+        "description_ar": "A CRM platform to manage calls, scheduling, invoicing, and social posts.",
+        "pricing": "Freemium",
+        "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68fb95c37f76a9ad5206583b_homefrontapp-com-logo.png",
+        "icon": "fa-chart-line",
+        "featured": true,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.751Z"
+      },
+      {
+        "name": "homefrontapp com",
+        "url": "https://futuretools.link/homefrontapp-com",
+        "category": "Productivity",
+        "description": "AI tool for productivity - automate and enhance your workflow",
+        "description_ar": "AI tool for productivity - automate and enhance your workflow",
+        "pricing": "Freemium",
+        "logo": "./Images/placeholder.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.751Z"
+      },
+      {
+        "name": "shortmotion",
+        "url": "https://www.futuretools.io/tools/shortmotion",
+        "category": "Productivity",
+        "description": "An iOS app for creating and editing stop motion animations.",
+        "description_ar": "An iOS app for creating and editing stop motion animations.",
+        "pricing": "Freemium",
+        "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68f9289a0f17cb2ed791cf6c_1200x630wa.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.751Z"
+      },
+      {
+        "name": "shortmotion animation editor",
+        "url": "https://futuretools.link/shortmotion-animation-editor",
+        "category": "Productivity",
+        "description": "AI tool for productivity - automate and enhance your workflow",
+        "description_ar": "AI tool for productivity - automate and enhance your workflow",
+        "pricing": "Freemium",
+        "logo": "./Images/placeholder.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.751Z"
+      },
+      {
+        "name": "loman ai",
+        "url": "https://www.futuretools.io/tools/loman-ai",
+        "category": "Productivity",
+        "description": "An AI voice phone agent for restaurants that answers calls, takes orders and reservations.",
+        "description_ar": "An AI voice phone agent for restaurants that answers calls, takes orders and reservations.",
+        "pricing": "Freemium",
+        "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68f9289850a04657a1d42cc6_68a8885a3cf0666c660dc65b_lomanai.jpeg",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity",
+          "ai"
+        ],
+        "timestamp": "2025-10-25T18:54:03.751Z"
+      },
+      {
+        "name": "loman ai",
+        "url": "https://futuretools.link/loman-ai",
+        "category": "Productivity",
+        "description": "AI tool for productivity - automate and enhance your workflow",
+        "description_ar": "AI tool for productivity - automate and enhance your workflow",
+        "pricing": "Freemium",
+        "logo": "./Images/placeholder.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.751Z"
+      },
+      {
+        "name": "noah ai",
+        "url": "https://www.futuretools.io/tools/noah-ai",
+        "category": "Productivity",
+        "description": "A platform for literature reviews, data extraction, and scientific analysis to research for life science.",
+        "description_ar": "A platform for literature reviews, data extraction, and scientific analysis to research for life science.",
+        "pricing": "Freemium",
+        "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68fa535dff0fbfb232cee8e8_noahai-co-logo.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity",
+          "ai"
+        ],
+        "timestamp": "2025-10-25T18:54:03.751Z"
+      },
+      {
+        "name": "noahai co",
+        "url": "https://futuretools.link/noahai-co",
+        "category": "Productivity",
+        "description": "AI tool for productivity - automate and enhance your workflow",
+        "description_ar": "AI tool for productivity - automate and enhance your workflow",
+        "pricing": "Freemium",
+        "logo": "./Images/placeholder.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.751Z"
+      },
+      {
+        "name": "fish audio",
+        "url": "https://www.futuretools.io/tools/fish-audio",
+        "category": "Productivity",
+        "description": "A platform to generate AI voices from text with customization and voice cloning.",
+        "description_ar": "A platform to generate AI voices from text with customization and voice cloning.",
+        "pricing": "Freemium",
+        "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68f819bb8609aeeac98ab941_.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity",
+          "ai"
+        ],
+        "timestamp": "2025-10-25T18:54:03.751Z"
+      },
+      {
+        "name": "fish audio",
+        "url": "https://futuretools.link/fish-audio",
+        "category": "Productivity",
+        "description": "AI tool for productivity - automate and enhance your workflow",
+        "description_ar": "AI tool for productivity - automate and enhance your workflow",
+        "pricing": "Freemium",
+        "logo": "./Images/placeholder.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "aident ai",
+        "url": "https://www.futuretools.io/tools/aident-ai",
+        "category": "Productivity",
+        "description": "A platform for automating workflows by describing them in plain language.",
+        "description_ar": "A platform for automating workflows by describing them in plain language.",
+        "pricing": "Freemium",
+        "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68fa50dedfd9f5b1aa2511ec_aident-ai-logo.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity",
+          "ai"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "aident ai",
+        "url": "https://futuretools.link/aident-ai",
+        "category": "Productivity",
+        "description": "AI tool for productivity - automate and enhance your workflow",
+        "description_ar": "AI tool for productivity - automate and enhance your workflow",
+        "pricing": "Freemium",
+        "logo": "./Images/placeholder.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "omnibox",
+        "url": "https://www.futuretools.io/tools/omnibox",
+        "category": "Productivity",
+        "description": "A unified interface to search and retrieve information.",
+        "description_ar": "A unified interface to search and retrieve information.",
+        "pricing": "Freemium",
+        "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68f6cc02e323dfd0f19d8dcd_logo.svg",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "omnibox pro",
+        "url": "https://futuretools.link/omnibox-pro",
+        "category": "Productivity",
+        "description": "AI tool for productivity - automate and enhance your workflow",
+        "description_ar": "AI tool for productivity - automate and enhance your workflow",
+        "pricing": "Freemium",
+        "logo": "./Images/placeholder.png",
+        "icon": "fa-chart-line",
+        "featured": true,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "pagelm",
+        "url": "https://www.futuretools.io/tools/pagelm",
+        "category": "Productivity",
+        "description": "An open-source version of Google's NotebookLM.",
+        "description_ar": "An open-source version of Google's NotebookLM.",
+        "pricing": "Freemium",
+        "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68f6cbffe323dfd0f19d8cb5_b158a317-5ce2-4653-b173-58fac6d14326.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "pagelm",
+        "url": "https://futuretools.link/pagelm",
+        "category": "Productivity",
+        "description": "AI tool for productivity - automate and enhance your workflow",
+        "description_ar": "AI tool for productivity - automate and enhance your workflow",
+        "pricing": "Freemium",
+        "logo": "./Images/placeholder.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "radiant ai",
+        "url": "https://www.futuretools.io/tools/radiant-ai",
+        "category": "Productivity",
+        "description": "An MacOS App that captures, summarizes, conversations note-taking and follow-up tasks.",
+        "description_ar": "An MacOS App that captures, summarizes, conversations note-taking and follow-up tasks.",
+        "pricing": "Freemium",
+        "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68f731556810cc76b3fe2498_radiantapp-com-logo(1).png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity",
+          "ai"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "radiantapp com",
+        "url": "https://futuretools.link/radiantapp-com",
+        "category": "Productivity",
+        "description": "AI tool for productivity - automate and enhance your workflow",
+        "description_ar": "AI tool for productivity - automate and enhance your workflow",
+        "pricing": "Freemium",
+        "logo": "./Images/placeholder.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "bloom studio",
+        "url": "https://www.futuretools.io/tools/bloom-studio",
+        "category": "Productivity",
+        "description": "A tool to generate product photos and videos for e-commerce.",
+        "description_ar": "A tool to generate product photos and videos for e-commerce.",
+        "pricing": "Freemium",
+        "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68f6cbfd6c88e84e75c15541_thumbnail%2520bloom.png",
+        "icon": "fa-chart-line",
+        "featured": true,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "bloom studio",
+        "url": "https://futuretools.link/bloom-studio",
+        "category": "Productivity",
+        "description": "AI tool for productivity - automate and enhance your workflow",
+        "description_ar": "AI tool for productivity - automate and enhance your workflow",
+        "pricing": "Freemium",
+        "logo": "./Images/placeholder.png",
+        "icon": "fa-chart-line",
+        "featured": true,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "tight studio",
+        "url": "https://www.futuretools.io/tools/tight-studio",
+        "category": "Productivity",
+        "description": "A MacOS Software to create product demo and tutorial videos with auto-zoom, captions, and voiceovers.",
+        "description_ar": "A MacOS Software to create product demo and tutorial videos with auto-zoom, captions, and voiceovers.",
+        "pricing": "Freemium",
+        "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68f2a44ccca282ae0790e80b_si91Tjc7VN5olbvlL2uagiKCk.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "tight studio",
+        "url": "https://futuretools.link/tight-studio",
+        "category": "Productivity",
+        "description": "AI tool for productivity - automate and enhance your workflow",
+        "description_ar": "AI tool for productivity - automate and enhance your workflow",
+        "pricing": "Freemium",
+        "logo": "./Images/placeholder.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "demodesk",
+        "url": "https://www.futuretools.io/tools/demodesk",
+        "category": "Productivity",
+        "description": "A platform for remote sales meetings with scheduling, notes, coaching, and live demos.",
+        "description_ar": "A platform for remote sales meetings with scheduling, notes, coaching, and live demos.",
+        "pricing": "Freemium",
+        "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68f2a44ba6898ec24c757aea_67d23807fe9c0a2db7c54839_OG_Image.jpeg",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "demodesk com",
+        "url": "https://futuretools.link/demodesk-com",
+        "category": "Productivity",
+        "description": "AI tool for productivity - automate and enhance your workflow",
+        "description_ar": "AI tool for productivity - automate and enhance your workflow",
+        "pricing": "Freemium",
+        "logo": "./Images/placeholder.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "anpo ai",
+        "url": "https://www.futuretools.io/tools/anpo-ai",
+        "category": "Productivity",
+        "description": "A tool to turn product photos into lifestyle videos.",
+        "description_ar": "A tool to turn product photos into lifestyle videos.",
+        "pricing": "Freemium",
+        "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68f4eb466243ebd8323f7ea1_anpo-ai-logo.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity",
+          "ai"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "anpo ai",
+        "url": "https://futuretools.link/anpo-ai",
+        "category": "Productivity",
+        "description": "AI tool for productivity - automate and enhance your workflow",
+        "description_ar": "AI tool for productivity - automate and enhance your workflow",
+        "pricing": "Freemium",
+        "logo": "./Images/placeholder.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "arist",
+        "url": "https://www.futuretools.io/tools/arist",
+        "category": "Productivity",
+        "description": "A tool to convert documents into personalized microlearning courses delivered via messaging apps.",
+        "description_ar": "A tool to convert documents into personalized microlearning courses delivered via messaging apps.",
+        "pricing": "Freemium",
+        "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68f1c87f8c1f4c96fa1c06ea_HdT8CPTbrUzCfb5icAn799OYJRU.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "arist co",
+        "url": "https://futuretools.link/arist-co",
+        "category": "Productivity",
+        "description": "AI tool for productivity - automate and enhance your workflow",
+        "description_ar": "AI tool for productivity - automate and enhance your workflow",
+        "pricing": "Freemium",
+        "logo": "./Images/placeholder.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "robomonkey",
+        "url": "https://www.futuretools.io/tools/robomonkey",
+        "category": "Productivity",
+        "description": "A nocode tool to create custom Chrome extensions and browser automations.",
+        "description_ar": "A nocode tool to create custom Chrome extensions and browser automations.",
+        "pricing": "Freemium",
+        "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68f3aeb88824610526b4d025_robomonkey-io-logo.png",
+        "icon": "fa-chart-line",
+        "featured": true,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "robomonkey io",
+        "url": "https://futuretools.link/robomonkey-io",
+        "category": "Productivity",
+        "description": "AI tool for productivity - automate and enhance your workflow",
+        "description_ar": "AI tool for productivity - automate and enhance your workflow",
+        "pricing": "Freemium",
+        "logo": "./Images/placeholder.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "recall ai",
+        "url": "https://www.futuretools.io/tools/recall-ai",
+        "category": "Productivity",
+        "description": "An universal API to capture and process real-time meeting data from major video conferencing platforms.",
+        "description_ar": "An universal API to capture and process real-time meeting data from major video conferencing platforms.",
+        "pricing": "Freemium",
+        "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68f2576d70727c4da2f26130_recall-ai-logo.png",
+        "icon": "fa-chart-line",
+        "featured": true,
+        "tags": [
+          "productivity",
+          "ai"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "recall ai",
+        "url": "https://futuretools.link/recall-ai",
+        "category": "Productivity",
+        "description": "AI tool for productivity - automate and enhance your workflow",
+        "description_ar": "AI tool for productivity - automate and enhance your workflow",
+        "pricing": "Freemium",
+        "logo": "./Images/placeholder.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "responsehub",
+        "url": "https://www.futuretools.io/tools/responsehub",
+        "category": "Productivity",
+        "description": "A tool for security questionnaire completion using on compliance paperwork.",
+        "description_ar": "A tool for security questionnaire completion using on compliance paperwork.",
+        "pricing": "Freemium",
+        "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68f1c87c71b193dbb4c50fe0_og-responsehub.3ErSs3sX_z2Hd9.jpeg",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity",
+          "ai"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "responsehub ai",
+        "url": "https://futuretools.link/responsehub-ai",
+        "category": "Productivity",
+        "description": "AI tool for productivity - automate and enhance your workflow",
+        "description_ar": "AI tool for productivity - automate and enhance your workflow",
+        "pricing": "Freemium",
+        "logo": "./Images/placeholder.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "amplifiles",
+        "url": "https://www.futuretools.io/tools/amplifiles",
+        "category": "Productivity",
+        "description": "A tool that transforms real estate photos into videos with voice-overs, captions, and branding.",
+        "description_ar": "A tool that transforms real estate photos into videos with voice-overs, captions, and branding.",
+        "pricing": "Freemium",
+        "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68f1c87c9c3dc017d3a08b40_68287a8834450f4a54145d94_homepage-socialshare.webp",
+        "icon": "fa-chart-line",
+        "featured": true,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "amplifiles ai",
+        "url": "https://futuretools.link/amplifiles-ai",
+        "category": "Productivity",
+        "description": "AI tool for productivity - automate and enhance your workflow",
+        "description_ar": "AI tool for productivity - automate and enhance your workflow",
+        "pricing": "Freemium",
+        "logo": "./Images/placeholder.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "decor8 ai",
+        "url": "https://www.futuretools.io/tools/decor8-ai",
+        "category": "Productivity",
+        "description": "A tool to generate interior redesigns from room photos",
+        "description_ar": "A tool to generate interior redesigns from room photos",
+        "pricing": "Freemium",
+        "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68ee980570c7859907d3108b_59378b_48125ad1e0f2465e8e131788fe432093~mv2.jpeg",
+        "icon": "fa-chart-line",
+        "featured": true,
+        "tags": [
+          "productivity",
+          "ai"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "decor8 ai",
+        "url": "https://futuretools.link/decor8-ai",
+        "category": "Productivity",
+        "description": "AI tool for productivity - automate and enhance your workflow",
+        "description_ar": "AI tool for productivity - automate and enhance your workflow",
+        "pricing": "Freemium",
+        "logo": "./Images/placeholder.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "feedguardians",
+        "url": "https://www.futuretools.io/tools/feedguardians",
+        "category": "Productivity",
+        "description": "A tool that manages social media comment responses for e-commerce brands.",
+        "description_ar": "A tool that manages social media comment responses for e-commerce brands.",
+        "pricing": "Freemium",
+        "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68f0f944386f91778487f8f5_feedguardians-com-logo.png",
+        "icon": "fa-chart-line",
+        "featured": true,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "feedguardians com",
+        "url": "https://futuretools.link/feedguardians-com",
+        "category": "Productivity",
+        "description": "AI tool for productivity - automate and enhance your workflow",
+        "description_ar": "AI tool for productivity - automate and enhance your workflow",
+        "pricing": "Freemium",
+        "logo": "./Images/placeholder.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "tutorial ai",
+        "url": "https://www.futuretools.io/tools/tutorial-ai",
+        "category": "Productivity",
+        "description": "A platform that creates step-by-step guides and demo videos.",
+        "description_ar": "A platform that creates step-by-step guides and demo videos.",
+        "pricing": "Freemium",
+        "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68edde7b9064c2cd9dafa8f4_og-image.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity",
+          "ai"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "tutorial ai",
+        "url": "https://futuretools.link/tutorial-ai",
+        "category": "Productivity",
+        "description": "AI tool for productivity - automate and enhance your workflow",
+        "description_ar": "AI tool for productivity - automate and enhance your workflow",
+        "pricing": "Freemium",
+        "logo": "./Images/placeholder.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "resyfy ai",
+        "url": "https://www.futuretools.io/tools/resyfy-ai",
+        "category": "Productivity",
+        "description": "A tool to organize, verify, and optimize career achievements into digital resumes and portfolios.",
+        "description_ar": "A tool to organize, verify, and optimize career achievements into digital resumes and portfolios.",
+        "pricing": "Freemium",
+        "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68edde7754f4b8d27c57b52a_c6c3a6_0cf85d2f81f94e79bd030350b29f9b9e%257Emv2.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity",
+          "ai"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      },
+      {
+        "name": "resyfy ai",
+        "url": "https://futuretools.link/resyfy-ai",
+        "category": "Productivity",
+        "description": "AI tool for productivity - automate and enhance your workflow",
+        "description_ar": "AI tool for productivity - automate and enhance your workflow",
+        "pricing": "Freemium",
+        "logo": "./Images/placeholder.png",
+        "icon": "fa-chart-line",
+        "featured": false,
+        "tags": [
+          "productivity"
+        ],
+        "timestamp": "2025-10-25T18:54:03.752Z"
+      }
+    ]
+  }
+}
