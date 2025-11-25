@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html data-theme="light" lang="en">
+<html data-theme="light" lang="en" dir="ltr">
 
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <title>
-    FutureGen
-  </title>
+  <title>FutureGen</title>
   <meta content="#401F71" name="theme-color" />
   <link rel="icon" href="Images/Favicon.ico" type="image/x-icon">
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
@@ -21,16 +19,11 @@
     type="text/css" />
   <link href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" rel="stylesheet"
     type="text/css">
-  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/@barba/core">
-  </script>
-  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js">
-  </script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
   <style>
     /* ========== THEME TOKENS ========== */
     :root {
@@ -154,7 +147,6 @@
       transform: rotate(180deg);
     }
 
-
     /* صفحة تفاصيل الأداة */
     .tool-details-page {
       display: none;
@@ -169,9 +161,9 @@
     }
 
     .tool-details-hero {
-      padding: 120px 0 60px;
+      padding: 60px 0 60px;
       background: linear-gradient(135deg, rgba(64, 31, 113, 0.05), rgba(190, 123, 114, 0.05));
-      margin-top: 80px;
+      margin-top: 0px;
     }
 
     .tool-logo-large {
@@ -237,14 +229,17 @@
     }
 
     section {
-      margin-top: -80px;
-      position: relative;
-      z-index: 1;
+      z-index: 10000000;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      top: 0px;
+      padding-top: 0px;
+      padding-bottom: 0px;
     }
 
     nav {
-      position: absolute;
-      top: 40px;
+      position: relative;
+      top: 60px;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
@@ -401,8 +396,8 @@
       background-size: cover;
       padding-top: 120px;
       top: -80px;
-      margin-bottom: 0;
-      margin-top: -80px;
+      margin-bottom: -80px;
+      margin-top: 0px;
       position: relative;
       z-index: 1;
     }
@@ -429,7 +424,7 @@
       max-width: 800px;
       margin: 0 auto;
       padding: 3rem 1rem;
-      top: 65px;
+      top: 35px;
     }
 
     .hero-title {
@@ -476,7 +471,6 @@
       padding: 0;
       width: 100%;
     }
-
 
     .nav-icon {
       display: flex;
@@ -569,7 +563,6 @@
 
     /* ========== SECTION / HEADINGS ========== */
     .section {
-      padding: 4rem 0;
       scroll-margin-top: calc(var(--header-h) + 14px);
     }
 
@@ -774,7 +767,7 @@
 
     .category-grid {
       display: grid;
-      grid-template-columns: repeat(7, minmax(193px, 2fr));
+      grid-template-columns: repeat(8, minmax(193px, 2fr));
       gap: 0.7rem;
       justify-content: center;
       align-items: center;
@@ -892,41 +885,6 @@
       margin-bottom: 0.5rem;
       color: var(--text-dark);
     }
-
-    /* إزالة قواعد اللغة العربية التي تغير المحاذاة والاتجاه */
-    /* تم إزالة هذه القواعد:
-    body[lang="ar"] h1,
-    body[lang="ar"] h2,
-    body[lang="ar"] h3,
-    body[lang="ar"] h4,
-    body[lang="ar"] h5,
-    body[lang="ar"] h6,
-    body[lang="ar"] p,
-    body[lang="ar"] .card-title,
-    body[lang="ar"] .card-text {
-      text-align: right;
-    }
-
-    body[lang="ar"] .ms-2 {
-      margin-left: 0 !important;
-      margin-right: 0.5rem !important;
-    }
-
-    body[lang="ar"] .me-2 {
-      margin-right: 0 !important;
-      margin-left: 0.5rem !important;
-    }
-
-    body[lang="ar"] .feature-list li i {
-      margin-right: 0;
-      margin-left: 0.5rem;
-    }
-
-    body[lang="ar"] .blog-details-content ul {
-      padding-right: 20px;
-      padding-left: 0;
-    }
-    */
 
     /* تحسينات صفحة التفاصيل */
     .tool-details-content .card {
@@ -1414,6 +1372,22 @@
       }
     }
 
+    @media (max-width: 459) {
+      .hero-icons-container {
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .nav-icon {
+        margin: 8px;
+      }
+
+      .nav-icon img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
     @media (max-width: 768px) {
       .hero-icons-container {
         flex-wrap: wrap;
@@ -1421,7 +1395,7 @@
       }
 
       .nav-icon {
-        margin: 5px;
+        margin: 10px;
       }
 
       .nav-icon img {
@@ -1568,12 +1542,19 @@
     }
 
     #same-category-container .card {
+      border: none;
+      border-radius: var(--radius-sm);
+      background: var(--bg-white);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.35s var(--easing), box-shadow 0.35s var(--easing);
+      overflow: hidden;
+      position: relative;
       height: 100%;
-      transition: all 0.3s ease;
+      will-change: transform;
     }
 
     #same-category-container .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-8px);
       box-shadow: var(--shadow-lg);
     }
 
@@ -1598,20 +1579,20 @@
 
     /* ========== ENHANCED SAME CATEGORY TOOLS STYLES ========== */
     .same-category-card {
-      border: 1px solid var(--border);
+      border: none;
       border-radius: var(--radius-sm);
-      transition: all 0.3s var(--easing);
       background: var(--bg-white);
       box-shadow: var(--shadow-sm);
+      transition: transform 0.35s var(--easing), box-shadow 0.35s var(--easing);
+      overflow: hidden;
+      position: relative;
       height: 100%;
-      display: flex;
-      flex-direction: column;
+      will-change: transform;
     }
 
     .same-category-card:hover {
       transform: translateY(-8px);
       box-shadow: var(--shadow-lg);
-      border-color: var(--primary-color);
     }
 
     .same-category-card-img {
@@ -1810,17 +1791,13 @@
     /* ========== STATIC PAGES STYLES ========== */
     .static-page {
       display: none;
-      position: fixed;
-      top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: black;
-      z-index: 1040;
+      background: var(--bg-page);
+      z-index: 999999;
       overflow-y: auto;
-      padding-top: 100px;
       min-height: calc(100vh - 200px);
-      position: relative;
     }
 
     .static-content {
@@ -1831,14 +1808,14 @@
       margin-top: 2rem;
       margin-bottom: 1rem;
       font-weight: 700;
-      color: var(--primary-color);
+      color: var(--footer-text-dark);
     }
 
     .static-content h4 {
       margin-top: 1.5rem;
       margin-bottom: 0.75rem;
       font-weight: 600;
-      color: var(--secondary-color);
+      color: var(--bg-white);
     }
 
     .static-content p {
@@ -2022,7 +1999,7 @@
     /* ===== About Page Styles ===== */
     .about-page {
       min-height: 100vh;
-      padding: 100px 0 60px;
+      padding: 60px 0 60px;
       background: linear-gradient(180deg, rgba(64, 31, 113, 1) 0%, rgba(64, 31, 113, 1) 100%);
       color: var(--text-dark, #401F71);
       font-family: 'Tajawal', sans-serif;
@@ -2223,14 +2200,15 @@
     /* ===== About Page Banner ===== */
     .about-banner {
       position: relative;
-      width: 1500px;
+      width: 100%;
+      max-width: 1500px;
       height: 50vh;
       overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
-      left: 40px;
+      margin: 0 auto;
     }
 
     .about-banner img {
@@ -2289,9 +2267,8 @@
     .footer-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
-      max-width: 1200px;
-      margin: 0 auto;
+      gap: 60px;
+      max-width: 1250px;
       padding: 0 18px;
     }
 
@@ -2397,7 +2374,7 @@
 
     /* Support Box Styles */
     .support-box {
-      padding: 1.25rem;
+      padding: 1.875rem;
       border-radius: 0.75rem;
       background-color: rgba(255, 255, 255, 0.1);
       color: var(--footer-text-light);
@@ -2549,6 +2526,40 @@
         padding: 20px;
       }
     }
+
+    .AboutUsLOGO {
+      width: 250px;
+      height: auto;
+      margin-left: 100px;
+    }
+
+    html[data-theme="dark"] .AboutUsLOGO {
+      background-image: url('./Images/logo-dark-futuregen.png');
+    }
+
+    .AboutP {
+      color: #343434;
+    }
+
+    html[data-theme="dark"] .AboutP {
+      color: hsl(0, 0%, 89%);
+    }
+
+    .AboutM {
+      color: #343434;
+    }
+
+    html[data-theme="dark"] .AboutM {
+      color: hsl(0, 0%, 89%);
+    }
+
+    .AboutMP {
+      color: #343434;
+    }
+
+    html[data-theme="dark"] .AboutMP {
+      color: hsl(0, 0%, 89%);
+    }
   </style>
 </head>
 
@@ -2580,9 +2591,8 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link smooth-scroll" data-ar="المدونة" data-en="Blog" href="#blog">
-                Blog
-              </a>
+              <a class="nav-link" href="#news-page" id="news-link" data-ar="أخبار الذكاء الاصطناعي" data-en="AI News">
+                AI News</a>
             </li>
           </ul>
           <div class="nav-actions">
@@ -2775,6 +2785,9 @@
           <a class="nav-icon-manus" href="https://chat.humain.ai/en" rel="noopener" target="_blank">
             <img alt="Humain" src="./Images/Humain.png" />
           </a>
+          <a class="nav-icon-manus" href="https://www.perplexity.ai/" rel="noopener" target="_blank">
+            <img alt="Preplixity" src="./Images/Preplixity.png" />
+          </a>
           <a class="nav-icon-manus" href="https://www.kimi.com/" rel="noopener" target="_blank">
             <img alt="KimiK2" src="./Images/KimiK2.png" />
           </a>
@@ -2782,10 +2795,10 @@
       </div>
     </section>
     <main id="main">
-      <section class="section bg-white" id="categories">
+      <section class="section bg-white categories-container" id="categories">
         <div class="container">
           <div class="text-center mb-5">
-            <h2 class="fw-bold" data-ar="فئات أدوات الذكاء الاصطناعي" data-en="AI Tools Categories">
+            <h2 class="fw-bold categories-title" data-ar="فئات أدوات الذكاء الاصطناعي" data-en="AI Tools Categories">
               AI Tools Categories
             </h2>
             <div class="section-underline mx-auto">
@@ -2822,25 +2835,6 @@
           </div>
         </div>
       </section>
-      <section class="section bg-white" id="blog">
-        <div class="container">
-          <div class="text-center mb-5">
-            <h2 class="fw-bold" data-ar="أخبار ورؤى الذكاء الاصطناعي" data-en="AI News &amp; Insights">
-              AI News &amp; Insights
-            </h2>
-            <div class="section-underline mx-auto">
-            </div>
-          </div>
-          <!-- زر الرجوع -->
-          <button class="back-button" id="backButtonBlog" style="display: none;">
-            <i class="fas fa-arrow-left">
-            </i>
-            رجوع
-          </button>
-          <div class="row g-4" id="blog-posts-container">
-          </div>
-        </div>
-      </section>
     </main>
     <footer class="site-footer">
       <div class="container">
@@ -2863,23 +2857,15 @@
                 <i class="bi bi-instagram">
                 </i>
               </a>
-              <a class="text-light" href="javascript:void(0)">
-                <i class="bi bi-facebook">
-                </i>
-              </a>
-              <a class="text-light" href="javascript:void(0)">
-                <i class="bi bi-linkedin">
-                </i>
-              </a>
             </div>
           </div>
           <div class="footer-col">
-            <h6 class="fw-bold mb-3" data-ar="الشركة" data-en="Company">
-              Company
+            <h6 dir="rtl" class="fw-bold mb-3" data-ar="فريق FutureGEN" data-en="FutureGEN Team">
+              FutureGEN Team
             </h6>
             <ul class="list-unstyled">
               <li>
-                <a class="text-light text-decoration-none footer-nav-link" data-page="about" href="javascript:void(0)"
+                <a class="text-light text-decoration-none footer-nav-link" data-page="about" href="#about-page"
                   id="about-link">
                   <span data-ar="من نحن" data-en="About Us">
                     About Us
@@ -2887,24 +2873,10 @@
                 </a>
               </li>
               <li>
-                <a class="text-light text-decoration-none footer-nav-link" data-page="contact" href="javascript:void(0)"
+                <a class="text-light text-decoration-none footer-nav-link" data-page="contact" href="#contact-page"
                   id="contact-link">
                   <span data-ar="اتصل بنا" data-en="Contact Us">
                     Contact Us
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a class="text-light text-decoration-none" href="#privacy-policy">
-                  <span data-ar="سياسة الخصوصية" data-en="Privacy Policy">
-                    Privacy Policy
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a class="text-light text-decoration-none" href="#terms-of-service">
-                  <span data-ar="شروط الخدمة" data-en="Terms of Service">
-                    Terms of Service
                   </span>
                 </a>
               </li>
@@ -2916,9 +2888,9 @@
               <h6 class="fw-bold mb-3" data-ar="ادعمنا" data-en="Support Us">
                 Support Us
               </h6>
-              <p class="text-light opacity-75" data-ar="ادعم الموقع لمواصلة تطوير الأدوات والميزات الجديدة."
-                data-en="Support the site to keep improving and adding new features.">
-                Support the site to keep improving and adding new features.
+              <p class="text-light opacity-75" data-ar="ادعمنا ليستمر العطاء من اجل العلم و المعرفة و تقدم الأنسان"
+                data-en="Support us so that the giving continues for the sake of knowledge, learning, and the advancement of humanity.">
+                Support us so that the giving continues for the sake of knowledge, learning, and the advancement of humanity.
               </p>
               <div class="d-flex flex-wrap gap-2 mb-3">
                 <button class="btn btn-outline-light btn-sm donate-btn" data-amount="1">
@@ -2943,56 +2915,21 @@
               </button>
             </div>
           </div>
-          <div class="footer-col">
-            <h6 class="fw-bold mb-3" data-ar="روابط سريعة" data-en="Quick Links">
-              Quick Links
-            </h6>
-            <ul class="list-unstyled">
-              <li>
-                <a class="text-light text-decoration-none smooth-scroll" href="#featured">
-                  <span data-ar="الأدوات المميزة" data-en="Featured Tools">
-                    Featured Tools
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a class="text-light text-decoration-none smooth-scroll" href="#categories">
-                  <span data-ar="الفئات" data-en="Categories">
-                    Categories
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a class="text-light text-decoration-none smooth-scroll" href="#blog">
-                  <span data-ar="المدونة" data-en="Blog">
-                    Blog
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a class="text-light text-decoration-none" href="#ai-news">
-                  <span data-ar="أخبار الذكاء الاصطناعي" data-en="AI News">
-                    AI News
-                  </span>
-                </a>
-              </li>
-            </ul>
+          <div class="footer-newsletter">
+            <h5 data-ar="اشترك في الجريدة البريدية" data-en="Subscribe to the Newsletter">
+              Subscribe to the Newsletter
+            </h5>
+            <form id="newsletterForm">
+              <input data-ar="اكتب بريدك الإلكتروني" data-en="Enter your email" id="newsletterEmail"
+                placeholder="Enter your email" required="" type="email" />
+              <button data-ar="اشترك" data-en="Subscribe" type="submit">
+                Subscribe
+              </button>
+            </form>
+            <p id="newsletterMessage" class="mt-3"></p>
           </div>
         </div>
 
-        <div class="footer-newsletter">
-          <h5 data-ar="اشترك في الجريدة البريدية" data-en="Subscribe to the Newsletter">
-            Subscribe to the Newsletter
-          </h5>
-          <form id="newsletterForm">
-            <input data-ar="اكتب بريدك الإلكتروني" data-en="Enter your email" id="newsletterEmail"
-              placeholder="Enter your email" required="" type="email" />
-            <button data-ar="اشترك" data-en="Subscribe" type="submit">
-              Subscribe
-            </button>
-          </form>
-          <p id="newsletterMessage" class="mt-3"></p>
-        </div>
 
         <hr class="my-4 opacity-25" />
         <div class="footer-bottom">
@@ -3000,11 +2937,11 @@
             <div class="col-md-6 text-center text-md-start">
               <p class="mb-0 text-light opacity-75">
                 &copy; 2025
-                <span data-ar="مركز أدوات الذكاء الاصطناعي" data-en="AI Tools Hub">
-                  AI Tools Hub
+                <span data-ar="FutureGEN" data-en="AI Tools Hub">
+                  FutureGEN
                 </span>
                 .
-                <span data-ar="جميع الحقوق محفوظة." data-en="All rights reserved.">
+                <span data-ar="جميع الحقوق محفوظة ل." data-en="All rights reserved.">
                   All rights reserved.
                 </span>
               </p>
@@ -3133,52 +3070,11 @@
       </div>
     </section>
   </div>
-  <!-- صفحة تفاصيل المدونة -->
-  <div class="blog-post-page" id="blog-post-page">
-    <div class="container mt-4 pt-5">
-      <button class="btn btn-outline-primary back-button" id="back-to-home-from-blog">
-        <i class="fas fa-arrow-left me-2">
-        </i>
-        <span data-ar="العودة إلى المدونة" data-en="Back to Blog">
-          Back to Blog
-        </span>
-      </button>
-    </div>
-    <section class="blog-details-content py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <p class="text-muted mb-2">
-              <span class="badge bg-primary" id="blog-post-category">
-              </span>
-            </p>
-            <h1 class="display-4 fw-bold mb-3" id="blog-post-title">
-            </h1>
-            <p class="text-muted mb-4 fs-6">
-              <span class="me-3" id="blog-post-date">
-              </span>
-              <span data-ar="بواسطة" data-en="By">
-                By
-              </span>
-              :
-              <span id="blog-post-author">
-              </span>
-            </p>
-            <img alt="Post Image" class="img-fluid rounded-4 mb-4" id="blog-post-image" src=""
-              style="object-fit: cover; max-height: 400px; width: 100%;" />
-            <div class="lead" id="blog-post-body-container">
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
   <!-- About Us Page -->
   <div aria-labelledby="about-title" class="static-page" id="about-page" role="region">
     <section class="about-page">
       <button class="btn btn-outline-primary back-button" id="back-to-home-from-about">
-        <i aria-hidden="true" class="fas fa-arrow-left me-2 about-back-button">
-        </i>
+        <i aria-hidden="true" class="fas fa-arrow-left me-2 about-back-button"></i>
         <span data-ar="العودة إلى الرئيسية" data-en="Back to Home">
           Back to Home
         </span>
@@ -3187,9 +3083,7 @@
         <img alt="About FutureGen AI" loading="lazy" src="./Images/AboutUs.jpg" />
         <div class="about-banner-overlay">
           <div class="banner-overlay">
-            <h1 data-ar="من نحن" data-en="About Us">
-              من نحن
-            </h1>
+            <h1 data-ar="من نحن" data-en="About Us">من نحن</h1>
             <p data-ar="تعرف علينا وعلى رؤيتنا في FutureGen AI."
               data-en="Discover who we are and what drives FutureGen AI.">
               تعرف علينا وعلى رؤيتنا في FutureGen AI.
@@ -3200,70 +3094,62 @@
       <div class="container about-container">
         <div aria-labelledby="about-title" class="about-hero" role="region">
           <div>
-            <h2 class="title" data-ar="من نحن" data-en="Who We Are" id="about-title">
-              من نحن
-            </h2>
-            <p class="subtitle" data-ar="مركز أدوات الذكاء الاصطناعي &mdash; دليل مُنسّق لأفضل أدوات الذكاء الاصطناعي."
-              data-en="AI Tools Directory &mdash; a curated hub of the best AI tools.">
-              نحن فريق
-              <span class="ltr" dir="ltr">
-                FutureGen AI
-              </span>
-              نعمل على جمع وتصنيف أفضل أدوات الذكاء الاصطناعي
-              في مكان واحد لتسهيل وصولك إليها.
-            </p>
-            <p class="lead" data-ar="هدفنا هو تمكين الجميع من استخدام التكنولوجيا الحديثة بطرق عملية ومبتكرة."
-              data-en="Our goal is to empower everyone to use modern technology in practical and innovative ways.">
-              هدفنا هو تمكين الجميع من استخدام التكنولوجيا الحديثة بطرق عملية ومبتكرة.
-            </p>
+            <h2 class="title" data-ar="من نحن" data-en="Who We Are" id="about-title">من نحن</h2>
+            <p class="AboutP" dir="ltr" data-ar="
+              الشغوفين بالتكنولوجيا والذكاء الاصطناعي، ونسعى لتقديم دليل موثوق وسهل الاستخدام لجميع الأدوات الحديثة التي
+              تساعد المستخدمين على الاستفادة القصوى من قدرات الذكاء الاصطناعي.
+
+              هدفنا هو تسهيل الوصول إلى أدوات الذكاء الاصطناعي دون قيود، لذلك نقدم الموقع مجانيًا بالكامل وبدون أي
+              إعلانات، مع التركيز على تجربة مستخدم سلسة وواضحة. سواء كنت مبتدئًا تبحث عن أدوات لتجربة أفكارك، أو محترفًا
+              يسعى لتعزيز إنتاجيته، ستجد في منصتنا كل ما تحتاجه في مكان واحد.
+
+              نحن نؤمن بقوة المجتمع والتعاون، ولذلك نرحب بالمستخدمين والمطورين للمساهمة بأفكارهم وملاحظاتهم لتطوير
+              الموقع باستمرار. مع FutureGEN، اكتشف الذكاء الاصطناعي بطريقة بسيطة وموثوقة، وكن جزءًا من مجتمع يشاركك
+              شغف الابتكار والتطور التكنولوجي. "
+              data-en="Welcome to FutureGen, your comprehensive platform for discovering and exploring AI tools. We are a team of passionate volunteers dedicated to technology and artificial intelligence, striving to provide a reliable and user-friendly guide to the latest tools that help users make the most of AI capabilities.
+
+Our goal is to make AI tools easily accessible to everyone, which is why our platform is completely free and ad-free, focusing  on a smooth and clear user experience. Whether you are a beginner looking to experiment with ideas or a professional seeking to  enhance productivity, you will find everything you need in one place.
+
+We believe in the power of community and collaboration, and we welcome users and developers to contribute their ideas and  feedback to continuously improve the platform. With FutureGen, explore AI in a simple and trustworthy way, and become part of a  community that shares your passion for innovation and technological advancement.">
+              مرحبًا بكم في FutureGen، منصتكم الشاملة لاكتشاف واستكشاف أدوات الذكاء الاصطناعي. نحن فريق من المتطوعين
+              الشغوفين بالتكنولوجيا والذكاء الاصطناعي، ونسعى لتقديم دليل موثوق وسهل الاستخدام لجميع الأدوات الحديثة التي
+              تساعد المستخدمين على الاستفادة القصوى من قدرات الذكاء الاصطناعي.
+
+              هدفنا هو تسهيل الوصول إلى أدوات الذكاء الاصطناعي دون قيود، لذلك نقدم الموقع مجانيًا بالكامل وبدون أي
+              إعلانات، مع التركيز على تجربة مستخدم سلسة وواضحة. سواء كنت مبتدئًا تبحث عن أدوات لتجربة أفكارك، أو محترفًا
+              يسعى لتعزيز إنتاجيته، ستجد في منصتنا كل ما تحتاجه في مكان واحد.
+
+              نحن نؤمن بقوة المجتمع والتعاون، ولذلك نرحب بالمستخدمين والمطورين للمساهمة بأفكارهم وملاحظاتهم لتطوير
+              الموقع باستمرار. مع FutureGEN، اكتشف الذكاء الاصطناعي بطريقة بسيطة وموثوقة، وكن جزءًا من مجتمع يشاركك
+              شغف الابتكار والتطور التكنولوجي. </p>
           </div>
-          <aside aria-label="Quick Info" class="about-card">
-            <h4 data-ar="مركز أدوات الذكاء الاصطناعي" data-en="AI Tools Hub">
-              مركز أدوات الذكاء الاصطناعي
-            </h4>
-            <p data-ar="دليل شامل لأدوات وموارد وتقنيات الذكاء الاصطناعي."
-              data-en="Curated guide of tools &amp; resources.">
-              دليل شامل لأدوات وموارد وتقنيات الذكاء
-              الاصطناعي.
-            </p>
-          </aside>
+          <img class="AboutUsLOGO" alt="About Us" src="./Images/Logo.png" />
         </div>
         <div class="about-content">
           <div class="about-section" id="about-mission">
-            <h3 data-ar="هدفنا" data-en="Our Mission">
-              هدفنا
-            </h3>
-            <p data-ar="نحن نؤمن بأن التكنولوجيا يجب أن تكون في متناول الجميع. نعمل على تبسيط الوصول للأدوات الذكية وتقديم شروحات ونصائح عملية."
+            <h3 class="AboutM" data-ar="هدفنا" data-en="Our Mission">هدفنا</h3>
+            <p class="AboutMP data-ar=" نحن نؤمن بأن التكنولوجيا يجب أن تكون في متناول الجميع. نعمل على تبسيط الوصول
+              للأدوات الذكية وتقديم شروحات ونصائح عملية."
               data-en="We believe technology should be accessible to everyone. We simplify access to smart tools with guides and insights.">
-              نحن نؤمن بأن التكنولوجيا يجب أن تكون في متناول الجميع. نعمل على تبسيط الوصول للأدوات الذكية وتقديم
-              شروحات
+              نحن نؤمن بأن التكنولوجيا يجب أن تكون في متناول الجميع. نعمل على تبسيط الوصول للأدوات الذكية وتقديم شروحات
               ونصائح عملية.
             </p>
             <div class="about-grid">
               <div class="col">
-                <strong data-ar="تحديث مستمر" data-en="Updated Daily">
-                  تحديث مستمر
-                </strong>
+                <strong data-ar="تحديث مستمر" data-en="Updated Daily">تحديث مستمر</strong>
                 <div data-ar="نضيف أدوات جديدة ونراجعها باستمرار." data-en="We add and review tools regularly.">
-                  نضيف
-                  أدوات جديدة ونراجعها باستمرار.
+                  نضيف أدوات جديدة ونراجعها باستمرار.
                 </div>
               </div>
               <div class="col">
-                <strong data-ar="مُنقّح" data-en="Curated">
-                  مُنقّح
-                </strong>
+                <strong data-ar="مُنقّح" data-en="Curated">مُنقّح</strong>
                 <div data-ar="نختار فقط الأدوات ذات الجودة العالية والفائدة العملية."
                   data-en="Only high-quality, useful tools are listed.">
-                  نختار فقط الأدوات ذات الجودة
-                  العالية
-                  والفائدة العملية.
+                  نختار فقط الأدوات ذات الجودة العالية والفائدة العملية.
                 </div>
               </div>
               <div class="col">
-                <strong data-ar="للجميع" data-en="For Everyone">
-                  للجميع
-                </strong>
+                <strong data-ar="للجميع" data-en="For Everyone">للجميع</strong>
                 <div data-ar="محتوى وتوصيات مناسبة للمبتدئين والمحترفين."
                   data-en="Resources suitable for beginners and experts alike.">
                   محتوى وتوصيات مناسبة للمبتدئين والمحترفين.
@@ -3276,9 +3162,6 @@
               data-en="&copy; 2025 AI Tools Center. All rights reserved.">
               &copy; 2025 مركز أدوات الذكاء الاصطناعي. جميع الحقوق محفوظة.
             </p>
-            <p data-ar="مصمم بحب ❤️" data-en="Made with ❤️" style="font-weight:700;color:#401F71;">
-              مصمم بحب ❤️
-            </p>
           </div>
         </div>
       </div>
@@ -3288,8 +3171,7 @@
   <div aria-labelledby="contact-title" class="static-page" id="contact-page" role="region" style="display:none;">
     <section class="contact-page">
       <button class="btn btn-outline-primary back-button" id="back-to-home-from-contact">
-        <i aria-hidden="true" class="fas fa-arrow-left me-2 contact-back-button">
-        </i>
+        <i aria-hidden="true" class="fas fa-arrow-left me-2 contact-back-button"></i>
         <span data-ar="العودة إلى الرئيسية" data-en="Back to Home">
           Back to Home
         </span>
@@ -3311,163 +3193,91 @@
         <div class="contact-card">
           <form class="contact-form mx-auto" id="contactForm">
             <div class="mb-4">
-              <label class="form-label" data-ar="الاسم" data-en="Name" for="contactName">
-                الاسم
-              </label>
-              <input class="form-control" id="contactName" name="name" required="" type="text" />
+              <label class="form-label" data-ar="الاسم" data-en="Name" for="contactName">الاسم</label>
+              <input autocomplete="on" class="form-control" id="contactName" name="name" required="" type="text" />
             </div>
             <div class="mb-4">
               <label class="form-label" data-ar="البريد الإلكتروني" data-en="Email" for="contactEmail">
-                البريد
-                الإلكتروني
+                البريد الإلكتروني
               </label>
-              <input class="form-control" id="contactEmail" name="email" required="" type="email" />
+              <input autocomplete="on" class="form-control" id="contactEmail" required="" type="email" />
             </div>
             <div class="mb-4">
-              <label class="form-label" data-ar="الموضوع" data-en="Subject" for="contactSubject">
-                الموضوع
-              </label>
+              <label class="form-label" data-ar="الموضوع" data-en="Subject" for="contactSubject">الموضوع</label>
               <input class="form-control" id="contactSubject" name="subject" required="" type="text" />
             </div>
             <div class="mb-4">
-              <label class="form-label" data-ar="رسالتك" data-en="Message" for="contactMessage">
-                رسالتك
-              </label>
+              <label class="form-label" data-ar="رسالتك" data-en="Message" for="contactMessage">رسالتك</label>
               <textarea class="form-control" id="contactMessage" name="message" required="" rows="4"></textarea>
             </div>
             <button class="btn btn-primary w-100" data-ar="إرسال الرسالة" data-en="Send Message" type="submit">
-              إرسال
-              الرسالة
+              إرسال الرسالة
             </button>
-            <div class="mt-3" id="contactFormMessage">
-            </div>
+            <div class="mt-3" id="contactFormMessage"></div>
           </form>
         </div>
       </div>
     </section>
   </div>
-  <style>
-    /* Contact Page Styles */
-    .contact-page {
-      padding-top: 80px;
-      min-height: 100vh;
-      background: var(--bs-body-bg);
-    }
 
-    .contact-hero {
-      background: var(--primary-gradient);
-      color: var(--bs-light);
-      padding: 4rem 0;
-      margin-bottom: -3rem;
-      border-radius: 0 0 2rem 2rem;
-    }
+  <!-- News Page -->
+  <div id="news-page" class="static-page" style="display: none;">
+    <section class="container pt-5 mt-5">
+      <button class="btn btn-outline-primary mb-4 back-button" id="back-to-home-from-news">
+        <i class="fas fa-arrow-left me-2"></i>
+        <span data-ar="العودة للرئيسية" data-en="Back to Home">Back to Home</span>
+      </button>
 
-    .contact-container {
-      position: relative;
-      z-index: 1;
-      max-width: 800px;
-    }
+      <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold mb-3 gradient-text" data-ar="أحدث الأخبار والمقالات"
+          data-en="Latest News & Articles">Latest News & Articles</h1>
+        <p class="lead bg-white" data-ar="اكتشف أحدث التطورات في عالم الذكاء الاصطناعي"
+          data-en="Discover the latest developments in the world of AI">Discover the latest developments in the world of
+          AI</p>
+      </div>
 
-    .contact-card {
-      background: var(--bs-body-bg);
-      border-radius: 1rem;
-      padding: 2.5rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    }
+      <div class="row g-4" id="blog-posts-container">
+        <!-- Blog posts will be dynamically inserted here -->
+      </div>
+    </section>
+  </div>
 
-    .contact-form .form-control {
-      border: 2px solid var(--bs-border-color);
-      padding: 0.8rem 1rem;
-      border-radius: 0.5rem;
-      transition: all 0.3s ease;
-    }
+  <!-- Blog Post Details Page -->
+  <div class="blog-post-page" id="blog-post-page" style="display: none;">
+    <div class="container mt-5 pt-5">
+      <button class="btn btn-outline-primary mb-4 back-button" id="back-to-home-from-blog">
+        <i class="fas fa-arrow-left me-2"></i>
+        <span data-ar="العودة إلى الأخبار" data-en="Back to News">Back to News</span>
+      </button>
 
-    .contact-form .form-control:focus {
-      border-color: var(--bs-primary);
-      box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.1);
-    }
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <article class="blog-details-content">
+            <div class="text-center mb-5">
+              <span class="badge bg-primary mb-3" id="blog-post-category">Category</span>
+              <h1 class="display-4 fw-bold mb-3" id="blog-post-title">Post Title</h1>
+              <div class="text-muted mb-4">
+                <span data-en="Posted on" data-ar="بتاريخ">Posted on</span>
+                <span id="blog-post-date">2024-01-01</span>
+                <span data-en="By" data-ar="بواسطة">By</span>
+                <span id="blog-post-author">Author</span>
+              </div>
+            </div>
 
-    .contact-form .form-label {
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
+            <img src="" alt="" class="img-fluid rounded mb-5 w-100" id="blog-post-image"
+              style="height: 400px; object-fit: cover;">
 
-    .contact-form .btn-primary {
-      padding: 0.8rem 2rem;
-      font-weight: 600;
-      transition: all 0.3s ease;
-    }
-
-    .contact-form .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(var(--bs-primary-rgb), 0.2);
-    }
-
-    /* Theme-specific styles */
-    [data-bs-theme="dark"] .contact-card {
-      background: var(--bs-dark);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    }
-
-    [data-bs-theme="dark"] .contact-form .form-control {
-      background-color: var(--bs-dark);
-      border-color: var(--bs-border-color);
-      color: var(--bs-light);
-    }
-
-    [data-bs-theme="dark"] .contact-form .form-control:focus {
-      background-color: var(--bs-dark);
-      border-color: var(--bs-primary);
-    }
-  </style>
-  <script>
-    // Show Contact Page when footer link is clicked
-    document.addEventListener('DOMContentLoaded', function () {
-      document.getElementById('contact-link').addEventListener('click', function (e) {
-        document.getElementById('home-page').style.display = 'none';
-        document.getElementById('about-page').style.display = 'none';
-        document.getElementById('contact-page').style.display = 'block';
-        e.preventDefault();
-      });
-    });
-
-    document.getElementById('back-to-home-from-contact').addEventListener('click', function () {
-      document.getElementById('contact-page').style.display = 'none';
-      document.getElementById('home-page').style.display = 'block';
-    });
-
-    // Contact Form Submission with animation
-    document.getElementById('contactForm').addEventListener('submit', function (e) {
-      e.preventDefault();
-      const messageDiv = document.getElementById('contactFormMessage');
-      messageDiv.innerHTML = `
-      <div class="alert alert-success d-flex align-items-center" role="alert">
-        <i class="fas fa-check-circle me-2"></i>
-        <div>
-          ${document.documentElement.lang === 'ar' ?
-          'شكراً لتواصلك معنا! سنرد عليك قريباً.' :
-          'Thank you for contacting us! We will reply soon.'}
+            <div class="blog-content fs-5 lh-base" id="blog-post-body-container">
+              <!-- Blog content will be inserted here -->
+            </div>
+          </article>
         </div>
       </div>
-    `;
+    </div>
+  </div>
 
-      // Add animation to the success message
-      messageDiv.firstChild.style.animation = 'slideIn 0.5s ease-out';
-
-      // Reset form with animation
-      const form = this;
-      form.style.opacity = '0.5';
-      setTimeout(() => {
-        form.reset();
-        form.style.opacity = '1';
-      }, 500);
-    });
-  </script>
-  <!-- Footer -->
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-  </script>
-  <script src="./Script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
