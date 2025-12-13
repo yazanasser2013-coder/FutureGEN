@@ -1,0 +1,528 @@
+{
+  "timestamp": "2025-12-09T06:32:32.136Z",
+  "total_tools": 4234,
+  "processed": 4234,
+  "fixed": 2,
+  "failed": 1046,
+  "skipped": 3186,
+  "success_rate": "0.2%",
+  "sources": {
+    "favicon_services": 2
+  },
+  "fixed_tools": [
+    {
+      "name": "Betterreach.io Find, Connect & Close 50x Faster 🚀 #data",
+      "status": "fixed",
+      "source": "favicon_services",
+      "logo": "https://icon.horse/icon/betterreach.io"
+    },
+    {
+      "name": "Imaginarium Create books with AI-generated content and audio narration. #AI",
+      "status": "fixed",
+      "source": "favicon_services",
+      "logo": "https://icon.horse/icon/octofreetools.com"
+    }
+  ],
+  "failed_tools": [
+    {
+      "name": "Fedica Mobile Social media AI analytics, publishing, listening & analysis #Social Media Management",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "AI Humanizer - 100% Free Bypass Detectors. Write Like a Human. #AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Distill Every move, any company, tracked on autopilot #Automation",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "VisionCraft MCP AI context engine for vibe coding in Cursor/Windsurf #data",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Neural Frames Autopilot Create Professional Full-Length Music Videos in 2 Clicks #AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "PocketShield Your Private AI for sensitive data discovery #Data Privacy",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "LightPDF AI Agent Your All-in-One PDF Assistant #Productivity",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Closure AI-chats with those who disappeared #Communication",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Phala Cloud Zero-trust cloud for safe AGI #Cloud Computing",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Joyn Align product teams with the people closest to customers #Real-time",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "PhraseClip Improve your vocabulary as you browse the web #Translation",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Mukh.1 Automate work with AI Agents #data",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Flowise Build AI Agents, Visually #data",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "AutoA2A: Convert Agents to A2A Servers Easily Deploy Your Existing AI Agent Projects as A2A Servers #data",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Fluig AI Instantly turn documents & ideas into professional diagrams #Productivity",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Bolto Find, interview, and hire engineers with AI #Recruiting",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "AI Action Figure Maker-Trend Transform your photos into collectible action figures #Technology",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Evenza Revolutionizing networking at events with AI #Event Management",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "One Click Deploy Deploy your LiveKit Voice AI agents instantly #Deployment",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Opusense AI-generated reports for site inspections #AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "TikTok AI Alive Bringing your photos to life on TikTok Stories #AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Kazu Navi (かずナビ) Learn Japanese with clarity, context, and confidence #Language Learning",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Gadget The fastest way to build and scale apps with AI #AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Generated Assets Turn any idea into an investable index with AI #AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Shadow Meet once, stay ahead—Shadow helps you follow through #data",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Corpus Insight The OS for modern work #data",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "AI Meeting Notes by Notion Perfect meeting memory in Notion #Productivity",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Max Fitness AI AI, Fitness, Trainer, Workout Coach, Personal Trainer #Fitness",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "FastVLM Lightweight open-source vision models for Apple devices #data",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Photo AI Reimagine your photos with AI #AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "LevelUp for Hacker News AI Summaries for Hacker News & Tech Articles (iOS/Android!) #Mobile App",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "iCliniq Tes for Prostate Cancer Crafted by Expert Physicians #Healthcare",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "TableSprint Vibe coding platform for developing business applications #Coding",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "ShareAI Think Uber, but for AI Open Source Models #data",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Jump Start by Synscribe pSEO ideas generator tool #SEO",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "RADiCAL AI motion capture meets 3D storytelling #motion capture",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "AI Avatar Videos AI Avatars with natural expressions and perfect lipsync #Artificial Intelligence",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Probo Compliance for Startups to get SOC2/ISO27001/HIPAA in a week #Open-source",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Syft AI Define Your news & choose your topics for personalized feed #AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Qualisync AI that gives your time back - for busy professionals #AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "TheGoatedProfessor The best AI professor! Learn Smarter, Not Harder! #Study Tools",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Demo → Intercom by DocsHound Screen share demo to articles with screenshots #Intercom",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Alder Optimizing Data Warehouse Query Performance via AI Agents #data",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "VoltAgent Build TS AI agents with n8n-style observability #Framework",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Codelifted Generate Pull Requests with AI #AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Matter AI AI Code reviewer to fix bugs, security & performance issues #AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Agentic Testing by Testsigma AI agents create and run tests from specs & designs #AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "SnapHire Prepare for job interviews with AI-powered mock interviews. #data",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "AnimeMyPic Turn your photo into anime art with AI — fast and easy! #AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Reddityzer Automate your Reddit account with AI #Social Media Marketing",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "InternshipsAI Discover AI Internships That Launch Careers # AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "MadeByHuman A badge for human work, helping AI-free creators stand out. # MadeByHuman : [creator",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "DeepList AI A simple way to discover how AI can help you #AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "LinkedBoost AI AI that Upgrades LinkedIn for More Job Offers #Productivity",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "RockPic Identify all kind of rocks instantly #AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "eBay AI Shopping Agent Your AI assistant for truly personal eBay shopping #AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "SpeakingAI Practice speaking skills with personalized AI conversations #skills improvement",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "AI Voice Calls Send AI voice calls for free. Human-like outbound calls #AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Two-Step Contextual Enrichment TSCE is model-agnostic and increases LLM accuracy +20-30pp #Machine Learning",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "DeckSpeed Cursor for slides #AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Viaona Ai Powered Travel. Uniquely Yours🧠📍🏝🛫 #Travel",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "PLAI - Mondadori Group Accelerator Accelerate your AI startup with PLAI's full support #AI startups",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Soma Skin Cancer Classifier A lightweight Skin Cancer Classifier #Healthcare",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "DeepImpasse New LLM is SASSY # sassy",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Vilcos Chat your website to life: The CMS, Reimagined #AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "PersoLetter Receive Personalized Newsletters Every Week #data",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "AI API Pricing Calculator Estimate price for using different AI model API's #AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Action Figure AI Turn Yourself into an Epic Action Figure with AI! #toy",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Voila Open-source AI for real-time, expressive voice role-play #Open-source",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Promptlyzer The fastest way to test, version, and deploy your prompts. # DevOps",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Aladin Supercharge your browser with AI #AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Graphthem Deep-research engine reads 10,000 articles, gives one answer #data",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Become Never-ending AI-driven interactive stories. #AI-powered",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "InstantAiAds Turn Products into Viral Ads with AI Magic #AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Seveum Find your dream job in record time #AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Zoho WorkDrive 5.0 Intelligent content management platform #Cloud Storage",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Pipedream MCP 2,500+ APIs and 10,000+ tools for your AI assistant #data",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "pfp.fm Upgrade Your Profile Picture #image editing",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Antispace Artificially Intelligent Operating System (AIOS) #AIOS",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Posts Copy AI-Powered Your Social Media Content #Copywriting",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "HyperArc AI Native Business Intelligence #AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Referlytics Capturing Every Interaction with Precision #AI-powered",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "QuickSearhPlus-AI Your AI-powered productivity assistant. #AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "CopyNote Smart snippets and message templates for your phone #Productivity",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Chef by Convex Generate and launch realtime full‑stack apps #AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Promptify Use AI instantly from website write emails, summarize pages #Productivity",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "PixelGlow AI to seamlessly merge image cutouts into realistic photos #Photography",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "ThotStream World's first anti-social social experience moderated by AI #social media",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Meta Perception Encoder Vision encoder setting new standards in image & video tasks #Vision Encoding",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Gemini 2.5 Pro I/O Edition Even better coding performance #Productivity",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Gemini 2.5 Pro (I/O edition) Our most intelligent model that’s even better at coding #Web Development",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Nelly Create your own team of AI agents #AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Self-Learning Agents that improve! Make AI agents self-improve instantly with human feedback! #AI",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Empirical Heart Health Don't die of a heart attack #Healthcare",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Closer: Deeper Connections Build Stronger Relationships #Relationships",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Resume AI Optimise your resumes free with LLMs #data",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "EchoComet Feed your code context directly to AI #data",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Intercom + Fin AI Agent for Startups The best AI agent and AI-first customer service platform #Customer Service",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Custom Template by CountAnything Count things faster and more accurately. #Productivity",
+      "status": "failed",
+      "reason": "All strategies failed"
+    },
+    {
+      "name": "Connect Four Turn ChatGPT wait time into game time with Connect Four #Fun",
+      "status": "failed",
+      "reason": "All strategies failed"
+    }
+  ]
+}

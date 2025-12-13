@@ -44,7 +44,7 @@
       --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
       --easing: cubic-bezier(0.2, 0.8, 0.2, 1);
       --header-h: 68px;
-      --footer-bg-light: linear-gradient(135deg, #5a2d9c 0%, #d4958e 100%);
+      --footer-bg-light: linear-gradient(135deg, #be7b72 0%, #633d5c 100%);
       --footer-bg-dark: linear-gradient(135deg, #2a1a4a 0%, #8a5a52 100%);
       --footer-text-light: #ffffff;
       --footer-text-dark: #e5e7eb;
@@ -68,6 +68,11 @@
     /* ========== BASE ========== */
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-padding-top: 90px;
+      /* عدّل الرقم حسب ارتفاع الهيدر */
     }
 
     html,
@@ -146,6 +151,21 @@
     body.rtl-mode .back-button i {
       transform: rotate(180deg);
     }
+
+    /* Sections were hidden by default, which prevented anything after the hero
+       from appearing if JS failed to add the .show class. Keep the transition
+       but make them visible by default so content always renders. */
+    .section {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all .6s ease;
+    }
+
+    .section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
 
     /* صفحة تفاصيل الأداة */
     .tool-details-page {
@@ -249,7 +269,7 @@
       background: rgba(255, 255, 255, 0.6);
       backdrop-filter: blur(12px);
       border-radius: 40px;
-      width: 1350px;
+      width: 1450px;
       max-width: calc(100% - 32px);
     }
 
@@ -259,13 +279,8 @@
     }
 
     .navbar-brand {
-      font-family: "Tajawal", "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      font-weight: 700;
-      font-size: 1.5rem;
-      color: var(--primary-color);
       display: flex;
       align-items: center;
-      gap: 10px;
       transition: all 0.3s ease;
     }
 
@@ -293,7 +308,6 @@
       color: var(--text-dark) !important;
       opacity: 0.8;
       transition: all 0.2s ease;
-      margin: 0 0.25rem;
       padding: 0.5rem 1rem !important;
       border-radius: var(--radius-xs);
       position: relative;
@@ -522,15 +536,15 @@
       animation-delay: 4s;
     }
 
-    .nav-icon:nth-child(6) {
+    .nav-icon-manus:nth-child(6) {
       animation-delay: 1.5s;
     }
 
-    .nav-icon:nth-child(7) {
+    .nav-icon-manus:nth-child(7) {
       animation-delay: 2.5s;
     }
 
-    .nav-icon:nth-child(8) {
+    .nav-icon-manus:nth-child(8) {
       animation-delay: 3.5s;
     }
 
@@ -578,6 +592,18 @@
       background: var(--gradient);
       border-radius: 2px;
       margin-bottom: 2rem;
+      top: 25px;
+    }
+
+    .categories-section-underline {
+      height: 3px;
+      width: 64px;
+      background: var(--gradient);
+      border-radius: 2px;
+      margin-bottom: 2rem;
+      top: 200px;
+      align-items: center;
+      justify-content: center;
     }
 
     .bg-white {
@@ -767,10 +793,9 @@
 
     .category-grid {
       display: grid;
-      grid-template-columns: repeat(8, minmax(193px, 2fr));
+      grid-template-columns: repeat(8, minmax(200px, 2fr));
       gap: 0.7rem;
       justify-content: center;
-      align-items: center;
       padding-top: 2rem;
     }
 
@@ -1003,45 +1028,153 @@
       }
     }
 
-    /* ========== RESPONSIVE ========== */
-    @media (max-width: 992px) {
-      .hero-title {
-        font-size: 2.5rem;
+    /* ========== ENHANCED RESPONSIVENESS ========== */
+
+    /* Extra Small Devices (Phones, less than 400px) */
+    @media (max-width: 400px) {
+
+      /* Navbar adjustments */
+      nav {
+        width: calc(100% - 20px) !important;
+        padding: 10px 20px !important;
+        top: 20px !important;
+        border-radius: 30px !important;
       }
 
-      .hero-subtitle {
-        font-size: 1.1rem;
-      }
-
-      .nav-search {
-        width: 100%;
-        margin-top: 1rem;
-      }
-
-      .nav-search:focus-within {
-        width: 100%;
+      .navbar-brand img {
+        height: 28px !important;
       }
 
       .nav-actions {
-        flex-direction: column;
-        align-items: stretch;
-        width: 100%;
+        gap: 0.25rem;
       }
 
-      .navbar-collapse {
-        padding: 1rem;
-        background: var(--bg-white);
-        border-radius: var(--radius-md);
-        margin-top: 10px;
+      .btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
       }
 
-      .category-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      /* Hero section */
+      .hero-section {
+        padding-top: 80px;
+        min-height: 45vh;
+      }
+
+      .hero-content {
+        padding: 1.5rem 0.5rem;
+        top: 0;
+      }
+
+      .hero-title {
+        font-size: 1.5rem !important;
+        line-height: 1.3;
+      }
+
+      .hero-subtitle {
+        font-size: 0.85rem !important;
+      }
+
+      .hero-buttons {
+        gap: 0.5rem;
+      }
+
+      .hero-buttons .btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+      }
+
+      /* Hero icons - complete restructuring */
+      .hero-icons-container {
+        flex-wrap: wrap;
+        gap: 5px !important;
+        margin-top: 1rem;
+      }
+
+      .nav-icon,
+      .nav-icon-manus {
+        flex: 0 0 calc(33.333% - 10px);
+        margin: 0 !important;
+        animation: none !important;
       }
 
       .nav-icon img {
-        width: 180px;
-        height: 180px;
+        width: 80px !important;
+        height: 80px !important;
+      }
+
+      .nav-icon-manus img {
+        width: 90px !important;
+        height: 90px !important;
+        margin: 10px !important;
+      }
+
+      /* Categories grid */
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 0.5rem;
+      }
+
+      .category-card {
+        width: 100% !important;
+        height: 70px !important;
+        padding: 0.5rem;
+      }
+
+      .category-icon {
+        font-size: 1.1rem;
+        margin-bottom: 0.2rem;
+      }
+
+      .category-title {
+        font-size: 0.7rem;
+      }
+
+      /* Footer */
+      .footer-container {
+        gap: 30px;
+      }
+
+      .footer-newsletter form {
+        flex-direction: column;
+      }
+
+      .support-box .d-flex {
+        flex-direction: column;
+      }
+
+      .support-box .d-flex .donate-btn {
+        flex: 1;
+        margin-bottom: 0.5rem;
+      }
+
+      #customAmount {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      /* Cards */
+      .card-body {
+        padding: 1rem;
+      }
+
+      .card-title {
+        font-size: 1rem;
+      }
+
+      .card-text {
+        font-size: 0.85rem;
+      }
+
+      /* Tool details */
+      .tool-details-hero {
+        padding: 40px 0;
+      }
+
+      .tool-logo-large {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 20px;
+        display: block;
       }
 
       .tool-info-grid,
@@ -1049,11 +1182,135 @@
       .specs-grid {
         grid-template-columns: 1fr;
       }
+
+      #same-category-container .col-xl-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      /* About page */
+      .about-hero .title {
+        font-size: 1.8rem;
+      }
+
+      .about-banner h1 {
+        font-size: 1.7rem;
+      }
+
+      .about-banner p {
+        font-size: 0.9rem;
+      }
+
+      .about-section {
+        padding: 20px 15px;
+      }
+
+      /* Blog/News pages */
+      .blog-post-page .container {
+        padding-top: 20px;
+      }
+
+      .blog-details-content h1 {
+        font-size: 1.8rem;
+      }
+
+      #blog-post-image {
+        height: 250px;
+      }
+
+      /* Footer */
+      .footer-newsletter {
+        padding: 20px 15px;
+      }
+
+      .footer-newsletter form {
+        flex-direction: column;
+      }
+
+      .footer-bottom {
+        font-size: 0.85rem;
+      }
     }
 
-    @media (max-width: 768px) {
+    /* Small Devices (Phones, 400px to 576px) */
+    @media (min-width: 401px) and (max-width: 576px) {
+
+      /* Hero icons */
+      .hero-icons-container {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .nav-icon {
+        flex: 0 0 calc(25% - 10px);
+      }
+
+      .nav-icon-manus {
+        flex: 0 0 calc(20% - 10px);
+      }
+
+      .nav-icon img {
+        width: 100px;
+        height: 100px;
+      }
+
+      .nav-icon-manus img {
+        width: 90px;
+        height: 90px;
+        margin: 15px;
+      }
+
+      /* Categories grid */
+      .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .category-card {
+        width: 100% !important;
+      }
+    }
+
+    /* Medium Devices (Tablets, 577px to 768px) */
+    @media (min-width: 577px) and (max-width: 768px) {
+
+      /* Hero icons */
+      .hero-icons-container {
+        gap: 15px;
+      }
+
+      .nav-icon img {
+        width: 130px;
+        height: 130px;
+      }
+
+      .nav-icon-manus img {
+        width: 90px;
+        height: 90px;
+        margin: 25px;
+      }
+
+      /* Categories grid */
+      .category-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      /* Hero section */
+      .hero-section {
+        padding-top: 100px;
+        min-height: 50vh;
+      }
+
+      .hero-content {
+        padding: 2rem 1rem;
+        top: 0;
+      }
+
       .hero-title {
-        font-size: 2rem;
+        font-size: 2.2rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1rem;
       }
 
       .hero-buttons {
@@ -1061,54 +1318,306 @@
         align-items: center;
       }
 
-      .tool-logo-large {
-        margin-top: 2rem;
+      .hero-buttons .btn {
+        width: 100%;
+        max-width: 250px;
       }
+    }
 
+    /* Large Devices (Desktops, 769px to 992px) */
+    @media (min-width: 769px) and (max-width: 992px) {
+
+      /* Hero icons */
       .nav-icon img {
-        width: 60px;
-        height: 60px;
+        width: 150px;
+        height: 150px;
       }
 
-      .specs-section {
-        padding: 1rem;
+      .nav-icon-manus img {
+        width: 125px;
+        height: 125px;
       }
 
-      .show-more-btn {
-        margin-block-start: 1.25rem;
+      /* Categories grid */
+      .category-grid {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+
+    /* Extra Large Devices (Large Desktops, 993px to 1200px) */
+    @media (min-width: 993px) and (max-width: 1200px) {
+
+      /* Categories grid */
+      .category-grid {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+
+    /* ========== IMPROVED NAVBAR RESPONSIVENESS ========== */
+    @media (max-width: 992px) {
+      nav {
+        width: calc(100% - 20px) !important;
+        padding: 10px 20px !important;
+        top: 20px !important;
+      }
+
+      .navbar-collapse {
+        margin-top: 15px;
+        padding: 15px;
+        border-radius: 12px;
+        box-shadow: var(--shadow-md);
+      }
+
+      .nav-search {
+        margin-top: 10px;
+        width: 100% !important;
+      }
+
+      .nav-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+      }
+
+      .auth-section {
+        justify-content: center;
+        width: 100%;
       }
     }
 
     @media (max-width: 576px) {
-      .hero-section {
-        padding-top: 100px;
+      nav {
+        padding: 8px 15px !important;
+        border-radius: 20px !important;
       }
 
-      .hero-title {
-        font-size: 1.75rem;
+      .navbar-brand {
+        font-size: 1.2rem;
       }
 
-      .hero-subtitle {
+      .navbar-brand img {
+        height: 30px;
+      }
+
+      .nav-link {
+        padding: 0.4rem 0.8rem !important;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* ========== IMPROVED CATEGORIES GRID RESPONSIVENESS ========== */
+    @media (max-width: 1400px) {
+      .category-grid {
+        grid-template-columns: repeat(7, minmax(180px, 1fr));
+      }
+    }
+
+    @media (max-width: 1200px) {
+      .category-grid {
+        grid-template-columns: repeat(6, minmax(160px, 1fr));
+      }
+    }
+
+    @media (max-width: 992px) {
+      .category-grid {
+        grid-template-columns: repeat(5, minmax(140px, 1fr));
+      }
+    }
+
+    @media (max-width: 768px) {
+      .category-grid {
+        grid-template-columns: repeat(4, minmax(120px, 1fr));
+      }
+
+      .category-card {
+        width: 100% !important;
+        height: 85px !important;
+        padding: 1rem 0.5rem;
+      }
+
+      .category-icon {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .category-title {
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .category-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+      }
+    }
+
+    /* ========== IMPROVED TOOLS CARDS RESPONSIVENESS ========== */
+    @media (max-width: 768px) {
+      .card {
+        margin-bottom: 1rem;
+      }
+    }
+
+    /* ========== IMPROVED FOOTER RESPONSIVENESS ========== */
+    @media (max-width: 768px) {
+      .site-footer {
+        padding-top: 40px;
+      }
+
+      .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+      }
+
+      .footer-col form {
+        flex-direction: column;
+      }
+
+      .footer-col button {
+        width: 100%;
+        margin-top: 0.5rem;
+      }
+
+      .social-links {
+        justify-content: center;
+      }
+
+      .support-box {
+        padding: 1.5rem;
+      }
+
+      .support-box .d-flex {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
+      #customAmount {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+    }
+
+    /* ========== IMPROVED MODAL RESPONSIVENESS ========== */
+    @media (max-width: 576px) {
+      .modal-dialog {
+        margin: 10px;
+      }
+
+      .modal-content {
+        border-radius: 8px;
+      }
+
+      .modal-header,
+      .modal-body,
+      .modal-footer {
+        padding: 1rem;
+      }
+
+      .aihub-modal .modal-body {
+        padding: 20px;
+      }
+    }
+
+    /* ========== IMPROVED ABOUT PAGE RESPONSIVENESS ========== */
+    @media (max-width: 768px) {
+      .about-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .AboutUsLOGO {
+        margin: 0 auto 20px;
+        order: -1;
+      }
+
+      .about-banner h1 {
+        font-size: 2rem;
+      }
+
+      .about-banner p {
         font-size: 1rem;
       }
 
-      .category-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ========== ORIENTATION-SPECIFIC STYLES ========== */
+    @media (max-width: 768px) and (orientation: landscape) {
+      .hero-section {
+        min-height: 70vh;
+      }
+
+      .hero-icons-container {
+        gap: 10px;
       }
 
       .nav-icon img {
+        width: 90px;
+        height: 90px;
+      }
+
+      .nav-icon-manus img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    /* ========== HIGH-DPI SCREENS SUPPORT ========== */
+    @media (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi) {
+
+      .nav-icon img,
+      .nav-icon-manus img,
+      .category-icon,
+      .navbar-brand img {
+        image-rendering: -webkit-optimize-contrast;
+      }
+    }
+
+    /* ========== IMPROVED LOADING STATES ========== */
+    @media (max-width: 576px) {
+      .loader {
         width: 50px;
         height: 50px;
       }
 
-      .nav-icon-manus img {
+      .loader:after {
         width: 30px;
         height: 30px;
+        border-width: 4px;
+      }
+    }
+
+    /* ========== ENHANCED TOUCH INTERACTIONS ========== */
+    @media (hover: none) and (pointer: coarse) {
+      .card:hover {
+        transform: none;
       }
 
-      .show-more-btn {
-        margin-block-start: 1rem;
-        width: fit-content;
+      .category-card:hover {
+        transform: none;
+      }
+
+      .nav-link::after {
+        display: none;
+      }
+
+      /* Increase touch targets for mobile */
+      .btn,
+      .nav-link,
+      .category-card {
+        min-height: 44px;
+      }
+
+      .nav-icon,
+      .nav-icon-manus {
+        min-height: 60px;
+        min-width: 60px;
       }
     }
 
@@ -1386,6 +1895,15 @@
         width: 200px;
         height: 200px;
       }
+
+      .nav-icon-manus {
+        margin: 8px;
+      }
+
+      .nav-icon-manus img {
+        width: 210px;
+        height: 210px;
+      }
     }
 
     @media (max-width: 768px) {
@@ -1401,6 +1919,15 @@
       .nav-icon img {
         width: 180px;
         height: 180px;
+      }
+
+      .nav-icon-manus {
+        margin: 10px;
+      }
+
+      .nav-icon-manus img {
+        width: 190px;
+        height: 190px;
       }
 
       .category-grid {
@@ -2381,6 +2908,7 @@
       border: 1px solid rgba(255, 255, 255, 0.2);
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
       transition: all 0.3s ease;
+      width: 400px;
     }
 
     html[data-theme="dark"] .support-box {
@@ -2560,7 +3088,88 @@
     html[data-theme="dark"] .AboutMP {
       color: hsl(0, 0%, 89%);
     }
+
+    .categories-title {
+      top: 50px;
+    }
+
+    .Tools-title {
+      top: 50px;
+    }
+
+    .categories-container {
+      background-color: #f8fafc;
+    }
+
+    html[data-theme="dark"] .categories-container {
+      background-color: #0b0f1a;
+    }
+
+    /* زر الانتقال بين الهيرو والفوتر */
+    .scroll-toggle-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 15px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: none;
+      background: #baaad2;
+      color: #fff;
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 999999;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      transition:
+        background-color 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .scroll-toggle-btn:hover {
+      background: #5e32b0;
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    }
+
+    /* للداكن */
+    html[data-theme="dark"] .scroll-toggle-btn {
+      background: #be7b72;
+    }
+
+    html[data-theme="dark"] .scroll-toggle-btn:hover {
+      background: #d38c82;
+    }
+
+    .counter {
+      display: inline-block;
+      min-width: 40px;
+      text-align: center;
+      /* will-change: contents; */
+    }
+
+    /* Remove spinners from number inputs */
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type=number] {
+      -moz-appearance: textfield;
+      appearance: textfield;
+    }
+
+    .static-back-btn {
+      margin: 90px;
+    }
+
+
   </style>
+  <script>try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) { };</script>
 </head>
 
 <body>
@@ -2570,8 +3179,8 @@
   <header class="sticky-top">
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand" href="./index.html">
-          <img alt="AI Tools Directory" src="./Images/Logo.png" />
+        <a class="navbar-brand" href="javascript:void(0)" onclick="location.reload()">
+          <img alt="AI Tools Directory" loading="lazy" src="./Images/Logo.png" />
         </a>
         <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
           data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
@@ -2586,13 +3195,15 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link smooth-scroll" data-ar="الفئات" data-en="Categories" href="#categories">
+              <a id="cats-link" class="nav-link" data-scroll="categories" data-ar="الفئات" data-en="Categories"
+                href="#categories">
                 Categories
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#news-page" id="news-link" data-ar="أخبار الذكاء الاصطناعي" data-en="AI News">
-                AI News</a>
+              <a id="news-link" class="nav-link" data-page="news-page" href="#news-page">
+                AI News
+              </a>
             </li>
           </ul>
           <div class="nav-actions">
@@ -2733,7 +3344,7 @@
     </div>
   </div>
   <!-- الصفحة الرئيسية -->
-  <div id="home-page">
+  <div id="home-page" class="page">
     <section class="hero-section">
       <div class="hero-content">
         <h1 class="hero-title" data-ar="اكتشف أفضل أدوات الذكاء الاصطناعي لاحتياجاتك"
@@ -2741,7 +3352,7 @@
           Discover the Best AI Tools for Your Needs
         </h1>
         <p class="hero-subtitle">
-          <span class="counter" data-count="5000">
+          <span class="counter" data-count="4000">
             0
           </span>
           +
@@ -2765,44 +3376,45 @@
         </div>
         <div class="hero-icons-container">
           <a class="nav-icon" href="https://chatgpt.com/" rel="noopener" target="_blank">
-            <img alt="ChatGPT" src="./Images/ChatGPT.png" />
+            <img alt="ChatGPT" loading="lazy" src="./Images/ChatGPT.png" />
           </a>
           <a class="nav-icon" href="https://claude.ai/new" rel="noopener" target="_blank">
-            <img alt="Claude" src="./Images/Claude.png" />
+            <img alt="Claude" loading="lazy" src="./Images/Claude.png" />
           </a>
-          <a class="nav-icon" href="https://www.deepseek.com/en" rel="noopener" target="_blank">
-            <img alt="DeepSeek" src="./Images/DeepSeek.png" />
-          </a>
-          <a class="nav-icon" href="https://figma.com" rel="noopener" target="_blank">
-            <img alt="Figma" src="./Images/Figma.png" />
-          </a>
-          <a class="nav-icon" href="https://gemini.google.com/" rel="noopener" target="_blank">
-            <img alt="Gemini" src="./Images/Gemeni.png" />
-          </a>
-          <a class="nav-icon-manus" href="https://manus.im/" rel="noopener" target="_blank">
-            <img alt="Manus" src="./Images/Manus.png" />
+          <a class="nav-icon-manus" href="https://grok.com/" rel="noopener" target="_blank">
+            <img alt="KimiK2" loading="lazy" src="./Images/Grok.png" />
           </a>
           <a class="nav-icon-manus" href="https://chat.humain.ai/en" rel="noopener" target="_blank">
-            <img alt="Humain" src="./Images/Humain.png" />
+            <img alt="Humain" loading="lazy" src="./Images/Humain.png" />
+          </a>
+          <a class="nav-icon" href="https://www.deepseek.com/en" rel="noopener" target="_blank">
+            <img alt="DeepSeek" loading="lazy" src="./Images/DeepSeek.png" />
+          </a>
+          <a class="nav-icon" href="https://figma.com" rel="noopener" target="_blank">
+            <img alt="Figma" loading="lazy" src="./Images/Figma.png" />
+          </a>
+          <a class="nav-icon" href="https://gemini.google.com/" rel="noopener" target="_blank">
+            <img alt="Gemini" loading="lazy" src="./Images/Gemeni.png" />
+          </a>
+          <a class="nav-icon-manus" href="https://manus.im/" rel="noopener" target="_blank">
+            <img alt="Manus" loading="lazy" src="./Images/Manus.png" />
           </a>
           <a class="nav-icon-manus" href="https://www.perplexity.ai/" rel="noopener" target="_blank">
-            <img alt="Preplixity" src="./Images/Preplixity.png" />
+            <img alt="Preplixity" loading="lazy" src="./Images/Preplixity.png" />
           </a>
           <a class="nav-icon-manus" href="https://www.kimi.com/" rel="noopener" target="_blank">
-            <img alt="KimiK2" src="./Images/KimiK2.png" />
+            <img alt="KimiK2" loading="lazy" src="./Images/KimiK2.png" />
           </a>
         </div>
       </div>
     </section>
     <main id="main">
-      <section class="section bg-white categories-container" id="categories">
-        <div class="container">
+      <section class="section" id="categories">
+        <div class="categories-container">
           <div class="text-center mb-5">
             <h2 class="fw-bold categories-title" data-ar="فئات أدوات الذكاء الاصطناعي" data-en="AI Tools Categories">
               AI Tools Categories
             </h2>
-            <div class="section-underline mx-auto">
-            </div>
           </div>
           <!-- زر الرجوع -->
           <button class="back-button" id="backButtonCategories" style="display: none;">
@@ -2810,28 +3422,25 @@
             </i>
             رجوع
           </button>
-          ّ
-          <div class="category-grid" id="categories-container">
-          </div>
+          <div class="category-grid" id="categories-container"></div>
         </div>
       </section>
       <section class="section" id="featured">
         <div class="container">
           <div class="text-center mb-5">
-            <h2 class="fw-bold" data-ar="أدوات الذكاء الاصطناعي" data-en="AI Tools">
+            <h2 class="fw-bold Tools-title" data-ar="أدوات الذكاء الاصطناعي" data-en="AI Tools">
               AI Tools
             </h2>
-            <div class="section-underline mx-auto">
-            </div>
           </div>
+
           <!-- زر الرجوع -->
           <button class="back-button" id="backButtonTools" style="display: none;">
-            <i class="fas fa-arrow-left">
-            </i>
+            <i class="fas fa-arrow-left"></i>
             رجوع
           </button>
+
           <div id="featured-tools-container">
-            <!-- محتوى الأدوات -->
+            <!-- محتوى الأدوات حسب الأقسام -->
           </div>
         </div>
       </section>
@@ -2849,12 +3458,20 @@
               AI tools...
             </p>
             <div class="social-links">
-              <a class="text-light" href="javascript:void(0)">
+              <a class="text-light" href="https://x.com/FutureGEN2025">
                 <i class="bi bi-twitter-x">
                 </i>
               </a>
-              <a class="text-light" href="https://www.instagram.com/futuregen2025/">
+              <a class="text-light" href="https://www.instagram.com/futuregen26/">
                 <i class="bi bi-instagram">
+                </i>
+              </a>
+              <a class="text-light" href="https://www.youtube.com/@yazan-gf7nh">
+                <i class="bi bi-youtube">
+                </i>
+              </a>
+              <a class="text-light" href="https://www.facebook.com/profile.php?id=61584349735605">
+                <i class="bi bi-facebook">
                 </i>
               </a>
             </div>
@@ -2890,7 +3507,8 @@
               </h6>
               <p class="text-light opacity-75" data-ar="ادعمنا ليستمر العطاء من اجل العلم و المعرفة و تقدم الأنسان"
                 data-en="Support us so that the giving continues for the sake of knowledge, learning, and the advancement of humanity.">
-                Support us so that the giving continues for the sake of knowledge, learning, and the advancement of humanity.
+                Support us so that the giving continues for the sake of knowledge, learning, and the advancement of
+                humanity.
               </p>
               <div class="d-flex flex-wrap gap-2 mb-3">
                 <button class="btn btn-outline-light btn-sm donate-btn" data-amount="1">
@@ -2905,8 +3523,7 @@
                 <button class="btn btn-outline-light btn-sm donate-btn" data-amount="10">
                   $10
                 </button>
-                <input class="form-control form-control-sm w-50 mt-2" id="customAmount" min="1" placeholder="Custom"
-                  style="max-width:110px;" type="number" />
+                <input id="customAmount" placeholder="Custom" style="max-width:110px;" type="number" />
               </div>
               <button class="btn btn-primary w-100" id="paypalDonateBtn">
                 <span data-ar="ادعمنا عبر PayPal" data-en="Support Us with PayPal">
@@ -2943,13 +3560,6 @@
                 .
                 <span data-ar="جميع الحقوق محفوظة ل." data-en="All rights reserved.">
                   All rights reserved.
-                </span>
-              </p>
-            </div>
-            <div class="col-md-6 text-center text-md-end">
-              <p class="mb-0 text-light opacity-75">
-                <span data-ar="مصمم بحب ❤️" data-en="Made with love ❤️">
-                  Made with love ❤️
                 </span>
               </p>
             </div>
@@ -3073,7 +3683,7 @@
   <!-- About Us Page -->
   <div aria-labelledby="about-title" class="static-page" id="about-page" role="region">
     <section class="about-page">
-      <button class="btn btn-outline-primary back-button" id="back-to-home-from-about">
+      <button class="btn btn-outline-primary back-button static-back-btn" id="back-to-home-from-about">
         <i aria-hidden="true" class="fas fa-arrow-left me-2 about-back-button"></i>
         <span data-ar="العودة إلى الرئيسية" data-en="Back to Home">
           Back to Home
@@ -3123,7 +3733,7 @@ We believe in the power of community and collaboration, and we welcome users and
               الموقع باستمرار. مع FutureGEN، اكتشف الذكاء الاصطناعي بطريقة بسيطة وموثوقة، وكن جزءًا من مجتمع يشاركك
               شغف الابتكار والتطور التكنولوجي. </p>
           </div>
-          <img class="AboutUsLOGO" alt="About Us" src="./Images/Logo.png" />
+          <img class="AboutUsLOGO" alt="About Us" loading="lazy" src="./Images/Logo.png" />
         </div>
         <div class="about-content">
           <div class="about-section" id="about-mission">
@@ -3167,11 +3777,36 @@ We believe in the power of community and collaboration, and we welcome users and
       </div>
     </section>
   </div>
+
+  <!-- صفحة أدوات القسم -->
+  <div id="category-tools-page" class="page static-page" style="display: none;">
+    <section class="category-tools-page">
+      <div class="container mt-5 pt-5">
+        <button class="btn btn-outline-primary back-button" id="back-to-home-from-category-tools">
+          <i class="fas fa-arrow-left me-2"></i>
+          <span data-ar="العودة إلى الأدوات" data-en="Back to Tools">Back to Tools</span>
+        </button>
+
+        <div class="text-center mb-5">
+          <h1 class="display-4 fw-bold mb-3" id="category-tools-title">
+            Category Tools
+          </h1>
+          <p class="lead" id="category-tools-description">
+            Explore all tools in this category
+          </p>
+        </div>
+
+        <div class="row g-4" id="category-tools-container">
+          <!-- سيتم تعبئة أدوات القسم هنا -->
+        </div>
+      </div>
+    </section>
+  </div>
   <!-- Contact Us Page -->
-  <div aria-labelledby="contact-title" class="static-page" id="contact-page" role="region" style="display:none;">
+  <div aria-labelledby="contact-title" class="page" id="contact-page" role="region" style="display:none;">
     <section class="contact-page">
-      <button class="btn btn-outline-primary back-button" id="back-to-home-from-contact">
-        <i aria-hidden="true" class="fas fa-arrow-left me-2 contact-back-button"></i>
+      <button class="btn btn-outline-primary back-button static-back-btn" id="back-to-home-from-contact">
+        <i aria-hidden="true" class="fas fa-arrow-left me-2 about-back-button"></i>
         <span data-ar="العودة إلى الرئيسية" data-en="Back to Home">
           Back to Home
         </span>
@@ -3221,7 +3856,7 @@ We believe in the power of community and collaboration, and we welcome users and
   </div>
 
   <!-- News Page -->
-  <div id="news-page" class="static-page" style="display: none;">
+  <div id="news-page" class="page" style="display: none;">
     <section class="container pt-5 mt-5">
       <button class="btn btn-outline-primary mb-4 back-button" id="back-to-home-from-news">
         <i class="fas fa-arrow-left me-2"></i>
@@ -3243,7 +3878,7 @@ We believe in the power of community and collaboration, and we welcome users and
   </div>
 
   <!-- Blog Post Details Page -->
-  <div class="blog-post-page" id="blog-post-page" style="display: none;">
+  <div class="page blog-post-page" id="blog-post-page" style="display: none;">
     <div class="container mt-5 pt-5">
       <button class="btn btn-outline-primary mb-4 back-button" id="back-to-home-from-blog">
         <i class="fas fa-arrow-left me-2"></i>
@@ -3264,7 +3899,7 @@ We believe in the power of community and collaboration, and we welcome users and
               </div>
             </div>
 
-            <img src="" alt="" class="img-fluid rounded mb-5 w-100" id="blog-post-image"
+            <img loading="lazy" src="" alt="" class="img-fluid rounded mb-5 w-100" id="blog-post-image"
               style="height: 400px; object-fit: cover;">
 
             <div class="blog-content fs-5 lh-base" id="blog-post-body-container">
@@ -3276,8 +3911,27 @@ We believe in the power of community and collaboration, and we welcome users and
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/main.js"></script>
+  <button id="scrollToggleBtn" class="scroll-toggle-btn">
+    <i class="bi bi-arrow-down"></i>
+  </button>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 
 </html>
+
+<style>
+  .static-buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .static-buttons-grid .btn {
+    width: 100%;
+    padding: 14px;
+  }
+</style>

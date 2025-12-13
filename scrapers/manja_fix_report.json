@@ -1,0 +1,2385 @@
+{
+  "timestamp": "2025-12-09T20:09:52.390Z",
+  "processed": 475,
+  "fixed": 475,
+  "failed": 0,
+  "success_rate": "100.0%",
+  "fixed_tools": [
+    {
+      "name": "Nonverbia",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Activepieces",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Mastt",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "UX Pilot",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "HumanLayer",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Athenic AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "KUSE AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "SmythOS",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Yapify",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Enjo.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Memara",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "StatPecker",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Macaron",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Cobot",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Tasker AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Simular Pro",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Functionize",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "TicketMine.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "MemU",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Trails.so",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Elvity AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "MasterSheets",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "VibeDash",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "FlowMetr",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Lindra AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "vBots",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "HeadsUp",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "ResearchCollab.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "FlyTest",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Yoink",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Mapify",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "AutonomOps AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Dume.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Poppy AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Voiset",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Messync",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Mexty AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "GetDot.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "DevPlan",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Mirai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "BeeSift",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "DeepDocs",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "UnSoloMind",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Blok",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Ponder",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "BrowserAct",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Unrav.io",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "ExtractAny",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "AI inTime",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Bit Flows",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Keepmind",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Constella",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Chronicle",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "ActionFlows",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Littlebird",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Klarops",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Shiplo",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Broadn",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Altavize",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Pally",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Smart Calendars AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Macro",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Dialbox",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Drawer AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "New.website",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "AgentPass.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Votars",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Aerogram",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Kuberns",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "CloudEagle.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Kosmik",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Nimblr.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Rierino",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Mindly",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Tapflow",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Wellpin",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Sky",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Web Gremlin",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Instafill",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "MatMat AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "LunaCal",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Rippletide",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Plansom",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Flowla",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "JustCall",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Urbiverse",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Aurora AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Buildpad",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Pine AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Figma Sites",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Kortex",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "SuperExpert.AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Table Studio",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Miniflow",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Vercept",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "The Librarian",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Kroolo",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Molku",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Nutix AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Fluig",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Klutch App",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Steve",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Voice Calculator",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "DocsLoop",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Inabit.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Foundor.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Convoso",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "EZSite.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Doable.sh",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "ExcelMatic",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Victoria",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Leania.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Submarine Player",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Verex",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Docci.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Vetis",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Karax.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Aviator",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Luna",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "ChatSlide AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Legion AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "SurfSky",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "WebCrawler API",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "ToDiagram",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Noteey",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Kolosal AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "RetroTeam",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Webflow's AI Site Builder",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "RecordsKeeper.AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Kaiboard",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Zapier MCP",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "WorkFlawless",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Remio",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Cobbai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Cloudairy",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "CodeGuide",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "JobQuest.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Vectal",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Guse",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Vaiz",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Eraser IO",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Mochii AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Enso",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Fellow.app",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "ReconXi",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Excel Whisper",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Worxmate",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Curiso.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Highlight AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "TypeThinkAI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Fenn",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Pikr",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Pig",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Kudra",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "AISOAP",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Twin AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "ClickBoss AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Zuzia",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Cradl AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Feeedback",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Kolena",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "TestZeus",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Locus Extension",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Needle AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Proxed.AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Octopus.do",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Presentations.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Kwizie",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Right Click Prompt",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Clueso",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "GenPPT",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "ReviewNicely",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Platus",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Folder Pilot",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "RPLY",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Sitehunt",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Supametas.AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "ChatGPT Exporter",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "HideMyData",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "CodeBeaver",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "AgentVoice",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Replit iOS App",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Storyblocker",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Serif.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "CubeOne AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Tana",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Venice AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Wand AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Modulify AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Rootly",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Cliprun",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "CTRL Sheet",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Toolhouse",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "IdeaBuddy",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "THEO",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Motion",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "CICube",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Ping AI Tasklist",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Teammately",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Figflow",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Aphra",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Anchor Browser",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Sourcetable",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Qodex.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Open Interface",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "there",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "UniScribe",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "SenseTask",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "CopyCat",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Bluebarry AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "ProdPad",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Hoop",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "AI Drive",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Appointwise",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "HeyBoss",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Witsy",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Folk CRM",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Inbox AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Cotypist",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "LambdaTest",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Napkin AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "CoursePro.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Zoc.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Cora",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Fingertip",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "MasterKey",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Featherless.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Greptile",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "BlurData",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Theneo 2.0",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Humiris AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Side Space",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Hyperbrowser",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Cades.dev",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Lecca.io",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Erayaha.AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Monkt",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Simple AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Cognikeep",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Pismo",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "UpBrains AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "OneTask",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "TimeSentry",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Tumeryk AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "AirCaption",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "AiPPT",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Eden",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Pointer AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Saima",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "AISmartCube",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Prepin.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Polymet",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Autoflow",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "TwinMind",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Vratix",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Rantir",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Boltic.io",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "CypherScribe",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "iMean AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Gecko Security",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Mezi",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Wander Maps",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Webdraw",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "EzyGraphs",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Legal Brief AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Maximus",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Shadow",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "FullContext",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "AI Magicx",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "MockFlow",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "ScalerX.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "HeyQuin",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "TimelyGrader",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Magic",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "EchoNote",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "FlexBE",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Observely",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Inferable",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Mazaal AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Agent.exe",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "CapGo.AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Blinkfeed.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "CrewAI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Ready to Send",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Klipy",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Reiden AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Feta",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Keywords AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "MinutesLink",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Khroma",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Fronty",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Inkline AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "FastTrackr AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "AirDoc.Pro",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Guidejar",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "APIDNA",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "CostGPT AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Lookie AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Inbox Zero",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Mesha",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "TailorTask",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Zivy",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Epsilla",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Aicado.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Retainr.io",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Xylo AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Hoody AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Toolpad",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Fable",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Jsonify",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Bricks",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Abacus.AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Clockwise",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Zed",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Mokkup.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Tome Law",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Grug Notes",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Msty",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Crew",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "ShellMate",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Sparkle",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Spiral",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Flowith",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Easy Folders",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Commabot",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Glitter AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Lazybird",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Voqal",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Minduck",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Kerplunk",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "BGBye",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Fluid",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "PraisonAI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Flezr",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Manual Content Scanner",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "ScreenshotMagic",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "PackPack",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Waxwing",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Floode",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "HowsThisGoing",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Riffo",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "EduWiz.AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Outerform",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Supermemory",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Velvet",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Nailedit.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Devv AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Relay.app",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Skyvern",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "AppFlowy",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Motiff",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Xspiral",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "VisualSitemaps",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Job Boardly",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Legaliser",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Talecast",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Limeline",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "timeOS",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Frontly",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "CodeParrot",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Codara",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Eververse",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Formshare",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Uiino",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Invisibility",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Relume",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Elementor AI Website Builder",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Dashworks",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Wizardshot",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Hyperaide",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Bahama",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Kerlig",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Effie",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Omnipilot",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Happily.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "SecBrain",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "NexusGPT",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Intellisay",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Omnifact",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Jamie",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "UI Bakery",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "DocsHound",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Kaiden AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Screenloop",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "GitLoop",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Limecube",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Alice App",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Limitless",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Cassidy",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Novelcrafter",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Synthflow AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Canyon",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "PowerNote.app",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Create",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Nodes AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "TypeflowAI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Browserbase",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Litespace",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Oto",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Martin",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "NoteGPT",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Otto Engineer",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Airtable AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Leiga",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Zerve AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "ChatPC",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Craft",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "DryMerge",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Sieve",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Inkflow",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "SellMeThisPen",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Kater",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Wudpecker",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Capitol.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Airtrain.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "EverLearns",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "MyMemo",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "BizPlanner.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "WisdomPlan",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Brainstory",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Parallel AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Salt AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Repeto",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "DOO",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "OneCliq",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "CodeRabbit",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "IdeaSpark",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Thunderbit",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "MailWizard",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Saner.AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Zarla AI Website Builder",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "QA.tech",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Hyperlint",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Quest",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "SkimAI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Techmart AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "BidBuilder",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Owwlish",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Bit.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Varolio",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Onvo AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Boxletters",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Nexto",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Lazy AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Dorik",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "SnapCall",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Map This",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Dola",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "WildcardParking.com",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Phew AI Tab",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Modelit",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "GPT For Google Forms",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Kompas AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Arc Search",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Microsoft SwiftKey",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "WeGoDoo",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Keep It Shot",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "BrainSoup",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Interviewer.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Findr",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Keepi",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "FilmmakerPRO",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Help Docs Generator",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Dart",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Arvin AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Gigasheet",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Broadcast",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "PopAI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Modelize.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "MindyGem",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Calorieasy",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "DeepTab",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Build AI",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Cosmo",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/"
+    },
+    {
+      "name": "Manja.ai",
+      "status": "fixed",
+      "logo": "https://cdn.prod.website-files.com/639910cce4b41d2a9b3e96fb/"
+    }
+  ],
+  "failed_tools": []
+}

@@ -1,0 +1,11 @@
+{
+  "total": 4234,
+  "need_fix_initially": 3162,
+  "fixed_official": 35,
+  "fixed_logos": 1888,
+  "still_bad_official": 24,
+  "still_missing_or_white_logo": 3151,
+  "pillow_enabled": true,
+  "local_assets": true,
+  "local_dir": "E:\\Yazan Nasser\\FutureGEN\\site\\assets\\logos"
+}

@@ -1,0 +1,4530 @@
+{
+  "timestamp": "2025-12-09T18:33:22.976Z",
+  "processed": 906,
+  "fixed": 895,
+  "failed": 11,
+  "success_rate": "98.8%",
+  "fixed_tools": [
+    {
+      "name": "Fedica Mobile Social media AI analytics,",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ff212d6c-a3d2-45ea-bb3b-99e1ab4dc"
+    },
+    {
+      "name": "AI Humanizer - 100% Free Bypass Detector",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/2f952af6-a57b-4dc3-98f3-c5be02f83"
+    },
+    {
+      "name": "Distill Every move, any company, tracked",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a7edffca-d340-46c2-8884-1267a8e66"
+    },
+    {
+      "name": "VisionCraft MCP AI context engine for vi",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/cd4198cd-ae18-4777-bf42-c9037443d"
+    },
+    {
+      "name": "Neural Frames Autopilot Create Professio",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5125a3ef-7b26-4215-9998-782cadb6f"
+    },
+    {
+      "name": "PocketShield Your Private AI for sensiti",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7b7b9f79-cf60-4c0c-bc90-c65cea86e"
+    },
+    {
+      "name": "LightPDF AI Agent Your All-in-One PDF As",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5b7813ab-93d5-4669-8272-39bce897f"
+    },
+    {
+      "name": "Closure AI-chats with those who disappea",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7bff1a26-7290-455c-a0ea-a352635fc"
+    },
+    {
+      "name": "Phala Cloud Zero-trust cloud for safe AG",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/df598a3d-af1d-40e3-9751-b3e9d079b"
+    },
+    {
+      "name": "Joyn Align product teams with the people",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d6d26b8d-e17d-4622-96ec-c06560b4f"
+    },
+    {
+      "name": "PhraseClip Improve your vocabulary as yo",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/2c08d8c9-0480-4bad-9b63-1714a534d"
+    },
+    {
+      "name": "Mukh.1 Automate work with AI Agents #dat",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/237a5312-d4e9-4669-88d4-627b8857d"
+    },
+    {
+      "name": "Flowise Build AI Agents, Visually #data",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/4ca2eea9-d717-4e7b-b113-66772f6a0"
+    },
+    {
+      "name": "AutoA2A: Convert Agents to A2A Servers E",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/46d149f5-ad25-425c-9183-ae3fa5819"
+    },
+    {
+      "name": "Fluig AI Instantly turn documents & idea",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9e6532a6-9f0a-4ce2-969c-d66f88e52"
+    },
+    {
+      "name": "Bolto Find, interview, and hire engineer",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c20bde95-f1cd-4768-9352-cdaa79e11"
+    },
+    {
+      "name": "AI Action Figure Maker-Trend Transform y",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/08ec60bb-499b-49f9-9060-c32a0860b"
+    },
+    {
+      "name": "Evenza Revolutionizing networking at eve",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/1a598da0-b689-4e1e-bcb0-c4fdd2476"
+    },
+    {
+      "name": "One Click Deploy Deploy your LiveKit Voi",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/4a803fb2-2b26-4e53-97fd-2f831485d"
+    },
+    {
+      "name": "Opusense AI-generated reports for site i",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d4716a7f-0bd2-458d-9ff7-c9029d183"
+    },
+    {
+      "name": "TikTok AI Alive Bringing your photos to ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/147400f1-d210-4b25-addd-0132c4314"
+    },
+    {
+      "name": "Kazu Navi (かずナビ) Learn Japanese with cla",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/679c7c48-99c5-4afd-9335-22f190eba"
+    },
+    {
+      "name": "Gadget The fastest way to build and scal",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/535bb617-8107-4384-b287-486cd4381"
+    },
+    {
+      "name": "Generated Assets Turn any idea into an i",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/3268df64-cc61-4b78-be3d-7c4306993"
+    },
+    {
+      "name": "Shadow Meet once, stay ahead—Shadow help",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c7a1b909-630f-4f88-a393-b35ed7f87"
+    },
+    {
+      "name": "Corpus Insight The OS for modern work #d",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/55450a46-e0fd-43d3-8dde-b7d953700"
+    },
+    {
+      "name": "AI Meeting Notes by Notion Perfect meeti",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/00ea5767-a40f-40d6-8051-8608d6331"
+    },
+    {
+      "name": "Max Fitness AI AI, Fitness, Trainer, Wor",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f0423d52-2cb1-4f4a-a4dc-2530ac710"
+    },
+    {
+      "name": "FastVLM Lightweight open-source vision m",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e243182f-3651-412a-be1b-1f093ae30"
+    },
+    {
+      "name": "Photo AI Reimagine your photos with AI #",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c4a84b99-383d-478e-a132-fccf6c956"
+    },
+    {
+      "name": "LevelUp for Hacker News AI Summaries for",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/15e614a2-4704-4eab-a5af-8b6960d6a"
+    },
+    {
+      "name": "iCliniq Tes for Prostate Cancer Crafted ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/3cdbfd5e-4032-4e49-a7f3-744f55775"
+    },
+    {
+      "name": "TableSprint Vibe coding platform for dev",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ca9a7bed-157d-4d66-bbbc-64fcbb264"
+    },
+    {
+      "name": "ShareAI Think Uber, but for AI Open Sour",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b8156d0c-295e-4896-8066-ac1985393"
+    },
+    {
+      "name": "Jump Start by Synscribe pSEO ideas gener",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d815c38c-3364-4c0e-bd97-c5f73b66e"
+    },
+    {
+      "name": "RADiCAL AI motion capture meets 3D story",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/0f227330-66c2-4aa7-8b44-eed227132"
+    },
+    {
+      "name": "AI Avatar Videos AI Avatars with natural",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/41170d45-af12-4b5e-b6e0-32faf3def"
+    },
+    {
+      "name": "Probo Compliance for Startups to get SOC",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d35978de-4c5a-4925-8ec5-45fe1e934"
+    },
+    {
+      "name": "Syft AI Define Your news & choose your t",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a08b2189-de31-454a-8664-06f1f2794"
+    },
+    {
+      "name": "Qualisync AI that gives your time back -",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9843d062-e932-438f-a8a0-9dd46cac8"
+    },
+    {
+      "name": "TheGoatedProfessor The best AI professor",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f2189f2d-97a1-40c0-82ae-abc107ea8"
+    },
+    {
+      "name": "Demo → Intercom by DocsHound Screen shar",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/fe9a22c1-5818-4e90-b8a4-3ec55401f"
+    },
+    {
+      "name": "Alder Optimizing Data Warehouse Query Pe",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d03d0f13-aaff-4f99-b006-72b5bb51b"
+    },
+    {
+      "name": "VoltAgent Build TS AI agents with n8n-st",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/23431592-6f37-4db5-b014-74ea4c8cd"
+    },
+    {
+      "name": "Codelifted Generate Pull Requests with A",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/51a0e21d-b24f-47e7-8bcb-cad0c295f"
+    },
+    {
+      "name": "Matter AI AI Code reviewer to fix bugs, ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c75e374e-aec9-44c3-a8f6-f3685e7de"
+    },
+    {
+      "name": "Agentic Testing by Testsigma AI agents c",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d3d9fa72-5122-4d7f-a3d0-c8def70ed"
+    },
+    {
+      "name": "SnapHire Prepare for job interviews with",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/eddb8355-3b40-4416-898c-dd817d70f"
+    },
+    {
+      "name": "AnimeMyPic Turn your photo into anime ar",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d97afc97-b5bc-450e-9e8c-1a28e78af"
+    },
+    {
+      "name": "Reddityzer Automate your Reddit account ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b4a6f261-28f5-47ae-aa54-5efef5e12"
+    },
+    {
+      "name": "InternshipsAI Discover AI Internships Th",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/1e5c112e-cd98-4650-ac31-778878253"
+    },
+    {
+      "name": "MadeByHuman A badge for human work, help",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/3fd731e9-4ecb-47d7-af65-227fe0c2f"
+    },
+    {
+      "name": "DeepList AI A simple way to discover how",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c583c6bc-4ca7-42aa-88be-02c5c7821"
+    },
+    {
+      "name": "LinkedBoost AI AI that Upgrades LinkedIn",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/50497c89-69b7-43ad-8af9-877008027"
+    },
+    {
+      "name": "RockPic Identify all kind of rocks insta",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/1901ca13-1d04-4c57-a8af-853e46a8b"
+    },
+    {
+      "name": "eBay AI Shopping Agent Your AI assistant",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5a61d8a1-676c-4880-9b77-7793a0e00"
+    },
+    {
+      "name": "SpeakingAI Practice speaking skills with",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e15d127b-03b5-4bd8-b831-db7e34ef2"
+    },
+    {
+      "name": "AI Voice Calls Send AI voice calls for f",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/1535da16-8cec-423f-b8b6-7c83907e7"
+    },
+    {
+      "name": "Two-Step Contextual Enrichment TSCE is m",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/50c63a23-f6f7-4369-b8bc-8f09333c6"
+    },
+    {
+      "name": "DeckSpeed Cursor for slides #AI",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/0d0e2137-9a91-478f-bcfd-7d45d6839"
+    },
+    {
+      "name": "Viaona Ai Powered Travel. Uniquely Yours",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ffeb6949-7246-4ee2-8a0e-991c2baf9"
+    },
+    {
+      "name": "PLAI - Mondadori Group Accelerator Accel",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/3915f114-6d79-4dfc-b67f-4bffe4c06"
+    },
+    {
+      "name": "Soma Skin Cancer Classifier A lightweigh",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/511f7cc4-fdd6-43f9-9116-83bb56676"
+    },
+    {
+      "name": "DeepImpasse New LLM is SASSY # sassy",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d16c993f-4e2b-4958-87bf-5c606bcfb"
+    },
+    {
+      "name": "Vilcos Chat your website to life: The CM",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/2a7946b9-ebfd-4b45-a031-d1438825a"
+    },
+    {
+      "name": "PersoLetter Receive Personalized Newslet",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/1b3ef5ce-6d46-438d-83fe-e6e74689e"
+    },
+    {
+      "name": "AI API Pricing Calculator Estimate price",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e0c70865-5977-48fd-916a-9276e82fa"
+    },
+    {
+      "name": "Action Figure AI Turn Yourself into an E",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ba0e61d0-e68f-40d0-a55d-e3dada77e"
+    },
+    {
+      "name": "Voila Open-source AI for real-time, expr",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/58f2217e-b682-4ca4-98d3-f60521bf6"
+    },
+    {
+      "name": "Promptlyzer The fastest way to test, ver",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b3497d28-f9ee-42cc-99df-6ed346d61"
+    },
+    {
+      "name": "Aladin Supercharge your browser with AI ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/adae1d0e-750b-481d-aa0d-adf22ea5d"
+    },
+    {
+      "name": "Graphthem Deep-research engine reads 10,",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/944c69e0-f2ae-45ea-a4a2-ab87d1261"
+    },
+    {
+      "name": "Become Never-ending AI-driven interactiv",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/aa6b18f4-558b-453f-a9c7-51d441ed8"
+    },
+    {
+      "name": "InstantAiAds Turn Products into Viral Ad",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/776c4bc1-6381-450e-ae77-86f92a0d2"
+    },
+    {
+      "name": "Seveum Find your dream job in record tim",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a0604b17-d98e-46c2-b958-da2f871ca"
+    },
+    {
+      "name": "Zoho WorkDrive 5.0 Intelligent content m",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5c245712-9ea0-4513-9792-622875df1"
+    },
+    {
+      "name": "Pipedream MCP 2,500+ APIs and 10,000+ to",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/48ea5578-70d5-4b51-bb72-dc50468c6"
+    },
+    {
+      "name": "pfp.fm Upgrade Your Profile Picture #ima",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a8b93edf-fbec-47e0-bb2c-a76f8cbd4"
+    },
+    {
+      "name": "Antispace Artificially Intelligent Opera",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/3aad28f5-7541-42d1-a1f4-c67d47c55"
+    },
+    {
+      "name": "Posts Copy AI-Powered Your Social Media ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/374041c8-2e5a-4c83-8a5b-b9c6ac8b3"
+    },
+    {
+      "name": "HyperArc AI Native Business Intelligence",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b07ac9c7-fe07-4d4f-87cb-ae4f4c44e"
+    },
+    {
+      "name": "Referlytics Capturing Every Interaction ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a617ff4e-37cd-4da9-89bd-ed87abe52"
+    },
+    {
+      "name": "QuickSearhPlus-AI Your AI-powered produc",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a8b26181-a692-45b1-b543-964590302"
+    },
+    {
+      "name": "CopyNote Smart snippets and message temp",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b0045c54-0db3-44de-8944-054bff200"
+    },
+    {
+      "name": "Chef by Convex Generate and launch realt",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7732c455-df10-44fe-8ab8-364fab47c"
+    },
+    {
+      "name": "Promptify Use AI instantly from website ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ff6e8b11-3595-482a-a7a4-c75bdc262"
+    },
+    {
+      "name": "PixelGlow AI to seamlessly merge image c",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f9454b2b-30c3-4ae8-b51f-d21c90131"
+    },
+    {
+      "name": "ThotStream World's first anti-social soc",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/0645aa51-ee4a-4939-8834-bbb34324f"
+    },
+    {
+      "name": "Meta Perception Encoder Vision encoder s",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7a1e30c4-7526-44eb-9f11-cf031f522"
+    },
+    {
+      "name": "Gemini 2.5 Pro I/O Edition Even better c",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/66030c8c-f537-49d1-8fe8-d33b13074"
+    },
+    {
+      "name": "Gemini 2.5 Pro (I/O edition) Our most in",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/580d26e8-0df8-4f2a-bde0-c794a5e92"
+    },
+    {
+      "name": "Nelly Create your own team of AI agents ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f7eddd84-20a4-4175-b264-2ff8215b5"
+    },
+    {
+      "name": "Self-Learning Agents that improve! Make ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/085267d6-65ca-4f63-8bc1-8054ce816"
+    },
+    {
+      "name": "Empirical Heart Health Don't die of a he",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/023607a4-ef80-45c8-93fd-e4da84eea"
+    },
+    {
+      "name": "Closer: Deeper Connections Build Stronge",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/512e7b7a-0d67-4191-ae4f-cc9257dd1"
+    },
+    {
+      "name": "Resume AI Optimise your resumes free wit",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/eed5e360-f03e-476d-997e-12aad100e"
+    },
+    {
+      "name": "EchoComet Feed your code context directl",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/72dac8f9-6462-41dc-a1e2-00e18d763"
+    },
+    {
+      "name": "Intercom + Fin AI Agent for Startups The",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f0e0a028-dab4-48ea-8135-71bb9dfab"
+    },
+    {
+      "name": "Custom Template by CountAnything Count t",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ebcccd2c-5aba-4a1d-bf4c-e0e98fc0f"
+    },
+    {
+      "name": "Connect Four Turn ChatGPT wait time into",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/96c2f0d5-1d0b-4e6b-aa00-df887b1b4"
+    },
+    {
+      "name": "Visa Intelligent Commerce Enabling AI ag",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/941eaaf7-fbdf-4572-bab8-745642b86"
+    },
+    {
+      "name": "Calldock Instantly call your website lea",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e7b8b9cc-9d35-4abd-b978-1b94ff8b7"
+    },
+    {
+      "name": "Suno v4.5 Level up your AI music creatio",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/de43b94e-abd2-44e8-af5d-743b94cfe"
+    },
+    {
+      "name": "there The AI word editor — notes, docs, ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ac0a2550-a745-4a42-ad7c-26f2df992"
+    },
+    {
+      "name": "Invent by Relevance AI Build AI agents b",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f88bae90-7372-428a-827b-f039bf398"
+    },
+    {
+      "name": "Zed Agentic Editing The IDE scratch-buil",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/df772058-5ecc-4489-aea2-6b743de36"
+    },
+    {
+      "name": "Zapier MCP 2.0 Connect your AI app to an",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/66d9912b-84db-4ae1-87ad-4d197396c"
+    },
+    {
+      "name": "FREE LinkedIn Profile Review Get a profe",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/cc8df108-7466-4b9b-af4d-e4756cc0b"
+    },
+    {
+      "name": "Guide4U: Social Coach Master any Social ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/75e75f0d-af4c-4880-a276-c88f0c4a7"
+    },
+    {
+      "name": "ThumblifyAI Create Thumbnails That Make ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/45ffe69e-cddb-452b-895b-98a775e78"
+    },
+    {
+      "name": "iCliniq Tes for Type 2 Diabetes Crafted ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9c3fd241-963e-4a83-b9e9-ec5f17aa8"
+    },
+    {
+      "name": "Saga Playground The first AI plattform f",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c5614566-a8ee-483d-89a3-815a81dd3"
+    },
+    {
+      "name": "Docs2mcp Turn any API documentation into",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d868d66b-4f6a-42ee-ba63-ce1793f98"
+    },
+    {
+      "name": "Korl AI presentations. From your data. F",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9a63a84a-9dc5-4bb5-8d03-ed99055bf"
+    },
+    {
+      "name": "Shortcut for Agents Plan and build at li",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/792598eb-cedf-4d08-a1d1-1762e06c1"
+    },
+    {
+      "name": "Tarn Meet your Salesforce AI agent #Sale",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7c376f29-efc1-4ffc-acdd-6ca5d12db"
+    },
+    {
+      "name": "Agenda Hero Magic Pages Turn any set of ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7a407d9d-3612-4995-b6f9-222fa37f4"
+    },
+    {
+      "name": "Pinterest Visual Search Go beyond words ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/cababcc9-99a3-4e86-adff-3b16cb3dd"
+    },
+    {
+      "name": "Explorium MCP Integrate B2B data to any ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/42f021c0-057e-405a-acd9-48a998f1f"
+    },
+    {
+      "name": "UnlimitedTales Personalized stories for ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/48866bb9-81b1-4ed9-88f3-e2165e654"
+    },
+    {
+      "name": "UFO² The Desktop AgentOS for Windows Aut",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c646a6b6-355f-4980-906e-8c647eb06"
+    },
+    {
+      "name": "Resumade Your resume’s personal trainer.",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d7f1a7b0-4824-4127-8849-8ddaad784"
+    },
+    {
+      "name": "Bevel Democratizing code understanding t",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/2e021a95-bf5c-400a-851b-8c4d46656"
+    },
+    {
+      "name": "AI Engineer Hire an expert AI engineer f",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/54e3d2ec-7878-4f3a-ab85-544e13d99"
+    },
+    {
+      "name": "AI Powered Resume Checker AI-Powered Res",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/894f37e8-a81a-48fa-851b-83554919e"
+    },
+    {
+      "name": "Writitude AI-powered content governance ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c3d248c1-d40a-4031-9c1c-23492f64e"
+    },
+    {
+      "name": "AI Poster Generator Instantly craft capt",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d77ada55-a24f-4131-90aa-c9d52128e"
+    },
+    {
+      "name": "Smart Keys for iOS Chat in multiple lang",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f65452ed-b5f7-4502-b1e9-e74507e3c"
+    },
+    {
+      "name": "Lingloop Your AI English coach for every",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/997c69e0-c442-42df-9d1b-07970f0ea"
+    },
+    {
+      "name": "DeepLiveCam The Live AI DeepFake #AI",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/adf65eff-45b5-4474-a361-1cf0af9c0"
+    },
+    {
+      "name": "Pablo.Design Unfold your website from yo",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/26b9dd7f-2d43-4a96-81bc-2c42226f9"
+    },
+    {
+      "name": "AI Interviewer by Hyring Your AI Recruit",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ee0e9c41-e64a-483b-9626-293a87a88"
+    },
+    {
+      "name": "Movixar AI-Powered Random Film Discovery",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7e27f54d-176b-4372-a958-4897ce835"
+    },
+    {
+      "name": "Codermon Turn your github profile into a",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/831b38ed-461f-4d3b-942d-3cb6edfb6"
+    },
+    {
+      "name": "Forket Meal planning made easy #data",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c70fec84-a5f7-4f25-9ac0-2ed666ec7"
+    },
+    {
+      "name": "ZoomWhisper Never ask 'What was I suppos",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f3d1e44e-b4a6-4067-81f0-695cb79cf"
+    },
+    {
+      "name": "Cashtaq The AI Money Manager #Finance",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/27385fa8-6660-4594-a145-2dffeface"
+    },
+    {
+      "name": "Nexa - AI Assistant Think more. Forget L",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/10730b39-3091-4dd6-aac5-e81c062ca"
+    },
+    {
+      "name": "HelloAI E-Commerce AI Agents That Conver",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c8429267-f7ef-4338-a8d8-504f88cda"
+    },
+    {
+      "name": "Kroskod Building Krod AI Research Assist",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/82d87d30-15c0-4e98-b1a3-0098d54a5"
+    },
+    {
+      "name": "Ogvin AI AI-powered thumbnail generator ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/33d11e15-8bd6-4f20-810a-282b3168b"
+    },
+    {
+      "name": "Kimi-Audio The universal open source mod",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/cbffbc9a-2041-44b3-9ff5-f562846cd"
+    },
+    {
+      "name": "MapMyLearn AI-generated learning paths, ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9f107c35-f904-4d4f-870a-b8b615cc0"
+    },
+    {
+      "name": "Xinsight X-ray your tweets. Get insights",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/19314ec8-069b-4246-816b-4bfe16880"
+    },
+    {
+      "name": "Pupilus AI-generated 3D models from just",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/65557959-edc4-4741-bc17-4827d069f"
+    },
+    {
+      "name": "SudoResume AI-Powered Platform for ATS-F",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b2a4b03c-f1d4-4e0b-a96f-ecc8d2d9c"
+    },
+    {
+      "name": "Better AI Code Generate,extend well craf",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ba17f06b-befd-4bdf-b6ba-f8af5b547"
+    },
+    {
+      "name": "vibe interviews Get a job in weeks, not ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c6ee0935-1daf-4eb9-aaf2-4d0efd88f"
+    },
+    {
+      "name": "Reef Your AI Worksheet - Turns Data into",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7dfff22b-a110-46a5-9afe-0e767e3e8"
+    },
+    {
+      "name": "Ithy AI What happens when you combine ev",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/493e0005-698d-4594-931e-2df032a82"
+    },
+    {
+      "name": "Multi-AI Airtable Script 3.0 Connect Air",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c82ef2dd-5857-40d4-b162-7ddd1e8da"
+    },
+    {
+      "name": "qomplement The first desktop AI agent th",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9048be1a-1566-4dc8-a746-948dfd3a2"
+    },
+    {
+      "name": "Bookcraft Write Less. Create More. Let A",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9878dc74-3592-4b52-91ae-ce48d9b3b"
+    },
+    {
+      "name": "thefastai Fast && Free AI Tools – Ultima",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/095dfd5a-a5fb-4bed-a743-0470ddf88"
+    },
+    {
+      "name": "ChatGPT for GenAI - The Complete Bundle ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ce15a9a3-84f5-4ddf-bc9d-8902eb99e"
+    },
+    {
+      "name": "Dazero Create AI apps in minutes, visual",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/775c516b-2ea0-407a-ae44-555bd6540"
+    },
+    {
+      "name": "Buildfy AI Generate Beautiful GUIs #Pyth",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/fab99ac5-a75b-4fbf-89c1-a778c04ce"
+    },
+    {
+      "name": "Hairmaxx AI Hair Scan: Catch early hair ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9e2de573-99db-40c7-b117-419ae393f"
+    },
+    {
+      "name": "Powerful Thesis Ideas Free thesis statem",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/53f6ffb4-d782-4556-be10-0bb40ac24"
+    },
+    {
+      "name": "AvaFace Talk face-to-face with your own ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b4971151-1e36-442c-b6c9-9c0e392bb"
+    },
+    {
+      "name": "LevelOh Level up your career with tailor",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9133755e-2e2b-416c-85c6-bed4e034a"
+    },
+    {
+      "name": "Toy.new 100% free AI website builder wit",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/de59268e-afc9-4fa6-b6c1-e07848df0"
+    },
+    {
+      "name": "Midjourney Omni Reference Precise elemen",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/401938e3-7e72-460b-9911-8c5c5b376"
+    },
+    {
+      "name": "Phi-4 Reasoning Big reasoning power, sma",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/be98c8a9-e87f-4fdf-b960-881d1184d"
+    },
+    {
+      "name": "DragonPDF Save PDFs with ULTRA descripti",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f4172a8e-9853-40b6-bd01-1eda18632"
+    },
+    {
+      "name": "UnitBuddy Generate Unit tests for your L",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/8ece57ef-0e65-42df-821d-7ce85939f"
+    },
+    {
+      "name": "Quizcreatorpro Stop Spending Precious Ho",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a39efb77-0492-4b75-ab97-3f5c7bff7"
+    },
+    {
+      "name": "Little Language Lessons AI Experiments f",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9df33362-d3a1-44aa-a43e-07d33843c"
+    },
+    {
+      "name": "vibecodee Where vibecoders come to creat",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/03b4983f-fdd5-44fa-a4b6-749150489"
+    },
+    {
+      "name": "Walker AI Assistant that Networks For Yo",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/94dcba63-4adf-4f7d-a019-34de83c49"
+    },
+    {
+      "name": "AI Character Gen Personalize Your AI Cha",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/0003db27-2c7e-4448-afde-6334d09c2"
+    },
+    {
+      "name": "Demystifyd AI-Powered Visa Jobs & Career",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/861160ef-0683-4b09-b156-82a6d566e"
+    },
+    {
+      "name": "Integrations by Anthropic Claude can now",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/308c9dd3-45f7-4737-b71c-afa48fc8e"
+    },
+    {
+      "name": "PromptPerf Instantly test and compare AI",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/fa9b3937-edce-47d5-b52c-ba485c024"
+    },
+    {
+      "name": "Turn AI images into editable designs Cha",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5245062a-f265-48bb-951e-647c99ea9"
+    },
+    {
+      "name": "ZenAiCo Where meetings meet clarity #Art",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e31d8a2d-953c-4096-9259-1e2d504ea"
+    },
+    {
+      "name": "Kindred eCommerce Merchant Deals Dataset",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/07361c30-528a-4e83-ad79-28ccd8011"
+    },
+    {
+      "name": "Songjam - X/Twitter Space Insights & CRM",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/cc130c16-f12b-466f-a643-368ef13da"
+    },
+    {
+      "name": "How Normal Am I AI Face Beauty Analyzer ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/4753834b-851c-4eca-9b2c-5ea5b2bbf"
+    },
+    {
+      "name": "FxChartAI with AI-Agent Data-Driven. AI-",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/2367a5ef-4824-4a8c-934d-a4e11982a"
+    },
+    {
+      "name": "Dcup: Open-Source RAG-as-a-Service Conne",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/97fc36e5-fa07-45a2-8561-6f1782524"
+    },
+    {
+      "name": "Indilingo Learn Indian languages for FRE",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b3c56b29-6466-47c6-956e-ef4ee3263"
+    },
+    {
+      "name": "Blooming Chain text, image and video AI ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/56d8f066-d616-4905-b2a6-e0c4c5dc4"
+    },
+    {
+      "name": "Querri Making data ridiculously easy for",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/97000a88-6751-460c-ba38-718d72c6c"
+    },
+    {
+      "name": "omiGPT Connect 100+ tools to ChatGPT and",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/acaf83be-85e9-48a2-8a1e-8ccdc4206"
+    },
+    {
+      "name": "LLMrefs AI SEO Keyword Rank Tracker for ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/8b333704-807e-42d8-85dc-2d7ac1998"
+    },
+    {
+      "name": "Raycast for iOS Powerful productivity on",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/934da8ac-639b-453b-b90c-0577427c8"
+    },
+    {
+      "name": "Avatars in Descript Instant text-to-vide",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/0b338f63-5d5e-49a4-ab58-3e1ad4c59"
+    },
+    {
+      "name": "LoveYuu A Surprise QR Code Gift for Coup",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/cee385d4-e4ab-4f0d-adfc-14a18b20f"
+    },
+    {
+      "name": "CodEase The vibe-coding way to create Ch",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a548d184-993f-4254-9c00-07fa57749"
+    },
+    {
+      "name": "Craftz AI Create Stunning Designs in Sec",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f863da3c-8182-46bf-9677-81ab9524e"
+    },
+    {
+      "name": "Skilfut Track how often AI mentions your",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e679443c-4445-497a-94ca-481b13b45"
+    },
+    {
+      "name": "Wise AI powered tutor management softwar",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/08332088-90ec-407c-a337-2c7d3d98a"
+    },
+    {
+      "name": "Vy by Vercept AI agent that does tasks o",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ab7a9be4-51fc-4a64-a5f7-474085222"
+    },
+    {
+      "name": "Promptrepo Create your own AI model usin",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/376a7c78-2e8c-4b48-b946-cef7bfad0"
+    },
+    {
+      "name": "MiMo Xiaomi's Open Source Model, Born fo",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ba121c75-54e5-4e07-bd07-0c02f1f5e"
+    },
+    {
+      "name": "Praise Jar Save & revisit every positive",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ff12061e-76cf-430e-96f3-97d8bb82b"
+    },
+    {
+      "name": "Meta AI App Personal AI that understands",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/921d3a5a-4152-4356-8c15-77d71cf08"
+    },
+    {
+      "name": "Podpod Turn anything into a podcast #Pro",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/3daced7e-bcd1-4797-b382-90596833e"
+    },
+    {
+      "name": "Pathfinder Visualize Your Future #data",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/22e3d64f-3457-4715-85be-7bd0dd181"
+    },
+    {
+      "name": "Doro Your smart and caring AI companion ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/6842c389-7191-4c9e-ac38-08e7bfc4a"
+    },
+    {
+      "name": "Vibe Board Know your vibe with AI agents",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/dad0472b-c7f8-4302-8c2b-5a876c986"
+    },
+    {
+      "name": "Boltweb Create iconic,premium website & ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f6d34da8-519f-42c8-b390-0984f31b5"
+    },
+    {
+      "name": "iCliniq Tes - Breast Cancer AI Assistant",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/62704e6e-a588-46bc-af81-03ea2fef7"
+    },
+    {
+      "name": "Music Studio Turn your words into rhythm",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ac90a580-196c-4bcb-8c9e-3f8bd90a0"
+    },
+    {
+      "name": "Idyll: AI Voicebot Companion with Memory",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f46825f4-693c-4564-9f96-a3c508d65"
+    },
+    {
+      "name": "Klassifier AI Powered Voice & Text Trans",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f8130ba0-5dec-4f60-9e6e-f78391384"
+    },
+    {
+      "name": "Promptaa AI enhance and organize prompts",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/978490ef-fda2-4a0f-829e-0057e5c20"
+    },
+    {
+      "name": "TurboSQL Blazing-fast, AI-powered SQL de",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/09fdee60-cffe-4d63-8d00-212bf8f1c"
+    },
+    {
+      "name": "Qwen3 Think Deeper or Act Faster #data",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b4ce74dc-4007-4ee3-bdf8-87551311b"
+    },
+    {
+      "name": "Colleague Ninja Automate anything just b",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ee8efed7-917d-46b2-be06-8c939b952"
+    },
+    {
+      "name": "FullReviews Handle Google reviews with A",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/1980bd50-67e8-422a-962d-51761febc"
+    },
+    {
+      "name": "DeepWiki by Congnition Understand Any Gi",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d7d86095-6fcf-4d4f-9c21-affa2f0a3"
+    },
+    {
+      "name": "Breaktime Buddy Smarter breaks. Sharper ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/6058969a-e645-4f39-ad3f-106aeed51"
+    },
+    {
+      "name": "Helsa Health Your personalized metabolic",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/1a69cf5b-ffc9-450b-b1f5-388d05dc8"
+    },
+    {
+      "name": "Transkriptor 2.0 From speech to insights",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e536fbf4-062e-4e62-b3b1-eb8220fc0"
+    },
+    {
+      "name": "Collate Offline, Private, PDF Reader, Su",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/14f2efa5-e826-4a47-9df6-649f1873d"
+    },
+    {
+      "name": "Ingage Build LinkedIn influence with AI-",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/299cdf4c-577e-4e37-97fe-fbcde32ff"
+    },
+    {
+      "name": "InterviewHero Crush Your Next Interview ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/48c441f9-c165-4fd4-87a4-c19cb2ec5"
+    },
+    {
+      "name": "AnyVoice.net Clone any voice with just 3",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/8becf230-75df-42e1-98f7-81373458f"
+    },
+    {
+      "name": "InPage AI AI Assistant That Works Where ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7b911f1f-7f22-4144-8d6e-6cdf0dd57"
+    },
+    {
+      "name": "Rounds.so Technical Interview that AI Ca",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f00d233c-c2db-48d9-9010-f5593e009"
+    },
+    {
+      "name": "MCP Gateway Turn APIs into MCP endpoints",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b44ed37f-1a7e-456e-9cc1-51c5baec5"
+    },
+    {
+      "name": "NeuraPrep The first autonomous technical",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ff2e1c82-d1b9-4812-90fe-b31258768"
+    },
+    {
+      "name": "Podlettr Read your podcasts in beautiful",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/374df4c1-635c-4b75-9b55-376934413"
+    },
+    {
+      "name": "Hirenga ATS that smartly organizes, scor",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f21566b7-6fc9-4ba7-9574-a119cd43a"
+    },
+    {
+      "name": "Shepherd All in one personalized learnin",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b3d7004f-aca0-46c1-8354-6e1349246"
+    },
+    {
+      "name": "SparkLab SparkLab is a weekly community ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/64896b07-4235-40e5-913c-e780e34f7"
+    },
+    {
+      "name": "mrge Cursor for code review #AI",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/57fe90fc-04ad-42e6-91a8-4b300b8f5"
+    },
+    {
+      "name": "LifeSnap Capture, organize, and visualiz",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/40d0f693-f65e-4e21-95ae-645a4f396"
+    },
+    {
+      "name": "Pet to Human Transform your pet into rea",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/62fc5e29-e460-458e-85a2-137d65e08"
+    },
+    {
+      "name": "PitchMeBaby Sell weird stuff in 60 secon",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9fce0d93-9ed4-4588-8aa5-2bd0f0e93"
+    },
+    {
+      "name": "cKALARMe FIT Shop with confidence, disco",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/16a96853-14e8-43ee-a810-40f9aa0fc"
+    },
+    {
+      "name": "PlantID Identify plants and get care gui",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/aa78c06e-ca2b-4280-ab02-a8b2cc3cd"
+    },
+    {
+      "name": "Ryvlar Ryvlar: Privacy-First Discussions",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d683fdb2-7428-4126-a168-93b36cef6"
+    },
+    {
+      "name": "Novi AI Create Stunning AI Videos from T",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/cae73347-feba-4e5b-8613-877447734"
+    },
+    {
+      "name": "CandiScreen Hire smarter, faster, and wi",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ed07e99c-eb10-48ef-9b19-6a2fbf0d7"
+    },
+    {
+      "name": "Gity The Next Generation Git Assistant #",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/eb9d7df8-f418-4363-a4c1-ba4d31333"
+    },
+    {
+      "name": "TechCognita Suite All-in-One AI, Content",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/bccf3582-3591-40c7-9273-bbe121ea4"
+    },
+    {
+      "name": "Formgen AI Create Google Forms from text",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e5ae9b32-4db8-4605-a2a4-3faa19761"
+    },
+    {
+      "name": "Clarior Mind Structured AI for Mental Cl",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/dd89913c-f860-4534-8603-bc4c16581"
+    },
+    {
+      "name": "TalkToGitHub Turn GitHub repositories in",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ab51a196-05b2-442b-8f5e-33b886d4f"
+    },
+    {
+      "name": "OnRanko Data-Driven AI SEO Agents: Work ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7d93f3da-9f10-46d0-9e50-40c0e1e2a"
+    },
+    {
+      "name": "RightNow AI 'V2.0' Vibe coding for CUDA ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9e98939f-7599-4809-a2f3-47fb0c8fd"
+    },
+    {
+      "name": "AI Presentation Narrator Free AI voiceov",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e2852941-ab69-4762-a655-6defb717f"
+    },
+    {
+      "name": "Nootlie Ditch Traditional Notes – AI Not",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/389b6e34-524d-46ee-bb61-f740ae748"
+    },
+    {
+      "name": "Veristyle Discover the clothes you were ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/23696846-4a59-4c4c-bd23-66e177bb9"
+    },
+    {
+      "name": "Sales Automation score leads, automate f",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a5fe21a6-ebb4-4397-81c1-cbb7ef6c6"
+    },
+    {
+      "name": "BizCalendarKit All-in-one business manag",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/2e1b15de-057a-40ce-af27-548a10142"
+    },
+    {
+      "name": "TrustCheck.dev Spot YouTube red flags & ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/323ed821-6e35-421d-be7d-3af3c1ade"
+    },
+    {
+      "name": "AI Image Detector - ImgDetect Detect AI-",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/04818c06-4feb-40fd-bcd9-2f7977e6d"
+    },
+    {
+      "name": "Picture Picker—Collect,Create,Edit Image",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/523efe44-17dc-43a3-88eb-1d8b7c46c"
+    },
+    {
+      "name": "AI CLI AI coding copilot (like cursor) i",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5f895232-47a8-4316-8988-61afdeb45"
+    },
+    {
+      "name": "Blend-ed AI Agent for smarter training a",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/3f212f86-ac56-4269-bead-50816fa1f"
+    },
+    {
+      "name": "OThree AI 2.0 Always have the answer #Tr",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9205b1f0-788a-4fd0-8f16-86c5b10d5"
+    },
+    {
+      "name": "Samm Care Doctor info, medicine details ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/326e5798-6063-4703-b1c9-06e082c96"
+    },
+    {
+      "name": "Hive Perform Your sales performance solu",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/74b3edb6-0baa-4fc4-8e60-2f8aa9550"
+    },
+    {
+      "name": "WhereIsThisPhoto AI Photo Geolocation #A",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/0c4d87b1-845d-47a7-93db-354b03787"
+    },
+    {
+      "name": "Credeed Intelligence Platform Credit Sco",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ce5a58a4-b544-4510-bbdf-dc186dd5c"
+    },
+    {
+      "name": "Turn any picture into a coloring page Co",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/baea59dc-9272-43e7-af93-abb88d49b"
+    },
+    {
+      "name": "Q Star - Super Agent & Search Assistant ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/0d7d014b-3221-4110-a4af-ac2e0f06f"
+    },
+    {
+      "name": "Coder a terminal based AI Agent #data",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7a215c13-d1c8-46b0-9949-a31dfc66e"
+    },
+    {
+      "name": "Lovable 2.0 Build apps and websites by c",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/38a4c2d8-66eb-4fdf-9a25-e0c11e4c5"
+    },
+    {
+      "name": "Wan.Video Create AI videos easily with A",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/1b4d2183-ed6e-4e2c-a83f-bfc5e4fbe"
+    },
+    {
+      "name": "Kling AI 2.0 Next-level AI video & image",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/6b6a74ec-f979-4b31-8025-9e7534ea9"
+    },
+    {
+      "name": "Bubbl - The Podcast Discovery Platform F",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ab5a596f-acce-451d-bc95-7e983f3b7"
+    },
+    {
+      "name": "Voicetype AI Replace typing with AI voic",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5bc6c33c-9bcb-43a2-b994-56f64e920"
+    },
+    {
+      "name": "OnTapSEO SEO Auto-Pilot For Webflow, Rep",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5320f963-4dc8-4190-b985-78259b0fe"
+    },
+    {
+      "name": "KIT Global Optimize, Automate & Scale wi",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/43dccb23-de01-4eb3-a17b-d975135bc"
+    },
+    {
+      "name": "DB Chat Chat with your database #data",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/475e024d-7faf-4442-8fbf-3b1d57444"
+    },
+    {
+      "name": "Subtiled.com Effortless AI subtitles: ed",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/2a49e699-8219-4f2f-aa85-069138660"
+    },
+    {
+      "name": "CybeDefend Secure Your Application with ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/80ffde17-662b-43a5-a67a-a6d3a6a13"
+    },
+    {
+      "name": "Snips by Aloha Browser Smart web-snippin",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/523c661b-a5ad-4488-95f7-7159165d2"
+    },
+    {
+      "name": "Sync v2 The worlds most natural lipsync ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/69d51c21-383f-41b0-b27c-50fbb1e88"
+    },
+    {
+      "name": "Supajar Analyze and search YouTube comme",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e3a369b9-3b83-49b3-a4f5-ca657b116"
+    },
+    {
+      "name": "Hana by Spline A new canvas for interact",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a81d2d59-a807-4eef-b50d-3c9cbe14c"
+    },
+    {
+      "name": "Linda AI Turn conversations into short, ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/932f1b73-c806-4865-9228-e997368bf"
+    },
+    {
+      "name": "ContextGem Effortless LLM extraction fro",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/14e2b5a7-c75f-4d51-ad0d-f1e7a3e62"
+    },
+    {
+      "name": "Iris Computer use agents: beyond standar",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/4f016907-26b7-42b6-9e31-297bc48d5"
+    },
+    {
+      "name": "AceUnlock AI AI-powered mock interviews ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d131d0db-206b-4909-9d45-6fedbdd7e"
+    },
+    {
+      "name": "ApplyIQ Get hired smarter—with your pers",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/48000083-1e85-4a32-a258-f18f864cf"
+    },
+    {
+      "name": "NeuralAgent The First AI Agent That Live",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c763b488-8fbc-4b5a-a3af-43ef09263"
+    },
+    {
+      "name": "Sona by OpenPhone Voice AI agent, built ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/00eea995-f42e-42fc-9506-cab6e391d"
+    },
+    {
+      "name": "Clientell AI The AI Agent that builds an",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/bca568b4-999f-4629-a160-edb42a4f4"
+    },
+    {
+      "name": "Suna Open source generalist AI agent tha",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/898d85ac-faa3-415f-ac8e-599b93da4"
+    },
+    {
+      "name": "RightNow AI Vibe Coding for CUDA Enginee",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/665863be-7ad5-439f-a542-2bafb4dc9"
+    },
+    {
+      "name": "Alter Talk to your Mac and get things do",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a506fe5c-3b4d-4f20-8a60-69f8140c1"
+    },
+    {
+      "name": "FIRE-1 A new leap in web scraping #data",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e1e7f62b-fbb5-4cfc-a862-f03dc75dc"
+    },
+    {
+      "name": "PDFtoJson.dev Parse PDF to Json with AI ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/537ba15a-ba61-4062-bfcf-1f2dd7539"
+    },
+    {
+      "name": "BadgeCraft badge, ai, generation, web, h",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/4bb0005a-9933-453a-8590-b29675ee5"
+    },
+    {
+      "name": "MeowGTP Your purr-sonal AI cat companion",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/27a94196-d14a-4307-9375-13938b580"
+    },
+    {
+      "name": "AILogoMagic Create professional logos in",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/46aedfc0-9c89-4467-b21e-7b0bbb691"
+    },
+    {
+      "name": "iCliniq Tes - Autism AI Assistant Crafte",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f207a661-84e6-403e-978b-2732f6666"
+    },
+    {
+      "name": "FenxChat AI One App. Every Model. Zero D",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/0876dfdc-66d9-4fb6-9595-b8b49d4cc"
+    },
+    {
+      "name": "ImgEdify AI-powered image creation, edit",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/01413404-9541-4448-ad64-7cdbfde3e"
+    },
+    {
+      "name": "News Coverage An AI-powered Google News ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b634975b-e0a9-40e5-82b7-8ddc1a6a2"
+    },
+    {
+      "name": "Kurator Instantly Analyze & Summarize Co",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/de3d024b-e468-47d0-97e2-7eee97838"
+    },
+    {
+      "name": "Jasmine Energy Claim solar incentives wi",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/35d276f4-673b-4476-9295-78bc4565a"
+    },
+    {
+      "name": "Pino - Fact Checker Fact check highlight",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f1dbe222-c789-4dde-8153-968d388c4"
+    },
+    {
+      "name": "Corgea Ship fast without worrying about ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/0d858666-a838-485d-a977-c26efc77c"
+    },
+    {
+      "name": "Strawberry AI browser that saves you 18h",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7e4de88e-08f4-4af4-891d-19c6ddfd3"
+    },
+    {
+      "name": "Open Meme Studio ai, meme, prompt, image",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c3114752-d43c-4c2d-96c8-55af31c64"
+    },
+    {
+      "name": "Tubetitlegenerator Generate YouTube Titl",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e031999f-4cac-470b-bda8-c7d929958"
+    },
+    {
+      "name": "Picasso AI a free powerful text-to-image",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/8043c47b-e718-4a22-b855-b494ebd72"
+    },
+    {
+      "name": "ScanGSC AI-powered SEO reports from Sear",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/8e47fd54-637e-4aad-9cac-5a3aabd7d"
+    },
+    {
+      "name": "BookBrain Build a Reading Habit that Sti",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d0b39775-bb5b-49d2-a34e-285a00fe4"
+    },
+    {
+      "name": "OT2.net Smart price tracking & deal aler",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/2988f360-64bd-4983-89f9-9a53a786d"
+    },
+    {
+      "name": "WhizzSEO Boost your product SEO without ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ec8f5868-6351-4e4b-abf5-bb3d3da19"
+    },
+    {
+      "name": "JigsawStack v3 Custom AI models that sca",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/779d86b6-d0ab-4054-b3e5-c02279b04"
+    },
+    {
+      "name": "Ghostrun Ghostrun unifies your AI workfl",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/bb91771f-8724-4922-acaf-4f969d35c"
+    },
+    {
+      "name": "Android XR Reality, expanded by Google A",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a16ee3ed-d446-45fe-a778-3dfac0493"
+    },
+    {
+      "name": "Seedream 3.0 Next-gen text-to-image mode",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/59827da9-0e20-4698-8cd7-06cee36fe"
+    },
+    {
+      "name": "Blastable Get More Emails Inboxed Using ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f0d82b99-bba4-458c-8035-368053669"
+    },
+    {
+      "name": "Outtloud Create unlimited audiobooks & p",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9d82fcb2-b08e-477f-a2bf-47b909b9c"
+    },
+    {
+      "name": "Modelify Transform 2D photos into stunni",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/4bbec090-717a-4b81-a70f-a943720f3"
+    },
+    {
+      "name": "All Voice Lab Ultra-realistic AI voices ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/2f599b22-e3db-4240-990e-17822e5b5"
+    },
+    {
+      "name": "Infraware From prompt to production #Clo",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a64774d1-97fe-4e6a-b8d0-51772b1fc"
+    },
+    {
+      "name": "PackCraft Pack your idea into figurine #",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/bbb7f380-4447-46e0-8e95-6f9110657"
+    },
+    {
+      "name": "Mimikree Mimikree: Not just an AI that k",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d7d57861-7b14-4dc5-a062-58ffdf9d1"
+    },
+    {
+      "name": "Life to CV Turn your story into intervie",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5b211f5e-f3a8-4321-8c61-e7ec708e4"
+    },
+    {
+      "name": "SmartPress PRO Write. Generate. Automate",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/faad1241-8317-4e74-8535-f79dc418e"
+    },
+    {
+      "name": "Scholar AI Study smarter with instant an",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9e295d2e-7748-4cfd-9be3-4366145b5"
+    },
+    {
+      "name": "Cheenikum.ai Gestational Diabetes Manage",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/832fb50f-6d31-49d1-9157-b46fcc190"
+    },
+    {
+      "name": "Trust Me Bro Learn And Earn Social Game ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/091865c7-1f7c-454d-a48a-73b68ec90"
+    },
+    {
+      "name": "RedTri.Ai Redtry – Shopping meets natura",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/2362b168-6041-48ae-be2e-3a6a105b8"
+    },
+    {
+      "name": "Midjourney API by useapi.net support all",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/6d28e602-213c-4494-b2f3-bd532e11f"
+    },
+    {
+      "name": "A2A Agent List Explore & Share A2A-Compa",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a7e692fc-e8e6-4646-b3c6-048a8a46c"
+    },
+    {
+      "name": "Unfiltered The AI copywriter with zero c",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/2c7abfdc-b7bc-4ee3-9008-87ef62b8c"
+    },
+    {
+      "name": "ElliMail AI You prompt it. ElliMail writ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b4240484-06f7-4507-853a-8398d7a3a"
+    },
+    {
+      "name": "LinkedOwl LinkedIn Automation Without Th",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/44ba2b49-6b7a-48ba-b2ad-a1cc0968d"
+    },
+    {
+      "name": "Templaio Save hours writing PRDs, TRDs, ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/fa401691-0813-4731-be8f-9c686a435"
+    },
+    {
+      "name": "SuperMindMaps AI Deep Research Using Min",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/0cf79a21-4064-4c01-9638-0a3cce32f"
+    },
+    {
+      "name": "Bookaroozie AI powered Kindle alternativ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/50210743-4b84-456b-bd41-ddfc5b22a"
+    },
+    {
+      "name": "Google Whisk 2.0 Turn images into eight-",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/50b7c1eb-2571-41ff-8aec-a41790bb4"
+    },
+    {
+      "name": "MoodBite Just speak—MoodBite serves food",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/dfedaad5-42aa-4c13-837b-889d39b5a"
+    },
+    {
+      "name": "Artistico Art Create your own personal A",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/317b55b6-5108-40bc-9f22-966f0c170"
+    },
+    {
+      "name": "Stat-Fusion: AI One‑Page Analytics Hub. ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/037bdac1-e0b6-4b28-8d26-88d7e3aa5"
+    },
+    {
+      "name": "MetaBlogger A podcast platform with inte",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/dc6f9818-8026-46b8-a5a0-bb012217a"
+    },
+    {
+      "name": "ScriptX Copy viral youtube content in yo",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d8ea16b9-fd47-4a75-a70f-a2b0a61ea"
+    },
+    {
+      "name": "Intervene Autopilot for your desktop wor",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c3af9093-ef3d-4846-a23f-be3dd917d"
+    },
+    {
+      "name": "Language Lantern Learn languages with pe",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/de670ef4-9ea5-4b34-9910-2da7b71ac"
+    },
+    {
+      "name": "PageTest Website Testing, Monitoring wit",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/188d4507-3169-43cd-a5ad-965ad80df"
+    },
+    {
+      "name": "LLG the best AI tool for public markets ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a77885fa-ec30-4a9c-a2d0-0b776c8ee"
+    },
+    {
+      "name": "YouStylize Turn Your Photos Into Magical",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/4b15f836-31b2-4ebf-b57a-bcd90178b"
+    },
+    {
+      "name": "PainPointFinder Find real pain points. B",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e93f9381-c5e1-4bc5-8f6e-36720ce71"
+    },
+    {
+      "name": "PassIntervu Practice real interviews wit",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ed4fdb31-ab85-4781-b3be-b45f0e334"
+    },
+    {
+      "name": "Duet Mail Save hours every week with Due",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/332c72f7-a483-4cf0-82a2-03ea0905d"
+    },
+    {
+      "name": "Notably AI notes that think, link, and g",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/fa383731-3e7f-4c86-ad44-20e652410"
+    },
+    {
+      "name": "Call Buddi Let AI Book Appointments for ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/95eb17e2-134d-4031-882b-24b307351"
+    },
+    {
+      "name": "AI Essay Grader Save Hours Grading Stude",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/2a398b4f-9fa6-4650-aca8-2c4e7adc2"
+    },
+    {
+      "name": "Ghibli Image Generator Create studio ghi",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/aba58b13-51b9-4cc4-b6af-8e8c00e50"
+    },
+    {
+      "name": "A2A Store The first A2A Registry Platfor",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e3ec95c9-01ef-4a6f-aa47-e0506c6fb"
+    },
+    {
+      "name": "neural frames' lyric video maker the syn",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5a730f8e-51f7-4726-8049-e6b0871f9"
+    },
+    {
+      "name": "Good Friend LinkedIn posts that work DAM",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/561f74de-0acc-4686-9074-31e9a9d35"
+    },
+    {
+      "name": "ProTunes One The royalty-free music plat",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b5895285-314f-4ec8-a471-3eca5ce4b"
+    },
+    {
+      "name": "AnyLLM 10+ LLMs at 10x speed. Think we'r",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/58fa283e-bb45-4c42-a6db-6ffa416d9"
+    },
+    {
+      "name": "LLM Hydra Forum of AI experts. More idea",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e3644d9c-aa48-4ce2-bebe-9ce849bf7"
+    },
+    {
+      "name": "Product Hunt MCP Connect Product Hunt da",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b15d879b-2610-40ff-8218-2c9a5174c"
+    },
+    {
+      "name": "Picsellia Atlas Your vision AI agent to ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/8d261e0a-dfd0-4bde-8f93-bfef4cdb3"
+    },
+    {
+      "name": "Gemini 2.5 Flash Fast, Efficient AI with",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f99d56a8-35c3-4eed-9fac-b6d7e8d34"
+    },
+    {
+      "name": "Universal Memory MCP Your memories, in e",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/262237a3-1ebd-48d6-829f-16285692c"
+    },
+    {
+      "name": "Tensara The competitive GPU kernel optim",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/49e0cdcf-7258-4ea4-a59d-e0eb2de56"
+    },
+    {
+      "name": "Botsheets Extension Instantly generate G",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/99adbd78-4092-4944-bdf9-e05e4eb14"
+    },
+    {
+      "name": "Jurix Ai Your AI Legal Companion #AI",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/6c0c2402-724b-43fc-8f05-49cea2173"
+    },
+    {
+      "name": "GenSticker Turn boring photos into beaut",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d7c28cf7-34b5-4643-b10e-e748cad02"
+    },
+    {
+      "name": "PhotoGuru Transform your bad selfies int",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d263c746-236d-4643-b939-2048649a2"
+    },
+    {
+      "name": "Fitboite Your box of smart fitness tools",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/33469026-c175-40a4-a84f-2b52c0902"
+    },
+    {
+      "name": "Smart Admissions Streamline University I",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/875e7027-9ad9-4242-855e-af198eae3"
+    },
+    {
+      "name": "Veo 2 in Gemini Google's Cinematic Video",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b8a79cbf-f954-4f1a-871d-6d14f9051"
+    },
+    {
+      "name": "Omniflow The Operating System for modern",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5c237b5f-fd68-4ca8-8b95-5e94ada17"
+    },
+    {
+      "name": "Music AI Bubble Connect ChatGPT to your ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/91c77080-9557-4fa0-827b-6026d9ea6"
+    },
+    {
+      "name": "StarGPT AI chat with GPT-4.5, Claude 3.7",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/cc076a7e-40ed-465a-9f96-99b511f72"
+    },
+    {
+      "name": "Aruko The only group travel planner you ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/3e3b4fdd-fd7c-4b0a-bf46-fe9d803df"
+    },
+    {
+      "name": "MCPBind Enterprise security for every MC",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9aeae8a3-e659-4791-8016-177d603b8"
+    },
+    {
+      "name": "ParrotWriter The only AI research and wr",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c7eeb056-30e1-4732-974f-55aebb19a"
+    },
+    {
+      "name": "Makersfuel Build your startup faster, sm",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5ceea5b5-7762-4141-9a9a-27c9fa070"
+    },
+    {
+      "name": "BriefPod Your personal news anchor, powe",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/81eebd5f-1ba0-4c69-91cf-fc124552e"
+    },
+    {
+      "name": "PrmptVault Save your best AI prompts. Ac",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c9e9fc0f-7e7a-44bf-8fa5-d12dea62d"
+    },
+    {
+      "name": "CapWords Learn a new language with AI-po",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/95444ff8-00be-473e-8f91-f06e14697"
+    },
+    {
+      "name": "Cerebro Cerebro turns information into c",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/949245c8-b6a5-4f33-8658-9c310241c"
+    },
+    {
+      "name": "Guidemaker Free How-to Guide & SOP Creat",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e9db8851-1e58-4653-b02d-d7e7ccfac"
+    },
+    {
+      "name": "Why My Wife Yelling At Me AI wife simula",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/319b988f-e47d-4329-a19a-2ca92779c"
+    },
+    {
+      "name": "Kling AI 2.0 Next-level AI video & image",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c7c75821-e1b0-4783-a69c-4af949cd0"
+    },
+    {
+      "name": "Avochato Chrome extension Business texti",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d7e78120-b73f-48e2-b161-5092b3bd6"
+    },
+    {
+      "name": "Inform AI The world's first autonomous A",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e4586c1b-590b-419a-bd2b-edba0a2e2"
+    },
+    {
+      "name": "Real-Time Characters by Vexiam Studio Ta",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/1abf0c3d-f4f9-4d14-a728-524f3b959"
+    },
+    {
+      "name": "Inner Circle A smarter way to stay in to",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/2fc79ebe-7133-45aa-91ca-3654a3f75"
+    },
+    {
+      "name": "Protocode Code, run, and test your web a",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/13b1b5b8-e5ec-4be4-8455-a822d3534"
+    },
+    {
+      "name": "jobpakki AI Generated resume tailored to",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ea024f2a-68d8-42b6-859b-a52dfa8c0"
+    },
+    {
+      "name": "iCliniq Tes AI for Multiple Sclerosis Cr",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5697fb0e-8555-4d7b-98b0-52d6a0c1c"
+    },
+    {
+      "name": "UnitText - AI copy editor Not another AI",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e3029c8d-fb5c-4cd1-b616-e94b679d5"
+    },
+    {
+      "name": "ContentMagix B2B AI Content Creation & H",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b50356ae-a2f0-47ab-8dc4-62d7f6bf4"
+    },
+    {
+      "name": "AutoMCP Easily deploy your existing AI a",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d388a3a7-8948-4ee6-a2e8-b01026f90"
+    },
+    {
+      "name": "DocsHound AI turns demos into instant do",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/47ffc366-fc1a-477a-8c53-53b250f30"
+    },
+    {
+      "name": "n8nChat Create automations in seconds by",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e6ab291f-4144-4791-a96f-1969017e7"
+    },
+    {
+      "name": "Bilanc Measure the impact of AI on engin",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a5a6f58e-e859-4648-b699-6547f8c9e"
+    },
+    {
+      "name": "Aqua Voice Incredibly fast voice input f",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ce1a3699-1426-4641-968a-600d7226a"
+    },
+    {
+      "name": "Extrovert Warm-up and nurture prospects ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/3158f361-437c-4d97-8139-997e556a0"
+    },
+    {
+      "name": "Potpie AI Create custom AI agents for yo",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b3a4e2d1-4931-46b1-9cba-acaf5f345"
+    },
+    {
+      "name": "Simply Moby Organize DeepSeek. Your chat",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/364047d9-496a-41c8-8b7d-1bb65f4e6"
+    },
+    {
+      "name": "Mezzoic - Alpha Launch Software Project ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a832c9c1-bbc8-4b8d-ad28-d189ae447"
+    },
+    {
+      "name": "Eloovor Make your job search stress-free",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/194b4cd2-545b-4595-902d-985221d6a"
+    },
+    {
+      "name": "AI-Powered Chinese Name Generator Discov",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a5f84dab-02a4-4a0b-8206-41c769192"
+    },
+    {
+      "name": "AI-Based Personalized Skincare System AI",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/be99394f-30c3-4db3-8b35-f20958c72"
+    },
+    {
+      "name": "UpRate Automating Customer Support for Y",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/70b2e674-9d5e-4060-941d-6758d5ce2"
+    },
+    {
+      "name": "Augment Agent AI pair programmer that un",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/3eb29573-601e-49fa-9ddc-0289ec512"
+    },
+    {
+      "name": "PRISM by Block Convey Monitor models, ex",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e2c0764e-6004-4cab-b67a-08d4b342e"
+    },
+    {
+      "name": "Educato for Students AI tutor prep for 1",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e150fa22-d5d1-4aac-ae61-17686177f"
+    },
+    {
+      "name": "SpreadSimple 2.0 The fastest way to buil",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d866a945-a712-40c9-86d9-3f4d9176f"
+    },
+    {
+      "name": "Ginie AI Your Movie Ginie #AI",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/bed4fb48-9f08-4725-b652-800adb487"
+    },
+    {
+      "name": "MarkdownMate Vibe Coding? Stop your AI A",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9052bfeb-37e9-4f24-8ee3-6a3535743"
+    },
+    {
+      "name": "My Color Elf Create Stunning Coloring Pa",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5ad49bba-cc0b-478b-9f6c-07682c754"
+    },
+    {
+      "name": "DatingBioGen Get more matches with our A",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/854a8b8c-e6cc-4f05-abfe-abe0020f6"
+    },
+    {
+      "name": "BookBlitzAI Your All-in-One AI eBook Cre",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/0dfaaffb-829b-4ca0-b6c9-eebc72de4"
+    },
+    {
+      "name": "e-Commerce Solution Level Up Your Busine",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/0428c6bc-9cf9-4fde-9613-e1959e95c"
+    },
+    {
+      "name": "ZLVAN Boat Name Generator ​Boat Name Gen",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9070e92b-cc41-45dc-bfd5-9c26c91c2"
+    },
+    {
+      "name": "RentalRetouch Professional photo editing",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/093da03f-1b2f-453b-acf3-75fd0ab4a"
+    },
+    {
+      "name": "Monivity Automate monitoring your activi",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/568d6fc4-6e59-42fa-850e-93d255e28"
+    },
+    {
+      "name": "Pizza Or Not Pizza Is it pizza? Find out",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/776e563b-dcda-4f86-bd1f-5ed2066df"
+    },
+    {
+      "name": "OmniHuman by ByteDance An advanced AI-dr",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/561cf18a-589e-493a-a3c9-682bd25e6"
+    },
+    {
+      "name": "Amazon Nova Sonic AI That Hears How You ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b3658b56-d4e6-4fb4-92b5-7eefe3c01"
+    },
+    {
+      "name": "MindPal Turn your expertise into sharabl",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/43c33a44-348b-4ebf-96a4-637df5dcd"
+    },
+    {
+      "name": "AI Homework Save time, boost English stu",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/4a88dd36-6ab7-40cb-89c4-8561ee1df"
+    },
+    {
+      "name": "Chatasist Next-Gen Customer Support Cent",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f04dc1dc-ad7b-49d1-ac8d-0e14342bf"
+    },
+    {
+      "name": "Undetectable WTF Bypass ALL AI Detectors",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c0f03d75-47b4-4611-ad95-3a9ec43be"
+    },
+    {
+      "name": "AI PDF Summary Summarize PDFs & Web Page",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d32f534f-536b-4793-a888-2142be3ac"
+    },
+    {
+      "name": "AI Powered Rituals Reprogram Your Subcon",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f230be5f-fe40-4ea0-9686-b77dc69bc"
+    },
+    {
+      "name": "Blabblr Business jargon to plain English",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9c07a900-aedd-4314-aa0e-d265a8f6b"
+    },
+    {
+      "name": "DocuDive Read fast, understand faster #d",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/73402189-2232-4124-a605-48b8fee77"
+    },
+    {
+      "name": "AI Answer Generator Get free AI answers ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/3871345d-dff5-46d9-b7df-492a75d3f"
+    },
+    {
+      "name": "Quake II (GenAI Version) Experience a Cl",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/4777f094-2a61-4db7-99f9-bb59a69cc"
+    },
+    {
+      "name": "Bevelify Instant 3D Models from Text & I",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9ee76adc-a8b0-4906-8c37-c0ae63f53"
+    },
+    {
+      "name": "Threadrize Grow your audience with an AI",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/07a12286-da98-48a3-8608-61753a1b2"
+    },
+    {
+      "name": "Lillian ai AI tool that matches brands w",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f853548e-e53e-493e-be05-733a09ba2"
+    },
+    {
+      "name": "Socratify: Learn by Debating Your Critic",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/2d24331d-cb38-41fa-a173-f99753ed8"
+    },
+    {
+      "name": "Universal Intelligence Composable AI. In",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/bc24129c-d025-4111-a212-20e2d7c09"
+    },
+    {
+      "name": "Elissa - My Panic Ally Your Panic & Anxi",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7146fb5a-c808-4d9f-89a6-f8a990254"
+    },
+    {
+      "name": "Outerspan Deploy agents that have their ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/887229f5-272e-41b1-bdaf-7c8942219"
+    },
+    {
+      "name": "iglu Micro-journaling with on-device int",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f835eac4-6078-413a-8fc1-8f462bdbd"
+    },
+    {
+      "name": "Startup Grants Find, filter and apply fo",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5b585352-6dfa-48d7-9bbc-2be26fcc7"
+    },
+    {
+      "name": "MechConnect Diagnose your car problem in",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c448acc3-4723-4a53-8721-cda4fe3be"
+    },
+    {
+      "name": "Open Prompt Manager Open Source Prompt M",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/871e213c-faeb-43d1-9664-6143b1bda"
+    },
+    {
+      "name": "Nemesys Labs Generate Natural Voices & P",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/6c97f106-0bcc-46f6-83ef-3d4de669b"
+    },
+    {
+      "name": "RoadMapTracker - AI Your learning journe",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/4b42547d-7207-4153-af15-3326331df"
+    },
+    {
+      "name": "Moodrobe AI your personal ai outfit asis",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/685659f7-5165-45f3-aa10-99888acdb"
+    },
+    {
+      "name": "AI Reply Generator - social24 Convert so",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/81ed948d-bd55-497e-9969-d70d039bf"
+    },
+    {
+      "name": "Lazy Prompter Generate any prompt - text",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b8f38e00-2c79-4e24-92cd-f818b4c8b"
+    },
+    {
+      "name": "HeyGen x HubSpot Integration Automate pe",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/3ec52faa-5947-45f8-b92a-f62394a35"
+    },
+    {
+      "name": "Pippit AI Your smart video & image creat",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f6a6de63-abe0-4f42-8af9-2481a18e5"
+    },
+    {
+      "name": "Browserable Open source browser automati",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7e2b46ba-552f-4366-a1c3-d5769ebd3"
+    },
+    {
+      "name": "Vinter AI Recruitment Platform Innovativ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5250aff3-9afb-4937-be53-095e5b817"
+    },
+    {
+      "name": "Compose Personal assistant for your mac ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b26fe856-c746-4e77-b95b-5f6846571"
+    },
+    {
+      "name": "AI Infographics Turn text into stunning ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5451186d-212b-42d7-8fe5-7ed027de9"
+    },
+    {
+      "name": "MIOSN We needed a better way to choose L",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/2bc17db1-e414-4142-8f66-d0a6a3bf0"
+    },
+    {
+      "name": "Cloudflare AutoRAG Managed RAG pipelines",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/0220535f-bd6e-46a0-a61d-e40923f1b"
+    },
+    {
+      "name": "A2A Protocol Open standard for AI Agent2",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/cce7658c-a3ab-470d-b3f0-c41d4c052"
+    },
+    {
+      "name": "Instalog Because your logs deserve bette",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/308cd88e-1d2f-44a2-ad5f-587766d75"
+    },
+    {
+      "name": "Haystack Code Reviewer Review code as a ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9fc10974-6aec-4d55-a02c-0d718755f"
+    },
+    {
+      "name": "LiquidIndex 2.0 The Stripe Checkout of R",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/cf6d09cd-7652-4804-bb4e-8a30be4cb"
+    },
+    {
+      "name": "Voicenotes Pages What if publishing felt",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d01690d3-06de-44a8-87ca-8c86425aa"
+    },
+    {
+      "name": "Crono Outreach personalisation at scale ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/76fb0046-8ea9-40a4-b0fb-46c2009c9"
+    },
+    {
+      "name": "xoFocus Intelligent Highlighter Reading ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/bdefa517-024e-443f-9dba-5438d3dee"
+    },
+    {
+      "name": "Nuron Empathy-driven AI that Grows with ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a8fc86c3-5548-4883-a40f-76cb4f3fb"
+    },
+    {
+      "name": "YouTube Transcript Generator Extract tra",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/0130702e-0682-47db-ab4e-d0e93095a"
+    },
+    {
+      "name": "Elys AI Your ultimate BFF #AI",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/dc5e05e7-9dbe-4e0a-96d7-8d866567b"
+    },
+    {
+      "name": "InFeely Create High-Quality, Creative Im",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d80806df-c4a8-43d6-9371-e827eb0c4"
+    },
+    {
+      "name": "Buildzero Your AI Co-founder to Validate",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/721a4467-d71a-4ae7-9bba-ead10ff7c"
+    },
+    {
+      "name": "IBM z17 The Mainframe Reimagined for the",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/1d2709af-2321-4416-921b-129c5bc3c"
+    },
+    {
+      "name": "Okareo Error discovery & evaluation for ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/935071b7-c734-43e8-9934-77ebd8fc9"
+    },
+    {
+      "name": "GitHub MCP Server The Official MCP Bridg",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/23867c4d-b6fe-4619-afbe-f4be4ade6"
+    },
+    {
+      "name": "AI Command Bar Turn your user's words in",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/19f12cb9-5c2b-4646-bcc7-278d499ca"
+    },
+    {
+      "name": "Helix Your collaborative AI coding agent",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/432b3980-9c14-4798-8ab2-61e0a77d7"
+    },
+    {
+      "name": "Dialx Your AI phone receptionists that w",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a3f1b62f-9a6f-4811-967d-29d6ddc21"
+    },
+    {
+      "name": "Ink Thoughts Where your thoughts, screen",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/0940c87b-1cb3-4b2f-aaf3-6c0765ec5"
+    },
+    {
+      "name": "AiSkill Explore and share AI-generated c",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f3a278be-cc89-4ed8-b9b1-f686b6d7d"
+    },
+    {
+      "name": "iCliniq Tes - HIV AI Assistant Crafted b",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ab3add78-762c-4759-b1c3-f81bb5db0"
+    },
+    {
+      "name": "TVDE: Revisualize Any Online Video Turn ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c7864f0d-1e7b-472a-a211-fc89fa954"
+    },
+    {
+      "name": "Pickaxe Build and monetize AI tools # AI",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/db885ec3-f894-480b-bd27-c874bfb3c"
+    },
+    {
+      "name": "AI Character Generator Bring Your Imagin",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/75c595e3-25a2-4bce-8da0-c6ba4ff1a"
+    },
+    {
+      "name": "Drooid Whole truth with news summaries f",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/633a2a37-d11c-42ec-8653-5dc655e7d"
+    },
+    {
+      "name": "The Repeater AI Learning: See, Hear, Spe",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/35692064-86b4-4734-88bb-cc07704b2"
+    },
+    {
+      "name": "Agno Build lightning-fast, multi-modal R",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/93cf03e0-a1c5-4e73-8004-ecbaf2d1f"
+    },
+    {
+      "name": "Face Shape Detector Online Detect Your F",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ce254581-956b-4e06-8cb1-dfe197dfe"
+    },
+    {
+      "name": "noCaptcha Ai Effortless CAPTCHA Solving,",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f87e7a0c-8551-4022-b43a-6a992d1da"
+    },
+    {
+      "name": "Brick.Photos Turn Your Pics Into Brics #",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b5f7fa75-5b8c-448b-b7d9-91b9b716d"
+    },
+    {
+      "name": "Chef Lens - (Beta) ​Never lose your favo",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/31ad9b60-7814-4e68-8112-eaeee7e05"
+    },
+    {
+      "name": "TracAI Ready To Boost Your Productivity ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e529c276-dffc-4977-938b-864838f87"
+    },
+    {
+      "name": "ResumeInvent Get Noticed, Get Hired – Th",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a924983c-0c4d-4981-9e95-36a8f4189"
+    },
+    {
+      "name": "Find That Face AI Have you ever seen you",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/85fec8f8-e0fd-4de7-80b4-9132d24de"
+    },
+    {
+      "name": "Sweep AI AI coding assistant in IntelliJ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/bad1e21c-7a90-4f87-accb-3be3cdc88"
+    },
+    {
+      "name": "The New Microsoft Copilot Your AI Compan",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/3890b8c9-79d5-4a38-90d6-84fa4197e"
+    },
+    {
+      "name": "Llama 4 A new era of natively multimodal",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/44208b61-f7ee-4588-8ac9-496747a11"
+    },
+    {
+      "name": "Shiprocket Copilot Voice based copilot f",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/907b9f77-9a51-4e35-a4de-b39d37c9f"
+    },
+    {
+      "name": "Pleeso Transformez votre idée en startup",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e69f3371-48cc-4b4c-a8aa-580c174ba"
+    },
+    {
+      "name": "MCP Market MCP Marketplace | Discover To",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/fc822d9a-1fe3-427c-8535-2e1200835"
+    },
+    {
+      "name": "Coqui TTS Turn your words into natural-s",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/be4e676a-2733-436a-9031-04e24a984"
+    },
+    {
+      "name": "Scour AI Extract structured data from an",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/bfbe7c8d-5df0-4897-b4a4-4f4f180e8"
+    },
+    {
+      "name": "Sms Tactic Marketing like VCs in Budget ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/392979aa-8560-40e4-a6a8-8b2232ede"
+    },
+    {
+      "name": "ReInterview We help you crack your inter",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/865ee9c0-c579-41a8-8973-cef75acbf"
+    },
+    {
+      "name": "Dateno Turn Data into Insights - No Code",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c18a19f1-5452-4f8f-8d80-c79b64bc9"
+    },
+    {
+      "name": "Amazon Buy for Me AI Agent that shops in",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/da7f706c-512a-4d20-9931-4c12400ee"
+    },
+    {
+      "name": "Databutton MCP Give your app AI superpow",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/cacc9b28-1c46-487b-a524-0dccdd926"
+    },
+    {
+      "name": "IncogniChat We have incognito mode for s",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/54124fa9-895b-4486-8655-51c61f567"
+    },
+    {
+      "name": "Ask the Architect by Exploravention Labs",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9ba837c6-0e04-465d-8497-7be4de8d4"
+    },
+    {
+      "name": "Threader.Ai Make sense of complex LLM co",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b1e39709-c95c-44b9-8061-d675011f3"
+    },
+    {
+      "name": "LoveLink AI-powered reply wizard for dat",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f714b84e-a70b-4b74-9085-c7d6c76da"
+    },
+    {
+      "name": "Prompt Trained Personalized learning pla",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/cd763128-fefd-4287-b70c-a880f02ce"
+    },
+    {
+      "name": "Spotbuzz | Create Content 10X Faster A L",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e8062d30-c666-4ee6-9d55-f15fa388d"
+    },
+    {
+      "name": "Ai Agents The place to discover the best",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/cb427de6-4db8-4cf8-98f1-b8bacadd5"
+    },
+    {
+      "name": "Adobe Premiere Pro 25.2 Smarter search &",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/95edfbba-c287-48f2-a167-6c56464d3"
+    },
+    {
+      "name": "CloneMyTrips AI Travel Buddy #Travel",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/0e5c2243-01b0-485c-9ca5-0ee11b8a4"
+    },
+    {
+      "name": "Itzam Seamless AI integration # AI integ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b052e54e-cb90-4a25-a4f2-3e0ac0897"
+    },
+    {
+      "name": "PhonePi MCP Bridge AI to Your Phone usin",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c0c2f1a5-b446-4bc7-9fe8-f914ed12c"
+    },
+    {
+      "name": "FlashMind Learn more, forget less—with A",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7f512dc9-8504-4531-b97d-2ad147fff"
+    },
+    {
+      "name": "Ghibli Style AI Generator Ghibli Style A",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f08bce00-a000-4cb8-9593-4677c2d2a"
+    },
+    {
+      "name": "Talkblue (alpha) The European, privacy f",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/421ce6e7-295d-4ebb-aa08-33acc3d6a"
+    },
+    {
+      "name": "LLMule Community-powered P2P network for",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/cec12d82-5fec-4358-bd40-43bbc1c0c"
+    },
+    {
+      "name": "KUBI Conversational AI Robot Barista #Ar",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/0673854a-21dd-40d5-8568-eff65760c"
+    },
+    {
+      "name": "News Zap Stay Informed, Save Time #AI",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/900b8357-b6aa-4050-a81d-bb691c43c"
+    },
+    {
+      "name": "Survey Sync AI-Powered Surveys That Save",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e75d8dab-b1f2-465e-8858-f6fb53cbf"
+    },
+    {
+      "name": "Formula E Stats Centre Dive deeper into ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/31a1eb92-e25e-4887-b067-adafc59c3"
+    },
+    {
+      "name": "Koah Make money with ads in your AI chat",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/478e6c8e-d421-4fb1-bf6b-83de94f95"
+    },
+    {
+      "name": "Super Grok Voice, custom prompts, langua",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b92a9e54-039e-4939-9897-bac020d4e"
+    },
+    {
+      "name": "NotebookLM Discover Sources Describe you",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/bd2b8f35-2add-45b9-96b8-db932b571"
+    },
+    {
+      "name": "Shamaze The app that tells a story in yo",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/910ed62e-8fbf-4947-840c-b630652a4"
+    },
+    {
+      "name": "NilgAI Travel NilgAI crafts in-depth AI ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/2b0f008e-377e-4afe-9817-a90292524"
+    },
+    {
+      "name": "Open Source LLM Performance Tracker An o",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/12356d35-cd39-4c7b-a55e-8b4b4095d"
+    },
+    {
+      "name": "YRIKKA APEX API Contextual red teaming f",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d509b0fe-768e-43cd-a70a-4dfb2fcb7"
+    },
+    {
+      "name": "KudosWall Build better resumes & beat th",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a8cd0e3b-a524-4910-a1c7-e8aa4c9b8"
+    },
+    {
+      "name": "LangPanel AI Powered Webtoon/Manhwa Tran",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/1d129314-adc6-4732-91aa-bb1fd68fe"
+    },
+    {
+      "name": "Best F*ing Translator The best translato",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a8eaa789-41f2-4de2-8e26-5337311e8"
+    },
+    {
+      "name": "Prompt Template Generator Share AI promp",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/272dbe24-a92f-4b1f-876a-fc4758269"
+    },
+    {
+      "name": "Vantedge AI The AI agent marketplace for",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9e64e25f-4e35-40ef-a9bc-a6bcab3a7"
+    },
+    {
+      "name": "GitSummarize Create beautiful internal d",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5e8ff429-d3d2-4f83-8fef-beb876b7f"
+    },
+    {
+      "name": "Langflow Desktop Build AI-powered Agents",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ff7c9bdb-7572-4a0b-9fa4-353381bc4"
+    },
+    {
+      "name": "TwinMind: AI Second Brain for Mobile Rem",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/4e262a7d-953e-48c4-9fbb-2556b6fd9"
+    },
+    {
+      "name": "oMoo Listen to music through your hand v",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d9e51df5-99e1-4de1-89ee-fb6d90d41"
+    },
+    {
+      "name": "Datatrixs Understand Your Business with ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/4bd26d31-109a-467f-8041-79dc29c9d"
+    },
+    {
+      "name": "Mom & Dad Tales Help your kids sleep fas",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/074d4d07-39e8-4a1f-b108-a4bc7a2d0"
+    },
+    {
+      "name": "Magic Minutes AI Summarizer for all plat",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/39debc98-a47d-477e-9224-d795a0e32"
+    },
+    {
+      "name": "iSwift.dev Create apps in minutes with A",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/42f37fd3-db6b-41bc-88ec-90770a3bd"
+    },
+    {
+      "name": "Usercall AI Qualitative Analysis Automat",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/22c870c5-f53d-468d-8acf-366b6ef8c"
+    },
+    {
+      "name": "Octomind MCP Use vibe testing to repair ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/fb9f004c-60d7-429b-9210-5ea02008d"
+    },
+    {
+      "name": "OpenAI Academy Free AI Literacy for Ever",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b5927fd0-c4c1-4874-8c80-06307fd7b"
+    },
+    {
+      "name": "Exponent A programming agent that runs a",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/6461bd03-433c-41b3-bfe7-0c3de7a9e"
+    },
+    {
+      "name": "Stringer News Decentralized objective ne",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ad3daf73-fbdc-48ad-a3f7-6518789a6"
+    },
+    {
+      "name": "wand.email Create emails with AI #Email ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/caef0e70-7204-4e95-85ce-1b8a51cb4"
+    },
+    {
+      "name": "Webfuse Augment. Automate. Own the web. ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/cf521835-30ec-4274-9828-6a6e52f1f"
+    },
+    {
+      "name": "loat Grow MRR with automated product mar",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7a4b4d79-43c5-4b65-98cc-1dfdcc388"
+    },
+    {
+      "name": "NowStarring.Me Imagine yourself in your ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9de1b602-3a3a-4ce7-a006-bb61e827c"
+    },
+    {
+      "name": "Suitpax The next-gen AI traveltech with ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/10e5d80f-250c-4710-bc00-b56ada78d"
+    },
+    {
+      "name": "GitSummarize Instantly generate beautifu",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/aa606aa5-ecaf-4a5b-a234-6f67f5610"
+    },
+    {
+      "name": "Newsletter: Diseña IA para Humanos Casos",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/8de481ff-fb2d-4bb9-8517-2b98e1802"
+    },
+    {
+      "name": "InstaPage Read Smarter, Not Harder #Prod",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5e6aa8c3-a511-4365-a460-cf4174145"
+    },
+    {
+      "name": "Snappy - Your AI Fashion Stylist Get AI-",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/2ba4edbe-af82-497a-bfe3-89dd85608"
+    },
+    {
+      "name": "iCliniq Tes - Migraine AI Assistant Craf",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ab88a468-b5b8-45ef-a2b7-42772a913"
+    },
+    {
+      "name": "Runway Gen-4 Our next-generation series ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/1145814e-15c9-42f4-be57-b7cf0338d"
+    },
+    {
+      "name": "Amazon Nova Act Reliable AI for web auto",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/4a55b7e5-80bf-4ac7-af66-fbadb1902"
+    },
+    {
+      "name": "visionOS 2.4 Apple Intelligence arrives ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c1a09dad-718a-4dc9-ac10-fb15991cd"
+    },
+    {
+      "name": "OctoComics AI Comic creation tool Includ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/069c9fdc-6b22-4734-a7e6-26a6253fa"
+    },
+    {
+      "name": "Yond Search-less trip planning. Turn soc",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/43c5d5db-1e9b-42b6-9aa1-ae02c5c95"
+    },
+    {
+      "name": "Video Generator AI Generate videos using",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/0baf2872-a055-4c6e-99a9-f51b9eb54"
+    },
+    {
+      "name": "AI Infographics Convert text into stunni",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b361ee9e-4fb5-4e20-98a2-3a35017e3"
+    },
+    {
+      "name": "Second Brain Your digital knowledge mana",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d777af32-4a46-42b8-8a81-c70f0f645"
+    },
+    {
+      "name": "ShortCut AI Associate AI with keyboard s",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f509c78c-2419-4daa-aec2-410d87733"
+    },
+    {
+      "name": "OWL #1 Open-Source Agent Framework on GA",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/99395c88-b2f4-47e9-94c6-87d6f3440"
+    },
+    {
+      "name": "Ghiblify Eid Photos Turn your Eid photos",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/17242343-6533-41b3-b8cb-d652878eb"
+    },
+    {
+      "name": "vkncy AI ranks. CVs battle. #AI",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ba32a129-94f3-410b-9afa-1cfd3a440"
+    },
+    {
+      "name": "Presto Work smarter. Just ask Presto. #A",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a64f5241-c9b5-4cc8-afc9-7c6cb2a82"
+    },
+    {
+      "name": "FlexClip Photo to Ghibli Style Converter",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/0a2d41dd-77a7-4c12-9f53-6a0b5ae89"
+    },
+    {
+      "name": "CandidateX AI-powered resume screening f",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c15c7f98-a0d7-4166-a698-633f6abca"
+    },
+    {
+      "name": "purposewrite Write quality content - res",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/066c5c1e-e831-4f86-883d-b525f610e"
+    },
+    {
+      "name": "MappingSpace ALM AI powered ALM (applica",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/41768977-3fd5-4d74-bdd3-f2c74f890"
+    },
+    {
+      "name": "hopping Tracker Snap your receipt. Track",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/6da241d9-539e-4482-9d08-0db02d010"
+    },
+    {
+      "name": "Scrape Any Website. Get Structured Data.",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e3754976-f8b8-4bfa-9244-abea58a95"
+    },
+    {
+      "name": "PodcastPrepper Cut podcast preparation e",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/76ebcfc4-b9f9-4cde-924d-f331d8cd3"
+    },
+    {
+      "name": "AI Ghibli Style Images Generator AI Ghib",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/64f87ca7-6632-4be9-8177-29d64c6e1"
+    },
+    {
+      "name": "Sourcelett The AI-powered writing tool b",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/07dc6a0f-35ab-4a47-86f1-89b09700e"
+    },
+    {
+      "name": "Manus AI App Autonomous Agents, Now on M",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/3bbdcd5b-c9cf-48aa-b104-69d285ba7"
+    },
+    {
+      "name": "Master Growbot AI Cannabis Cultivation A",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/784d534f-4ca2-498a-8f2c-63db00572"
+    },
+    {
+      "name": "Free Local A.I Tools WebGPU based LLMs #",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5d6c186d-f49d-4979-b732-2de2dfa88"
+    },
+    {
+      "name": "Slicks AI AI Powered presentation slides",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/2581edd9-b468-40a5-9625-61f7c5e3e"
+    },
+    {
+      "name": "Animefy Turn your pics into a very famil",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/60dbf24f-48a4-4f73-8b7a-7551391a7"
+    },
+    {
+      "name": "The Meme Co Discover the best memes on t",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/526bfed6-daf5-4647-aa81-9be9b43d2"
+    },
+    {
+      "name": "Ghibli Style AI Image filter Transform y",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d74d024a-0cb4-422b-a8a6-77c70f13c"
+    },
+    {
+      "name": "Ai2 Paper Finder AI That Searches Like a",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7d24c48a-4b29-40c5-a84d-11efe17d1"
+    },
+    {
+      "name": "Giblify AI Convert your photos to Ghibli",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/4f38bdd1-e6ba-4f3e-8758-a237401f7"
+    },
+    {
+      "name": "Skybox The world’s smartest AI influence",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a0ed28b1-e796-4666-9c11-13d29c764"
+    },
+    {
+      "name": "Sindo Effortless AI-powered testimonials",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e2417ca5-8640-44e5-a647-241c41585"
+    },
+    {
+      "name": "Harmonized The AI Doc Editor #AI",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/87839d47-7412-4017-b09a-47087e09b"
+    },
+    {
+      "name": "AutoAnalyze AI-Powered Data Processing T",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/45ce434f-80fb-4f3b-8d35-3ea00f9b3"
+    },
+    {
+      "name": "Go/NoGo- Business Idea Validator Greenli",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/77670835-8e11-4b9f-8dbf-68743c340"
+    },
+    {
+      "name": "NiceGPU On-demand GPU power for AI and c",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/cf53c2af-4f49-41c8-b961-72bf01663"
+    },
+    {
+      "name": "Portal Jumpers | Minigame Portal jumpers",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ad5b320a-5e51-438b-adff-8cd8240a6"
+    },
+    {
+      "name": "Studio Ghibli Magic Ghiblify Yourself! ✨",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7e207635-032f-4558-902d-acde9f1fe"
+    },
+    {
+      "name": "Faye - Free Privacy-first Period Tracker",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/3fc5edf9-6c1a-43ce-b878-ee781f1d1"
+    },
+    {
+      "name": "TalkToSales Make your website into a voi",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f2a60c38-d18b-4b16-aa17-99e193851"
+    },
+    {
+      "name": "MusicGPT Create Music with AI – Just Typ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/df7476cb-2996-4ba2-9757-f8dc5d4b0"
+    },
+    {
+      "name": "Neurally From Knowledge to Conversations",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a98dd4af-e049-4010-88cc-e28b58392"
+    },
+    {
+      "name": "Wallpea Create the unimaginable—instantl",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a32884d7-a4da-4a63-b327-0ed11ffb1"
+    },
+    {
+      "name": "BrowserAI Open source SDK: Run LLMs dire",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/0e1a6d94-f5fd-4123-8d57-1d14a97ec"
+    },
+    {
+      "name": "Teamsaver Where team updates turn into h",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/68c89f23-2eba-414a-8d19-c12513c87"
+    },
+    {
+      "name": "TxGemma AI models for faster drug develo",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/791c649a-f141-4fc0-a488-27587d25c"
+    },
+    {
+      "name": "Project G-Assist On-GPU AI, built for th",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/bdf4c86e-d3e9-4bc1-850a-da31ccb97"
+    },
+    {
+      "name": "Text2Note Turn any text into actionable ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/3ea61d3a-ab47-4485-9272-f84513ff9"
+    },
+    {
+      "name": "DelinkedIn Chrome extension that roasts ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/78d97433-06e0-4a22-8e47-d91a8d4f2"
+    },
+    {
+      "name": "AIHubMatrix Universal Chat for Any AI Mo",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a4a95e16-4224-4d3a-b9e0-cd86f7878"
+    },
+    {
+      "name": "websim.ai create, share, and explore fun",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a0b71966-d768-461f-a969-f436f0e33"
+    },
+    {
+      "name": "Avcado AI Reveal What's Really in Your F",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f0e198a9-9c36-4b0c-a198-6a68042f2"
+    },
+    {
+      "name": "NameNexa Generate business names with av",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b3dca5b2-b9a8-4700-98af-c77df6672"
+    },
+    {
+      "name": "AI Health Camera Lose bodyfat and keep m",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e87c6798-0ef1-4f0f-8dfd-00dc67924"
+    },
+    {
+      "name": "Taskra Plan Smarter. Execute Faster. #Pr",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/28aaf187-5372-4bfe-aae6-772619663"
+    },
+    {
+      "name": "MeshifAI Text-To-3D Generation Platform ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/4a2a5125-a861-41ff-92f8-b51b00df3"
+    },
+    {
+      "name": "Researcher & Analyst in M365 Copilot Rea",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/1fa16381-0537-474c-b857-80edee033"
+    },
+    {
+      "name": "Nash AI that interacts with any app, ser",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/578da675-40de-42ac-b798-5b23a595c"
+    },
+    {
+      "name": "Airial Travel Plan dream trips instantly",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/92a9bf61-2687-4792-bd39-a3497efde"
+    },
+    {
+      "name": "AI-Powered Crypto Wallet Prevent malicio",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/0cc27b6a-995b-43ab-b099-82de11b23"
+    },
+    {
+      "name": "Personas - AI Powered Document Review St",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a623007e-9ccb-4fb5-be61-e7ec5a31a"
+    },
+    {
+      "name": "Meal Genius AI kitchen helper. Customize",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/2d432b0e-5cf8-4678-806b-fffeba6aa"
+    },
+    {
+      "name": "Rovyk Platform to experience the latest ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/24a91c55-04eb-499c-8138-a8d0431ba"
+    },
+    {
+      "name": "Paint Color Match AI Live Paint Color Id",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/34fa789d-2f53-41f6-b8b8-4414f56fe"
+    },
+    {
+      "name": "Bootup AI Automating account creation & ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/851e28ab-832e-46a0-91a9-d9ffab8e6"
+    },
+    {
+      "name": "Mira Migo Your Perfect Career Path in 5 ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d032229c-4d9a-431a-9a0c-96a201ec9"
+    },
+    {
+      "name": "XSPACESTREAM Discover what's being said ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/4ebf8750-9210-468e-aa24-2e9c7413d"
+    },
+    {
+      "name": "React Native ExecuTorch Simplest way to ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d628c6be-40b2-42ed-a2b8-0b6a8bc0c"
+    },
+    {
+      "name": "NOAN Your superhuman business partner #A",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/01f8ab1d-27c6-4b01-a4c7-478231d09"
+    },
+    {
+      "name": "R2R Deep Research Agents for Your Data, ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/4f50328f-466c-499a-b599-82ee9a8f3"
+    },
+    {
+      "name": "Qwen2.5-Omni The end-to-end model poweri",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f70f5c9b-077c-4462-ac01-8122bf7b5"
+    },
+    {
+      "name": "Grok for Android The official app by xAl",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/546f3668-d0a9-48ad-98d9-e67933107"
+    },
+    {
+      "name": "ActionKit Instantly add 1000+ integratio",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/3bc58b5b-3997-4918-9efe-1ea288de4"
+    },
+    {
+      "name": "Redactable Protect your sensitive data i",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ccd137ce-b06e-4fd4-a491-d8e552739"
+    },
+    {
+      "name": "Lynk AI Sales Team: Skyrockets Business ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/97b42052-6fda-4888-9f85-db8fc3156"
+    },
+    {
+      "name": "Qwen2.5-VL-32B The Sweet Spot for Open-S",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/fd88b23d-fb0e-4d35-aff3-fb1d8137d"
+    },
+    {
+      "name": "URLtoText - API Extract clean text from ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c4260da0-4c9b-49b5-979e-2447e807d"
+    },
+    {
+      "name": "Kaiboard Supercharge your clipboard with",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f3562584-7b6f-4271-bb8c-153d82bad"
+    },
+    {
+      "name": "Nodeflow AI Connect YouTube, Instagram, ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b2c86fce-14f9-4d61-b5cc-9179a7538"
+    },
+    {
+      "name": "Prompteus Build and ship AI workflows th",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a8324056-7a02-4f2f-893d-c1f2755b8"
+    },
+    {
+      "name": "Dropgala Capture, organize, and share sm",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f6e34078-4166-411c-a15e-82531f1de"
+    },
+    {
+      "name": "Gemini 2.5 Google's most intelligent AI ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ab0255b2-3e9a-4072-957a-0da993b2e"
+    },
+    {
+      "name": "Fenn Find what you need on your Mac. Eve",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/75825399-4971-4795-8694-3305bce2e"
+    },
+    {
+      "name": "Open Agent Kit Build, customize, deploy ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7713d249-6ae4-4d78-9227-9fcc1d0a2"
+    },
+    {
+      "name": "Tiptap AI Suggestion Customizable AI sug",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d3ffddf6-0c9e-4607-84e4-37f37132b"
+    },
+    {
+      "name": "Solver Offload coding tasks to AI while ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/1d32665b-8920-4119-8352-7cae099ce"
+    },
+    {
+      "name": "Markifact AI marketing workflows made si",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c2070345-4bfb-4bab-a1f5-f2c568394"
+    },
+    {
+      "name": "Promptly AI - 250+ AI Tools Your AI Hub:",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/31d10ad6-15a4-4509-8ecd-29762547d"
+    },
+    {
+      "name": "Snapzion Open Source Unlimited AI Image ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/fc7c54f0-4ead-43b1-8ffb-da4ca51e9"
+    },
+    {
+      "name": "Kolank Generative AI Hub, unified API an",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/6c8cdb08-bfaf-41ce-b88f-35a9fb8ec"
+    },
+    {
+      "name": "RelaxFrens AI for your 🧠 - lower stress",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/cca02f26-2abe-4c9d-8ca2-ee3b40c67"
+    },
+    {
+      "name": "Powered_by Custom AI agents for SMBs. ag",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/31dcafc9-1360-4f92-bda5-dd30a5af6"
+    },
+    {
+      "name": "iCliniq Tes - Asthma AI Assistant Crafte",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ae8293c3-ff70-4ce4-8f89-20a2c91f4"
+    },
+    {
+      "name": "SmolDocling 256M VLM for end-to-end docu",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/8040f7b5-9011-46bb-b20d-c8d8a3520"
+    },
+    {
+      "name": "Break Me 2.0 Interactive website to rela",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/bc365baa-0239-445f-a222-bee054b86"
+    },
+    {
+      "name": "Zapier MCP Connect your AI to any app wi",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5f5dae53-54ab-4711-84fd-b3a9abd18"
+    },
+    {
+      "name": "DeepSeek-V3-0324 Code like 3.7 but open ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e424a13b-c8f4-4649-936d-c45ff9294"
+    },
+    {
+      "name": "new.email by Resend Build cross-platform",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e8a0231a-4229-46b5-a18b-c1c0c8f43"
+    },
+    {
+      "name": "mcpt Managed registry for MCP servers #d",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/6fa1bb8c-43b0-4175-b3ef-734821069"
+    },
+    {
+      "name": "Meilisearch AI Boost relevance and UX wi",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b636b105-360c-464a-8676-eae3f0cd9"
+    },
+    {
+      "name": "Inferless Deploy any machine learning mo",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7b2f6d44-2e50-4266-9b71-5a1f4f99f"
+    },
+    {
+      "name": "IP Portal Protect, license, and monetize",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d47fadf8-51c9-452b-a385-c811a0ddb"
+    },
+    {
+      "name": "WriteMancer Make AI undetectable within ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/4f8acf37-7d73-4a5a-9de7-40f2cbf1c"
+    },
+    {
+      "name": "PromptFile Your AI Prompts, Supercharged",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5cbba941-3bd0-41bc-942e-72560bc7e"
+    },
+    {
+      "name": "HrlensAi Realtime AI-Interviews – Honest",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a17d0223-8635-44d0-a202-3fb53c231"
+    },
+    {
+      "name": "Problem Pilot Stop building products nob",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ec940d38-3404-42f9-a907-2e28fb8b6"
+    },
+    {
+      "name": "Hypermedia Play News Your Personal Audio",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9af15f4f-d869-496b-a246-bdc75ebf7"
+    },
+    {
+      "name": "Say Kotoba - Study Japanese Real talk. R",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f39a34b0-636c-4ba7-8980-249a3a20b"
+    },
+    {
+      "name": "Accord Smarter Collaborative AI Driven E",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/60758987-3dc8-4366-b03e-45b1d78fb"
+    },
+    {
+      "name": "PolitePulseAI Text tone converter | tran",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ea2d4679-de37-4b80-85a5-b3db25218"
+    },
+    {
+      "name": "Knowa Your company's knowledge, at your ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/8a4e68c0-1245-4f07-95fb-5fc69ee15"
+    },
+    {
+      "name": "Educhain Turn any web page into Quiz #Ed",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/3672b0c6-886c-4d09-90d0-6e9a74e3f"
+    },
+    {
+      "name": "Reelvis Create reels for your brand on i",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c87533fa-92e7-427d-8066-9872f2426"
+    },
+    {
+      "name": "BASE44 2.0 The all-in-one app building p",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/73009a05-10bc-4090-b02e-8f48bc85a"
+    },
+    {
+      "name": "Bandera AI No More Manual Work. Just Sal",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/8caeb0f7-bc1b-4574-a8e7-051ad0e43"
+    },
+    {
+      "name": "Interview Code Ace The ultimate, invisib",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/cd39c800-b387-4f3c-ac34-b0d04890b"
+    },
+    {
+      "name": "GPT Rules Supercharge your AI chats with",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/fe1b2afb-5c63-40e5-855e-acaa3ce78"
+    },
+    {
+      "name": "LiftmyCV AI agent that finds jobs and au",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/32c54c0f-c316-48ad-a22b-bfdf82801"
+    },
+    {
+      "name": "CrowdCore Automate your influencer marke",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/fff986de-4ddf-462c-ae4e-67e47f287"
+    },
+    {
+      "name": "Fastrack AI hiring manager that automate",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/473f2416-35ee-49d9-8f02-5555b6f52"
+    },
+    {
+      "name": "iSEOAI The Ultimate Free AI Tools Direct",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/07d8dc12-496e-4078-b25b-3bf5393e1"
+    },
+    {
+      "name": "VizgenAi Edit any image using our Ai. #A",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/984b1b71-bea4-4729-b533-ea973f091"
+    },
+    {
+      "name": "PM Pathfinder Product Management Excelle",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9ba6c7dc-4f08-40b2-b868-5e3b49f19"
+    },
+    {
+      "name": "Contenfly A centralized hub for hands-fr",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c7b924b1-ea58-4123-bb9d-164969970"
+    },
+    {
+      "name": "Neural DSL for defining, training, debug",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e1ac8607-b48c-4d56-9ad8-840043b77"
+    },
+    {
+      "name": "Cherry Pick Unlock the full potential of",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f4c36c69-26c4-4bcf-8b01-b1da7d59f"
+    },
+    {
+      "name": "PodAI.fm Create podcasts in seconds. # A",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d97b8479-69b4-4608-ab0f-3e81cddcd"
+    },
+    {
+      "name": "Selfie AI: AI Avatar Generator Transform",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ef34ed56-064d-4dd9-a23b-b4efde013"
+    },
+    {
+      "name": "AI Charades HUB Charades game with commu",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f0f68ab1-f28d-4e62-ab68-2fa6d2c17"
+    },
+    {
+      "name": "DeGen.ai Transform your data with Genera",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/13a08644-0620-49e5-a793-f4dd49a71"
+    },
+    {
+      "name": "Skywork-R1V Pioneering multimodal reason",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/1f561cd9-5d91-4e07-bd01-243ef48f6"
+    },
+    {
+      "name": "Chromatic AI Create AI UGCs for TikTok &",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/afd8a91a-a0f8-46a3-b605-094c5d158"
+    },
+    {
+      "name": "Copilot for Gaming Your AI-Powered Xbox ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9eefe31f-146b-48ca-949c-c34ba6b5d"
+    },
+    {
+      "name": "MyPT: Workouts and Meal Planner The AI p",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/db8e3b78-ed58-4630-a003-b31b8974c"
+    },
+    {
+      "name": "Ai Business Plan Builder Home #data",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/3beb392a-a699-4a71-8e28-90a2090ab"
+    },
+    {
+      "name": "omniai.club Create 10x More Content, Bui",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/857fd87e-2b2a-40be-afda-61c9849ed"
+    },
+    {
+      "name": "YNXO AI-driven social interactions tailo",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9cb25d72-542b-44dc-bc11-d96c6cd3d"
+    },
+    {
+      "name": "TheZAI Transform Photos with AI Magic #A",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/88b5589c-421b-46e4-bacb-288ddaa15"
+    },
+    {
+      "name": "Ali: AI Business Consultant for UAE Your",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d2c130fd-3541-4853-85b1-240392625"
+    },
+    {
+      "name": "LearniAI AI learning tool with knowledge",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/66bb8363-6d67-45fe-85a0-64c084461"
+    },
+    {
+      "name": "WaterCrawl Transform Web Content into LL",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e948b690-cef1-49ed-9fe6-a346eddb1"
+    },
+    {
+      "name": "Podttr Audio to Text Transcription & Ins",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/cf88d22d-23ba-440c-8636-913ece807"
+    },
+    {
+      "name": "BRUTAL CRITIC AI ART CRITIC WITH NO MERC",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/881eb5a1-e941-440e-ba2a-1eb29d127"
+    },
+    {
+      "name": "ASOnalytics Boost your app's conversion ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/79ebcd4f-fbf4-40c5-90d1-234da21d9"
+    },
+    {
+      "name": "Audio Guide It Explore any place on eart",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/0a10f919-54fe-4648-afec-7e86c6dd0"
+    },
+    {
+      "name": "FormGenie AI Agent To Build Google / Air",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/02146e5e-3977-40f2-9ba0-0b7ec551e"
+    },
+    {
+      "name": "GeoHealth App All your health in one App",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/3b813049-8fc7-47a0-92c0-4204b102d"
+    },
+    {
+      "name": "Roblox Cube 3D AI-powered 3D object crea",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/0179d0df-cb36-4937-aff4-35079e9f5"
+    },
+    {
+      "name": "Hunyuan3D 2.0 Create High-Quality 3D Ass",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/94096f11-5583-42c3-b577-679029102"
+    },
+    {
+      "name": "Chariot Build websites fast with AI #AI",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c02bdd3c-3273-4b6d-94e3-b8b8f8c2c"
+    },
+    {
+      "name": "Menu AI Ask AI in your Mac's menu bar. #",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b1864c73-c4cf-436d-88ae-b6166ca09"
+    },
+    {
+      "name": "BrowseRead – Challenge every article Unc",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/89b100f2-931c-4c6d-959c-90dfe7166"
+    },
+    {
+      "name": "Magicley AI for Android Multilingual AI ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/45c7afa4-1f8a-4a63-bf82-eb356c0cd"
+    },
+    {
+      "name": "Camouflage for iOS Redact photos with ea",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/36e6b9cd-04a7-4a3e-b6fe-1019d45dd"
+    },
+    {
+      "name": "AI Tools Directory - by Whalesync Discov",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/68afc1f3-761f-4b68-b13d-2adfac74c"
+    },
+    {
+      "name": "Second.Me by Me.bot The first network of",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/6cbf6e14-7f21-41d5-ac4c-53bd15728"
+    },
+    {
+      "name": "Tails & Frames Turn you pet recordings i",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/06f325f7-9134-4abf-a4fe-99cc83204"
+    },
+    {
+      "name": "Machina Sports - AI Agents for Sports Tr",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5cecc966-71c6-46b5-ab62-8ad5bfee6"
+    },
+    {
+      "name": "Mythic v3.0 Unparalleled breach intellig",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ffa4c7ab-13c6-480b-a297-49d9edf86"
+    },
+    {
+      "name": "Gymble - AI Coach Gymble: Your personali",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/46cb336c-fb9b-4c90-92c2-f152c51c6"
+    },
+    {
+      "name": "Pixsso AI-Generated art displayed on eIn",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/2db292cf-bc6b-4dc1-8937-2562fa17b"
+    },
+    {
+      "name": "Vibe Photoshop Edit with AI and Vibes #d",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5b90a4e5-2815-4de3-8bfd-7e6819fb7"
+    },
+    {
+      "name": "AI Prompt Generator Generate well-define",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/46c47033-2bd5-431b-a3ae-bbf6dec31"
+    },
+    {
+      "name": "TinyHeroStories Transforming Stories int",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f36a83a7-5239-40cb-9300-b8f7d4b5e"
+    },
+    {
+      "name": "BabelShark Rapid localization of website",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/907585ef-0b57-4314-a079-87172d7a3"
+    },
+    {
+      "name": "Chatwize Deploy your customer support AI",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/1824ef92-ac24-4051-b045-0c76dc495"
+    },
+    {
+      "name": "VoiceCanvas Instant text-to-speech in 40",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/162d06db-15da-43c6-89c0-216a5d4b7"
+    },
+    {
+      "name": "Gemini Canvas Interact and collaborate w",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/768cc656-ca9a-4f50-850c-d21dcae92"
+    },
+    {
+      "name": "Tennis Finance Never chase unpaid invoic",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/29cf3be4-9fbc-4ace-badb-d417d2b84"
+    },
+    {
+      "name": "PDF invoice capture PDF-to-XML for invoi",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/38549461-6e66-4e99-b6aa-b59282cec"
+    },
+    {
+      "name": "CrackCoder Invisible AI tool that lets y",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/2973fe0c-1cbb-485e-a770-6ac57f17c"
+    },
+    {
+      "name": "LLMinder Notifications for AI replies (C",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/264249d9-0682-4eee-9de2-760e4c888"
+    },
+    {
+      "name": "pg_search on Neon Get 1,000x faster full",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/86468497-3d6d-4b46-a549-9ecc273ed"
+    },
+    {
+      "name": "Summizer Comprehensive and Deep Analysis",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/fd620211-2435-47dd-8f92-f369d97a2"
+    },
+    {
+      "name": "EasyFindAi Instant AI Chatbot Integratio",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a4e9b601-bd65-418a-be61-1cc8ce67b"
+    },
+    {
+      "name": "EzReply - AI That Sounds Like You 1-Clic",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/197cba38-ad1d-410d-a0f1-ac3708789"
+    },
+    {
+      "name": "SeabassAI Discover real-world AI applica",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/4a772a5e-5d07-48fd-abbc-5e8dc1382"
+    },
+    {
+      "name": "Codegen AI developer that analyzes + imp",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/57fabee7-70a5-4aff-8a4f-387387a08"
+    },
+    {
+      "name": "Predibase Reinforcement Fine-Tuning LLM ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b28a2516-9461-4b33-a026-f78fddeea"
+    },
+    {
+      "name": "Attention Insight FIGMA Plugin Instantly",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/2c3fd230-234b-469a-a97f-2613282e1"
+    },
+    {
+      "name": "Autodraft AI Create 4K animations + cust",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e3cf7010-866f-4178-ae26-10e7830fe"
+    },
+    {
+      "name": "LoreMate - AI Character Chat Be the main",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c2a951c5-04df-47d5-a8a0-72123ed4e"
+    },
+    {
+      "name": "Doola: Pregnancy Safety Scanner Helping ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/1299d919-9f17-417e-96a3-7c6c9b6ea"
+    },
+    {
+      "name": "VidGen Transform your ideas into stunnin",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7a7dddc2-a50a-4697-a550-4108ade67"
+    },
+    {
+      "name": "iCliniq Tes AI for Rheumatoid Arthritis ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/67d87ea2-7f15-46ca-aacf-0d75dc22e"
+    },
+    {
+      "name": "GRID spreadsheet API A spreadsheet engin",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/82e784a6-d404-4246-b347-fdc0c256b"
+    },
+    {
+      "name": "Agentic PolicyApps AI Agents powered App",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/4d7238f1-cd75-4504-b7d4-af931ede6"
+    },
+    {
+      "name": "Bunch for Android Daily leadership coach",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/873eff6b-5445-47bd-9566-510eea719"
+    },
+    {
+      "name": "Tinybird Forward » The fastest way to sh",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/bb44f748-d2ed-4a1c-8592-2a0497716"
+    },
+    {
+      "name": "Crawl AI Build Your Own AI With One Prom",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/4b863b90-3984-41c9-8b74-8c5f7ef27"
+    },
+    {
+      "name": "DeepLetter Decimate Your Inbox & save ho",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/19d1adfa-3137-4a20-8083-429737071"
+    },
+    {
+      "name": "Falcon Deep company research for sales t",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5c937663-7436-41de-9585-e93d0d10e"
+    },
+    {
+      "name": "Hugging Face Daily Papers Search with AI",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/4237dba3-50ec-4ddf-ab62-6e9840a0f"
+    },
+    {
+      "name": "Shorty Like Cursor But For Marketing #So",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/1ca13cd2-8fae-44fb-aed6-6ce66f5be"
+    },
+    {
+      "name": "FoundersAgree - AI Contract Review Scan ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/3d9d2dff-f78a-4214-8ad5-4431ac2bf"
+    },
+    {
+      "name": "Aha The world's first AI influencer mark",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/badf0734-410e-439f-929f-eb7de8cec"
+    },
+    {
+      "name": "LearnLingo Learn languages by holding re",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f0e74fe4-5e9a-40a6-9cec-02155c203"
+    },
+    {
+      "name": "Melio Create custom royalty free music f",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/803f5c7e-3798-4a09-9c17-20751bb5a"
+    },
+    {
+      "name": "VoiceSii - Record Your 10 Sec Voice. Sha",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/65ba3a8b-23f0-49cf-88e6-d68ad268a"
+    },
+    {
+      "name": "Simplest Agent Generate Your Own AI Agen",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/178dfa36-4919-4663-beb2-262ff1161"
+    },
+    {
+      "name": "CityOne Smart travel planning with real-",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/50a8335a-8f8b-452d-80e3-5a4989872"
+    },
+    {
+      "name": "Sitalyze 20-Page Website Analysis Report",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/62ef3afb-cd65-461d-b692-02c9e5448"
+    },
+    {
+      "name": "Command A Cohere's most performant model",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5298a877-f5f5-4abd-bcf6-322104971"
+    },
+    {
+      "name": "FillyForm Make form filling simple and e",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/24f00f8e-84b2-46dc-9a6c-d3fbfe21c"
+    },
+    {
+      "name": "Gemini in Android Studio Code from image",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/378dbed2-f446-45fc-86de-e425574d8"
+    },
+    {
+      "name": "Fewsats The payment infrastructure for A",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/97a2ea61-b9dd-4593-a424-e47780432"
+    },
+    {
+      "name": "ShortQuiz.ai Transform ideas into engagi",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7f2bb2ea-1c11-4ba9-977d-cf10909c7"
+    },
+    {
+      "name": "Ease-Commit AI-Powered, Context-Aware, G",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/3348aaeb-ef87-434f-bcac-962b1c3b3"
+    },
+    {
+      "name": "GiveMeCalculator Create & Share online t",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a69b0d7f-d0bf-41f2-982d-e9251b03e"
+    },
+    {
+      "name": "BrainLink Helping AI devs get more users",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/2026ef85-e144-4608-88fa-30ced184b"
+    },
+    {
+      "name": "Not Legal Advice Need legal advice at 1%",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/4a6b57b1-90cd-472d-82d5-e02b61e32"
+    },
+    {
+      "name": "Iteraite Be an AI-powered Product Manage",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/3feedf50-4846-4c7b-910d-9444e0b68"
+    },
+    {
+      "name": "Flowgen AI Agents for Automation Consult",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b98dc6e2-76ab-42b2-a984-14f0eee81"
+    },
+    {
+      "name": "StrategyMaster The AI platform to create",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ab67b084-db14-407e-816d-8844c4044"
+    },
+    {
+      "name": "MoviePulse Your AI-powered movie compani",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b3a740ea-4ac5-40d1-8a49-4d01a7c8b"
+    },
+    {
+      "name": "OpenJobs AI Let your dream job find you ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/3a7d9331-425e-4f18-9cd4-7621fa61e"
+    },
+    {
+      "name": "PDF to Calendar w AI Extract and export ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/120bde2a-5c52-4c44-86cc-8c31bf3eb"
+    },
+    {
+      "name": "TraVisAI AI-powered travel assistant,mak",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/807ee19b-1b09-4911-9887-0d5daeb0e"
+    },
+    {
+      "name": "Stylo News AI-Powered, Multi-Source News",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/1b271b4f-4497-43a4-b058-5e0b15745"
+    },
+    {
+      "name": "Ai Image BG 100% free, unlimited generat",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7beb03a6-cc69-4a4b-b236-0608ef0fb"
+    },
+    {
+      "name": "AI Projects Marketplace Buy & Sell AI pr",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/3ba3e732-d451-4ca0-acaa-6454ed235"
+    },
+    {
+      "name": "Clipwave Switch languages in seconds for",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/4f295c80-4ece-40af-8865-140542271"
+    },
+    {
+      "name": "Pair Build Better Prompts, Get Better Re",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a0d2aea6-b922-47b2-afb2-64c8d397a"
+    },
+    {
+      "name": "Compare AI Roast or Toast? Let AI Rate Y",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/260f633d-fc8b-43d1-b84a-e264efab3"
+    },
+    {
+      "name": "ChooChoo A network of AI agents to autom",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/f42d97b4-9983-480f-bf90-bff7bb9ed"
+    },
+    {
+      "name": "Interlify Connect your APIs to LLMs in m",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b210b0e1-4899-46a3-a1ce-2ebc580a3"
+    },
+    {
+      "name": "Gemini Personalization Get help made jus",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/47dec7db-a37e-42ff-98e6-2a0cf0874"
+    },
+    {
+      "name": "CodeHound Automated Security Auditing So",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7295a3e9-8da5-4e82-b711-6dcfcbc1d"
+    },
+    {
+      "name": "Neosapien Neo 1 is your personal AI comp",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5d7b05ef-a876-4f6c-926c-770c72903"
+    },
+    {
+      "name": "Image Toolset Transform images fast with",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d35b6e4e-23c2-4484-9b7d-136ab1104"
+    },
+    {
+      "name": "RevivifyAI Transform old photos into bea",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/17985809-204f-488a-b823-441c97642"
+    },
+    {
+      "name": "HeyCli Your AI buddy for daily tasks #Au",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7cd68324-bc70-449d-93a5-9c6aa4b22"
+    },
+    {
+      "name": "FreeAIGen - AI Image Creator Create stun",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/67b6457a-b006-45ef-8ea1-ff4b0ad70"
+    },
+    {
+      "name": "IncredEmail AI Create High-Converting Em",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ca19e717-afc3-4629-bc03-c63a17d8b"
+    },
+    {
+      "name": "Nexus AI-managed code quality and workfl",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/0b4378da-91d2-45b2-9c36-27d1978c4"
+    },
+    {
+      "name": "KreadoAI Video Face Swap Get face swaps ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/8e47b6ec-f307-444d-ade3-345a3fffd"
+    },
+    {
+      "name": "Cresh Analyze & refine business idea in ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a4a0853d-acae-41f6-9eff-3e64cac94"
+    },
+    {
+      "name": "Hal9 Reply Reply to Any Message #data",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/63d36f80-e3f4-4baf-baa9-f2f4ad56a"
+    },
+    {
+      "name": "touch grass reduce your screen time # He",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ea1901ef-e7ce-4fee-af6b-71f320884"
+    },
+    {
+      "name": "Gemini Robotics Bringing AI into the Phy",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/48ed95b1-442c-472e-a085-62922dad2"
+    },
+    {
+      "name": "Repixart Your Personal AI Photographer –",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ca5ae7d5-f3fa-490c-8cf4-d1ae2a1fc"
+    },
+    {
+      "name": "SmartCartAI+ AI-personalized meal planne",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d92c752f-6563-492c-abb4-e0d1716a0"
+    },
+    {
+      "name": "CarbonFreeCommute Visualize your commute",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d6603c8f-ab21-4f7d-a9e4-e61226218"
+    },
+    {
+      "name": "MedicalGPT MedicalGPT | Accurate & Relia",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b3e8fe40-7f3a-4575-9d75-67e8fbaab"
+    },
+    {
+      "name": "ToxText AI-Powered Toxicity Detection AP",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/aede7dbb-6d30-4b0d-9475-0919152d9"
+    },
+    {
+      "name": "BulkImageGeneration.com Create 100+ prof",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/1add438d-4342-42c0-b907-c027a1326"
+    },
+    {
+      "name": "anchors | Uber of Influencer Marketing C",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/fedd1fd0-2fa4-40ac-a353-116eec143"
+    },
+    {
+      "name": "Hallucination-Proof AI Course Creator Tu",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/0300d2dc-c7d3-4550-b961-90f7161b4"
+    },
+    {
+      "name": "Appbuildchat AI-powered mobile app devel",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/cd043d03-39ad-4741-941f-836624d36"
+    },
+    {
+      "name": "Willow Voice Voice dictation that actual",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b7bc57fa-6d4e-41fa-96d5-d03688ac2"
+    },
+    {
+      "name": "Gemma 3 Build with multimodal AI from Go",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/3901c043-f443-454c-9f67-da1d3b4b4"
+    },
+    {
+      "name": "Bolt x Figma Turn Figma designs into pro",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/757f28c6-8d0f-469e-81ca-fc57dc2c7"
+    },
+    {
+      "name": "CodeNow.AI Bring ideas to life in second",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/cf3c2932-9ac2-4396-a38f-ce674df7b"
+    },
+    {
+      "name": "Layer Build an MCP server in minutes #AP",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b6e86c0e-87d8-428a-a86a-e9cdffd8e"
+    },
+    {
+      "name": "Namegener Generate instant brand names w",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/8d5e73e9-0941-48b6-a2ce-770531841"
+    },
+    {
+      "name": "Revinote Update your CRM on the go with ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b28957e7-1dad-429f-89d5-38cf4d69d"
+    },
+    {
+      "name": "Voicy Speech to Text Write with your voi",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/dc6bec59-9187-48d6-bbf0-7d9f0d2fa"
+    },
+    {
+      "name": "meraSaaS Starter Kit Build an AI SaaS in",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7aa7a079-92d2-4f13-afb8-5c930cf2e"
+    },
+    {
+      "name": "SubtleAI Transform Your Videos With AI-P",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/1aea0c09-6d94-4e4b-9538-0ea3701a3"
+    },
+    {
+      "name": "OCTA Free E-signatures, automated invoic",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ee723834-a4c3-4fd0-bdfa-13aa58efe"
+    },
+    {
+      "name": "No Cap World's first AI angel investor #",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/fbe8f5ed-a1a4-4785-b11e-77b73a3fe"
+    },
+    {
+      "name": "Cuckoo Real-time AI translator for globa",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/52048910-fa54-4406-a56d-6e5912895"
+    },
+    {
+      "name": "TOSI An avatar-based link-in-bio site #S",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/006ad0f6-5f6f-4519-b6ce-317072ed9"
+    },
+    {
+      "name": "Dex The AI Browser Copilot #AI",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/1f323cb7-3695-4c0d-a3c5-28338e1f3"
+    },
+    {
+      "name": "Doji Create your likeness, virtually try",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/0a9d5f94-d938-4ad9-abf6-7bc5de4b7"
+    },
+    {
+      "name": "Cenote Back office automation for medica",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/8c541b02-44f7-4eda-84fe-ab3388324"
+    },
+    {
+      "name": "Workspace by Portal Labs Collaborate wit",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/4e8faa04-4fe3-4694-89b2-32548106b"
+    },
+    {
+      "name": "Selene 1 Evaluate your AI app with the m",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/6cf04ebb-0e81-4013-965b-ab7ec3e39"
+    },
+    {
+      "name": "Mantle AI-native cap table management fo",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a4932e37-8fcf-41a9-bb46-53b885d0e"
+    },
+    {
+      "name": "Qodo Gen Agentic coding to generate conf",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/53baf72d-2d59-4cb3-840d-93d9ecba0"
+    },
+    {
+      "name": "Graphlit MCP Server Share knowledge betw",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/bd346a5c-66f1-4491-acbb-41e1eb3d8"
+    },
+    {
+      "name": "Skarbe The pro-active sales engine that ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c330a57e-b3ad-4afa-bf14-f3a1f5e30"
+    },
+    {
+      "name": "ResearchBunny V1 Making Research Accessi",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/68ab3114-1433-448e-804c-ee4ccfffd"
+    },
+    {
+      "name": "Feedback Brief Actionable insights from ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/feba853e-740e-4625-bb7f-3c16b927b"
+    },
+    {
+      "name": "Foundry Find who you're looking for, ins",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7df69579-4371-4374-a66d-442340578"
+    },
+    {
+      "name": "PawPal Smart Software to Simplify & Grow",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/6e9d1476-7fd0-4c72-a91f-cb5abcfac"
+    },
+    {
+      "name": "EarningsWave Equity market wisdom, just ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/18ece582-5e83-47d0-bb48-80b583f3f"
+    },
+    {
+      "name": "RLAMA Open-Source RAG CLI for Ollama #Ma",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/520b7701-27ce-4cd5-9712-9b548b151"
+    },
+    {
+      "name": "Duck.ai Private AI chat from DuckDuckGo ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/93231955-3ff1-41e7-b7ab-d170f9400"
+    },
+    {
+      "name": "Instella Open 3B language models from AM",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ee8703f9-9e8c-4284-9b50-2c8abdc04"
+    },
+    {
+      "name": "AI Traffic Analytics Track AI agent traf",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/030aa12e-d7b4-4fb8-b4c3-dcf38e122"
+    },
+    {
+      "name": "TinyGains A habit tracker that bullies y",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/740d1423-761b-4be1-a959-1153df70c"
+    },
+    {
+      "name": "Provid Stay ahead of the latest trends #",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c45b7025-4ef2-4715-ab79-d515cd9db"
+    },
+    {
+      "name": "FIND-X Perplexity for your website. #dat",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5956348b-a394-4d72-a5b7-1bcbdbaf9"
+    },
+    {
+      "name": "MonitorPlus AI Screen Monitor: Focus Boo",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/52fd3707-3705-432a-9141-610ea2a9d"
+    },
+    {
+      "name": "AIBoox Fast & affordable LLM API (Deepse",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/1e4572e8-3ead-42a9-bd1a-0ba33b1ca"
+    },
+    {
+      "name": "Tailor AI Free Personalized Coding Cours",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/27376ab0-fe2c-4999-9baa-b41b55275"
+    },
+    {
+      "name": "UiFast Perfect UI, One click Away. #data",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/9317726e-9bfb-4ef6-a09a-ffdd8155c"
+    },
+    {
+      "name": "X-ray Interpreter AI-powered interpretat",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e04f775c-e834-49b4-ac57-2c8b7ac87"
+    },
+    {
+      "name": "DOER Business AI that helps small busine",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/cb700c7a-c488-4742-8ce4-da2470819"
+    },
+    {
+      "name": "BeHooked Create viral short videos with ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/293cd578-e3e0-4103-8af7-e18c6cf0f"
+    },
+    {
+      "name": "Colossal Effortlessly integrate tool-usi",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7334b20a-670f-4ef3-ba94-559c54580"
+    },
+    {
+      "name": "HunyuanVideo-I2V High-Res Image-to-Video",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/8a6c85d4-b408-438e-8669-22d4a24ee"
+    },
+    {
+      "name": "Aya Vision Multilingual, Multimodal AI f",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/5c99ba16-38e7-4be1-9e6f-2d4f1f3f3"
+    },
+    {
+      "name": "Scaloom AI tool for high-conversion cold",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/2f353928-eebb-4d92-899d-00d8169f0"
+    },
+    {
+      "name": "Orson a coupon tool that works for you #",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b3f35a46-51a3-4f04-bf58-b94046f9d"
+    },
+    {
+      "name": "Neptune's Heart Secretly rigged astrolog",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/6972df59-5f4f-4015-904f-f1beeffcd"
+    },
+    {
+      "name": "RateMyBizIdea Validate Your Business Ide",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/6b00c015-d1e1-4c51-a810-38efd7634"
+    },
+    {
+      "name": "FirstRowChat Skip copy paste. LLM code c",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/6a5974b1-84e7-4fe5-ace0-0a9e6027f"
+    },
+    {
+      "name": "PetPic AI Capture your pet's essence wit",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b0ed4aff-a821-48d8-96c3-234cbf119"
+    },
+    {
+      "name": "Ai-Powered-Task-Manager AI Task Manager:",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/7b6cf015-a086-43b0-8fb3-0b69f2571"
+    },
+    {
+      "name": "LAHgen Unlimited Free Text-to-Image | No",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/ada11b8f-7532-4d66-9e02-bf74c7054"
+    },
+    {
+      "name": "PortalBunny The social network for creat",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/23908585-4d55-4ad3-917d-207bdd6b9"
+    },
+    {
+      "name": "Plabster Smartest Path to PLAB 2 Success",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/2a8222d6-e42b-4bc4-98fe-5f9b08a41"
+    },
+    {
+      "name": "Call AI - Smart Call Assistant Book Appo",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/a5bec0a3-ecf8-4fab-a021-bf04124ab"
+    },
+    {
+      "name": "Auntie PDF Your sassy pdf guru #Data Ana",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/11461fee-f1a0-4e58-9580-827a518fd"
+    },
+    {
+      "name": "Skilla.Day Learn a micro Skill a day. #L",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/8e410e67-0c93-43db-8318-99a567215"
+    },
+    {
+      "name": "ShrinkAI Instantly shorten your links – ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/6b85a648-54e6-4e85-92f8-8651e5a58"
+    },
+    {
+      "name": "youtube script writer AI-powered scripts",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/13e02bdb-d0ae-4f81-a61a-b9a3295a1"
+    },
+    {
+      "name": "Chaos Coder Web app generator # Name: Ch",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/015805d0-c73e-4df4-a35f-d1aac66f9"
+    },
+    {
+      "name": "Prose AI Elevate your writing with AI-po",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d3029c5f-a11b-4067-8565-e77e39046"
+    },
+    {
+      "name": "Tometo AI engineering manager for startu",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e12a6a0b-e085-482b-a429-2928d3f43"
+    },
+    {
+      "name": "Colorendo Turn your imagination into AI ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/6fa029c2-ad9a-4629-9066-16892b9f6"
+    },
+    {
+      "name": "LLMTrust Confidently navigate the world ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/1f886988-e7e1-4d02-976e-12e3c91c5"
+    },
+    {
+      "name": "AI Video Prompt Generator Turn your idea",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/4561f694-00ec-4f90-a805-fce2d786f"
+    },
+    {
+      "name": "Describe A Pic Advanced free AI tool for",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/2a42c6ae-746d-4503-85e7-acc9725b7"
+    },
+    {
+      "name": "mealclip Mealclip.com: Recipes from cook",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b40a688a-07fa-48cd-a116-51d84df11"
+    },
+    {
+      "name": "LeadLake Real-time B2B leads, hyper-pers",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/04e20d80-13a5-45e5-985a-139727c08"
+    },
+    {
+      "name": "WP Intellichat The Next Generation of AI",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/62bdbece-572e-485b-bfcd-1ae13def2"
+    },
+    {
+      "name": "BashBuddy Write bash commands with natur",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d70802cc-834e-4bab-8d5f-e224c3082"
+    },
+    {
+      "name": "RightNow AI Profile and optimize CUDA co",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/e50fb12f-6bf0-44d9-bee4-91d3805ac"
+    },
+    {
+      "name": "Hedra Studio and Character-3 A new gener",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/afcc6d65-746a-433f-95d8-5cf3c4302"
+    },
+    {
+      "name": "QwQ-32B Matching R1 reasoning yet 20x sm",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/36c1b8c3-360d-482c-899e-15013e720"
+    },
+    {
+      "name": "Google Search AI Mode Go beyond search #",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d8b2067e-e896-4240-bbf0-382ec53b5"
+    },
+    {
+      "name": "Localizapp for Xcode Translate .xcstring",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/0c1ecfdf-a80c-4846-adb9-fcdc71f63"
+    },
+    {
+      "name": "Botive AI Transforming Customer Support ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/b595b4d9-46fb-4bba-86a4-59b5acac6"
+    },
+    {
+      "name": "Manus a General agent doesn't just think",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/4828ebba-1470-43f3-b358-c79ea9bd9"
+    },
+    {
+      "name": "MarketsandMarkets™ SalesIQ AI-Powered B2",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c8ad56a7-5524-43f8-a39b-c4ae24508"
+    },
+    {
+      "name": "NextAI The Best NextJS Starterkit for AI",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/fc892a19-61e6-4c5d-8f7d-bd9427b78"
+    },
+    {
+      "name": "Flowblock AI powered Code editor built f",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/c41b36cd-ac02-46e8-825d-3de01b9fd"
+    },
+    {
+      "name": "Nebius AI Studio Fine-Tuning Transform g",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/53f47fbe-b4a4-4abf-8098-6d7ffb59b"
+    },
+    {
+      "name": "AI Shodh Transforming the future of AI-l",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/16d5fcc9-049b-4b95-8541-93ee4e2ab"
+    },
+    {
+      "name": "NoCode-X Build apps with security right ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/eeb1c417-8681-4bc6-a8e3-def71878c"
+    },
+    {
+      "name": "Kasplo Email Intelligence Predict, Optim",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/6d1d37aa-296a-422b-b888-721d41fba"
+    },
+    {
+      "name": "Docwelo Craft NDAs, service agreements, ",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/29a12c38-4cb9-4885-b7f6-cd724d269"
+    },
+    {
+      "name": "Colab Agent Go from data to insights #da",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/86641a39-9ef3-4180-babe-9e8936101"
+    },
+    {
+      "name": "AI Meeting Notes by Notion #Productivity",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/00ea5767-a40f-40d6-8051-8608d6331"
+    },
+    {
+      "name": "Probo #Open-source",
+      "status": "fixed",
+      "logo": "https://ph-files.imgix.net/d35978de-4c5a-4925-8ec5-45fe1e934"
+    }
+  ],
+  "failed_tools": [
+    {
+      "name": "Eight Sleep Spring '25 Release Turn any ",
+      "status": "failed"
+    },
+    {
+      "name": "IdeaValidate Validate your product idea ",
+      "status": "failed"
+    },
+    {
+      "name": "AiStockVids.com Gorgeous stock videos yo",
+      "status": "failed"
+    },
+    {
+      "name": "Doctorina Like а doctor, but available 2",
+      "status": "failed"
+    },
+    {
+      "name": "Your Interviewer Ask anyone anything wit",
+      "status": "failed"
+    },
+    {
+      "name": "Artefact Smarter Docs for Faster Teams #",
+      "status": "failed"
+    },
+    {
+      "name": "Standup Hiro Save hours a week with Inte",
+      "status": "failed"
+    },
+    {
+      "name": "DropATask - Email Integration Create tas",
+      "status": "failed"
+    },
+    {
+      "name": "Neuron AI Your AI, On Your Device - Priv",
+      "status": "failed"
+    },
+    {
+      "name": "Marauder Bot Ace technical interviews wi",
+      "status": "failed"
+    },
+    {
+      "name": "Intelswift AI Agents Marketplace AI cust",
+      "status": "failed"
+    }
+  ]
+}
