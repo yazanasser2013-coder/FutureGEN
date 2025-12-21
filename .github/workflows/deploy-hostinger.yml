@@ -45,6 +45,8 @@ jobs:
 
       - name: Deploy scraped_data to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+      - name: Deploy scraped_data to Hostinger (TEST ROOT)
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
