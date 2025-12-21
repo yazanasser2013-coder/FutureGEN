@@ -40,15 +40,15 @@ jobs:
           node scripts/scrape_ai_news.js
 
 
-      - name: Deploy data folder to public_html
+      - name: Deploy data folder to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: 21
-          local-dir: ./public_html/data/
-          server-dir: /public_html/data/
+            server: ${{ secrets.FTP_SERVER }}
+            username: ${{ secrets.FTP_USERNAME }}
+            password: ${{ secrets.FTP_PASSWORD }}
+            port: 21
+            local-dir: ./public_html/data/
+            server-dir: /public_html/data/
 
 
 
