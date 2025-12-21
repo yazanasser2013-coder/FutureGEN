@@ -1,388 +1,266 @@
-const fs = require('fs-extra');
+const axios = require('axios');
+const cheerio = require('cheerio');
+const translate = require('@vitalets/google-translate-api');
+const fs = require('fs');
 const path = require('path');
-const Parser = require('rss-parser');
 
-const CONFIG = {
-    RSS_URL: 'https://www.artificialintelligence-news.com/feed/',
-    OUTPUT_FILE: './scraped_data/ai_news.json',
-    MAX_ARTICLES: 6,
-    REQUEST_DELAY: 500
+
+const RSS_URL = "https://techcrunch.com/tag/artificial-intelligence/feed/";
+const HEADERS = {
+  "User-Agent": "Mozilla/5.0 (compatible; FutureGEN-NewsBot/1.0)"
 };
 
-// قاموس ترجمة شامل ومنظم
-const TRANSLATION_DICTIONARY = {
-    // مصطلحات الذكاء الاصطناعي الأساسية
-    "AI": "الذكاء الاصطناعي",
-    "Artificial Intelligence": "الذكاء الاصطناعي", 
-    "Machine Learning": "التعلم الآلي",
-    "Deep Learning": "التعلم العميق",
-    "Neural Network": "الشبكة العصبية",
-    "Computer Vision": "الرؤية الحاسوبية",
-    "Natural Language Processing": "معالجة اللغة الطبيعية",
-    "NLP": "معالجة اللغة الطبيعية",
-    
-    // الشركات العالمية
-    "Google": "غوغل",
-    "Microsoft": "مايكروسوفت",
-    "OpenAI": "أوبن إيه آي",
-    "Meta": "ميتا",
-    "Facebook": "فيسبوك",
-    "Amazon": "أمازون",
-    "Apple": "آبل",
-    "Tesla": "تسلا",
-    "NVIDIA": "إنفيديا",
-    "IBM": "آي بي إم",
-    "Intel": "إنتل",
-    "AMD": "أي إم دي",
-    "Samsung": "سامسونج",
-    "Huawei": "هواوي",
-    "Alibaba": "علي بابا",
-    "Tencent": "تنسنت",
-    "ByteDance": "بايت دانس",
-    
-    // المنتجات والتقنيات
-    "ChatGPT": "شات جي بي تي",
-    "GPT-4": "جي بي تي-4", 
-    "GPT-3": "جي بي تي-3",
-    "Copilot": "كوبايلوت",
-    "Bard": "بارد",
-    "Gemini": "جيميني",
-    "DALL-E": "دال-إي",
-    "Midjourney": "ميدجورني",
-    "Stable Diffusion": "ستيبل ديفيوجن",
-    "Sora": "سورا",
-    "Qwen": "كيو ون",
-    "DeepSeek": "ديب سيك",
-    
-    // مصطلحات تقنية
-    "downloads": "تحميل",
-    "download": "تحميل",
-    "app": "تطبيق",
-    "application": "تطبيق",
-    "beta": "نسخة تجريبية",
-    "release": "إصدار",
-    "launch": "إطلاق",
-    "update": "تحديث",
-    "feature": "ميزة",
-    "tool": "أداة",
-    "platform": "منصة",
-    "system": "نظام",
-    "software": "برنامج",
-    "hardware": "عتاد",
-    "cloud": "سحابة",
-    "data": "بيانات",
-    "model": "نموذج",
-    "algorithm": "خوارزمية",
-    
-    // مصطلحات الأعمال
-    "market": "سوق",
-    "business": "عمل",
-    "company": "شركة",
-    "enterprise": "مؤسسة",
-    "startup": "شركة ناشئة",
-    "investment": "استثمار",
-    "funding": "تمويل",
-    "revenue": "إيرادات",
-    "growth": "نمو",
-    "competition": "منافسة",
-    "strategy": "استراتيجية",
-    
-    // أفعال شائعة
-    "announces": "تعلن",
-    "launches": "تطلق",
-    "releases": "تصدر",
-    "develops": "تطور",
-    "creates": "تخلق",
-    "builds": "تبني",
-    "partners": "تتعاون",
-    "invests": "تستثمر",
-    "acquires": "تستحوذ",
-    "expands": "توسع",
-    "improves": "تحسن",
-    "disrupts": "تقتحم",
-    "exceeds": "تتجاوز",
-    "integrates": "تدمج",
-    
-    // صفات وظروف
-    "new": "جديد",
-    "latest": "أحدث",
-    "recent": "حديث",
-    "successful": "ناجح",
-    "popular": "شائع",
-    "free": "مجاني",
-    "comprehensive": "شامل",
-    "remarkable": "ملحوظ",
-    "public": "عام",
-    "commercial": "تجاري"
-};
 
-// دالة ترجمة ذكية محسنة
-function smartTranslate(text, to = "ar") {
-    if (!text || text.trim().length === 0) return "";
-    
-    if (to === "ar") {
-        let translated = text;
-        
-        // ترجمة العبارات الطويلة أولاً
-        const longPhrases = Object.keys(TRANSLATION_DICTIONARY)
-            .filter(phrase => phrase.includes(' '))
-            .sort((a, b) => b.length - a.length);
-        
-        longPhrases.forEach(english => {
-            const arabic = TRANSLATION_DICTIONARY[english];
-            const regex = new RegExp(english.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
-            translated = translated.replace(regex, arabic);
-        });
-        
-        // ثم ترجمة الكلمات المفردة
-        const singleWords = Object.keys(TRANSLATION_DICTIONARY)
-            .filter(word => !word.includes(' '))
-            .sort((a, b) => b.length - a.length);
-        
-        singleWords.forEach(english => {
-            const arabic = TRANSLATION_DICTIONARY[english];
-            const regex = new RegExp(`\\b${english}\\b`, 'gi');
-            translated = translated.replace(regex, arabic);
-        });
-        
-        return translated;
-    }
-    
-    return text;
+// ✅ مخرجات موقعك
+const OUT_FILE = path.join("public_html", "data", "ai_news.json");
+
+
+// ✅ ملف مساعد لمنع التكرار (urls فقط)
+const INDEX_FILE = path.join("public_html", "data", "ai_news_index.json");
+
+
+// إعدادات التشغيل
+const FIRST_RUN_COUNT = 50;
+const RSS_SCAN_LIMIT = 200;      // نفحص من RSS عدد أكبر حتى نلتقط كل أخبار 24 ساعة
+const SLEEP_S = 1.0;
+
+
+function ensureDirForFile(filePath) {
+  fs.mkdirSync(path.dirname(filePath), { recursive: true });
 }
 
-// دالة لتنظيف النص من الرموز غير المرغوبة
-function cleanText(text) {
-    return text
-        .replace(/&#8217;|&#8216;/g, "'")
-        .replace(/&#8220;|&#8221;/g, '"')
-        .replace(/&#8230;/g, '...')
-        .replace(/&nbsp;/g, ' ')
-        .replace(/&amp;/g, '&')
-        .replace(/&lt;/g, '<')
-        .replace(/&gt;/g, '>')
-        .replace(/&quot;/g, '"')
-        .replace(/\s+/g, ' ')
-        .trim();
+
+function loadJson(filePath, fallback) {
+  try {
+    if (!fs.existsSync(filePath)) return fallback;
+    return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+  } catch {
+    return fallback;
+  }
 }
 
-// دالة لإنشاء محتوى عربي متماسك
-function generateArabicContent(title_en, content_en, category_en) {
-    // تنظيف المحتوى
-    const cleanContent = cleanText(content_en);
-    
-    // ترجمة الكلمات الأساسية
-    const translatedContent = smartTranslate(cleanContent);
-    
-    // إذا كان المحتوى المترجم لا يزال بالإنجليزية بشكل كبير
-    const englishWordCount = (translatedContent.match(/[a-zA-Z]+/g) || []).length;
-    const totalWordCount = (translatedContent.split(/\s+/).length);
-    
-    if (totalWordCount > 0 && englishWordCount / totalWordCount > 0.3) {
-        // إنشاء محتوى عربي وصفي بديل
-        const arabicTitle = smartTranslate(title_en);
-        
-        return `تقرير مفصل عن ${arabicTitle}:
 
-هذا الخبر التقني يتناول أحدث التطورات في مجال ${smartTranslate(category_en)} حيث يشهد السوق تطورات ملحوظة في تقنيات الذكاء الاصطناعي.
-
-تشير التقارير إلى تقدم كبير في هذا المجال مع إطلاق شركات التقنية العالمية لمزيد من الحلول المبتكرة التي تهدف إلى تحسين تجربة المستخدم وتقديم ميزات متطورة.
-
-يستمر قطاع التكنولوجيا في النمو السريع مع تركيز خاص على تطوير أنظمة الذكاء الاصطناعي التي تخدم مختلف القطاعات والاحتياجات التقنية.`;
-    }
-    
-    return translatedContent;
+function saveJson(filePath, data) {
+  ensureDirForFile(filePath);
+  fs.writeFileSync(filePath, JSON.stringify(data, null, 4), 'utf-8');
 }
 
-// دالة لإنشاء ملخص عربي متماسك
-function generateArabicSummary(title_en, summary_en, category_en) {
-    const arabicTitle = smartTranslate(title_en);
-    const arabicCategory = smartTranslate(category_en);
-    
-    // إذا كان الملخص يحتوي على الكثير من الإنجليزية
-    const cleanSummary = cleanText(summary_en);
-    const translatedSummary = smartTranslate(cleanSummary);
-    
-    const englishChars = (translatedSummary.match(/[a-zA-Z]/g) || []).length;
-    const totalChars = translatedSummary.length;
-    
-    if (totalChars > 0 && englishChars / totalChars > 0.4) {
-        return `خبر تقني: ${arabicTitle} - يشهد ${arabicCategory} تطوراً ملحوظاً مع إطلاق حلول جديدة في مجال الذكاء الاصطناعي.`;
-    }
-    
-    return `خبر في ${arabicCategory}: ${arabicTitle}. ${translatedSummary}`;
+
+function parseRssDateToMs(dateStr) {
+  // pubDate مثل: "Sun, 21 Dec 2025 10:00:00 +0000"
+  const ms = Date.parse(dateStr || "");
+  return Number.isFinite(ms) ? ms : null;
 }
 
-// دالة لاستخراج النص النظيف من HTML
-function extractCleanText(html, maxLength = 1200) {
-    if (!html) return "";
-    
-    return html
-        .replace(/<script[^>]*>.*?<\/script>/gi, "")
-        .replace(/<style[^>]*>.*?<\/style>/gi, "")
-        .replace(/<[^>]+>/g, " ")
-        .replace(/\s+/g, " ")
-        .trim()
-        .substring(0, maxLength);
-}
 
-// دالة لاستخراج الصورة من المقال
-function extractImage(item) {
-    if (item["media:content"]?.$?.url) {
-        return item["media:content"].$.url;
-    } else if (item.enclosure?.url) {
-        return item.enclosure.url;
-    } else if (item["content:encoded"] || item.content) {
-        const content = item["content:encoded"] || item.content;
-        const match = content.match(/<img[^>]+src="([^">]+)"/);
-        if (match && match[1].startsWith('http')) {
-            return match[1];
-        }
-    }
-    return "";
-}
-
-// دالة لمعالجة مقال واحد
-async function processArticle(item, index) {
-    console.log(`\n📖 معالجة المقال ${index + 1}: ${item.title?.substring(0, 60)}...`);
-
-    const title_en = item.title || "No Title Available";
-    const summary_en = item.contentSnippet || item.description || "No summary available";
-    const category_en = item.categories?.[0] || "AI News";
-    const date = item.pubDate ? new Date(item.pubDate).toISOString().split("T")[0] : new Date().toISOString().split("T")[0];
-    const author_en = item.creator || item.author || "AI News";
-    const link = item.link || "#";
-
-    // استخراج الصورة
-    const image = extractImage(item);
-
-    // استخراج محتوى المقال
-    const body_html = item["content:encoded"] || item.content || item.description || "";
-    const body_text = extractCleanText(body_html, 1200);
-
-    console.log(`🌐 إنشاء المحتوى العربي للمقال ${index + 1}...`);
-    
-    // إنشاء المحتوى العربي
-    const title_ar = smartTranslate(title_en);
-    const summary_ar = generateArabicSummary(title_en, summary_en, category_en);
-    const category_ar = smartTranslate(category_en);
-    const author_ar = "فريق الأخبار التقنية";
-    const body_ar = generateArabicContent(title_en, body_text, category_en);
-
-    // تأخير بين المقالات
-    if (index < CONFIG.MAX_ARTICLES - 1) {
-        await new Promise(resolve => setTimeout(resolve, CONFIG.REQUEST_DELAY));
-    }
-
-    return {
-        id: `article_${index + 1}`,
-        title_en: title_en,
-        title_ar: title_ar,
-        summary_en: summary_en.substring(0, 400),
-        summary_ar: summary_ar,
-        category_en: category_en,
-        category_ar: category_ar,
-        date: date,
-        author_en: author_en,
-        author_ar: author_ar,
-        image: image,
-        link: link,
-        body_en: body_text,
-        body_ar: body_ar,
-        processed_at: new Date().toISOString(),
-        translation_method: "smart_dictionary_v2"
-    };
-}
-
-// الدالة الرئيسية للجلب
-async function scrapeNews() {
-    console.log("🚀 بدء جلب أخبار الذكاء الاصطناعي");
-    console.log(`📊 الهدف: ${CONFIG.MAX_ARTICLES} مقالات`);
-
+// ---------- Translation helpers ----------
+async function tr_en_ar(text) {
+  if (!text) return "";
+  const max_len = 12000; // تقسيم احتياطي
+  if (text.length <= max_len) {
     try {
-        const parser = new Parser({
-            customFields: {
-                item: ["content:encoded", "media:content", "dc:creator"]
-            },
-            timeout: 15000
-        });
-
-        console.log(`📄 جلب محتوى RSS من ${CONFIG.RSS_URL}…`);
-        const feed = await parser.parseURL(CONFIG.RSS_URL);
-
-        if (!feed.items || feed.items.length === 0) {
-            throw new Error("لا توجد مقالات في المصدر");
-        }
-
-        console.log(`📰 تم العثور على ${feed.items.length} مقال في المصدر`);
-
-        // أخذ العدد المطلوب من المقالات
-        const articlesToProcess = feed.items.slice(0, CONFIG.MAX_ARTICLES);
-        console.log(`🔄 معالجة ${articlesToProcess.length} مقال...`);
-
-        const processedArticles = [];
-        
-        // معالجة المقالات بالتسلسل
-        for (let i = 0; i < articlesToProcess.length; i++) {
-            try {
-                const article = await processArticle(articlesToProcess[i], i);
-                processedArticles.push(article);
-                console.log(`✅ اكتملت معالجة المقال ${i + 1}/${articlesToProcess.length}`);
-            } catch (articleError) {
-                console.error(`❌ فشل في معالجة المقال ${i + 1}:`, articleError.message);
-                continue;
-            }
-        }
-
-        if (processedArticles.length === 0) {
-            throw new Error("لم تتم معالجة أي مقالات بنجاح");
-        }
-
-        // إعداد هيكل البيانات النهائي
-        const finalData = {
-            metadata: {
-                source: CONFIG.RSS_URL,
-                total_articles: processedArticles.length,
-                scraped_at: new Date().toISOString(),
-                version: "4.0",
-                translation_method: "smart_dictionary_v2"
-            },
-            articles: processedArticles
-        };
-
-        // التأكد من وجود المجلد وحفظ البيانات
-        await fs.ensureDir(path.dirname(CONFIG.OUTPUT_FILE));
-        await fs.writeJson(CONFIG.OUTPUT_FILE, finalData, { spaces: 4 });
-
-        console.log(`\n🎉 تمت معالجة ${processedArticles.length} مقال بنجاح!`);
-        console.log(`💾 تم الحفظ في: ${CONFIG.OUTPUT_FILE}`);
-        
-        // عرض ملخص بالعربية
-        console.log(`\n📊 الملخص:`);
-        processedArticles.forEach((article, index) => {
-            console.log(`   ${index + 1}. ${article.title_ar}`);
-            console.log(`      📅 ${article.date} | 👤 ${article.author_ar}`);
-            console.log(`      🏷️  ${article.category_ar}`);
-            console.log(``);
-        });
-
-    } catch (err) {
-        console.error("❌ فشل الجلب:", err.message);
+      const res = await translate(text, { from: 'en', to: 'ar' });
+      return res.text;
+    } catch {
+      return text;
     }
+  }
+  const out = [];
+  for (let i = 0; i < text.length; i += max_len) {
+    try {
+      const res = await translate(text.slice(i, i + max_len), { from: 'en', to: 'ar' });
+      out.push(res.text);
+    } catch {
+      out.push(text.slice(i, i + max_len));
+    }
+  }
+  return out.join("");
 }
 
-// الدالة الرئيسية
+
+async function translate_html_en_to_ar(html) {
+  if (!html) return "";
+  const $ = cheerio.load(html);
+  const promises = [];
+  $('*').contents().each(function () {
+    if (this.type === 'text' && this.data.trim()) {
+      promises.push(
+        tr_en_ar(this.data).then(translated => {
+          $(this).replaceWith(translated);
+        }).catch(() => {})
+      );
+    }
+  });
+  await Promise.all(promises);
+  return "\n                " + $.html().trim() + "\n            ";
+}
+
+
+// ---------- Scraping helpers ----------
+async function get_article_json(url) {
+  const res = await axios.get(url, { headers: HEADERS, timeout: 30000 });
+  const $ = cheerio.load(res.data);
+
+
+  const title_en = $('h1').first().text().trim();
+
+
+  let date_iso = "";
+  const time_el = $('time').first();
+  if (time_el.attr('datetime')) date_iso = time_el.attr('datetime').slice(0, 10);
+
+
+  let author_en = "";
+  const a_author = $('a[rel="author"]').first();
+  if (a_author.length) {
+    author_en = a_author.text().trim();
+  } else {
+    const meta_author = $('meta[name="author"]').first();
+    if (meta_author.attr('content')) author_en = meta_author.attr('content').trim();
+  }
+
+
+  let category_en = "Artificial Intelligence";
+  const tag = $('a[aria-label="Tag"]').first().length ? $('a[aria-label="Tag"]').first() : $('a[href*="/tag/"]').first();
+  if (tag.length) {
+    const t = tag.text().trim();
+    if (t) category_en = t;
+  }
+
+
+  let image = "";
+  const og = $('meta[property="og:image"]').first();
+  if (og.attr('content')) image = og.attr('content').trim();
+
+
+  let summary_en = "";
+  const desc = $('meta[name="description"]').first();
+  if (desc.attr('content')) {
+    summary_en = desc.attr('content').trim();
+  } else {
+    const first_p = $('article p').first();
+    if (first_p.length) summary_en = first_p.text().trim();
+  }
+
+
+  let body_en_html = "";
+  const article = $('article');
+  if (article.length) {
+    const allowed = ["p", "h2", "h3", "ul", "ol", "li", "blockquote"];
+    const parts = [];
+    article.find(allowed.join(', ')).each((i, el) => parts.push($.html(el)));
+    body_en_html = "\n                " + parts.join("\n                ").trim() + "\n            ";
+  }
+
+
+  const title_ar = title_en ? await tr_en_ar(title_en) : "";
+  const summary_ar = summary_en ? await tr_en_ar(summary_en) : "";
+  const category_ar = category_en ? await tr_en_ar(category_en) : "";
+  const author_ar = author_en ? await tr_en_ar(author_en) : "";
+  const body_ar_html = body_en_html ? await translate_html_en_to_ar(body_en_html) : "";
+
+
+  // ✅ نفس القالب بدون أي مفاتيح إضافية (مثل سكربتك الحالي)  [oai_citation:2‡scrape_ai_news.js](sediment://file_00000000fd5c71fd8475dfcb9006f135)
+  return {
+    "title_en": title_en,
+    "title_ar": title_ar,
+    "summary_en": summary_en,
+    "summary_ar": summary_ar,
+    "category_en": category_en,
+    "category_ar": category_ar,
+    "date": date_iso,
+    "author_en": author_en,
+    "author_ar": author_ar,
+    "image": image,
+    "body_en": body_en_html,
+    "body_ar": body_ar_html,
+  };
+}
+
+
 async function main() {
-    console.log("🤖 سكريبر أخبار الذكاء الاصطناعي v4.0");
-    console.log("🌍 نسخة الترجمة الذكية المحسنة - محتوى عربي متماسك");
-    console.log("=".repeat(60));
-    
-    await scrapeNews();
-    
-    console.log("\n✨ اكتملت عملية الجلب بنجاح!");
+  ensureDirForFile(OUT_FILE);
+  ensureDirForFile(INDEX_FILE);
+
+
+  const existingItems = loadJson(OUT_FILE, []);
+  const index = loadJson(INDEX_FILE, { seen_urls: [] });
+
+
+  const seen = new Set(Array.isArray(index.seen_urls) ? index.seen_urls : []);
+  const isFirstRun = !Array.isArray(existingItems) || existingItems.length === 0;
+
+
+  // Parse RSS feed
+  const rssRes = await axios.get(RSS_URL, { headers: HEADERS });
+  const $rss = cheerio.load(rssRes.data, { xmlMode: true });
+
+
+  const nowMs = Date.now();
+  const cutoffMs = nowMs - (24 * 60 * 60 * 1000);
+
+
+  const candidates = [];
+  $rss('item').each((i, el) => {
+    if (i >= RSS_SCAN_LIMIT) return false;
+    const $el = $rss(el);
+
+
+    const link = ($el.find('link').text().trim() || $el.find('link').attr('href') || "").trim();
+    const pubDate = $el.find('pubDate').text().trim();
+    const pubMs = parseRssDateToMs(pubDate);
+
+
+    if (!link) return;
+
+
+    // منع التكرار
+    if (seen.has(link)) return;
+
+
+    if (isFirstRun) {
+      candidates.push({ link, pubMs });
+    } else {
+      // ✅ فقط أخبار آخر 24 ساعة
+      if (pubMs && pubMs >= cutoffMs) candidates.push({ link, pubMs });
+    }
+  });
+
+
+  // أول تشغيل: خذ أول 50
+  const toFetch = isFirstRun ? candidates.slice(0, FIRST_RUN_COUNT) : candidates;
+
+
+  const items = Array.isArray(existingItems) ? existingItems : [];
+  let newCount = 0;
+
+
+  for (const e of toFetch) {
+    try {
+      const item = await get_article_json(e.link);
+      items.push(item);
+      seen.add(e.link);
+      newCount++;
+      console.log(`✅ Added: ${item.title_en}`);
+    } catch (ex) {
+      console.log(`❌ Failed: ${e.link} -> ${ex.message}`);
+    }
+    await new Promise(r => setTimeout(r, SLEEP_S * 1000));
+  }
+
+
+  // ترتيب حسب التاريخ (YYYY-MM-DD) تنازليًا
+  items.sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+  saveJson(OUT_FILE, items);
+  saveJson(INDEX_FILE, { seen_urls: Array.from(seen) });
+
+
+  console.log(`\n📝 Updated: ${OUT_FILE}`);
+  console.log(`New items: ${newCount} | Total: ${items.length}`);
+  console.log(`Mode: ${isFirstRun ? "FIRST RUN (50)" : "DAILY (last 24h)"}`);
 }
 
-// تشغيل السكريبر
-main().catch(error => {
-    console.error('💥 فشل التطبيق:', error);
-});
+
+if (require.main === module) {
+  main();
+}
