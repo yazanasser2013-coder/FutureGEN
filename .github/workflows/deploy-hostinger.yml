@@ -1,0 +1,46 @@
+name: Update AI News + Deploy to Hostinger (FTP)
+
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # يوميًا 06:00 UTC = 09:00 الرياض
+  workflow_dispatch:
+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+
+      - name: Run scraper
+        run: |
+          python scraper.py
+
+
+      - name: Deploy data folder to public_html
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./public_html/data/
+          server-dir: /public_html/data/
+
+
+
+
