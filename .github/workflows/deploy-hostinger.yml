@@ -3,12 +3,8 @@ name: Update AI News + Deploy to Hostinger (FTP)
 
 on:
   schedule:
-    - cron: "0 6 * * *"   # يوميًا 06:00 UTC = 09:00 الرياض
+    - cron: "0 6 * * *"
   workflow_dispatch:
-
-
-permissions:
-  contents: read
 
 
 jobs:
@@ -19,28 +15,25 @@ jobs:
         uses: actions/checkout@v4
 
 
-      - name: Setuap Node
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
 
 
       - name: Install Node deps
-        run: |
-          npm ci || npm install
+        run: npm ci || npm install
 
 
       - name: Run scraper (Node)
-        run: |
-          node scripts/scrape_ai_news.js
+        run: node scripts/scrape_ai_news.js
 
 
       - name: Debug - show generated files
         run: |
-          echo "PWD:" && pwd
-          echo "List repo root:" && ls -la
-          echo "List scraped_data:" && ls -la scraped_data || true
-          echo "Find ai_news.json:" && find . -maxdepth 6 -name "ai_news.json" -print || true
+          ls -la scraped_data || true
+          find . -maxdepth 6 -name "ai_news.json" -print || true
+
 
       - name: Debug - check secrets exist
         run: |
@@ -51,12 +44,14 @@ jobs:
 
       - name: Deploy scraped_data to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
-      - name: Deploy scraped_data to Hostinger (TEST ROOT)
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 21
-          local-dir: ./scraped_data/
-          server-dir: /
+          local-dir: scraped_data/
+          server-dir: /data/
+
+
+
+
