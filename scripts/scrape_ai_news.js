@@ -11,12 +11,8 @@ const HEADERS = {
 };
 
 
-// ✅ مخرجات موقعك
-const OUT_FILE = path.join("public_html", "data", "ai_news.json");
-
-
-// ✅ ملف مساعد لمنع التكرار (urls فقط)
-const INDEX_FILE = path.join("public_html", "data", "ai_news_index.json");
+const OUT_FILE = path.join("scraped_data", "ai_news.json");
+const INDEX_FILE = path.join("scraped_data", "ai_news_index.json");
 
 
 // إعدادات التشغيل
