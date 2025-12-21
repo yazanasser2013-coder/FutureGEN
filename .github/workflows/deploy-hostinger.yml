@@ -42,6 +42,12 @@ jobs:
           echo "List scraped_data:" && ls -la scraped_data || true
           echo "Find ai_news.json:" && find . -maxdepth 6 -name "ai_news.json" -print || true
 
+      - name: Debug - check secrets exist
+        run: |
+          if [ -z "${{ secrets.FTP_SERVER }}" ]; then echo "FTP_SERVER is EMPTY"; else echo "FTP_SERVER is SET"; fi
+          if [ -z "${{ secrets.FTP_USERNAME }}" ]; then echo "FTP_USERNAME is EMPTY"; else echo "FTP_USERNAME is SET"; fi
+          if [ -z "${{ secrets.FTP_PASSWORD }}" ]; then echo "FTP_PASSWORD is EMPTY"; else echo "FTP_PASSWORD is SET"; fi
+
 
       - name: Deploy scraped_data to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
