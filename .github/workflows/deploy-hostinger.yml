@@ -28,7 +28,7 @@ jobs:
 
       - name: Run scraper
         run: |
-          python scrape_ai_news.js
+          python scripts/scrape_ai_news.js
 
 
       - name: Deploy data folder to public_html
