@@ -1,450 +1,389 @@
-/**
- * FutureGEN AI News Scraper (Robust)
- * - First run: collect 50 articles
- * - Daily: add 6 new articles from last 24h
- * - External image URLs only (no proxy, no downloads)
- * - Retry/backoff for feeds & article fetch
- * - Outputs: scraped_data/ai_news.json + scraped_data/ai_news_index.json
- */
+# news_scrape_rss_translate.py
+# يجلب أخبار من RSS + صورة شغّالة + محتوى + ترجمة عربية ويخرج JSON بالنمط الذي طلبته
 
 
-const axios = require("axios");
-const cheerio = require("cheerio");
-const translate = require("@vitalets/google-translate-api");
-const fs = require("fs");
-const path = require("path");
-const crypto = require("crypto");
+import os, re, json, time, hashlib
+from datetime import datetime
+from urllib.parse import urlparse, urljoin
 
 
-// ============= Paths =============
-const OUT_FILE = path.join("scraped_data", "ai_news.json");
-const INDEX_FILE = path.join("scraped_data", "ai_news_index.json");
+import feedparser
+import requests
+from bs4 import BeautifulSoup
+from tqdm import tqdm
 
 
-// ============= Feeds =============
-// زودنا مصادر RSS قوية لرفع احتمالية الوصول لـ 50 بسهولة.
-// تقدر تضيف/تحذف مصادر (لازم تكون RSS صالح).
-const FEEDS = [
-  { name: "AI News", url: "https://www.artificialintelligence-news.com/feed/" },
-  { name: "TechCrunch AI", url: "https://techcrunch.com/tag/artificial-intelligence/feed/" },
-  { name: "The Verge AI", url: "https://www.theverge.com/artificial-intelligence/rss/index.xml" },
-];
+# Readability (اختياري لكنه يعطي body أفضل)
+try:
+    from readability import Document
+    HAS_READABILITY = True
+except Exception:
+    HAS_READABILITY = False
 
 
-// ============= Rules =============
-const FIRST_RUN_TARGET = 50;
-const DAILY_NEW_LIMIT = 6;
-const DAILY_WINDOW_HOURS = 24;
+from transformers import MarianMTModel, MarianTokenizer
 
 
-// نفحص كثير عشان نضمن أول تشغيل 50 حتى لو بعض الروابط تفشل
-const RSS_SCAN_LIMIT_PER_FEED = 1200;
+# ================== المسارات ==================
+PROJECT_DIR = r"E:\Yazan Nasser\FutureGEN"
+OUT_PATH = os.path.join(PROJECT_DIR, "site", "data", "news.json")
+TEMP_PATH = os.path.join(PROJECT_DIR, "scrapers", "news_temp.json")
 
 
-// تهدئة أساسية بين المقالات
-const BASE_SLEEP_MS = 900;
+# ================== مصادر الأخبار (RSS) ==================
+# تقدر تزيد/تنقص بسهولة
+RSS_FEEDS = [
+    "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+    "https://www.technologyreview.com/feed/",
+    "https://feeds.arstechnica.com/arstechnica/index",
+    "https://venturebeat.com/category/ai/feed/",
+    "https://hnrss.org/frontpage",
+]
 
 
-// أقصى عدد نحتفظ به في الملف (تاريخيًا)
-const MAX_STORE = 800;
+UA = "Mozilla/5.0 Chrome/123 Safari/537.36"
 
 
-// Retry/Backoff
-const FEED_MAX_ATTEMPTS = 3;
-const ARTICLE_MAX_ATTEMPTS = 4;
-const BACKOFF_BASE_MS = 1200;
-const BACKOFF_JITTER_MS = 700;
-
-
-const HEADERS = {
-  "User-Agent": "Mozilla/5.0 (compatible; FutureGEN-NewsBot/2.0; +https://futuregen.space/)",
-  "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-};
-
-
-// ============= Helpers =============
-function ensureDirForFile(filePath) {
-  fs.mkdirSync(path.dirname(filePath), { recursive: true });
+# ================== تصنيفات الأخبار ==================
+CATEGORY_MAP = {
+    "ai": ("AI", "الذكاء الاصطناعي"),
+    "artificial intelligence": ("AI", "الذكاء الاصطناعي"),
+    "machine learning": ("AI", "الذكاء الاصطناعي"),
+    "future": ("Future Trends", "توجهات مستقبلية"),
+    "trends": ("Future Trends", "توجهات مستقبلية"),
+    "research": ("Research", "البحث"),
+    "business": ("Business", "الأعمال"),
+    "security": ("Security", "الأمن"),
+    "policy": ("Policy", "السياسات"),
 }
+DEFAULT_CAT = ("AI News", "أخبار الذكاء الاصطناعي")
 
 
-function loadJson(filePath, fallback) {
-  try {
-    if (!fs.existsSync(filePath)) return fallback;
-    return JSON.parse(fs.readFileSync(filePath, "utf-8"));
-  } catch {
-    return fallback;
-  }
-}
+# ================== الترجمة (مجانية/أوفلاين) ==================
+MODEL_NAME = "Helsinki-NLP/opus-mt-en-ar"
+tokenizer = MarianTokenizer.from_pretrained(MODEL_NAME)
+model = MarianMTModel.from_pretrained(MODEL_NAME)
 
 
-function saveJson(filePath, data) {
-  ensureDirForFile(filePath);
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 4), "utf-8");
-}
+MAX_CHARS = 1500
+BATCH = 16
 
 
-function sleep(ms) {
-  return new Promise((r) => setTimeout(r, ms));
-}
+def shorten(text: str) -> str:
+    text = (text or "").strip()
+    return text[:MAX_CHARS] if len(text) > MAX_CHARS else text
 
 
-function jitter(ms) {
-  return ms + Math.floor(Math.random() * BACKOFF_JITTER_MS);
-}
+def translate_batch(texts):
+    texts = [shorten(t) for t in texts]
+    if not any(t.strip() for t in texts):
+        return ["" for _ in texts]
+    batch = tokenizer(texts, return_tensors="pt", padding=True, truncation=True, max_length=256)
+    out = model.generate(**batch, max_length=256, num_beams=3)
+    return [tokenizer.decode(o, skip_special_tokens=True) for o in out]
 
 
-function parseRssDateToMs(dateStr) {
-  const ms = Date.parse(dateStr || "");
-  return Number.isFinite(ms) ? ms : null;
-}
+def strip_text(html: str) -> str:
+    try:
+        soup = BeautifulSoup(html or "", "lxml")
+        return soup.get_text(" ", strip=True)
+    except Exception:
+        return (html or "").strip()
 
 
-function md5(s) {
-  return crypto.createHash("md5").update(s).digest("hex");
-}
+def escape_html(s):
+    return (s.replace("&","&amp;").replace("<","&lt;").replace(">","&gt;"))
 
 
-function pickFirst(...vals) {
-  for (const v of vals) {
-    if (typeof v === "string" && v.trim()) return v.trim();
-  }
-  return "";
-}
+def to_para_html(text):
+    text = (text or "").strip()
+    if not text:
+        return ""
+    parts = [p.strip() for p in re.split(r"\n{2,}", text) if p.strip()]
+    if not parts:
+        return ""
+    # خفف العدد عشان ملفك ما يصير ضخم
+    return "\n".join([f"<p>{escape_html(p)}</p>" for p in parts[:20]])
 
 
-function isRetryableAxiosError(e) {
-  const status = e?.response?.status;
-  if (!status) return true; // network/timeouts
-  if (status === 408 || status === 429) return true;
-  if (status >= 500 && status <= 599) return true;
-  return false;
-}
+def norm_url(u: str) -> str:
+    u = (u or "").strip()
+    try:
+        p = urlparse(u)
+        return p._replace(query="", fragment="").geturl()
+    except Exception:
+        return u
 
 
-async function withRetry(fn, { attempts, label }) {
-  let lastErr = null;
-  for (let i = 1; i <= attempts; i++) {
-    try {
-      return await fn(i);
-    } catch (e) {
-      lastErr = e;
-      const status = e?.response?.status;
-      const retryable = isRetryableAxiosError(e);
+def stable_id(url: str) -> str:
+    return hashlib.md5(url.encode("utf-8")).hexdigest()[:12]
 
 
-      console.log(
-        `❌ ${label} attempt ${i}/${attempts} failed${status ? ` (HTTP ${status})` : ""}: ${e.message}`
-      );
+def entry_date(entry) -> str:
+    for key in ("published_parsed", "updated_parsed"):
+        if entry.get(key):
+            dt = datetime(*entry[key][:6])
+            return dt.strftime("%Y-%m-%d")
+    return datetime.utcnow().strftime("%Y-%m-%d")
+
 
+def pick_category(entry) -> tuple:
+    cats = []
+    for c in entry.get("tags", []) or []:
+        term = (c.get("term") or "").lower()
+        if term:
+            cats.append(term)
+    title = (entry.get("title") or "").lower()
+    blob = " ".join(cats + [title])
+    for k, v in CATEGORY_MAP.items():
+        if k in blob:
+            return v
+    return DEFAULT_CAT
 
-      if (!retryable || i === attempts) break;
 
+def author_name(entry):
+    return (entry.get("author") or entry.get("dc_creator") or "").strip()
 
-      const backoff = jitter(BACKOFF_BASE_MS * Math.pow(2, i - 1));
-      console.log(`⏳ Backoff ${backoff}ms then retry...`);
-      await sleep(backoff);
-    }
-  }
-  throw lastErr;
-}
 
+def first_img_in_html(html: str) -> str:
+    html = html or ""
+    if "<img" not in html.lower():
+        return ""
+    try:
+        soup = BeautifulSoup(html, "lxml")
+        im = soup.find("img")
+        if im and im.get("src"):
+            return im.get("src")
+    except Exception:
+        pass
+    return ""
+
+
+def extract_image_from_entry(entry) -> str:
+    media = entry.get("media_content") or entry.get("media_thumbnail") or []
+    if media:
+        u = media[0].get("url") or ""
+        if u:
+            return u
+
+
+    enc = entry.get("enclosures") or []
+    for e in enc:
+        u = e.get("href") or e.get("url") or ""
+        t = (e.get("type") or "").lower()
+        if u and ("image" in t or u.lower().endswith((".jpg",".jpeg",".png",".webp",".gif"))):
+            return u
+
+
+    for block in entry.get("content", []) or []:
+        html = block.get("value") or ""
+        img = first_img_in_html(html)
+        if img:
+            return img
 
-// ============= Translation (best-effort, لا يكسر الخبر) =============
-async function tr_en_ar(text) {
-  if (!text) return "";
-  try {
-    const res = await translate(text, { from: "en", to: "ar" });
-    return res.text || "";
-  } catch {
-    return "";
-  }
-}
 
+    img = first_img_in_html(entry.get("summary", "") or "")
+    if img:
+        return img
+
+
+    return ""
+
+
+def fetch_html(url: str) -> str:
+    try:
+        r = requests.get(url, headers={"User-Agent": UA}, timeout=18)
+        if r.status_code != 200:
+            return ""
+        return r.text
+    except Exception:
+        return ""
+
+
+def og_image_from_html(html: str, base_url: str) -> str:
+    if not html:
+        return ""
+    try:
+        soup = BeautifulSoup(html, "lxml")
+        m = soup.find("meta", attrs={"property":"og:image"})
+        if m and m.get("content"):
+            u = m["content"].strip()
+            if u.startswith("//"):
+                u = "https:" + u
+            if u.startswith("/"):
+                u = urljoin(base_url, u)
+            return u
+    except Exception:
+        pass
+    return ""
 
-async function translateHtml_en_to_ar(html) {
-  if (!html) return "";
-  const $ = cheerio.load(html);
+
+def body_html_from_entry_or_readability(entry, html: str) -> str:
+    # 1) RSS content (أفضل لأنه جاهز HTML)
+    blocks = entry.get("content", []) or []
+    for b in blocks:
+        v = (b.get("value") or "").strip()
+        if len(strip_text(v)) > 200:
+            return v
 
 
-  const tasks = [];
-  $("*")
-    .contents()
-    .each(function () {
-      if (this.type === "text" && this.data.trim()) {
-        const original = this.data;
-        tasks.push(
-          tr_en_ar(original)
-            .then((translated) => {
-              if (translated) $(this).replaceWith(translated);
-            })
-            .catch(() => {})
-        );
-      }
-    });
-
-
-  await Promise.all(tasks);
-  return "\n                " + $.html().trim() + "\n            ";
-}
-
-
-// ============= Scrape Article -> schema =============
-async function get_article_json(url, fallbackCategoryEn) {
-  const res = await axios.get(url, { headers: HEADERS, timeout: 35000 });
-  const $ = cheerio.load(res.data);
-
-
-  // Title
-  const title_en = pickFirst(
-    $('meta[property="og:title"]').attr("content"),
-    $("h1").first().text()
-  );
-
-
-  // Date
-  let date_iso = "";
-  const published = pickFirst(
-    $('meta[property="article:published_time"]').attr("content"),
-    $("time").first().attr("datetime"),
-    $('meta[name="pubdate"]').attr("content"),
-    $('meta[name="date"]').attr("content")
-  );
-  if (published) date_iso = published.slice(0, 10);
-
-
-  // Author
-  const author_en = pickFirst(
-    $('meta[name="author"]').attr("content"),
-    $('a[rel="author"]').first().text(),
-    $('span[class*="author"]').first().text()
-  );
-
-
-  // Category
-  const category_en = pickFirst(
-    $('meta[property="article:section"]').attr("content"),
-    $('a[href*="/category/"]').first().text(),
-    fallbackCategoryEn || "Artificial Intelligence"
-  );
-
-
-  // Image (external only)
-  const image = pickFirst(
-    $('meta[property="og:image"]').attr("content"),
-    $('meta[name="twitter:image"]').attr("content")
-  );
-
-
-  // Summary
-  const summary_en = pickFirst(
-    $('meta[name="description"]').attr("content"),
-    $('meta[property="og:description"]').attr("content")
-  );
+    # 2) summary
+    summ = (entry.get("summary") or "").strip()
+    if len(strip_text(summ)) > 200:
+        return summ
 
 
-  // Body HTML best-effort
-  let body_en = "";
-  const article = $("article").first();
-  const allowed = ["p", "h2", "h3", "ul", "ol", "li", "blockquote"];
+    # 3) Readability من الصفحة
+    if HAS_READABILITY and html:
+        try:
+            doc = Document(html)
+            content_html = doc.summary(html_partial=True)
+            if len(strip_text(content_html)) > 200:
+                return content_html
+        except Exception:
+            pass
 
 
-  if (article.length) {
-    const parts = [];
-    article.find(allowed.join(", ")).each((i, el) => parts.push($.html(el)));
-    if (parts.length) body_en = "\n                " + parts.join("\n                ").trim() + "\n            ";
-  } else {
-    const main = $("main").first();
-    if (main.length) {
-      const parts = [];
-      main.find(allowed.join(", ")).each((i, el) => parts.push($.html(el)));
-      if (parts.length) body_en = "\n                " + parts.join("\n                ").trim() + "\n            ";
-    }
-  }
+    # 4) fallback: أول فقرات من الصفحة
+    if html:
+        try:
+            soup = BeautifulSoup(html, "lxml")
+            ps = soup.find_all("p")
+            parts = []
+            for p in ps[:12]:
+                t = p.get_text(" ", strip=True)
+                if len(t) > 40:
+                    parts.append(f"<p>{escape_html(t)}</p>")
+            return "\n".join(parts)
+        except Exception:
+            pass
 
 
-  // Arabic fields (best-effort)
-  const title_ar = (await tr_en_ar(title_en)) || title_en;
-  const summary_ar = (await tr_en_ar(summary_en)) || "";
-  const category_ar = (await tr_en_ar(category_en)) || "";
-  const author_ar = (await tr_en_ar(author_en)) || "";
-  const body_ar = body_en ? await translateHtml_en_to_ar(body_en) : "";
+    return ""
 
 
-  return {
-    id: "article_" + md5(url).slice(0, 12),
-    title_en,
-    title_ar,
-    summary_en,
-    summary_ar,
-    category_en,
-    category_ar,
-    date: date_iso,
-    author_en,
-    author_ar,
-    image, // external only
-    link: url,
-    body_en: body_en || "",
-    body_ar: body_ar || "",
-  };
-}
+def main():
+    items = []
+    seen = set()
 
 
-// ============= Read RSS Items (with retry) =============
-async function readFeedItems(feed) {
-  return await withRetry(
-    async () => {
-      const rssRes = await axios.get(feed.url, { headers: HEADERS, timeout: 30000 });
-      const $ = cheerio.load(rssRes.data, { xmlMode: true });
+    print("📰 Fetching RSS feeds ...")
+    for feed_url in RSS_FEEDS:
+        d = feedparser.parse(feed_url)
+        for e in d.entries:
+            link = norm_url(e.get("link") or "")
+            if not link or link in seen:
+                continue
+            seen.add(link)
 
 
-      const items = [];
-      $("item").each((i, el) => {
-        if (i >= RSS_SCAN_LIMIT_PER_FEED) return false;
+            cat_en, cat_ar = pick_category(e)
 
 
-        const $el = $(el);
-        const link = ($el.find("link").text().trim() || "").trim();
-        const pubDate = $el.find("pubDate").text().trim();
-        const pubMs = parseRssDateToMs(pubDate);
-        const cat = $el.find("category").first().text().trim();
+            item = {
+                "title_en": (e.get("title") or "").strip(),
+                "title_ar": "",
+                "summary_en": strip_text(e.get("summary") or ""),
+                "summary_ar": "",
+                "category_en": cat_en,
+                "category_ar": cat_ar,
+                "date": entry_date(e),
+                "author_en": author_name(e) or "",
+                "author_ar": "",
+                "image": "",
+                "body_en": "",
+                "body_ar": "",
+                # اختياري: مفيد للتتبع
+                "source_url": link,
+                "id": stable_id(link),
+            }
 
 
-        if (!link) return;
-        items.push({ link, pubMs, category: cat || "", feedName: feed.name });
-      });
+            item["image"] = extract_image_from_entry(e) or ""
+            items.append((item, e))
 
 
-      return items;
-    },
-    { attempts: FEED_MAX_ATTEMPTS, label: `Feed ${feed.name}` }
-  );
-}
+    print(f"🧩 Enriching {len(items)} articles (body/image) ...")
+    enriched = []
+    for (item, entry) in tqdm(items, desc="Enrich", total=len(items)):
+        url = item["source_url"]
 
 
-// ============= Main =============
-async function main() {
-  ensureDirForFile(OUT_FILE);
-  ensureDirForFile(INDEX_FILE);
+        html = ""
+        # اجلب صفحة الخبر فقط إذا نحتاج body أو نحتاج صورة
+        need_fetch = (not item["image"]) or (len(item["summary_en"]) < 80)
+        if need_fetch:
+            html = fetch_html(url)
 
 
-  const existing = loadJson(OUT_FILE, { metadata: {}, articles: [] });
-  const index = loadJson(INDEX_FILE, { seen_urls: [] });
+        if not item["image"]:
+            item["image"] = og_image_from_html(html, url) or ""
 
 
-  const seen = new Set(Array.isArray(index.seen_urls) ? index.seen_urls : []);
-  const existingArticles = Array.isArray(existing.articles) ? existing.articles : [];
+        body_html = body_html_from_entry_or_readability(entry, html)
+        item["body_en"] = body_html
 
 
-  const isFirstRun = existingArticles.length === 0;
+        if not item["summary_en"]:
+            item["summary_en"] = strip_text(body_html)[:240]
 
 
-  const nowMs = Date.now();
-  const cutoffMs = nowMs - DAILY_WINDOW_HOURS * 60 * 60 * 1000;
+        enriched.append(item)
 
 
-  // 1) Collect candidates from all feeds
-  const candidates = [];
-  for (const feed of FEEDS) {
-    try {
-      const items = await readFeedItems(feed);
-      for (const it of items) {
-        if (seen.has(it.link)) continue;
+        if len(enriched) % 25 == 0:
+            os.makedirs(os.path.dirname(TEMP_PATH), exist_ok=True)
+            with open(TEMP_PATH, "w", encoding="utf-8") as f:
+                json.dump(enriched, f, ensure_ascii=False, indent=2)
 
 
-        if (isFirstRun) {
-          candidates.push(it);
-        } else {
-          if (it.pubMs && it.pubMs >= cutoffMs) candidates.push(it);
-        }
-      }
-    } catch (e) {
-      console.log(`❌ Feed permanently failed: ${feed.name} -> ${e.message}`);
-    }
-  }
+        time.sleep(0.08)
 
 
-  // newest first
-  candidates.sort((a, b) => (b.pubMs || 0) - (a.pubMs || 0));
+    print("🌍 Translating to Arabic ...")
+    total = len(enriched)
+    for i in tqdm(range(0, total, BATCH), desc="Translate batches"):
+        chunk = enriched[i:i+BATCH]
 
 
-  const articles = [...existingArticles];
-  let added = 0;
-  let attempted = 0;
+        titles = [c["title_en"] for c in chunk]
+        sums   = [c["summary_en"] for c in chunk]
+        auths  = [c["author_en"] for c in chunk]
+        cats   = [c["category_en"] for c in chunk]
+        body_text = [strip_text(c["body_en"]) for c in chunk]
 
 
-  // 2) Decide limit for this run
-  const runLimit = isFirstRun ? FIRST_RUN_TARGET : DAILY_NEW_LIMIT;
+        tr_titles = translate_batch(titles)
+        tr_sums   = translate_batch(sums)
+        tr_auths  = translate_batch(auths)
+        tr_cats   = translate_batch(cats)
+        tr_body   = translate_batch([t[:1200] for t in body_text])
 
 
-  // 3) Fetch articles with retry/backoff until reaching runLimit
-  for (const c of candidates) {
-    if (added >= runLimit) break;
+        for j, c in enumerate(chunk):
+            c["title_ar"] = tr_titles[j]
+            c["summary_ar"] = tr_sums[j]
+            c["author_ar"] = tr_auths[j]
+            c["category_ar"] = tr_cats[j]
+            c["body_ar"] = to_para_html(tr_body[j])
 
 
-    attempted++;
-    try {
-      const item = await withRetry(
-        async (tryNo) => {
-          // Mild sleep to reduce bans; increase a bit on first run
-          if (tryNo === 1) await sleep(isFirstRun ? BASE_SLEEP_MS : 450);
-          return await get_article_json(c.link, c.category);
-        },
-        { attempts: ARTICLE_MAX_ATTEMPTS, label: `Article ${c.feedName}` }
-      );
+        remain = total - (i + len(chunk))
+        tqdm.write(f"Remaining: {remain}")
 
 
-      // Basic validation: must have title + link
-      if (!item.title_en || !item.link) throw new Error("Invalid article (missing title/link)");
+    os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
+    with open(OUT_PATH, "w", encoding="utf-8") as f:
+        json.dump(enriched, f, ensure_ascii=False, indent=2)
 
 
-      articles.push(item);
-      seen.add(c.link);
-      added++;
-      console.log(`✅ Added: ${item.title_en}`);
-    } catch (e) {
-      console.log(`🔥 Give up: ${c.link}`);
-      // do not add to seen so it can be retried later
-    }
-  }
+    print("\n✅ DONE")
+    print("Articles:", len(enriched))
+    print("Saved:", OUT_PATH)
 
 
-  // 4) Sort & trim
-  articles.sort((a, b) => (b.date || "").localeCompare(a.date || ""));
-  const trimmed = articles.slice(0, MAX_STORE);
-
-
-  const output = {
-    metadata: {
-      sources: FEEDS.map((f) => f.url),
-      total_articles: trimmed.length,
-      scraped_at: new Date().toISOString(),
-      mode: isFirstRun ? "first_run_50" : "daily_add_6_last_24h",
-      attempted,
-      added,
-      images: "external_only",
-      retry: {
-        feed_attempts: FEED_MAX_ATTEMPTS,
-        article_attempts: ARTICLE_MAX_ATTEMPTS,
-        backoff_base_ms: BACKOFF_BASE_MS,
-      },
-    },
-    articles: trimmed,
-  };
-
-
-  saveJson(OUT_FILE, output);
-  saveJson(INDEX_FILE, { seen_urls: Array.from(seen) });
-
-
-  console.log(`\n📝 Updated: ${OUT_FILE}`);
-  console.log(`Mode: ${output.metadata.mode} | Added this run: ${added} | Total stored: ${trimmed.length}`);
-}
-
-
-if (require.main === module) {
-  main();
-}
+if __name__ == "__main__":
+    main()
 
 
 
