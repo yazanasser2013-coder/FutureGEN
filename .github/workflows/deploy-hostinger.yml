@@ -56,8 +56,7 @@ jobs:
           password: ${{ env.FTP_PASSWORD }}
           port: 21
           local-dir: scraped_data/
-          server-dir: /data/
-
+          server-dir: /
 
 
 
