@@ -1,62 +1,43 @@
-name: Update AI News + Deploy to Hostinger (FTP)
-
+name: Update News JSON
 
 on:
-  schedule:
-    - cron: "0 6 * * *"
   workflow_dispatch:
+  schedule:
+    - cron: "0 */6 * * *"   # كل 6 ساعات (UTC)
 
+permissions:
+  contents: write
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
-          node-version: "20"
+          python-version: "3.10"
 
-
-      - name: Install Node deps
-        run: npm ci || npm install
-
-
-      - name: Run scraper (Node)
-        run: node scripts/scrape_ai_news.js
-
-
-      - name: Debug - show generated files
+      - name: Install dependencies
         run: |
-          ls -la scraped_data || true
-          find . -maxdepth 6 -name "ai_news.json" -print || true
+          python -m pip install --upgrade pip
+          pip install feedparser beautifulsoup4 lxml requests tqdm
+          pip install transformers torch sentencepiece sacremoses
 
-
-      - name: Debug - check secrets exist
+      - name: Run scraper
         run: |
-          if [ -z "${{ secrets.FTP_SERVER }}" ]; then echo "FTP_SERVER is EMPTY"; else echo "FTP_SERVER is SET"; fi
-          if [ -z "${{ secrets.FTP_USERNAME }}" ]; then echo "FTP_USERNAME is EMPTY"; else echo "FTP_USERNAME is SET"; fi
-          if [ -z "${{ secrets.FTP_PASSWORD }}" ]; then echo "FTP_PASSWORD is EMPTY"; else echo "FTP_PASSWORD is SET"; fi
+          python scripts/news_rss_stable_v2.py
 
-
-      - name: Debug - export FTP env
+      - name: Commit changes (if any)
         run: |
-          echo "FTP_SERVER=${{ secrets.FTP_SERVER }}" >> $GITHUB_ENV
-          echo "FTP_USERNAME=${{ secrets.FTP_USERNAME }}" >> $GITHUB_ENV
-          echo "FTP_PASSWORD=${{ secrets.FTP_PASSWORD }}" >> $GITHUB_ENV
-
-      - name: Deploy scraped_data to Hostinger
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
-        with:
-          server: ${{ env.FTP_SERVER }}
-          username: ${{ env.FTP_USERNAME }}
-          password: ${{ env.FTP_PASSWORD }}
-          port: 21
-          local-dir: scraped_data/
-          server-dir: /scraped_data/
-
+          git config user.name "news-bot"
+          git config user.email "news-bot@users.noreply.github.com"
+          git add site/data/news.json || true
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "chore: update news.json"
+          git push
 
 
