@@ -2,7 +2,6 @@
 # Stable RSS News → image/body → optional Arabic translation → JSON
 # Run: python news_rss_stable_v2.py
 
-import os
 import re
 import json
 import time
@@ -15,8 +14,17 @@ import requests
 from bs4 import BeautifulSoup
 from tqdm import tqdm
 
-# ======================= SETTINGS =======================
-PROJECT_DIR = r"D:\Yazan Nasser\FutureGEN"
+import os
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))
+
+OUT_PATH  = os.path.join(PROJECT_DIR, "site", "data", "news.json")
+TEMP_PATH = os.path.join(PROJECT_DIR, "scrapers", "news_checkpoint.json")
+
+os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
+os.makedirs(os.path.dirname(TEMP_PATH), exist_ok=True)
+
 OUT_PATH  = os.path.join(PROJECT_DIR, "scraped_data", "news.json")
 TEMP_PATH = os.path.join(PROJECT_DIR, "scrapers", "news_checkpoint.json")
 
