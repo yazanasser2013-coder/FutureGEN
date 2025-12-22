@@ -16,8 +16,8 @@ from bs4 import BeautifulSoup
 from tqdm import tqdm
 
 # ======================= SETTINGS =======================
-PROJECT_DIR = r"E:\Yazan Nasser\FutureGEN"
-OUT_PATH  = os.path.join(PROJECT_DIR, "site", "data", "news.json")
+PROJECT_DIR = r"D:\Yazan Nasser\FutureGEN"
+OUT_PATH  = os.path.join(PROJECT_DIR, "scraped_data", "news.json")
 TEMP_PATH = os.path.join(PROJECT_DIR, "scrapers", "news_checkpoint.json")
 
 # RSS sources (عدّلها كما تريد)
