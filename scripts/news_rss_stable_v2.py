@@ -19,7 +19,8 @@ import os
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))
 
-OUT_PATH  = os.path.join(PROJECT_DIR, "site", "data", "news.json")
+OUT_PATH = os.path.join(PROJECT_DIR, "site", "data", "news.json")
+os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
 TEMP_PATH = os.path.join(PROJECT_DIR, "scrapers", "news_checkpoint.json")
 
 os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
