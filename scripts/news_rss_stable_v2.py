@@ -13,19 +13,16 @@ import feedparser
 import requests
 from bs4 import BeautifulSoup
 from tqdm import tqdm
-
 import os
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))
 
 OUT_PATH = os.path.join(PROJECT_DIR, "site", "data", "news.json")
-os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
-TEMP_PATH = os.path.join(PROJECT_DIR, "scrapers", "news_checkpoint.json")
+CHECKPOINT_PATH = os.path.join(PROJECT_DIR, "scrapers", "news_checkpoint.json")
 
 os.makedirs(os.path.dirname(OUT_PATH), exist_ok=True)
-os.makedirs(os.path.dirname(TEMP_PATH), exist_ok=True)
-
+os.makedirs(os.path.dirname(CHECKPOINT_PATH), exist_ok=True)
 OUT_PATH  = os.path.join(PROJECT_DIR, "scraped_data", "news.json")
 TEMP_PATH = os.path.join(PROJECT_DIR, "scrapers", "news_checkpoint.json")
 
