@@ -5910,6 +5910,65 @@
     body.rtl-mode .custom-toast.show {
       transform: translateX(0);
     }
+
+    /* =========================================
+   COMPACT SEARCH BUTTON — iPads → iPhones
+   ========================================= */
+    @media (max-width: 1024px) {
+
+      .nav-search {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        width: 100% !important;
+      }
+
+      /* SEARCH INPUT — takes all space */
+      .nav-search .form-control {
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+        height: 42px;
+        padding: 0 14px;
+        border-radius: 999px 0 0 999px !important;
+        border-right: 0 !important;
+        font-size: 0.95rem;
+      }
+
+      /* SEARCH BUTTON — compact icon */
+      .nav-search .btn {
+        flex: 0 0 42px !important;
+        /* 🔴 hard limit */
+        width: 42px;
+        min-width: 42px;
+        max-width: 42px;
+        height: 42px;
+        padding: 0 !important;
+        border-radius: 0 999px 999px 0 !important;
+        border-left: 0 !important;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .nav-search .btn i {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 1024px) {
+
+      body.rtl-mode .nav-search .form-control {
+        border-radius: 0 999px 999px 0 !important;
+        border-left: 0 !important;
+        border-right: 1px solid var(--border);
+      }
+
+      body.rtl-mode .nav-search .btn {
+        border-radius: 999px 0 0 999px !important;
+        border-right: 0 !important;
+        border-left: 1px solid var(--border);
+      }
+    }
   </style>
   <script>try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) { };</script>
 </head>
@@ -5953,17 +6012,16 @@
               <label class="visually-hidden" for="searchInput">
                 Search AI tools
               </label>
-              <input autocomplete="off" class="form-control" data-ar-placeholder="ابحث عن أدوات الذكاء الاصطناعي..."
-                data-en-placeholder="Search AI tools..." id="searchInput" placeholder="Search AI tools..."
-                type="text" />
-              <button class="btn btn-outline-secondary" id="searchBtn" type="button">
-                <i class="fas fa-search">
-                </i>
-                <span class="visually-hidden">
-                  Search
-                </span>
+
+              <input id="searchInput" type="text" class="form-control" autocomplete="off"
+                placeholder="Search AI tools..." data-en-placeholder="Search AI tools..."
+                data-ar-placeholder="ابحث عن أدوات الذكاء الاصطناعي..." />
+
+              <button class="btn btn-primary" id="searchBtn" type="button" aria-label="Search">
+                <i class="fas fa-search"></i>
               </button>
             </div>
+
             <!-- زر تسجيل الدخول/الخروج -->
             <div class="auth-section">
               <!-- <button class="btn btn-outline-primary" id="authButton" type="button">
