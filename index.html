@@ -271,6 +271,7 @@
       border-radius: 40px;
       width: 1450px;
       max-width: calc(100% - 32px);
+      z-index: 99999999;
     }
 
     html[data-theme="dark"] nav {
@@ -364,26 +365,27 @@
     }
 
     .nav-search {
-      width: 240px;
+      width: 340px;
       transition: width 0.3s ease;
+      border-radius: 40px;
     }
-
+    
     .nav-search:focus-within {
-      width: 280px;
+      width: 380px;
     }
-
+    
     .nav-search .form-control {
+      border-radius: 40px;
       border: 1px solid var(--border);
       padding: 0.5rem 1rem;
       background: var(--bg-white);
       color: var(--text-dark);
       font-size: 0.9rem;
-      border-radius: var(--radius-xs) 0 0 var(--radius-xs);
     }
 
     .nav-search .btn {
       padding: 0.5rem 0.75rem;
-      border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
+      border-radius: 40px;
     }
 
     .navbar-toggler {
@@ -2305,7 +2307,7 @@
 
     .form-control {
       border: 1px solid var(--border);
-      border-radius: var(--radius-xs);
+      border-radius: 40px;
       padding: 0.75rem 1rem;
       background: var(--bg-white);
       color: var(--text-dark);
@@ -5223,7 +5225,7 @@
 
       .nav-search .form-control {
         width: 100% !important;
-        border-radius: 12px 0 0 12px !important;
+        border-radius: 40 !important;
         height: 46px !important;
       }
 
@@ -5754,13 +5756,14 @@
     /* ===== Search Results Overlay (UX Best Practice) ===== */
     .search-results-overlay {
       position: fixed;
-      top: 115px;
+      top: 130px;
       /* تحت الناف بار */
       left: 0;
       right: 0;
       bottom: 0;
       z-index: 999999;
       overflow-y: auto;
+      backdrop-filter: blur(100px);
     }
 
     .search-results-inner {
@@ -5963,11 +5966,11 @@
             </div>
             <!-- زر تسجيل الدخول/الخروج -->
             <div class="auth-section">
-              <button class="btn btn-outline-primary" id="authButton" type="button">
+              <!-- <button class="btn btn-outline-primary" id="authButton" type="button">
                 <i class="fas fa-user me-2">
                 </i>
                 تسجيل الدخول
-              </button>
+              </button> -->
               <!-- <button class="btn btn-outline-primary" id="favoritesBtn" style="display: none;">
                 <i class="fas fa-heart me-2">
                 </i>
