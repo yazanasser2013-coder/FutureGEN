@@ -480,7 +480,7 @@
       justify-content: center;
       align-items: center;
       flex-wrap: nowrap;
-      gap: 0rem;
+      gap: 30px;
       margin-top: 2rem;
       padding: 0;
       width: 100%;
@@ -536,25 +536,25 @@
       animation-delay: 4s;
     }
 
-    .nav-icon-manus:nth-child(6) {
+    .nav-icon:nth-child(6) {
       animation-delay: 1.5s;
     }
 
-    .nav-icon-manus:nth-child(7) {
+    .nav-icon:nth-child(7) {
       animation-delay: 2.5s;
     }
 
-    .nav-icon-manus:nth-child(8) {
+    .nav-icon:nth-child(8) {
       animation-delay: 3.5s;
     }
 
     .nav-icon img {
-      width: 160px;
-      height: 160px;
+      width: 180px;
+      height: 180px;
       object-fit: contain;
       border-radius: 12px;
-      padding: 0;
-      transition: all 0.3s ease;
+      padding: 50;
+      transition: all 0.5s ease;
     }
 
     .nav-icon-manus img {
@@ -646,9 +646,33 @@
       cursor: pointer;
     }
 
-    .card-body {
-      padding: 1.25rem;
+    /* ✅ Default (Laptop) = Icon on top */
+    @media (min-width: 1024px) and (max-width: 1399px) {
+      .category-card .card-body {
+        flex-direction: column !important;
+        text-align: center !important;
+      }
+
+      .category-title {
+        text-align: center !important;
+      }
     }
+
+    /* ✅ Large screens = Icon left text */
+    @media (min-width: 1400px) {
+      .category-card .card-body {
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+        text-align: left !important;
+      }
+
+      .category-title {
+        text-align: left !important;
+      }
+    }
+
+
+
 
     .card-title {
       font-weight: 600;
@@ -791,42 +815,20 @@
       }
     }
 
-    .category-grid {
+    /* .category-grid {
       display: grid;
       grid-template-columns: repeat(8, minmax(200px, 2fr));
       gap: 0.7rem;
       justify-content: center;
       padding-top: 2rem;
-    }
+    } */
 
-    .category-card {
-      border-radius: var(--radius-sm);
-      transition: all 0.3s ease;
-      background: var(--bg-white);
-      border: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 1.5rem 1rem;
-      cursor: pointer;
-      text-align: center;
-      height: 100px !important;
-      width: 195px !important;
-    }
-
-    .category-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-md);
-      border-color: var(--primary-color);
-    }
-
-    .category-icon {
+    /* .category-icon {
       font-size: 2rem;
       color: var(--primary-color);
       margin-bottom: 0.1rem;
       transition: transform 0.3s ease;
-    }
+    } */
 
     html[data-theme="dark"] .category-icon {
       font-size: 2rem;
@@ -835,15 +837,11 @@
       transition: transform 0.3s ease;
     }
 
-    .category-card:hover .category-icon {
-      transform: scale(1.1);
-    }
-
-    .category-title {
+    /* .category-title {
       font-weight: 600;
       font-size: 0.9rem;
       color: var(--text-dark);
-    }
+    } */
 
     /* ========== NEW STYLES FOR CATEGORY SECTIONS ========== */
     .category-section {
@@ -1108,27 +1106,6 @@
         margin: 10px !important;
       }
 
-      /* Categories grid */
-      .category-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 0.5rem;
-      }
-
-      .category-card {
-        width: 100% !important;
-        height: 70px !important;
-        padding: 0.5rem;
-      }
-
-      .category-icon {
-        font-size: 1.1rem;
-        margin-bottom: 0.2rem;
-      }
-
-      .category-title {
-        font-size: 0.7rem;
-      }
-
       /* Footer */
       .footer-container {
         gap: 30px;
@@ -1259,15 +1236,6 @@
         height: 90px;
         margin: 15px;
       }
-
-      /* Categories grid */
-      .category-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      .category-card {
-        width: 100% !important;
-      }
     }
 
     /* Medium Devices (Tablets, 577px to 768px) */
@@ -1287,11 +1255,6 @@
         width: 90px;
         height: 90px;
         margin: 25px;
-      }
-
-      /* Categories grid */
-      .category-grid {
-        grid-template-columns: repeat(4, 1fr);
       }
 
       /* Hero section */
@@ -1338,19 +1301,7 @@
         height: 125px;
       }
 
-      /* Categories grid */
-      .category-grid {
-        grid-template-columns: repeat(5, 1fr);
-      }
-    }
 
-    /* Extra Large Devices (Large Desktops, 993px to 1200px) */
-    @media (min-width: 993px) and (max-width: 1200px) {
-
-      /* Categories grid */
-      .category-grid {
-        grid-template-columns: repeat(6, 1fr);
-      }
     }
 
     /* ========== IMPROVED NAVBAR RESPONSIVENESS ========== */
@@ -1406,51 +1357,6 @@
     }
 
     /* ========== IMPROVED CATEGORIES GRID RESPONSIVENESS ========== */
-    @media (max-width: 1400px) {
-      .category-grid {
-        grid-template-columns: repeat(7, minmax(180px, 1fr));
-      }
-    }
-
-    @media (max-width: 1200px) {
-      .category-grid {
-        grid-template-columns: repeat(6, minmax(160px, 1fr));
-      }
-    }
-
-    @media (max-width: 992px) {
-      .category-grid {
-        grid-template-columns: repeat(5, minmax(140px, 1fr));
-      }
-    }
-
-    @media (max-width: 768px) {
-      .category-grid {
-        grid-template-columns: repeat(4, minmax(120px, 1fr));
-      }
-
-      .category-card {
-        width: 100% !important;
-        height: 85px !important;
-        padding: 1rem 0.5rem;
-      }
-
-      .category-icon {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-      }
-
-      .category-title {
-        font-size: 0.8rem;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .category-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 0.5rem;
-      }
-    }
 
     /* ========== IMPROVED TOOLS CARDS RESPONSIVENESS ========== */
     @media (max-width: 768px) {
@@ -1595,24 +1501,13 @@
 
     /* ========== ENHANCED TOUCH INTERACTIONS ========== */
     @media (hover: none) and (pointer: coarse) {
-      .card:hover {
-        transform: none;
-      }
 
-      .category-card:hover {
-        transform: none;
-      }
 
       .nav-link::after {
         display: none;
       }
 
-      /* Increase touch targets for mobile */
-      .btn,
-      .nav-link,
-      .category-card {
-        min-height: 44px;
-      }
+
 
       .nav-icon,
       .nav-icon-manus {
@@ -1906,6 +1801,12 @@
       }
     }
 
+    /* @media (max-width: 768px) {
+      .nav-actions {
+
+      }
+    } */
+
     @media (max-width: 768px) {
       .hero-icons-container {
         flex-wrap: wrap;
@@ -1929,25 +1830,6 @@
         width: 190px;
         height: 190px;
       }
-
-      .category-grid {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-      }
-
-      .category-card {
-        width: 140px !important;
-        height: 90px !important;
-        padding: 1rem 0.5rem;
-      }
-
-      .category-icon {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-      }
-
-      .category-title {
-        font-size: 0.8rem;
-      }
     }
 
     @media (max-width: 576px) {
@@ -1962,26 +1844,6 @@
 
       .hero-subtitle {
         font-size: 0.9rem;
-      }
-
-      .category-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.5rem;
-      }
-
-      .category-card {
-        width: 100% !important;
-        height: 80px !important;
-        padding: 0.75rem 0.25rem;
-      }
-
-      .category-icon {
-        font-size: 1.25rem;
-        margin-bottom: 0.25rem;
-      }
-
-      .category-title {
-        font-size: 0.75rem;
       }
 
       .nav-actions {
@@ -3099,6 +2961,7 @@
 
     .categories-container {
       background-color: #f8fafc;
+
     }
 
     html[data-theme="dark"] .categories-container {
@@ -3167,7 +3030,2883 @@
       margin: 90px;
     }
 
+    /* =========================
+   NEWS GRID (cards)
+========================= */
+    #blog-posts-container {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
 
+    #blog-posts-container>div {
+      width: 100%;
+    }
+
+    /* card look */
+    #blog-posts-container .card {
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    /* image size in cards */
+    #blog-posts-container .card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* FIX: stop breaking letters */
+    #blog-posts-container .card-title,
+    #blog-posts-container .card-text {
+      word-break: normal !important;
+      overflow-wrap: break-word !important;
+      white-space: normal !important;
+      line-height: 1.5;
+    }
+
+    /* clamp summary nicely */
+    #blog-posts-container .card-text {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+      overflow: hidden;
+    }
+
+    #blog-post-page .container,
+    #blog-post-page .blog-post-container {
+      max-width: 900px;
+    }
+
+    #blog-post-image {
+      width: 100%;
+      height: auto;
+      max-height: 520px;
+      object-fit: cover;
+      border-radius: 16px;
+      display: block;
+      margin: 16px auto;
+    }
+
+    /* body typography */
+    #blog-post-body-container {
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    #blog-post-body-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      display: block;
+      margin: 14px auto;
+    }
+
+    /* (optional) better spacing for headings */
+    #blog-post-body-container h1,
+    #blog-post-body-container h2,
+    #blog-post-body-container h3 {
+      margin-top: 18px;
+      margin-bottom: 10px;
+    }
+
+    /* =====================================================
+   CATEGORY CARDS – STRETCH on md+ (NO column count changes)
+   Works even if your markup differs قليلاً
+===================================================== */
+
+
+    /* استهدف أغلب أشكال كروت الفئات بدون ما نلمس أعمدة الجريد */
+    @media (min-width: 768px) {
+
+
+      /* الكرت نفسه */
+      #categories-container .category-card,
+      #categories .category-card,
+      .categories-container .category-card,
+      .category-card,
+      [data-category].category-card {
+        width: 100% !important;
+        /* يتمدد داخل العمود الحالي فقط */
+      }
+
+
+      /* جسم الكرت */
+      #categories-container .category-card .card-body,
+      #categories .category-card .card-body,
+      .categories-container .category-card .card-body,
+      .category-card .card-body {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 14px !important;
+        padding: 18px 18px !important;
+        min-height: 90px !important;
+        text-align: left !important;
+      }
+
+
+      /* الأيقونة (أي شكل شائع للأيقونات) */
+      #categories-container .category-card i,
+      #categories .category-card i,
+      .categories-container .category-card i,
+      .category-card i {
+        font-size: 28px !important;
+        line-height: 1 !important;
+        margin: 0 !important;
+      }
+
+
+      /* العنوان (أي عنصر نصي داخل الكرت) */
+      #categories-container .category-card h5,
+      #categories-container .category-card .category-title,
+      #categories .category-card h5,
+      .category-card h5,
+      .category-card .category-title {
+        margin: 0 !important;
+        font-size: 16px !important;
+        line-height: 1.25 !important;
+      }
+
+
+      /* RTL: الأيقونة تصير على اليمين والنص على اليمين */
+      html[dir="rtl"] #categories-container .category-card .card-body,
+      html[dir="rtl"] #categories .category-card .card-body,
+      html[dir="rtl"] .category-card .card-body {
+        flex-direction: row-reverse !important;
+        text-align: right !important;
+      }
+    }
+
+
+    /* 992px+ أكبر شوي */
+    @media (min-width: 992px) {
+
+      #categories-container .category-card .card-body,
+      #categories .category-card .card-body,
+      .category-card .card-body {
+        padding: 22px 22px !important;
+        min-height: 100px !important;
+        gap: 16px !important;
+      }
+
+
+      #categories-container .category-card i,
+      #categories .category-card i,
+      .category-card i {
+        font-size: 32px !important;
+      }
+
+
+      #categories-container .category-card h5,
+      #categories-container .category-card .category-title,
+      #categories .category-card h5,
+      .category-card h5 {
+        font-size: 17px !important;
+      }
+    }
+
+
+    /* 1440px+ (Apple Display) */
+    @media (min-width: 1440px) {
+
+      #categories-container .category-card .card-body,
+      #categories .category-card .card-body,
+      .category-card .card-body {
+        padding: 26px 26px !important;
+        min-height: 112px !important;
+        gap: 18px !important;
+      }
+
+
+      #categories-container .category-card i,
+      #categories .category-card i,
+      .category-card i {
+        font-size: 36px !important;
+      }
+
+
+      #categories-container .category-card h5,
+      #categories-container .category-card .category-title,
+      #categories .category-card h5,
+      .category-card h5 {
+        font-size: 18px !important;
+      }
+    }
+
+    /* =====================================================
+   FORCE Category Card: icon left + text next to it
+   one row, centered vertically (MD+ only)
+===================================================== */
+
+
+    @media (min-width: 768px) {
+
+
+      /* اجبار الكرت ما يكون column */
+      #categories-container .category-card .card-body,
+      #categories .category-card .card-body,
+      .category-card .card-body {
+        display: flex !important;
+        flex-direction: row !important;
+        /* <-- مهم */
+        align-items: center !important;
+        /* <-- منتصف عمودي */
+        justify-content: flex-start !important;
+        gap: 14px !important;
+        text-align: left !important;
+        height: 100% !important;
+        min-height: 90px !important;
+      }
+
+
+      /* لو عندك wrapper للأيقونة */
+      #categories-container .category-card .category-icon,
+      #categories .category-card .category-icon,
+      .category-card .category-icon {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex: 0 0 auto !important;
+        margin: 0 !important;
+      }
+
+
+      /* الأيقونة نفسها */
+      #categories-container .category-card .category-icon i,
+      #categories .category-card .category-icon i,
+      .category-card .category-icon i,
+      #categories-container .category-card i,
+      #categories .category-card i,
+      .category-card i {
+        display: inline-block !important;
+        margin: 0 !important;
+        line-height: 1 !important;
+        font-size: 30px !important;
+      }
+
+
+      /* العنوان: امنع النزول تحت */
+      #categories-container .category-card .category-title,
+      #categories .category-card .category-title,
+      .category-card .category-title,
+      #categories-container .category-card h5,
+      #categories .category-card h5,
+      .category-card h5 {
+        margin: 0 !important;
+        display: inline-block !important;
+        white-space: nowrap !important;
+        /* <-- يمنع نزول السطر */
+      }
+
+
+      /* إذا العنوان طويل: بدل nowrap خلّه يلف بس يبقى في نفس الرو */
+      /* احذف التعليق عن الأسطر التالية إذا تبي لفّ منطقي بدل قص */
+      /*
+  #categories-container .category-card .category-title,
+  .category-card .category-title,
+  #categories-container .category-card h5,
+  .category-card h5 {
+    white-space: normal !important;
+  }
+  */
+
+
+      /* RTL: خلّه row-reverse (الأيقونة يمين) */
+      html[dir="rtl"] #categories-container .category-card .card-body,
+      html[dir="rtl"] #categories .category-card .card-body,
+      html[dir="rtl"] .category-card .card-body {
+        flex-direction: row-reverse !important;
+        text-align: right !important;
+      }
+    }
+
+    /* =========================================================
+   ✅ FINAL FIX PACK (CATEGORIES + HERO ICONS ONLY)
+   - Fix categories size (restore normal)
+   - Hero icons stay in 1 row (smaller)
+   - DOES NOT TOUCH tools/cards
+========================================================= */
+
+
+    /* ✅ 1) Prevent horizontal scroll ONLY (safe) */
+    html,
+    body {
+      overflow-x: hidden !important;
+    }
+
+
+    /* =========================================================
+   ✅ 2) RESTORE CATEGORIES GRID (Normal size again)
+========================================================= */
+
+    .category-grid {
+      display: grid !important;
+      gap: 18px !important;
+      width: 100% !important;
+      padding: 24px 0 !important;
+    }
+
+    /* ✅ Laptop -> big screens = 8 columns */
+    @media (min-width: 1024px) {
+      .category-grid {
+        grid-template-columns: repeat(8, minmax(160px, 1fr)) !important;
+      }
+    }
+
+    /* ✅ iPad Pro + iPad Air */
+    @media (min-width: 820px) and (max-width: 1023px) {
+      .category-grid {
+        grid-template-columns: repeat(4, minmax(160px, 1fr)) !important;
+      }
+    }
+
+    /* ✅ iPad Mini */
+    @media (min-width: 600px) and (max-width: 819px) {
+      .category-grid {
+        grid-template-columns: repeat(3, minmax(160px, 1fr)) !important;
+      }
+    }
+
+    /* ✅ Mobile */
+    @media (max-width: 599px) {
+      .category-grid {
+        grid-template-columns: repeat(2, minmax(140px, 1fr)) !important;
+        gap: 12px !important;
+      }
+    }
+
+
+
+
+    /* ✅ توسعة مساحة قسم التصنيفات فقط */
+    #categories .categories-container.container {
+      max-width: 1600px !important;
+      /* أو 1700 حسب رغبتك */
+      width: 96% !important;
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+    }
+
+
+
+
+
+    /* =========================================================
+   ✅ 3) CATEGORY CARD FIX (Normal size again)
+========================================================= */
+
+    .category-card {
+      width: 100% !important;
+      min-height: 130px !important;
+      background: #fff !important;
+      border-radius: 18px !important;
+      border: 1px solid rgba(0, 0, 0, 0.08) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 16px 12px !important;
+      cursor: pointer !important;
+      transition: all .25s ease !important;
+
+      overflow: visible !important;
+      /* ✅ مهم */
+      min-width: 0 !important;
+    }
+
+    .category-card:hover {
+      transform: translateY(-3px) !important;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+      border-color: rgba(64, 31, 113, 0.45) !important;
+    }
+
+
+    /* ✅ Laptop layout (icon فوق النص) */
+    @media (min-width:1024px) and (max-width:1399px) {
+      .category-card .card-body {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        text-align: center !important;
+        width: 100% !important;
+      }
+    }
+
+
+    /* ✅ Large screens layout (icon يسار النص) */
+    @media (min-width:1400px) {
+      .category-card {
+        min-height: 110px !important;
+        /* أقل لأن النص بجانب الايقونة */
+        padding: 18px 18px !important;
+      }
+
+      .category-card .card-body {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 14px !important;
+        text-align: left !important;
+        width: 100% !important;
+      }
+    }
+
+
+
+
+
+    /* ✅ Inner layout */
+    .category-card .card-body {
+      width: 100% !important;
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center !important;
+      gap: 14px !important;
+      padding: 0 !important;
+    }
+
+
+    /* ✅ Icon size */
+    .category-icon,
+    .category-card i {
+      font-size: 30px !important;
+      flex: 0 0 auto !important;
+      line-height: 1 !important;
+    }
+
+
+    .category-title,
+    .category-card h5 {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+      min-width: 0 !important;
+
+      font-weight: 700 !important;
+      line-height: 1.25 !important;
+
+      /* ✅ يسمح بسطر أو سطرين */
+      display: -webkit-box !important;
+      line-clamp: 2 !important;
+      -webkit-box-orient: vertical !important;
+      overflow: hidden !important;
+
+      word-break: break-word !important;
+    }
+
+    /* ✅ مقاس الخط يتناسب */
+    @media (min-width:1024px) {
+      .category-title {
+        font-size: 14px !important;
+      }
+    }
+
+    @media (min-width:1400px) {
+      .category-title {
+        font-size: 15px !important;
+      }
+    }
+
+
+    body.rtl-mode .category-card .card-body {
+      direction: rtl !important;
+    }
+
+    @media (min-width:1400px) {
+      body.rtl-mode .category-card .card-body {
+        flex-direction: row-reverse !important;
+        text-align: right !important;
+      }
+    }
+
+
+
+
+
+    /* ✅ RTL support */
+    body.rtl-mode .category-card .card-body {
+      flex-direction: row-reverse !important;
+    }
+
+    body.rtl-mode .category-title,
+    body.rtl-mode .category-card h5 {
+      text-align: right !important;
+    }
+
+
+    /* =========================================================
+   ✅ FINAL FIX PACK (CATEGORIES + HERO ICONS ONLY)
+   - Fix categories size (restore normal)
+   - Hero icons stay in 1 row (smaller)
+   - DOES NOT TOUCH tools/cards
+========================================================= */
+
+
+    /* ✅ 1) Prevent horizontal scroll ONLY (safe) */
+    html,
+    body {
+      overflow-x: hidden !important;
+    }
+
+
+    /* =========================================================
+   ✅ 2) RESTORE CATEGORIES GRID (Normal size again)
+========================================================= */
+
+    /* ✅ Grid */
+    .category-grid {
+      display: grid !important;
+      gap: 18px !important;
+      width: 100% !important;
+      margin: 0 auto !important;
+      padding: 24px 0 !important;
+    }
+
+    /* ✅ Laptop -> Large screens = 8 columns */
+    @media (min-width: 1024px) {
+      .category-grid {
+        grid-template-columns: repeat(8, minmax(140px, 1fr)) !important;
+      }
+    }
+
+    /* ✅ iPad Pro + iPad Air */
+    @media (min-width: 820px) and (max-width: 1023px) {
+      .category-grid {
+        grid-template-columns: repeat(4, minmax(160px, 1fr)) !important;
+      }
+    }
+
+    /* ✅ iPad Mini */
+    @media (min-width: 600px) and (max-width: 819px) {
+      .category-grid {
+        grid-template-columns: repeat(3, minmax(160px, 1fr)) !important;
+      }
+    }
+
+    /* ✅ Mobile */
+    @media (max-width: 599px) {
+      .category-grid {
+        grid-template-columns: repeat(2, minmax(140px, 1fr)) !important;
+        gap: 12px !important;
+        /* ✅ يمنع التلاصق */
+      }
+    }
+
+    /* ✅ Card */
+    .category-card {
+      width: 100% !important;
+      min-height: 130px !important;
+      height: auto !important;
+
+      background: #fff !important;
+      border-radius: 18px !important;
+      border: 1px solid rgba(0, 0, 0, 0.08) !important;
+
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+
+      padding: 16px 10px !important;
+      cursor: pointer !important;
+      transition: all 0.25s ease !important;
+      overflow: visible !important;
+      min-width: 0 !important;
+    }
+
+    /* ✅ IMPORTANT: card-body هو اللي لازم يصير مرتب */
+    /* ✅ Base = Column (أفضل للـ 8 أعمدة) */
+    .category-card .card-body {
+      width: 100% !important;
+      height: 100% !important;
+
+      display: flex !important;
+      flex-direction: column !important;
+      /* ✅ أيقونة فوق النص */
+      align-items: center !important;
+      justify-content: center !important;
+
+      gap: 10px !important;
+      padding: 0 !important;
+      text-align: center !important;
+    }
+
+    @media (min-width: 1366px) {
+      .category-card .card-body {
+        flex-direction: row !important;
+        /* ✅ أيقونة يسار النص */
+        justify-content: flex-start !important;
+        text-align: left !important;
+        gap: 14px !important;
+      }
+
+      .category-title,
+      .category-card h5 {
+        text-align: left !important;
+      }
+    }
+
+
+    @media (min-width: 1366px) {
+      body.rtl-mode .category-card .card-body {
+        flex-direction: row-reverse !important;
+        text-align: right !important;
+      }
+
+      body.rtl-mode .category-title,
+      body.rtl-mode .category-card h5 {
+        text-align: right !important;
+      }
+    }
+
+
+
+
+    /* ✅ Title - 2 lines max */
+    .category-title,
+    .category-card h5 {
+      margin: 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+
+      font-size: clamp(11px, 0.8vw, 14px) !important;
+      line-height: 1.25 !important;
+      font-weight: 700 !important;
+
+      overflow: hidden !important;
+      display: -webkit-box !important;
+      line-clamp: 2 !important;
+      -webkit-box-orient: vertical !important;
+      min-height: 34px !important;
+      text-align: center !important;
+    }
+
+    /* ✅ Icon */
+    .category-icon i {
+      font-size: 26px !important;
+      line-height: 1 !important;
+    }
+
+
+
+    /* =========================================================
+   ✅ 3) CATEGORY CARD FIX (Normal size again)
+========================================================= */
+
+
+    /* ✅ RTL support */
+    body.rtl-mode .category-card .card-body {
+      flex-direction: row-reverse !important;
+    }
+
+    body.rtl-mode .category-title,
+    body.rtl-mode .category-card h5 {
+      text-align: right !important;
+    }
+
+
+    /* =========================================================
+   ✅ 4) HERO ICONS (1 ROW ONLY + Smaller)
+   ⚠️ Does NOT affect tools or anything else
+========================================================= */
+
+    .hero-icons-container {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+
+      flex-wrap: nowrap !important;
+      /* ✅ FORCE single row */
+      overflow: hidden !important;
+
+      gap: 18px !important;
+      margin-top: 2rem !important;
+    }
+
+
+    /* ✅ reduce icon sizes */
+    .nav-icon img {
+      width: 110px !important;
+      height: 110px !important;
+    }
+
+    .nav-icon-manus img {
+      width: 70px !important;
+      height: 70px !important;
+    }
+
+
+    /* ✅ On laptops smaller */
+    @media (max-width: 1200px) {
+      .nav-icon img {
+        width: 95px !important;
+        height: 95px !important;
+      }
+
+      .nav-icon-manus img {
+        width: 60px !important;
+        height: 60px !important;
+      }
+    }
+
+
+    /* ✅ On mobile shrink more */
+    @media (max-width: 768px) {
+      .hero-icons-container {
+        gap: 10px !important;
+      }
+
+      .nav-icon img {
+        width: 75px !important;
+        height: 75px !important;
+      }
+
+      .nav-icon-manus img {
+        width: 50px !important;
+        height: 50px !important;
+      }
+    }
+
+    /* =========================================================
+   ✅ HERO ICONS (FINAL FIX)
+   - One row only
+   - No clipping
+   - Responsive scaling
+   - Good spacing
+   - Keeps animation without being cut
+========================================================= */
+
+    /* ✅ 1) منع قصّ الأيقونات داخل الهيرو */
+    .hero-section {
+      overflow: visible !important;
+      /* كان السبب الرئيسي للقص */
+    }
+
+    /* ✅ 2) الكونتينر حق الأيقونات: سطر واحد + بدون قص */
+    .hero-icons-container {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+
+      flex-wrap: nowrap !important;
+      /* ✅ سطر واحد فقط */
+      overflow: visible !important;
+      /* ✅ لا قص */
+      width: 100% !important;
+
+      gap: clamp(10px, 2vw, 26px) !important;
+      /* ✅ مسافة منطقية تتغير حسب الشاشة */
+      margin-top: 2rem !important;
+      padding: 0 20px !important;
+
+      /* ✅ يخلي الحركة تبان بدون ما تنقص */
+      min-height: 160px !important;
+    }
+
+    /* ✅ 3) أيقونات AI الكبيرة */
+    .nav-icon {
+      flex: 0 0 auto !important;
+    }
+
+    .nav-icon img {
+      width: clamp(75px, 6vw, 150px) !important;
+      height: clamp(75px, 6vw, 150px) !important;
+      object-fit: contain !important;
+
+      /* ✅ يخلي الحركة smooth */
+      transform: translateZ(0);
+      backface-visibility: hidden;
+    }
+
+    /* ✅ 4) أيقونات Manus الصغيرة */
+    .nav-icon-manus {
+      flex: 0 0 auto !important;
+    }
+
+    .nav-icon-manus img {
+      width: clamp(55px, 4.3vw, 100px) !important;
+      height: clamp(55px, 4.3vw, 100px) !important;
+      object-fit: contain !important;
+
+      transform: translateZ(0);
+      backface-visibility: hidden;
+    }
+
+    /* ✅ 5) شاشات صغيرة: تصغير مع الحفاظ على سطر واحد */
+    @media (max-width: 768px) {
+      .hero-icons-container {
+        gap: 10px !important;
+        min-height: 120px !important;
+        padding: 0 10px !important;
+      }
+    }
+
+    /* ✅ 6) شاشات كبيرة جدًا: زيادة حجم طبيعي ومسافة أجمل */
+    @media (min-width: 1400px) {
+      .hero-icons-container {
+        gap: 28px !important;
+        min-height: 180px !important;
+      }
+    }
+
+
+    #news-page,
+    #blog-posts-container {
+      overflow: visible !important;
+    }
+
+    /* ✅ Expand categories container only (doesn't affect whole site) */
+    #categories .categories-container.container {
+      max-width: 95vw !important;
+      /* يستغل الشاشة */
+      width: 95vw !important;
+      padding-left: 30px !important;
+      padding-right: 30px !important;
+    }
+
+    /* ✅ Extra large screens */
+    @media (min-width: 1600px) {
+      #categories .categories-container.container {
+        max-width: 1600px !important;
+        /* حد منطقي */
+        width: 1600px !important;
+      }
+    }
+
+    /* ✅ FULL WIDTH FIX (Stop container from squeezing) */
+    #categories .categories-container.container {
+      max-width: 100% !important;
+      width: 100% !important;
+      padding-left: 30px !important;
+      padding-right: 30px !important;
+    }
+
+    /* =========================================================
+   ✅ CATEGORY CARD RESPONSIVE LAYOUT (FINAL FIX)
+========================================================= */
+
+    /* ✅ Ensure cards can grow & text never clipped */
+    .category-card {
+      min-width: 0 !important;
+      overflow: visible !important;
+    }
+
+    html,
+    body {
+      height: auto !important;
+      overflow-y: auto !important;
+    }
+
+
+    /* ✅ Default behavior = icon on top (laptop and below) */
+    .category-card .card-body {
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      align-items: center !important;
+      text-align: center !important;
+      gap: 10px !important;
+      width: 100% !important;
+    }
+
+    /* ✅ Laptop -> Large screens = 8 columns */
+    @media (min-width: 1024px) {
+      .category-grid {
+        grid-template-columns: repeat(8, minmax(170px, 1fr)) !important;
+      }
+    }
+
+    /* ✅ BIG SCREENS ONLY (>= 1400px) → icon left of text */
+    @media (min-width: 1400px) {
+      .category-card .card-body {
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        text-align: left !important;
+        gap: 12px !important;
+      }
+
+      .category-title {
+        text-align: left !important;
+      }
+
+      body.rtl-mode .category-card .card-body {
+        flex-direction: row-reverse !important;
+      }
+
+      body.rtl-mode .category-title {
+        text-align: right !important;
+      }
+    }
+
+    /* ✅ Title = 2 lines max only */
+    .category-title {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      font-size: 14px !important;
+      line-height: 1.25 !important;
+      font-weight: 700 !important;
+
+      display: -webkit-box !important;
+      line-clamp: 2 !important;
+      -webkit-box-orient: vertical !important;
+      overflow: hidden !important;
+    }
+
+    /* ✅ FIX: prevent cutting + allow full width */
+    .categories-container.container {
+      max-width: 100% !important;
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+
+    /* ✅ Grid general */
+    .category-grid {
+      width: 100% !important;
+      box-sizing: border-box !important;
+      overflow: hidden !important;
+    }
+
+    /* =========================================================
+   ✅ 1) LAPTOP ONLY (1024 → 1366)
+   icon فوق النص + النص سطرين بدون قص
+========================================================= */
+    @media (min-width: 1024px) and (max-width: 1366px) {
+
+      .category-grid {
+        grid-template-columns: repeat(8, minmax(140px, 1fr)) !important;
+      }
+
+      .category-card {
+        padding: 14px 10px !important;
+        min-height: 120px !important;
+      }
+
+      .category-card .card-body {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        gap: 10px !important;
+        width: 100% !important;
+      }
+
+      .category-title {
+        text-align: center !important;
+        width: 100% !important;
+        max-width: 100% !important;
+
+        /* ✅ يظهر النص بالكامل داخل الكرت */
+        font-size: 13px !important;
+        line-height: 1.25 !important;
+
+        overflow: hidden !important;
+        display: -webkit-box !important;
+        line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+      }
+    }
+
+
+    /* =========================================================
+   ✅ 2) iPad Pro FIX (820 → 1023)
+   حل قص العمود الأخير
+========================================================= */
+    @media (min-width: 820px) and (max-width: 1023px) {
+
+      .category-grid {
+        grid-template-columns: repeat(4, minmax(140px, 1fr)) !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+      }
+
+      .category-card {
+        min-width: 0 !important;
+        width: 100% !important;
+      }
+    }
+
+
+    /* =========================================================
+   ✅ 3) BIG SCREENS (>= 1367)
+   خليها أيقونة يسار + نص يمين
+========================================================= */
+    @media (min-width: 1367px) {
+
+      .category-card .card-body {
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+        text-align: left !important;
+      }
+
+      body.rtl-mode .category-card .card-body {
+        flex-direction: row-reverse !important;
+        text-align: right !important;
+      }
+
+      .category-title {
+        text-align: left !important;
+      }
+
+      body.rtl-mode .category-title {
+        text-align: right !important;
+      }
+    }
+
+    /* =========================================================
+   ✅ HARD OVERRIDE FINAL FIX (Laptop vs Large Screens)
+   Put this at VERY END of <style>
+========================================================= */
+
+    /* ✅ Ensure container doesn't squeeze on laptop */
+    #categories .categories-container.container {
+      max-width: 100% !important;
+      width: 100% !important;
+      padding-left: 30px !important;
+      padding-right: 30px !important;
+    }
+
+    /* ✅ prevent card from clipping content */
+    #categories-container .category-card {
+      min-width: 0 !important;
+      overflow: visible !important;
+    }
+
+    /* =========================================================
+   ✅ LAPTOP ONLY (1024px → 1399px)
+   icon فوق النص + النص سطر/سطرين بدون قص
+========================================================= */
+    @media (min-width: 1024px) and (max-width: 1399px) {
+
+      /* ✅ Force column layout مهما كان */
+      #categories-container .category-card .card-body {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        gap: 10px !important;
+        padding: 0 !important;
+      }
+
+      /* ✅ Remove the nowrap that kills the title */
+      #categories-container .category-card h5,
+      #categories-container .category-card .category-title {
+        white-space: normal !important;
+        text-align: center !important;
+
+        display: -webkit-box !important;
+        line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+
+        max-width: 100% !important;
+        width: 100% !important;
+      }
+    }
+
+    /* =========================================================
+   ✅ BIG SCREENS ONLY (>= 1400px)
+   icon يسار النص + تمدد جميل
+========================================================= */
+    @media (min-width: 1400px) {
+
+      #categories-container .category-card .card-body {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 14px !important;
+        text-align: left !important;
+      }
+
+      #categories-container .category-card h5,
+      #categories-container .category-card .category-title {
+        white-space: normal !important;
+        text-align: left !important;
+      }
+
+      body.rtl-mode #categories-container .category-card .card-body {
+        flex-direction: row-reverse !important;
+        text-align: right !important;
+      }
+
+      body.rtl-mode #categories-container .category-card h5,
+      body.rtl-mode #categories-container .category-card .category-title {
+        text-align: right !important;
+      }
+    }
+
+    /* =========================================================
+   ✅ CLEAN FINAL CATEGORY SYSTEM (NO CONFLICTS)
+========================================================= */
+
+    /* ✅ Expand only categories section */
+    #categories .categories-container.container {
+      max-width: 100% !important;
+      width: 100% !important;
+      padding-left: 30px !important;
+      padding-right: 30px !important;
+    }
+
+    /* ✅ GRID BASE */
+    #categories-container.category-grid {
+      display: grid !important;
+      width: 100% !important;
+      gap: 18px !important;
+      padding: 24px 0 !important;
+    }
+
+    /* ✅ Laptop + Desktop = 8 Columns */
+    @media (min-width: 1024px) {
+      #categories-container.category-grid {
+        grid-template-columns: repeat(8, minmax(160px, 1fr)) !important;
+      }
+    }
+
+    /* ✅ iPad Pro + iPad Air */
+    @media (min-width: 820px) and (max-width: 1023px) {
+      #categories-container.category-grid {
+        grid-template-columns: repeat(4, minmax(160px, 1fr)) !important;
+      }
+    }
+
+    /* ✅ iPad Mini */
+    @media (min-width: 600px) and (max-width: 819px) {
+      #categories-container.category-grid {
+        grid-template-columns: repeat(3, minmax(160px, 1fr)) !important;
+      }
+    }
+
+    /* ✅ Mobile */
+    @media (max-width: 599px) {
+      #categories-container.category-grid {
+        grid-template-columns: repeat(2, minmax(140px, 1fr)) !important;
+        gap: 12px !important;
+      }
+    }
+
+    /* =========================================================
+   ✅ CARD BASE
+========================================================= */
+
+    #categories-container .category-card {
+      width: 100% !important;
+      min-width: 0 !important;
+      min-height: 130px !important;
+      background: #fff !important;
+      border-radius: 18px !important;
+      border: 1px solid rgba(0, 0, 0, 0.08) !important;
+      cursor: pointer !important;
+      transition: all 0.25s ease !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      padding: 16px 12px !important;
+      overflow: visible !important;
+    }
+
+    #categories-container .category-card:hover {
+      transform: translateY(-3px) !important;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+      border-color: rgba(64, 31, 113, 0.45) !important;
+    }
+
+    /* =========================================================
+   ✅ BODY BASE (Default = Laptop layout)
+   Icon فوق النص (أفضل للـ 8 أعمدة)
+========================================================= */
+
+    #categories-container .category-card .card-body {
+      width: 100% !important;
+      display: flex !important;
+      flex-direction: column !important;
+      /* ✅ icon فوق */
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 10px !important;
+      text-align: center !important;
+      padding: 0 !important;
+    }
+
+    /* ✅ ICON */
+    #categories-container .category-card .category-icon i,
+    #categories-container .category-card i {
+      font-size: 26px !important;
+      line-height: 1 !important;
+    }
+
+    /* ✅ TITLE (Two lines + no cutting) */
+    #categories-container .category-card h5,
+    #categories-container .category-card .category-title {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+
+      font-size: 14px !important;
+      font-weight: 700 !important;
+      line-height: 1.25 !important;
+
+      white-space: normal !important;
+      /* ✅ مهم جدًا */
+      word-break: break-word !important;
+
+      display: -webkit-box !important;
+      line-clamp: 2 !important;
+      /* ✅ سطرين */
+      -webkit-box-orient: vertical !important;
+      overflow: hidden !important;
+    }
+
+    /* =========================================================
+   ✅ BIG SCREENS ONLY (>= 1400px)
+   Icon يسار النص (تمدد مثالي)
+========================================================= */
+
+    @media (min-width: 1400px) {
+
+      #categories-container .category-card {
+        min-height: 110px !important;
+        padding: 18px 18px !important;
+      }
+
+      #categories-container .category-card .card-body {
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+        text-align: left !important;
+        gap: 14px !important;
+      }
+
+      #categories-container .category-card h5,
+      #categories-container .category-card .category-title {
+        text-align: left !important;
+      }
+    }
+
+    /* =========================================================
+   ✅ RTL SUPPORT
+========================================================= */
+
+    body.rtl-mode #categories-container .category-card .card-body {
+      direction: rtl !important;
+    }
+
+    @media (min-width: 1400px) {
+      body.rtl-mode #categories-container .category-card .card-body {
+        flex-direction: row-reverse !important;
+        text-align: right !important;
+      }
+
+      body.rtl-mode #categories-container .category-card h5,
+      body.rtl-mode #categories-container .category-card .category-title {
+        text-align: right !important;
+      }
+    }
+
+
+    /* ✅ FORCE Laptop Layout: icon فوق النص (حتى لو في CSS قديم) */
+    @media (min-width: 1024px) and (max-width: 1399px) {
+
+      #categories-container .category-card .card-body {
+        display: flex !important;
+        flex-direction: column !important;
+        /* ✅ فوق */
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+      }
+
+      #categories-container .category-card h5,
+      #categories-container .category-card .category-title {
+        text-align: center !important;
+        width: 100% !important;
+        white-space: normal !important;
+      }
+    }
+
+    /* =========================================================
+   ✅ FINAL HARD FIX (CATEGORIES ONLY)
+   - Laptop: icon فوق النص + سطر/سطرين
+   - Big screens: icon يسار النص + محتوى في الوسط (بدون فراغ يمين)
+   - iPad Pro: يمنع قص العمود بالكامل
+   - يغلب كل القواعد القديمة المتعارضة
+========================================================= */
+
+    /* ✅ 0) لازم grid/container ما يقص */
+    #categories,
+    #categories .categories-container,
+    #categories .categories-container.container,
+    #categories-container.category-grid {
+      overflow: visible !important;
+      box-sizing: border-box !important;
+      width: 100% !important;
+      max-width: 100% !important;
+    }
+
+    /* ✅ 1) توسعة مساحة التصنيفات (استغلال الهوامش يمين ويسار) */
+    #categories .categories-container.container {
+      max-width: 100% !important;
+      width: 100% !important;
+      padding-left: 26px !important;
+      padding-right: 26px !important;
+    }
+
+    /* ✅ 2) ضبط الجريد */
+    #categories-container.category-grid {
+      display: grid !important;
+      gap: 18px !important;
+      margin: 0 auto !important;
+      padding: 24px 0 !important;
+      width: 100% !important;
+      overflow: visible !important;
+    }
+
+    /* ✅ 3) Laptop & larger = 8 columns */
+    @media (min-width: 1024px) {
+      #categories-container.category-grid {
+        grid-template-columns: repeat(8, minmax(0, 1fr)) !important;
+      }
+    }
+
+    /* ✅ 4) iPad Pro + iPad Air = 4 columns (حل القص) */
+    @media (min-width: 820px) and (max-width: 1023px) {
+      #categories-container.category-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+      }
+
+      #categories .categories-container.container {
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+      }
+    }
+
+    /* ✅ iPad Mini = 3 columns */
+    @media (min-width: 600px) and (max-width: 819px) {
+      #categories-container.category-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      }
+    }
+
+    /* ✅ Mobile = 2 columns */
+    @media (max-width: 599px) {
+      #categories-container.category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 12px !important;
+      }
+    }
+
+    /* ✅ 5) الكرت نفسه */
+    #categories-container .category-card {
+      width: 100% !important;
+      min-width: 0 !important;
+      min-height: 120px !important;
+      height: auto !important;
+      background: #fff !important;
+      border-radius: 18px !important;
+      border: 1px solid rgba(0, 0, 0, 0.08) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 14px 12px !important;
+      cursor: pointer !important;
+      transition: all 0.25s ease !important;
+      overflow: visible !important;
+    }
+
+    /* ✅ 6) ✅ قاعدة أساسية: اللابتوب وما تحته = أيقونة فوق النص */
+    #categories-container .category-card .card-body {
+      width: 100% !important;
+      min-width: 0 !important;
+      display: flex !important;
+      flex-direction: column !important;
+      /* ✅ فوق */
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      gap: 10px !important;
+      padding: 0 !important;
+    }
+
+    /* ✅ 7) العنوان: سطر أو سطرين بدون قص الحروف */
+    #categories-container .category-card h5,
+    #categories-container .category-card .category-title {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+      min-width: 0 !important;
+      font-weight: 700 !important;
+      line-height: 1.25 !important;
+
+      display: -webkit-box !important;
+      line-clamp: 2 !important;
+      -webkit-box-orient: vertical !important;
+      overflow: hidden !important;
+
+      word-break: normal !important;
+      overflow-wrap: break-word !important;
+      text-align: center !important;
+
+      font-size: 13px !important;
+    }
+
+    /* ✅ 8) حجم الأيقونة */
+    #categories-container .category-card i {
+      font-size: 28px !important;
+      line-height: 1 !important;
+    }
+
+    /* ✅ 9) الشاشات الكبيرة فقط (>= 1400px)
+      أيقونة يسار + نص يمين + توسيط داخل الكرت */
+    @media (min-width: 1400px) {
+
+      #categories-container .category-card {
+        min-height: 105px !important;
+        padding: 18px 18px !important;
+      }
+
+      #categories-container .category-card .card-body {
+        flex-direction: row !important;
+        /* ✅ يسار */
+        justify-content: center !important;
+        /* ✅ وسط داخل الكرت */
+        align-items: center !important;
+        text-align: left !important;
+        gap: 14px !important;
+      }
+
+      #categories-container .category-card h5,
+      #categories-container .category-card .category-title {
+        width: auto !important;
+        text-align: left !important;
+        font-size: 15px !important;
+      }
+    }
+
+    /* ✅ 10) RTL دعم كامل */
+    body.rtl-mode #categories-container .category-card .card-body {
+      direction: rtl !important;
+    }
+
+    @media (min-width: 1400px) {
+      body.rtl-mode #categories-container .category-card .card-body {
+        flex-direction: row-reverse !important;
+        text-align: right !important;
+      }
+
+      body.rtl-mode #categories-container .category-card h5,
+      body.rtl-mode #categories-container .category-card .category-title {
+        text-align: right !important;
+      }
+    }
+
+    /* ✅ FORCE Laptop ONLY: icon فوق النص */
+    @media (min-width: 1024px) and (max-width: 1399px) {
+
+      /* أقوى selector ممكن */
+      #categories #categories-container.category-grid .category-card .card-body {
+        display: flex !important;
+        flex-direction: column !important;
+        /* ✅ فوق */
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        gap: 10px !important;
+      }
+
+      #categories #categories-container.category-grid .category-card .category-title,
+      #categories #categories-container.category-grid .category-card h5 {
+        text-align: center !important;
+        width: 100% !important;
+      }
+
+      #categories #categories-container.category-grid .category-card .category-icon {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+      }
+    }
+
+    /* =========================================================
+   ✅ HERO ICONS RESPONSIVE GRID FIX (FINAL)
+   - Laptop+ = 1 row
+   - iPad = 2 rows
+   - Mobile = 2 icons per row
+========================================================= */
+
+    /* ✅ الكونتينر حق الشعارات */
+    .hero-icons-container {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: clamp(12px, 2vw, 30px) !important;
+      width: 100% !important;
+      flex-wrap: wrap !important;
+      /* ✅ الافتراضي يسمح لف */
+      overflow: visible !important;
+      padding: 0 20px !important;
+    }
+
+    /* ✅ كل شعار */
+    .nav-icon,
+    .nav-icon-manus {
+      flex: 0 0 auto !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+
+    /* ✅ حجم الشعارات (يتغير تلقائي) */
+    .nav-icon img {
+      width: clamp(85px, 6vw, 150px) !important;
+      height: clamp(85px, 6vw, 150px) !important;
+    }
+
+    .nav-icon-manus img {
+      width: clamp(60px, 4.5vw, 110px) !important;
+      height: clamp(60px, 4.5vw, 110px) !important;
+    }
+
+    /* =========================================================
+   ✅ 1) Laptop + Large Screens = سطر واحد فقط
+========================================================= */
+    @media (min-width: 1024px) {
+      .hero-icons-container {
+        flex-wrap: nowrap !important;
+        /* ✅ سطر واحد */
+      }
+    }
+
+    /* =========================================================
+   ✅ 2) iPad = سطرين (تقريبًا 4 شعارات في صف)
+========================================================= */
+    @media (min-width: 600px) and (max-width: 1023px) {
+      .hero-icons-container {
+        flex-wrap: wrap !important;
+      }
+
+      .nav-icon,
+      .nav-icon-manus {
+        flex: 0 0 calc(25% - 20px) !important;
+        /* ✅ 4 في الصف */
+      }
+    }
+
+    /* =========================================================
+   ✅ 3) Mobile = شعارين في كل سطر
+========================================================= */
+    @media (max-width: 599px) {
+      .hero-icons-container {
+        flex-wrap: wrap !important;
+        gap: 12px !important;
+      }
+
+      .nav-icon,
+      .nav-icon-manus {
+        flex: 0 0 calc(50% - 12px) !important;
+        /* ✅ 2 في الصف */
+      }
+
+      .nav-icon img {
+        width: 90px !important;
+        height: 90px !important;
+      }
+
+      .nav-icon-manus img {
+        width: 75px !important;
+        height: 75px !important;
+      }
+    }
+
+
+    /* =========================================================
+   ✅ HERO ICONS FINAL FIX
+   Mobile: 2 per row
+   Tablets/iPads: 2 rows, 5 per row
+   Laptop+: 1 row
+========================================================= */
+
+    /* ✅ container */
+    .hero-icons-container {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+
+      flex-wrap: wrap !important;
+      width: 100% !important;
+
+      gap: 16px !important;
+      padding: 0 16px !important;
+
+      overflow: visible !important;
+    }
+
+    /* ✅ Each icon wrapper MUST be controllable */
+    .hero-icons-container .nav-icon,
+    .hero-icons-container .nav-icon-manus {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+
+      flex: 0 0 auto !important;
+      width: auto !important;
+    }
+
+    /* ✅ Icon sizes - responsive */
+    .hero-icons-container .nav-icon img {
+      width: clamp(85px, 6vw, 155px) !important;
+      height: clamp(85px, 6vw, 155px) !important;
+      object-fit: contain !important;
+    }
+
+    .hero-icons-container .nav-icon-manus img {
+      width: clamp(60px, 4.5vw, 110px) !important;
+      height: clamp(60px, 4.5vw, 110px) !important;
+      object-fit: contain !important;
+    }
+
+    /* =========================================================
+   ✅ 1) MOBILE: 2 icons per row
+========================================================= */
+    @media (max-width: 599px) {
+
+      .hero-icons-container {
+        flex-wrap: wrap !important;
+        gap: 12px !important;
+      }
+
+      .hero-icons-container .nav-icon,
+      .hero-icons-container .nav-icon-manus {
+        flex: 0 0 50% !important;
+        /* ✅ كل اثنين في صف */
+        max-width: 50% !important;
+      }
+    }
+
+    /* =========================================================
+   ✅ 2) ALL TABLETS + ALL IPADS: 2 rows / 5 per row
+========================================================= */
+    @media (min-width: 600px) and (max-width: 1023px) {
+
+      .hero-icons-container {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+      }
+
+      .hero-icons-container .nav-icon,
+      .hero-icons-container .nav-icon-manus {
+        flex: 0 0 20% !important;
+        /* ✅ 5 في كل صف */
+        max-width: 20% !important;
+      }
+    }
+
+    /* =========================================================
+   ✅ 3) LAPTOP + LARGE: 1 row only
+========================================================= */
+    @media (min-width: 1024px) {
+
+      .hero-icons-container {
+        flex-wrap: nowrap !important;
+        /* ✅ سطر واحد */
+        justify-content: center !important;
+      }
+
+      .hero-icons-container .nav-icon,
+      .hero-icons-container .nav-icon-manus {
+        flex: 0 0 auto !important;
+        max-width: unset !important;
+      }
+    }
+
+    /* =========================================================
+   ✅ HERO LOGOS FINAL LAYOUT (OVERRIDE EVERYTHING)
+   - Desktop/Laptop: 1 row
+   - Tablets/iPads: 2 rows (5 per row)
+   - Mobile: 2 per row
+========================================================= */
+
+    /* ✅ container */
+    .hero-icons-container {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      gap: 18px !important;
+      /* المسافة الافتراضية */
+      width: 100% !important;
+      padding: 0 18px !important;
+      margin-top: 24px !important;
+      overflow: visible !important;
+    }
+
+    /* ✅ كل أيقونة تعتبر عنصر مرن */
+    .hero-icons-container .nav-icon,
+    .hero-icons-container .nav-icon-manus {
+      flex: 0 0 auto !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+
+    /* =========================================================
+   ✅ 1) MOBILE (≤ 576px) → 2 icons per row
+========================================================= */
+    @media (max-width: 576px) {
+      .hero-icons-container {
+        gap: 14px !important;
+      }
+
+      .hero-icons-container .nav-icon,
+      .hero-icons-container .nav-icon-manus {
+        flex: 0 0 calc(50% - 14px) !important;
+        /* ✅ شعارين بالسطر */
+        display: flex !important;
+        justify-content: center !important;
+      }
+
+      .hero-icons-container .nav-icon img {
+        width: 78px !important;
+        height: 78px !important;
+      }
+
+      .hero-icons-container .nav-icon-manus img {
+        width: 70px !important;
+        height: 70px !important;
+        margin: 0 !important;
+      }
+    }
+
+
+    /* =========================================================
+   ✅ 2) TABLETS & iPads (577px → 1023px)
+   - 2 rows only
+   - 5 icons per row (20% لكل شعار)
+========================================================= */
+    @media (min-width: 577px) and (max-width: 1023px) {
+
+      .hero-icons-container {
+        gap: 20px !important;
+      }
+
+      .hero-icons-container .nav-icon,
+      .hero-icons-container .nav-icon-manus {
+        flex: 0 0 calc(20% - 20px) !important;
+        /* ✅ 5 شعارات بالسطر */
+        display: flex !important;
+        justify-content: center !important;
+      }
+
+      .hero-icons-container .nav-icon img {
+        width: 95px !important;
+        height: 95px !important;
+      }
+
+      .hero-icons-container .nav-icon-manus img {
+        width: 85px !important;
+        height: 85px !important;
+        margin: 0 !important;
+      }
+    }
+
+
+    /* =========================================================
+   ✅ 3) LAPTOP & DESKTOP (≥ 1024px)
+   - 1 row only
+   - Bigger icons + more spacing
+========================================================= */
+    @media (min-width: 1024px) {
+
+      .hero-icons-container {
+        flex-wrap: nowrap !important;
+        /* ✅ سطر واحد */
+        gap: clamp(18px, 2.2vw, 34px) !important;
+        padding: 0 40px !important;
+      }
+
+      .hero-icons-container .nav-icon img {
+        width: clamp(95px, 6vw, 150px) !important;
+        height: clamp(95px, 6vw, 150px) !important;
+      }
+
+      .hero-icons-container .nav-icon-manus img {
+        width: clamp(75px, 4.5vw, 120px) !important;
+        height: clamp(75px, 4.5vw, 120px) !important;
+        margin: 0 !important;
+      }
+    }
+
+
+    /* =========================================================
+   ✅ HERO ICONS GRID + MOTION (FOR 10 ICONS)
+   - Desktop: 1 row
+   - Tablets: 2 rows (5 + 5)
+   - Mobile: 2 per row
+   - Motion reduced on small screens to prevent overlap
+========================================================= */
+
+    /* ✅ Desktop/Laptop: 1 row */
+    .hero-icons-container {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      flex-wrap: nowrap !important;
+      gap: clamp(16px, 2vw, 32px) !important;
+      overflow: visible !important;
+      width: 100% !important;
+      padding: 0 20px !important;
+      min-height: 180px !important;
+    }
+
+    /* ✅ Icon sizes (desktop) */
+    .nav-icon img {
+      width: clamp(90px, 6vw, 150px) !important;
+      height: clamp(90px, 6vw, 150px) !important;
+    }
+
+    .nav-icon-manus img {
+      width: clamp(70px, 4.5vw, 110px) !important;
+      height: clamp(70px, 4.5vw, 110px) !important;
+    }
+
+    /* =========================================================
+   ✅ Animations
+========================================================= */
+    @keyframes floatDesktop {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-18px) rotate(4deg);
+      }
+    }
+
+    @keyframes floatTablet {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-7px) rotate(1deg);
+      }
+
+      /* ✅ صغير جدًا */
+    }
+
+    @keyframes floatMobile {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-4px) rotate(0.5deg);
+      }
+
+      /* ✅ شبه ثابت */
+    }
+
+    /* ✅ Default = desktop animation */
+    .hero-icons-container .nav-icon,
+    .hero-icons-container .nav-icon-manus {
+      animation: floatDesktop 6.5s ease-in-out infinite !important;
+    }
+
+    /* =========================================================
+   ✅ Tablets: 2 rows only (5 per row)
+========================================================= */
+    @media (max-width: 1023px) {
+
+      .hero-icons-container {
+        flex-wrap: wrap !important;
+        /* ✅ يسمح بسطرين */
+        justify-content: center !important;
+        gap: 18px 26px !important;
+        /* ✅ row-gap أكبر لمنع التلاصق */
+        min-height: 240px !important;
+        padding: 0 18px !important;
+      }
+
+      /* ✅ كل شعار ياخذ 20% = 5 بالشكل المثالي */
+      .hero-icons-container .nav-icon,
+      .hero-icons-container .nav-icon-manus {
+        flex: 0 0 calc(20% - 26px) !important;
+        /* ✅ 5 per row */
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding: 6px !important;
+        /* ✅ يمنع تلاصق أثناء الحركة */
+      }
+
+      /* ✅ تخفيف الحركة */
+      .hero-icons-container .nav-icon,
+      .hero-icons-container .nav-icon-manus {
+        animation: floatTablet 9s ease-in-out infinite !important;
+      }
+
+      /* ✅ تصغير بسيط للتابلت */
+      .nav-icon img {
+        width: 95px !important;
+        height: 95px !important;
+      }
+
+      .nav-icon-manus img {
+        width: 75px !important;
+        height: 75px !important;
+      }
+    }
+
+    /* =========================================================
+   ✅ Mobile: 2 icons per row
+========================================================= */
+    @media (max-width: 576px) {
+
+      .hero-icons-container {
+        gap: 14px 18px !important;
+        min-height: 240px !important;
+        padding: 0 12px !important;
+      }
+
+      .hero-icons-container .nav-icon,
+      .hero-icons-container .nav-icon-manus {
+        flex: 0 0 calc(50% - 18px) !important;
+        /* ✅ كل شعارين في سطر */
+        padding: 8px !important;
+      }
+
+      /* ✅ حركة خفيفة جدًا للجوال */
+      .hero-icons-container .nav-icon,
+      .hero-icons-container .nav-icon-manus {
+        animation: floatMobile 11s ease-in-out infinite !important;
+      }
+
+      /* ✅ مقاس الجوال */
+      .nav-icon img {
+        width: 90px !important;
+        height: 90px !important;
+      }
+
+      .nav-icon-manus img {
+        width: 70px !important;
+        height: 70px !important;
+      }
+    }
+
+
+    /* =========================================================
+   ✅ DESKTOP / LAPTOP: Restore strong motion + staggered delays
+========================================================= */
+
+    @media (min-width: 1024px) {
+
+      /* ✅ رجّع الحركة القوية فقط للابتوب والكبير */
+      @keyframes floatDesktop {
+
+        0%,
+        100% {
+          transform: translateY(0) rotate(0deg);
+        }
+
+        50% {
+          transform: translateY(-22px) rotate(6deg);
+        }
+
+        /* ✅ أقوى */
+      }
+
+      .hero-icons-container .nav-icon,
+      .hero-icons-container .nav-icon-manus {
+        animation: floatDesktop 6.5s ease-in-out infinite !important;
+      }
+
+      /* ✅ اختلاف زمني يعطي شكل جمالي (Stagger) */
+      .hero-icons-container>*:nth-child(1) {
+        animation-delay: 0s !important;
+      }
+
+      .hero-icons-container>*:nth-child(2) {
+        animation-delay: 0.7s !important;
+      }
+
+      .hero-icons-container>*:nth-child(3) {
+        animation-delay: 1.4s !important;
+      }
+
+      .hero-icons-container>*:nth-child(4) {
+        animation-delay: 2.1s !important;
+      }
+
+      .hero-icons-container>*:nth-child(5) {
+        animation-delay: 2.8s !important;
+      }
+
+      .hero-icons-container>*:nth-child(6) {
+        animation-delay: 0.9s !important;
+      }
+
+      .hero-icons-container>*:nth-child(7) {
+        animation-delay: 1.6s !important;
+      }
+
+      .hero-icons-container>*:nth-child(8) {
+        animation-delay: 2.3s !important;
+      }
+
+      .hero-icons-container>*:nth-child(9) {
+        animation-delay: 3s !important;
+      }
+
+      .hero-icons-container>*:nth-child(10) {
+        animation-delay: 3.7s !important;
+      }
+    }
+
+    /* =========================================================
+   ✅ FIX iPad Pro CLIPPING + Mobile Animation Boost
+========================================================= */
+
+    /* ✅ 1) منع القص في الهيرو نهائيًا */
+    .hero-section,
+    .hero-content,
+    .hero-icons-container {
+      overflow: visible !important;
+    }
+
+    /* ✅ 2) iPad Pro + كل التابلت: أعطِ مساحة يمين ويسار لمنع القص */
+    @media (min-width: 768px) and (max-width: 1024px) {
+
+      .hero-icons-container {
+        padding-left: 28px !important;
+        padding-right: 28px !important;
+        box-sizing: border-box !important;
+
+        /* ✅ ما نخلي العناصر تلمس الحواف */
+        justify-content: center !important;
+      }
+    }
+
+    /* ✅ 3) الجوال: زود الحركة شوي عشان تكون واضحة */
+    @media (max-width: 599px) {
+
+      @keyframes floatMobile {
+
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+
+        50% {
+          transform: translateY(-12px);
+        }
+
+        /* ✅ كانت خفيفة جدًا */
+      }
+
+      .hero-icons-container .nav-icon,
+      .hero-icons-container .nav-icon-manus {
+        animation: floatMobile 5.2s ease-in-out infinite !important;
+      }
+    }
+
+    /* =========================================================
+   ✅ iPad Pro 12.9" (1024 x 1366) – STOP CLIPPING
+   - Prevent first/last icon from being cut
+   - Keep 2 rows (5 + 5)
+========================================================= */
+    @media (width: 1024px) and (height: 1366px) {
+
+      .hero-section,
+      .hero-content,
+      .hero-icons-container {
+        overflow: visible !important;
+      }
+
+      .hero-icons-container {
+        flex-wrap: wrap !important;
+        /* ✅ سطرين */
+        justify-content: center !important;
+        align-items: center !important;
+
+        width: 100% !important;
+        max-width: 100% !important;
+
+        padding-left: 45px !important;
+        /* ✅ أهم شي لمنع القص */
+        padding-right: 45px !important;
+        /* ✅ أهم شي لمنع القص */
+
+        gap: 18px !important;
+        /* ✅ تباعد منطقي */
+        box-sizing: border-box !important;
+      }
+
+      /* ✅ ضمان أن كل صف يأخذ 5 شعارات */
+      .hero-icons-container .nav-icon,
+      .hero-icons-container .nav-icon-manus {
+        flex: 0 0 calc(20% - 18px) !important;
+      }
+    }
+
+    /* =========================================================
+   ✅ MOBILE + TABLET NAV MENU FIX
+   - Works for iPad + phones
+   - Clean aligned menu
+========================================================= */
+
+    @media (max-width: 992px) {
+
+      /* ✅ Nav box */
+      nav {
+        flex-wrap: wrap !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 12px 18px !important;
+        border-radius: 22px !important;
+        width: calc(100% - 16px) !important;
+        top: 15px !important;
+      }
+
+      /* ✅ collapse container */
+      .navbar-collapse {
+        width: 100% !important;
+        margin-top: 14px !important;
+        padding: 14px !important;
+        border-radius: 18px !important;
+        background: rgba(255, 255, 255, 0.85) !important;
+        backdrop-filter: blur(16px) !important;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1) !important;
+      }
+
+      html[data-theme="dark"] .navbar-collapse {
+        background: rgba(26, 34, 56, 0.85) !important;
+      }
+
+      /* ✅ menu links vertical */
+      .navbar-nav {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        padding: 0 !important;
+        margin: 0 0 14px 0 !important;
+      }
+
+      .navbar-nav .nav-link {
+        width: 100% !important;
+        text-align: right !important;
+        padding: 10px 12px !important;
+        border-radius: 12px !important;
+        background: rgba(255, 255, 255, 0.6) !important;
+      }
+
+      html[data-theme="dark"] .navbar-nav .nav-link {
+        background: rgba(255, 255, 255, 0.08) !important;
+      }
+
+      /* ✅ Search full width */
+      .nav-search {
+        width: 100% !important;
+        margin-bottom: 14px !important;
+      }
+
+      .nav-search .form-control {
+        width: 100% !important;
+        border-radius: 12px 0 0 12px !important;
+        height: 46px !important;
+      }
+
+      .nav-search .btn {
+        border-radius: 0 12px 12px 0 !important;
+        height: 46px !important;
+      }
+
+      /* ✅ Buttons area grid */
+      .nav-actions {
+        width: 100% !important;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        /* ✅ زرين بكل سطر */
+        gap: 10px !important;
+      }
+
+      /* ✅ all buttons consistent */
+      .nav-actions button,
+      .nav-actions a,
+      .nav-actions .btn {
+        width: 100% !important;
+        justify-content: center !important;
+        height: 44px !important;
+        border-radius: 14px !important;
+        font-size: 14px !important;
+      }
+
+      /* ✅ force last row center if single button */
+      .nav-actions>*:last-child:nth-child(odd) {
+        grid-column: span 2 !important;
+      }
+    }
+
+    /* ✅ Smaller phones */
+    @media (max-width: 480px) {
+      .nav-actions {
+        grid-template-columns: 1fr !important;
+        /* ✅ كل زر بسطر */
+      }
+    }
+
+
+    /* =========================================================
+   ✅ iPad NAV ACTIONS ALIGN FIX
+   - Fix uneven buttons height
+   - Perfect 2x2 alignment
+========================================================= */
+
+    @media (min-width: 600px) and (max-width: 992px) {
+
+      /* ✅ Buttons grid becomes stable */
+      .nav-actions {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 12px !important;
+        align-items: stretch !important;
+        /* ✅ يمنع تفاوت الارتفاع */
+      }
+
+      /* ✅ Force all buttons same height */
+      .nav-actions button,
+      .nav-actions a,
+      .nav-actions .btn {
+        height: 46px !important;
+        min-height: 46px !important;
+        max-height: 46px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        /* ✅ وسط عمودي */
+        justify-content: center !important;
+
+        padding: 0 14px !important;
+        line-height: 1 !important;
+        white-space: nowrap !important;
+        /* ✅ ما ينزل النص تحت */
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+      }
+
+      /* ✅ Icons inside buttons align */
+      .nav-actions i {
+        margin: 0 6px !important;
+        font-size: 15px !important;
+        flex: 0 0 auto !important;
+      }
+
+      /* ✅ If last button alone center it */
+      .nav-actions>*:last-child:nth-child(odd) {
+        grid-column: span 2 !important;
+      }
+    }
+
+    /* =========================================================
+   ✅ iPad Pro 1024px FIX — FINAL
+   Works with navbar-expand-lg (Expanded mode)
+========================================================= */
+    @media (min-width: 992px) and (max-width: 1100px) {
+
+      /* ✅ 1) منع container من ضغط المحتوى داخل nav */
+      nav.navbar.navbar-expand-lg>.container {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+      }
+
+      /* ✅ 2) خلي collapse نفسه يصير Grid */
+      nav.navbar.navbar-expand-lg .navbar-collapse {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+        width: 100% !important;
+        align-items: center !important;
+      }
+
+      /* ✅ 3) nav-actions تتحول Grid (بحث فوق - أزرار تحت) */
+      nav.navbar.navbar-expand-lg .nav-actions {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr 56px !important;
+        grid-template-rows: auto auto !important;
+        gap: 10px !important;
+        width: 100% !important;
+        align-items: center !important;
+      }
+
+      /* ✅ 4) البحث ياخذ صف كامل */
+      nav.navbar.navbar-expand-lg .nav-search {
+        grid-column: 1 / -1 !important;
+        width: 100% !important;
+      }
+
+      nav.navbar.navbar-expand-lg .nav-search input,
+      nav.navbar.navbar-expand-lg .nav-search button {
+        height: 46px !important;
+      }
+
+      /* ✅ 5) auth-section (Logout + Favorites) = صف واحد */
+      nav.navbar.navbar-expand-lg .auth-section {
+        grid-column: 1 / 3 !important;
+        display: flex !important;
+        gap: 10px !important;
+        width: 100% !important;
+        align-items: center !important;
+      }
+
+      nav.navbar.navbar-expand-lg .auth-section button {
+        flex: 1 1 0 !important;
+        height: 46px !important;
+        white-space: nowrap !important;
+      }
+
+      /* ✅ 6) themeToggle ثابت */
+      nav.navbar.navbar-expand-lg #themeToggle {
+        grid-column: 3 / 4 !important;
+        width: 56px !important;
+        height: 46px !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+
+      /* ✅ 7) langToggle تحتهم كامل */
+      nav.navbar.navbar-expand-lg #langToggle {
+        grid-column: 1 / -1 !important;
+        width: 100% !important;
+        height: 46px !important;
+      }
+
+      /* ✅ 8) منع أي margin/padding يخرب المحاذاة */
+      nav.navbar.navbar-expand-lg .btn,
+      nav.navbar.navbar-expand-lg .form-control {
+        margin: 0 !important;
+      }
+    }
+
+
+    /* =========================================================
+   ✅ iPad Pro — NAV RESET (KILL OLD NAV STYLE)
+   Fix floating + width + transform issues
+========================================================= */
+    @media (min-width: 992px) and (max-width: 1100px) {
+
+      /* ✅ 1) Reset nav itself */
+      nav.navbar {
+        position: static !important;
+        top: auto !important;
+        left: auto !important;
+        transform: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 12px auto !important;
+        padding: 12px 18px !important;
+
+        border-radius: 24px !important;
+      }
+
+      /* ✅ 2) Container full width */
+      nav.navbar>.container {
+        max-width: 100% !important;
+        width: 100% !important;
+        padding: 0 !important;
+      }
+
+      /* ✅ 3) Force navbar-collapse grid */
+      nav.navbar .navbar-collapse {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+        width: 100% !important;
+        align-items: center !important;
+      }
+
+      /* ✅ 4) nav-actions grid */
+      nav.navbar .nav-actions {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr 56px !important;
+        grid-template-rows: auto auto !important;
+        gap: 10px !important;
+        width: 100% !important;
+        align-items: center !important;
+      }
+
+      /* ✅ 5) Search full row */
+      nav.navbar .nav-search {
+        grid-column: 1 / -1 !important;
+        width: 100% !important;
+      }
+
+      nav.navbar .nav-search input,
+      nav.navbar .nav-search button {
+        height: 46px !important;
+      }
+
+      /* ✅ 6) Auth buttons row */
+      nav.navbar .auth-section {
+        grid-column: 1 / 3 !important;
+        display: flex !important;
+        gap: 10px !important;
+        width: 100% !important;
+        align-items: center !important;
+      }
+
+      nav.navbar .auth-section button {
+        flex: 1 1 0 !important;
+        height: 46px !important;
+        white-space: nowrap !important;
+      }
+
+      /* ✅ 7) Theme button fixed */
+      nav.navbar #themeToggle {
+        grid-column: 3 / 4 !important;
+        width: 56px !important;
+        height: 46px !important;
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+
+      /* ✅ 8) Lang button full row */
+      nav.navbar #langToggle {
+        grid-column: 1 / -1 !important;
+        width: 100% !important;
+        height: 46px !important;
+      }
+
+      /* ✅ 9) Safety — remove margins */
+      nav.navbar .btn,
+      nav.navbar .form-control {
+        margin: 0 !important;
+      }
+    }
+
+
+    /* =========================================================
+   ✅ iPad Pro Navbar Layout Fix (1024×1366)
+   Logo on the RIGHT + Menu links beside it (same row)
+========================================================= */
+    @media (min-width: 992px) and (max-width: 1100px) {
+
+      /* ✅ اجبار الـ navbar يكون flex */
+      nav.navbar>.container {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 16px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      /* ✅ نخلي الـ collapse flex row */
+      nav.navbar .navbar-collapse {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        flex: 1 1 auto !important;
+        gap: 16px !important;
+      }
+
+      /* ✅ الروابط تكون بجانب اللوقو وليس في النص */
+      nav.navbar .navbar-nav {
+        margin: 0 !important;
+        /* بدل mx-auto */
+        display: flex !important;
+        gap: 18px !important;
+        justify-content: flex-end !important;
+        flex: 0 0 auto !important;
+      }
+
+      /* ✅ اللوقو يصير في اليمين */
+      nav.navbar .navbar-brand {
+        margin: 0 !important;
+        order: 2 !important;
+        display: flex !important;
+        align-items: center !important;
+      }
+
+      /* ✅ نرفع اللوقو يمين */
+      nav.navbar .navbar-brand img {
+        height: 40px !important;
+        width: auto !important;
+      }
+
+      /* ✅ نحط nav-actions بالجهة الثانية */
+      nav.navbar .nav-actions {
+        order: 3 !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        flex: 0 0 auto !important;
+      }
+
+      /* ✅ مهم: إلغاء mx-auto اللي كانت تكسر الترتيب */
+      nav.navbar .navbar-nav.mx-auto {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+
+      /* ✅ RTL (العربية): اللوقو يبقى يمين طبيعي */
+      body.rtl-mode nav.navbar .navbar-nav {
+        justify-content: flex-start !important;
+      }
+    }
+
+
+    /* =========================================================
+   ✅ iPad Pro (1024×1366) FINAL NAV FIX
+   Row 1: Logo + Menu Links
+   Row 2: Search + Buttons (full width)
+========================================================= */
+    @media (min-width: 992px) and (max-width: 1100px) {
+
+      /* ✅ اجبار container يتمدد ويقسم صفين */
+      nav.navbar>.container {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        /* ✅ يسمح بسطرين */
+        align-items: center !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 10px !important;
+      }
+
+      /* ✅ brand يكون في اليمين أعلى */
+      nav.navbar .navbar-brand {
+        order: 1 !important;
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+      }
+
+      /* ✅ تصغير اللوقو شوي */
+      nav.navbar .navbar-brand img {
+        height: 42px !important;
+        width: auto !important;
+      }
+
+      /* ✅ الـ collapse (القائمة) تكون بجانب اللوقو */
+      nav.navbar .navbar-collapse {
+        order: 2 !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        gap: 12px !important;
+        flex: 1 1 auto !important;
+      }
+
+      /* ✅ الروابط = Tools/Categories/News في نفس السطر مع اللوقو */
+      nav.navbar .navbar-nav {
+        order: 1 !important;
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 18px !important;
+        justify-content: flex-end !important;
+        flex: 0 0 auto !important;
+      }
+
+      /* ✅ إلغاء mx-auto نهائياً */
+      nav.navbar .navbar-nav.mx-auto {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+
+      /* ✅ nav-actions = ينزل تحت كسطر ثاني كامل */
+      nav.navbar .nav-actions {
+        order: 2 !important;
+        width: 100% !important;
+        /* ✅ أهم شيء */
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        margin-top: 8px !important;
+      }
+
+      /* ✅ search يأخذ عرض منطقي */
+      nav.navbar .nav-search {
+        flex: 1 1 340px !important;
+        max-width: 100% !important;
+      }
+
+      /* ✅ auth-section (logout/fav) على نفس مستوى search */
+      nav.navbar .auth-section {
+        display: flex !important;
+        gap: 10px !important;
+        align-items: center !important;
+        flex: 0 0 auto !important;
+      }
+
+      /* ✅ theme + lang ثابتين */
+      nav.navbar #themeToggle,
+      nav.navbar #langToggle {
+        flex: 0 0 auto !important;
+        height: 44px !important;
+      }
+
+      /* ✅ كل الأزرار نفس الارتفاع */
+      nav.navbar .nav-actions .btn,
+      nav.navbar .nav-actions input {
+        height: 44px !important;
+      }
+
+      /* ✅ RTL: العربية */
+      body.rtl-mode nav.navbar>.container {
+        direction: rtl !important;
+      }
+
+      body.rtl-mode nav.navbar .navbar-collapse {
+        justify-content: flex-start !important;
+      }
+
+      body.rtl-mode nav.navbar .navbar-nav {
+        justify-content: flex-start !important;
+      }
+    }
+
+    /* =========================
+   NEWS GRID (3 cards per row desktop)
+========================= */
+    #blog-posts-container {
+      display: grid !important;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      align-items: stretch;
+    }
+
+
+    @media (max-width: 992px) {
+      #blog-posts-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+
+    @media (max-width: 576px) {
+      #blog-posts-container {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+    }
+
+
+    #blog-posts-container .news-card-item {
+      width: 100%;
+    }
+
+
+    #blog-posts-container .card {
+      height: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+
+    #blog-posts-container .card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
+    }
+
+
+    #blog-posts-container .card-title,
+    #blog-posts-container .card-text {
+      word-break: normal !important;
+      overflow-wrap: break-word !important;
+      white-space: normal !important;
+      line-height: 1.6;
+    }
+
+
+    #blog-posts-container .card-text {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+      /* ✅ متوسط */
+      line-clamp: 4;
+      overflow: hidden;
+    }
+
+    /* ===== Search Results Overlay (UX Best Practice) ===== */
+    .search-results-overlay {
+      position: fixed;
+      top: 115px;
+      /* تحت الناف بار */
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 999999;
+      overflow-y: auto;
+    }
+
+    .search-results-inner {
+      max-width: 1200px;
+      margin: 20px auto;
+      background: var(--bg-white, #fff);
+      padding: 18px;
+      border-radius: 16px;
+    }
+
+
+    /* في الدارك مود */
+    html[data-theme="dark"] .search-results-inner {
+      background: #0f162a;
+      border-color: #2c3b63;
+    }
+
+
+    /* cards inside overlay */
+    #search-results-overlay .tool-card {
+      height: 100%;
+    }
+
+    #tool-details-page {
+      z-index: 99999 !important;
+    }
+
+    #search-results-overlay {
+      z-index: 9999;
+    }
+
+    /* =========================================================
+   ✅ DARK MODE FIX (Categories Cards Only)
+   - fixes white cards in dark theme
+   - keeps light mode unchanged
+========================================================= */
+
+    html[data-theme="dark"] #categories-container .category-card {
+      background: rgba(26, 34, 56, 0.92) !important;
+      /* نفس لون كروت الموقع الداكن */
+      border: 1px solid rgba(255, 255, 255, 0.10) !important;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45) !important;
+    }
+
+    html[data-theme="dark"] #categories-container .category-card:hover {
+      transform: translateY(-3px) !important;
+      border-color: rgba(253, 175, 123, 0.55) !important;
+      /* accent */
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.60) !important;
+    }
+
+    /* ✅ Title text + icon color in dark */
+    html[data-theme="dark"] #categories-container .category-card h5,
+    html[data-theme="dark"] #categories-container .category-card .category-title {
+      color: #E5E7EB !important;
+    }
+
+    html[data-theme="dark"] #categories-container .category-card i,
+    html[data-theme="dark"] #categories-container .category-card .category-icon i {
+      color: #FDAF7B !important;
+      /* accent icon */
+      opacity: 0.95 !important;
+    }
+
+    /* ✅ optional: reduce “washed” look */
+    html[data-theme="dark"] #categories-container .category-card {
+      backdrop-filter: blur(10px) !important;
+    }
+
+    html[data-theme="dark"] #categories-container .category-card {
+      background: linear-gradient(135deg,
+          rgba(26, 34, 56, 0.95),
+          rgba(64, 31, 113, 0.25)) !important;
+    }
+
+    /* =========================================================
+       ✅ FAVORITE BUTTON & TOAST NOTIFICATIONS
+    ========================================================= */
+
+    /* Favorite Toggle Button Active State - Gold Color */
+    .favorite-toggle.active i,
+    .favorite-toggle.active {
+      color: #FFD700 !important;
+    }
+
+    .favorite-toggle:hover {
+      transform: scale(1.15);
+    }
+
+    .favorite-toggle i {
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    /* Custom Toast Notification */
+    .custom-toast {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 99999;
+      min-width: 280px;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: 'Tajawal', sans-serif;
+      font-weight: 600;
+      transform: translateX(120%);
+      transition: transform 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .custom-toast.show {
+      transform: translateX(0);
+    }
+
+    .custom-toast.success {
+      background: linear-gradient(135deg, #28a745, #20c997);
+      color: white;
+    }
+
+    .custom-toast.error {
+      background: linear-gradient(135deg, #dc3545, #e83e8c);
+      color: white;
+    }
+
+    .custom-toast.info {
+      background: linear-gradient(135deg, #17a2b8, #6f42c1);
+      color: white;
+    }
+
+    .custom-toast .toast-icon {
+      font-size: 1.25rem;
+    }
+
+    /* RTL Support for Toast */
+    body.rtl-mode .custom-toast {
+      right: auto;
+      left: 20px;
+      transform: translateX(-120%);
+    }
+
+    body.rtl-mode .custom-toast.show {
+      transform: translateX(0);
+    }
   </style>
   <script>try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) { };</script>
 </head>
@@ -3229,11 +5968,11 @@
                 </i>
                 تسجيل الدخول
               </button>
-              <button class="btn btn-outline-primary" id="favoritesBtn" style="display: none;">
+              <!-- <button class="btn btn-outline-primary" id="favoritesBtn" style="display: none;">
                 <i class="fas fa-heart me-2">
                 </i>
                 المفضلة
-              </button>
+              </button> -->
             </div>
             <button aria-label="Toggle theme" class="btn btn-outline-primary" id="themeToggle">
               <i class="fa-solid fa-moon">
@@ -3381,10 +6120,10 @@
           <a class="nav-icon" href="https://claude.ai/new" rel="noopener" target="_blank">
             <img alt="Claude" loading="lazy" src="./Images/Claude.png" />
           </a>
-          <a class="nav-icon-manus" href="https://grok.com/" rel="noopener" target="_blank">
+          <a class="nav-icon" href="https://grok.com/" rel="noopener" target="_blank">
             <img alt="KimiK2" loading="lazy" src="./Images/Grok.png" />
           </a>
-          <a class="nav-icon-manus" href="https://chat.humain.ai/en" rel="noopener" target="_blank">
+          <a class="nav-icon" href="https://chat.humain.ai/en" rel="noopener" target="_blank">
             <img alt="Humain" loading="lazy" src="./Images/Humain.png" />
           </a>
           <a class="nav-icon" href="https://www.deepseek.com/en" rel="noopener" target="_blank">
@@ -3396,32 +6135,34 @@
           <a class="nav-icon" href="https://gemini.google.com/" rel="noopener" target="_blank">
             <img alt="Gemini" loading="lazy" src="./Images/Gemeni.png" />
           </a>
-          <a class="nav-icon-manus" href="https://manus.im/" rel="noopener" target="_blank">
+          <a class="nav-icon" href="https://manus.im/" rel="noopener" target="_blank">
             <img alt="Manus" loading="lazy" src="./Images/Manus.png" />
           </a>
-          <a class="nav-icon-manus" href="https://www.perplexity.ai/" rel="noopener" target="_blank">
+          <a class="nav-icon" href="https://www.perplexity.ai/" rel="noopener" target="_blank">
             <img alt="Preplixity" loading="lazy" src="./Images/Preplixity.png" />
           </a>
-          <a class="nav-icon-manus" href="https://www.kimi.com/" rel="noopener" target="_blank">
-            <img alt="KimiK2" loading="lazy" src="./Images/KimiK2.png" />
+          <a class="nav-icon" href="https://mistral.ai/" rel="noopener" target="_blank">
+            <img alt="KimiK2" loading="lazy" src="./Images/mistral.png" />
           </a>
         </div>
       </div>
     </section>
     <main id="main">
       <section class="section" id="categories">
-        <div class="categories-container">
+        <div class="categories-container container">
           <div class="text-center mb-5">
             <h2 class="fw-bold categories-title" data-ar="فئات أدوات الذكاء الاصطناعي" data-en="AI Tools Categories">
               AI Tools Categories
             </h2>
           </div>
-          <!-- زر الرجوع -->
+
+
           <button class="back-button" id="backButtonCategories" style="display: none;">
-            <i class="fas fa-arrow-left">
-            </i>
+            <i class="fas fa-arrow-left"></i>
             رجوع
           </button>
+
+
           <div class="category-grid" id="categories-container"></div>
         </div>
       </section>
@@ -3871,9 +6612,10 @@ We believe in the power of community and collaboration, and we welcome users and
           AI</p>
       </div>
 
-      <div class="row g-4" id="blog-posts-container">
-        <!-- Blog posts will be dynamically inserted here -->
+      <div class="news-grid" id="blog-posts-container">
+        <!-- News cards will be inserted here -->
       </div>
+
     </section>
   </div>
 
@@ -3911,13 +6653,173 @@ We believe in the power of community and collaboration, and we welcome users and
     </div>
   </div>
 
+  <div id="search-results-overlay" class="search-results-overlay" style="display:none;">
+    <div class="search-results-inner">
+      <div id="search-results-list" class="row g-3"></div>
+    </div>
+  </div>
+
+
+
+
+
   <button id="scrollToggleBtn" class="scroll-toggle-btn">
     <i class="bi bi-arrow-down"></i>
   </button>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-  <script src="js/main.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/main.js?v=1"></script>
+  <script src="./js/news_loader.js?v=1"></script>
+
+  <!-- Favorites Modal Handler - Added to complete favorite button functionality -->
+  <script>
+    (function () {
+      'use strict';
+
+      // Show favorites modal when navbar button is clicked
+      function showFavoritesModal() {
+        const ids = getFavoritesIds(); // ✅ array مضمون
+
+
+        if (!ids.length) {
+          showToast(currentLang === "ar" ? "لا توجد أدوات مفضلة" : "No favorites yet", "info");
+          return;
+        }
+
+
+        // ✅ aiTools يجب أن تكون موجودة
+        const toolsArr = window.aiTools || [];
+        const tools = ids.map(id => toolsArr[id]).filter(Boolean);
+
+
+        // ✅ بناء المودال
+        const favoritesModalHTML = `
+    <div class="modal fade favorites-modal" id="favoritesModal" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">${currentLang === "ar" ? "الأدوات المفضلة" : "Favorite Tools"}</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+
+
+          <div class="modal-body">
+            <div class="row g-3" id="favoritesListContainer">
+              ${tools.map((tool, idx) => {
+          const toolId = ids[idx]; // ✅ index الحقيقي
+          const description = currentLang === "ar" ? (tool.desc_ar || tool.description) : tool.description;
+
+
+          return `
+                  <div class="col-md-6">
+                    <div class="card h-100">
+                      <div class="card-img-top position-relative" style="height:120px; overflow:hidden; background:linear-gradient(135deg, #401F71, #BE7B72);">
+                        <img src="${tool.logo}" alt="${tool.name}" class="w-100 h-100 object-fit-contain p-2" style="background:white;" onerror="this.src='./Images/placeholder-logo.png'">
+
+
+                        <button class="btn btn-sm btn-danger position-absolute top-0 start-0 m-2 remove-favorite-btn" data-tool-id="${toolId}">
+                          <i class="fas fa-times"></i>
+                        </button>
+                      </div>
+
+
+                      <div class="card-body">
+                        <h6 class="card-title">${tool.name}</h6>
+                        <p class="card-text small">${description || ""}</p>
+
+
+                        <div class="d-flex justify-content-between align-items-center">
+                          <button class="btn btn-sm btn-outline-primary view-details-btn" data-tool-id="${toolId}">
+                            ${currentLang === "ar" ? "تفاصيل" : "Details"}
+                          </button>
+                          <span class="badge bg-secondary">${tool.pricing || ""}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                `;
+        }).join("")}
+            </div>
+          </div>
+
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              ${currentLang === "ar" ? "إغلاق" : "Close"}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+
+
+        // إزالة القديم إذا موجود
+        document.getElementById("favoritesModal")?.remove();
+        document.body.insertAdjacentHTML("beforeend", favoritesModalHTML);
+
+
+        const modal = new bootstrap.Modal(document.getElementById("favoritesModal"));
+        modal.show();
+
+
+        // ✅ Bind events inside modal
+        document.getElementById("favoritesModal").addEventListener("shown.bs.modal", () => {
+          document.querySelectorAll("#favoritesListContainer .view-details-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+              const toolId = Number(btn.dataset.toolId);
+              modal.hide();
+              setTimeout(() => showToolDetails(toolId), 250);
+            });
+          });
+
+
+          document.querySelectorAll("#favoritesListContainer .remove-favorite-btn").forEach(btn => {
+            btn.addEventListener("click", (e) => {
+              e.preventDefault();
+              e.stopPropagation();
+
+
+              const toolId = Number(btn.dataset.toolId);
+              let ids = getFavoritesIds();
+              ids = ids.filter(id => id !== toolId);
+
+
+              saveFavoritesIds(ids);
+              updateFavoritesButton();
+
+
+              btn.closest(".col-md-6")?.remove();
+
+
+              if (!ids.length) {
+                modal.hide();
+                showToast(currentLang === "ar" ? "تم حذف كل المفضلة" : "All favorites removed", "info");
+              }
+            });
+          });
+        });
+      }
+
+      // Attach to navbar favorites button
+      document.addEventListener('DOMContentLoaded', function () {
+        const favoritesBtn = document.getElementById('favoritesBtn');
+        if (favoritesBtn) {
+          favoritesBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            showFavoritesModal();
+          });
+        }
+
+        // Initial update
+        if (typeof updateFavoritesButton === 'function') updateFavoritesButton();
+        if (typeof updateAllFavoriteButtons === 'function') updateAllFavoriteButtons();
+      });
+    })();
+  </script>
+
+
 </body>
 
 </html>
@@ -3933,5 +6835,96 @@ We believe in the power of community and collaboration, and we welcome users and
   .static-buttons-grid .btn {
     width: 100%;
     padding: 14px;
+  }
+
+  /* Toast Notification Styles */
+  .custom-toast {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: var(--bg-white, #fff);
+    color: var(--text-dark, #101010);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 600;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .custom-toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .custom-toast .toast-icon {
+    font-size: 1.25rem;
+  }
+
+  .custom-toast.success .toast-icon {
+    color: #22c55e;
+  }
+
+  .custom-toast.error .toast-icon {
+    color: #ef4444;
+  }
+
+  .custom-toast.info .toast-icon {
+    color: #3b82f6;
+  }
+
+  /* ========== FAVORITE BUTTON - BULLETPROOF STYLING ========== */
+  /* Force the button to be clickable above EVERYTHING */
+  .favorite-toggle {
+    position: absolute !important;
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    transition: all 0.25s ease;
+    opacity: 0.9;
+    background: rgba(0, 0, 0, 0.7) !important;
+    border: none !important;
+    padding: 8px 10px !important;
+    border-radius: 8px !important;
+  }
+
+  .favorite-toggle:hover {
+    opacity: 1;
+    transform: scale(1.15);
+    background: rgba(0, 0, 0, 0.9) !important;
+  }
+
+  .favorite-toggle.active,
+  .favorite-toggle.active i {
+    color: #FFD700 !important;
+  }
+
+  .favorite-toggle i {
+    pointer-events: none;
+    font-size: 1rem;
+  }
+
+  /* Make card images NOT intercept clicks */
+  .card-img-top img {
+    pointer-events: none !important;
+  }
+
+  /* Ensure card-img-top container doesn't block the button */
+  .card-img-top {
+    pointer-events: none;
+  }
+
+  /* But allow the button inside to still get clicks */
+  .card-img-top .favorite-toggle {
+    pointer-events: auto !important;
+  }
+
+  .card-img-top .badge {
+    pointer-events: none;
   }
 </style>
