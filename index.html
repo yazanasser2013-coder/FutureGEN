@@ -5931,6 +5931,7 @@
         border-radius: 999px 0 0 999px !important;
         border-right: 0 !important;
         font-size: 0.95rem;
+        width: 100% !important;
       }
 
       /* SEARCH BUTTON — compact icon */
@@ -5969,6 +5970,22 @@
         border-left: 1px solid var(--border);
       }
     }
+
+    @media (max-width: 1024px) {
+
+  /* Allow search to stretch closer to navbar edges */
+  .navbar {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  /* Make search occupy full available navbar width */
+  .nav-search {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+}
   </style>
   <script>try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) { };</script>
 </head>

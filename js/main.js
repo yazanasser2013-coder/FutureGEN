@@ -136112,7 +136112,9 @@ function updateThemeImages(theme) {
 function applyLanguage(lang) {
   console.log('Applying language:', lang);
   currentLang = lang;
+  currentLanguage = lang;
   localStorage.setItem("lang", lang);
+  localStorage.setItem("preferredLanguage", lang);
   document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
   document.documentElement.setAttribute("lang", lang);
   document.body.setAttribute("lang", lang);
@@ -136727,9 +136729,9 @@ function createToolCard(tool) {
   const col = document.createElement('div');
   col.className = 'col-xl-4 col-lg-6 mb-4';
 
-  const description = currentLanguage === 'ar' ? (tool.desc_ar || tool.description) : tool.description;
-  const visitText = currentLanguage === 'ar' ? 'زيارة الموقع' : 'Visit Website';
-  const detailsText = currentLanguage === 'ar' ? 'التفاصيل' : 'Details';
+  const description = (localStorage.getItem('lang') === 'ar') ? (tool.desc_ar || tool.description) : tool.description;
+  const visitText = (localStorage.getItem('lang') === 'ar') ? 'زيارة الموقع' : 'Visit Website';
+  const detailsText = (localStorage.getItem('lang') === 'ar') ? 'التفاصيل' : 'Details';
 
   col.innerHTML = `
         <div class="card tool-card h-100">
@@ -139900,37 +139902,31 @@ function createToolCardFull(tool, index) {
   col.className = "col-lg-4 col-md-6";
   col.dataset.toolId = index;
 
-
-  // ✅ تأمين index (لو جاء undefined نحاول نستنتجه)
   if (index === undefined || index === null || Number.isNaN(Number(index))) {
     index = (window.aiTools || []).findIndex(t => t === tool);
   }
 
-
-  // ✅ آخر fallback: لا تسمح بأن يكون undefined
   if (index === -1 || index === undefined) index = 0;
-
 
   const isFav = isFavoriteIndex(index);
 
+  const currentLangCode = localStorage.getItem('lang') || 'en';
+  const isAr = currentLangCode === 'ar';
 
   const description =
-    (window.currentLanguage === "ar" || window.currentLang === "ar")
+    isAr
       ? (tool.desc_ar || tool.description || "")
       : (tool.description || "");
 
-
   const visitText =
-    (window.currentLanguage === "ar" || window.currentLang === "ar")
+    isAr
       ? "زيارة الموقع"
       : "Visit Website";
 
-
   const detailsText =
-    (window.currentLanguage === "ar" || window.currentLang === "ar")
+    isAr
       ? "التفاصيل"
       : "Details";
-
 
   col.innerHTML = `
     <div class="card tool-card card-3d tilt enhanced-card h-100">
@@ -139941,16 +139937,13 @@ function createToolCardFull(tool, index) {
           onerror="this.src='./Images/placeholder-logo.png'">
       </div>
 
-
       <div class="card-body d-flex flex-column">
         <div class="d-flex justify-content-between align-items-start mb-2">
           <h5 class="card-title fw-bold">${tool.name || ""}</h5>
           <span class="badge bg-secondary mb-2">${tool.category || ""}</span>
         </div>
 
-
         <p class="card-text flex-grow-1">${description}</p>
-
 
         <div class="mt-auto">
           <div class="d-flex gap-2">
@@ -139966,16 +139959,15 @@ function createToolCardFull(tool, index) {
     </div>
   `;
 
-
-  // ✅ ربط زر التفاصيل
   const detailsBtn = col.querySelector(".view-details-btn");
-  detailsBtn.addEventListener("click", (event) => {
-    event.preventDefault();
-    event.stopPropagation();
-    if (typeof hideSearchOverlay === "function") hideSearchOverlay();
-    showToolDetails(index);
-  });
-
+  if (detailsBtn) {
+    detailsBtn.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      if (typeof hideSearchOverlay === "function") hideSearchOverlay();
+      showToolDetails(index);
+    });
+  }
 
   return col;
 }
