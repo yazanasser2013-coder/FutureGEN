@@ -11,6 +11,9 @@
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <script
+    src="https://www.paypal.com/sdk/js?client-id=BAA-380vJWCTc40BMW9RsF0XuRIlID4x2if0n3Tn9_4Z_ylcSG57ijRCUX-nM5LQ2PW5UflPtw85-UqsqA&components=hosted-buttons&disable-funding=venmo&currency=USD">
+    </script>
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&amp;display=swap"
     rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -366,18 +369,24 @@
     }
 
     .nav-search {
+      position: relative;
       width: 340px;
       transition: width 0.3s ease;
-      border-radius: 40px;
     }
 
     .nav-search:focus-within {
       width: 380px;
     }
 
-    .nav-search .form-control {
+    .nav-search .input-group {
       border-radius: 40px;
+      overflow: hidden;
+    }
+
+    .nav-search .form-control {
+      border-radius: 40px 0 0 40px;
       border: 1px solid var(--border);
+      border-right: none;
       padding: 0.5rem 1rem;
       background: var(--bg-white);
       color: var(--text-dark);
@@ -386,7 +395,7 @@
 
     .nav-search .btn {
       padding: 0.5rem 0.75rem;
-      border-radius: 40px;
+      border-radius: 0 40px 40px 0;
     }
 
     .navbar-toggler {
@@ -5912,15 +5921,119 @@
       transform: translateX(0);
     }
 
+    /* =========================================================
+       ✅ SEARCH RESULTS OVERLAY
+    ========================================================= */
+    .search-results-overlay {
+      position: fixed;
+      top: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 900px;
+      max-width: 1400px;
+      width: 90vw;
+      min-height: 500px;
+      max-height: 100vh;
+      overflow-y: auto;
+      background: var(--bg-white);
+      border-radius: var(--radius-md);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+      z-index: 99999999;
+      padding: 2rem;
+      border: 1px solid var(--border);
+      animation: fadeInDown 0.2s ease;
+    }
+
+    @media (max-width: 768px) {
+      .search-results-overlay {
+        left: 16px;
+        right: 16px;
+        transform: none;
+        min-width: auto;
+        max-width: none;
+        width: auto;
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .search-results-overlay .search-overlay-close {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: transparent;
+      border: none;
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 4px;
+      transition: all 0.2s ease;
+    }
+
+    .search-results-overlay .search-overlay-close:hover {
+      background: var(--border);
+      color: var(--text-dark);
+    }
+
+    /* RTL support for search overlay */
+    body.rtl-mode .search-results-overlay .search-overlay-close {
+      right: auto;
+      left: 8px;
+    }
+
+    /* Make tool cards in search results smaller */
+    .search-results-overlay .col-lg-4 {
+      padding: 0.25rem;
+    }
+
+    .search-results-overlay .card {
+      font-size: 0.9rem;
+    }
+
+    .search-results-overlay .card-title {
+      font-size: 1rem;
+    }
+
+    .search-results-overlay .card-text {
+      font-size: 0.85rem;
+      max-height: 60px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+      -webkit-box-orient: vertical;
+    }
+
+    /* Dark mode for search overlay */
+    html[data-theme="dark"] .search-results-overlay {
+      background: var(--bg-white);
+      border-color: var(--border);
+    }
+
     /* =========================================
    COMPACT SEARCH BUTTON — iPads → iPhones
    ========================================= */
     @media (max-width: 1024px) {
 
       .nav-search {
+        width: 100% !important;
+      }
+
+      .nav-search .input-group {
         display: flex !important;
         flex-wrap: nowrap !important;
-        width: 100% !important;
       }
 
       /* SEARCH INPUT — takes all space */
@@ -5974,19 +6087,19 @@
 
     @media (max-width: 1024px) {
 
-  /* Allow search to stretch closer to navbar edges */
-  .navbar {
-    padding-left: 8px !important;
-    padding-right: 8px !important;
-  }
+      /* Allow search to stretch closer to navbar edges */
+      .navbar {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+      }
 
-  /* Make search occupy full available navbar width */
-  .nav-search {
-    width: 100% !important;
-    margin: 0 !important;
-  }
+      /* Make search occupy full available navbar width */
+      .nav-search {
+        width: 100% !important;
+        margin: 0 !important;
+      }
 
-}
+    }
   </style>
   <script>try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) { };</script>
 </head>
@@ -6026,18 +6139,27 @@
             </li>
           </ul>
           <div class="nav-actions">
-            <div class="input-group nav-search">
-              <label class="visually-hidden" for="searchInput">
-                Search AI tools
-              </label>
+            <div class="nav-search">
+              <div class="input-group">
+                <label class="visually-hidden" for="searchInput">
+                  Search AI tools
+                </label>
 
-              <input id="searchInput" type="text" class="form-control" autocomplete="off"
-                placeholder="Search AI tools..." data-en-placeholder="Search AI tools..."
-                data-ar-placeholder="ابحث عن أدوات الذكاء الاصطناعي..." />
+                <input id="searchInput" type="text" class="form-control" autocomplete="off"
+                  placeholder="Search AI tools..." data-en-placeholder="Search AI tools..."
+                  data-ar-placeholder="ابحث عن أدوات الذكاء الاصطناعي..." />
 
-              <button class="btn btn-primary" id="searchBtn" type="button" aria-label="Search">
-                <i class="fas fa-search"></i>
-              </button>
+                <button class="btn btn-primary" id="searchBtn" type="button" aria-label="Search">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+              <!-- Search Results Overlay (positioned outside input-group) -->
+              <div id="search-results-overlay" class="search-results-overlay" style="display: none;">
+                <button type="button" class="search-overlay-close" aria-label="Close" onclick="hideSearchOverlay()">
+                  <i class="fas fa-times"></i>
+                </button>
+                <div id="search-results-list" class="row g-3"></div>
+              </div>
             </div>
 
             <!-- زر تسجيل الدخول/الخروج -->
@@ -6319,39 +6441,12 @@
               </li>
             </ul>
           </div>
-          <!-- Donations Section -->
-          <div class="footer-col">
-            <div class="support-box">
-              <h6 class="fw-bold mb-3" data-ar="ادعمنا" data-en="Support Us">
-                Support Us
-              </h6>
-              <p class="text-light opacity-75" data-ar="ادعمنا ليستمر العطاء من اجل العلم و المعرفة و تقدم الأنسان"
-                data-en="Support us so that the giving continues for the sake of knowledge, learning, and the advancement of humanity.">
-                Support us so that the giving continues for the sake of knowledge, learning, and the advancement of
-                humanity.
-              </p>
-              <div class="d-flex flex-wrap gap-2 mb-3">
-                <button class="btn btn-outline-light btn-sm donate-btn" data-amount="1">
-                  $1
-                </button>
-                <button class="btn btn-outline-light btn-sm donate-btn" data-amount="3">
-                  $3
-                </button>
-                <button class="btn btn-outline-light btn-sm donate-btn" data-amount="5">
-                  $5
-                </button>
-                <button class="btn btn-outline-light btn-sm donate-btn" data-amount="10">
-                  $10
-                </button>
-                <input id="customAmount" placeholder="Custom" style="max-width:110px;" type="number" />
-              </div>
-              <button class="btn btn-primary w-100" id="paypalDonateBtn">
-                <span data-ar="ادعمنا عبر PayPal" data-en="Support Us with PayPal">
-                  Support Us with PayPal
-                </span>
-              </button>
-            </div>
-          </div>
+          <div id="paypal-container-Z958LLNENNFBJ"></div>
+          <script>
+            paypal.HostedButtons({
+              hostedButtonId: "Z958LLNENNFBJ",
+            }).render("#paypal-container-Z958LLNENNFBJ")
+          </script>
           <div class="footer-newsletter">
             <h5 data-ar="اشترك في الجريدة البريدية" data-en="Subscribe to the Newsletter">
               Subscribe to the Newsletter
@@ -6753,27 +6848,27 @@ We believe in the power of community and collaboration, and we welcome users and
 
   <!-- Favorites Modal Handler - Added to complete favorite button functionality -->
   <script>
-    (function () {
-      'use strict';
+      (function () {
+        'use strict';
 
-      // Show favorites modal when navbar button is clicked
-      function showFavoritesModal() {
-        const ids = getFavoritesIds(); // ✅ array مضمون
-
-
-        if (!ids.length) {
-          showToast(currentLang === "ar" ? "لا توجد أدوات مفضلة" : "No favorites yet", "info");
-          return;
-        }
+        // Show favorites modal when navbar button is clicked
+        function showFavoritesModal() {
+          const ids = getFavoritesIds(); // ✅ array مضمون
 
 
-        // ✅ aiTools يجب أن تكون موجودة
-        const toolsArr = window.aiTools || [];
-        const tools = ids.map(id => toolsArr[id]).filter(Boolean);
+          if (!ids.length) {
+            showToast(currentLang === "ar" ? "لا توجد أدوات مفضلة" : "No favorites yet", "info");
+            return;
+          }
 
 
-        // ✅ بناء المودال
-        const favoritesModalHTML = `
+          // ✅ aiTools يجب أن تكون موجودة
+          const toolsArr = window.aiTools || [];
+          const tools = ids.map(id => toolsArr[id]).filter(Boolean);
+
+
+          // ✅ بناء المودال
+          const favoritesModalHTML = `
     <div class="modal fade favorites-modal" id="favoritesModal" tabindex="-1">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -6786,11 +6881,11 @@ We believe in the power of community and collaboration, and we welcome users and
           <div class="modal-body">
             <div class="row g-3" id="favoritesListContainer">
               ${tools.map((tool, idx) => {
-          const toolId = ids[idx]; // ✅ index الحقيقي
-          const description = currentLang === "ar" ? (tool.desc_ar || tool.description) : tool.description;
+            const toolId = ids[idx]; // ✅ index الحقيقي
+            const description = currentLang === "ar" ? (tool.desc_ar || tool.description) : tool.description;
 
 
-          return `
+            return `
                   <div class="col-md-6">
                     <div class="card h-100">
                       <div class="card-img-top position-relative" style="height:120px; overflow:hidden; background:linear-gradient(135deg, #401F71, #BE7B72);">
@@ -6818,7 +6913,7 @@ We believe in the power of community and collaboration, and we welcome users and
                     </div>
                   </div>
                 `;
-        }).join("")}
+          }).join("")}
             </div>
           </div>
 
@@ -6834,68 +6929,68 @@ We believe in the power of community and collaboration, and we welcome users and
   `;
 
 
-        // إزالة القديم إذا موجود
-        document.getElementById("favoritesModal")?.remove();
-        document.body.insertAdjacentHTML("beforeend", favoritesModalHTML);
+          // إزالة القديم إذا موجود
+          document.getElementById("favoritesModal")?.remove();
+          document.body.insertAdjacentHTML("beforeend", favoritesModalHTML);
 
 
-        const modal = new bootstrap.Modal(document.getElementById("favoritesModal"));
-        modal.show();
+          const modal = new bootstrap.Modal(document.getElementById("favoritesModal"));
+          modal.show();
 
 
-        // ✅ Bind events inside modal
-        document.getElementById("favoritesModal").addEventListener("shown.bs.modal", () => {
-          document.querySelectorAll("#favoritesListContainer .view-details-btn").forEach(btn => {
-            btn.addEventListener("click", () => {
-              const toolId = Number(btn.dataset.toolId);
-              modal.hide();
-              setTimeout(() => showToolDetails(toolId), 250);
-            });
-          });
-
-
-          document.querySelectorAll("#favoritesListContainer .remove-favorite-btn").forEach(btn => {
-            btn.addEventListener("click", (e) => {
-              e.preventDefault();
-              e.stopPropagation();
-
-
-              const toolId = Number(btn.dataset.toolId);
-              let ids = getFavoritesIds();
-              ids = ids.filter(id => id !== toolId);
-
-
-              saveFavoritesIds(ids);
-              updateFavoritesButton();
-
-
-              btn.closest(".col-md-6")?.remove();
-
-
-              if (!ids.length) {
+          // ✅ Bind events inside modal
+          document.getElementById("favoritesModal").addEventListener("shown.bs.modal", () => {
+            document.querySelectorAll("#favoritesListContainer .view-details-btn").forEach(btn => {
+              btn.addEventListener("click", () => {
+                const toolId = Number(btn.dataset.toolId);
                 modal.hide();
-                showToast(currentLang === "ar" ? "تم حذف كل المفضلة" : "All favorites removed", "info");
-              }
+                setTimeout(() => showToolDetails(toolId), 250);
+              });
             });
-          });
-        });
-      }
 
-      // Attach to navbar favorites button
-      document.addEventListener('DOMContentLoaded', function () {
-        const favoritesBtn = document.getElementById('favoritesBtn');
-        if (favoritesBtn) {
-          favoritesBtn.addEventListener('click', function (e) {
-            e.preventDefault();
-            showFavoritesModal();
+
+            document.querySelectorAll("#favoritesListContainer .remove-favorite-btn").forEach(btn => {
+              btn.addEventListener("click", (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+
+
+                const toolId = Number(btn.dataset.toolId);
+                let ids = getFavoritesIds();
+                ids = ids.filter(id => id !== toolId);
+
+
+                saveFavoritesIds(ids);
+                updateFavoritesButton();
+
+
+                btn.closest(".col-md-6")?.remove();
+
+
+                if (!ids.length) {
+                  modal.hide();
+                  showToast(currentLang === "ar" ? "تم حذف كل المفضلة" : "All favorites removed", "info");
+                }
+              });
+            });
           });
         }
 
-        // Initial update
-        if (typeof updateFavoritesButton === 'function') updateFavoritesButton();
-        if (typeof updateAllFavoriteButtons === 'function') updateAllFavoriteButtons();
-      });
-    })();
+        // Attach to navbar favorites button
+        document.addEventListener('DOMContentLoaded', function () {
+          const favoritesBtn = document.getElementById('favoritesBtn');
+          if (favoritesBtn) {
+            favoritesBtn.addEventListener('click', function (e) {
+              e.preventDefault();
+              showFavoritesModal();
+            });
+          }
+
+          // Initial update
+          if (typeof updateFavoritesButton === 'function') updateFavoritesButton();
+          if (typeof updateAllFavoriteButtons === 'function') updateAllFavoriteButtons();
+        });
+      })();
   </script>
 
 

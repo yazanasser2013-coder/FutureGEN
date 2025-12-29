@@ -139470,32 +139470,35 @@ document.addEventListener('click', function (e) {
       return;
     }
 
-    // ✅ فلترة النتائج (ذكية تدعم العربي والانجليزي)
-    // ✅ فلترة + ترتيب ذكي
+    // ✅ Simple search - searches in name, category, and descriptions (both English and Arabic)
     const results = arr
       .map((t) => {
         const name = String(t?.name || "").toLowerCase();
         const cat = String(t?.category || "").toLowerCase();
-        const desc = String(t?.description || t?.desc_ar || "").toLowerCase();
+        const descEn = String(t?.description || "").toLowerCase();
+        const descAr = String(t?.desc_ar || "").toLowerCase();
 
         let score = 0;
 
-        // 1) يبدأ بالبحث (الأفضل)
+        // 1) Name starts with query (best match)
         if (name.startsWith(q)) score += 100;
 
-        // 2) يحتوي البحث داخل الاسم
+        // 2) Name contains query
         else if (name.includes(q)) score += 60;
 
-        // 3) يحتوي داخل التصنيف
+        // 3) Category contains query
         if (cat.includes(q)) score += 25;
 
-        // 4) يحتوي داخل الوصف
-        if (desc.includes(q)) score += 10;
+        // 4) English description contains query
+        if (descEn.includes(q)) score += 10;
+
+        // 5) Arabic description contains query
+        if (descAr.includes(q)) score += 10;
 
         return { tool: t, score };
       })
-      .filter(x => x.score > 0) // ✅ فقط نتائج فيها تطابق
-      .sort((a, b) => b.score - a.score) // ✅ ترتيب بالأفضل
+      .filter(x => x.score > 0)
+      .sort((a, b) => b.score - a.score)
       .map(x => x.tool);
 
     showSearchOverlay();
