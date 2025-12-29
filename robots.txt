@@ -1,0 +1,13 @@
+# Allow all crawlers to access the site
+User-agent: *
+Allow: /
+
+# Disallow crawling of admin or sensitive folders (optional)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Link to sitemap for better discovery
+Sitemap: https://futuregen.space/sitemap.xml
+
+# Crawl delay (optional, prevents server overload)
+# Crawl-delay: 1
