@@ -6097,6 +6097,17 @@
       }
 
     }
+
+    .support-box {
+      padding: 1.875rem;
+      border-radius: 0.75rem;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: var(--footer-text-light);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      width: 400px;
+    }
   </style>
   <script>try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) { };</script>
 </head>
@@ -6439,14 +6450,15 @@
             </ul>
           </div>
 
-          <script src="https://www.paypal.com/sdk/js?client-id=BAA-380vJWCTc40BMW9RsF0XuRIlID4x2if0n3Tn9_4Z_ylcSG57ijRCUX-nM5LQ2PW5UflPtw85-UqsqA&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
-
-          <div id="paypal-container-WB25CBYK6274N"></div>
-          <script>
-            paypal.HostedButtons({
-              hostedButtonId: "WB25CBYK6274N",
-            }).render("#paypal-container-WB25CBYK6274N")
-          </script>
+          <script
+            src="https://www.paypal.com/sdk/js?client-id=BAA-380vJWCTc40BMW9RsF0XuRIlID4x2if0n3Tn9_4Z_ylcSG57ijRCUX-nM5LQ2PW5UflPtw85-UqsqA&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
+            
+            <div class="support-box" id="paypal-container-WB25CBYK6274N"></div>
+            <script>
+              paypal.HostedButtons({
+                hostedButtonId: "WB25CBYK6274N",
+              }).render("#paypal-container-WB25CBYK6274N")
+            </script>
 
           <div class="footer-newsletter">
             <h5 data-ar="اشترك في الجريدة البريدية" data-en="Subscribe to the Newsletter">
