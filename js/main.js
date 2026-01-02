@@ -47575,10 +47575,10 @@ const aiTools = [
   {
     "name": "Otio",
     "directory_url": "https://www.futuretools.io/tools/otio",
-    "url": "https://www.notion.so/product/ai",
+    "url": "https://app.otio.ai",
     "description": "",
     "pricing": "Unknown",
-    "logo": "https://www.google.com/s2/favicons?domain=searchplus.ai&sz=128",
+    "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiMwfYr66Th-qfPtTYST7JALG9pdvaFjnQLw&s",
     "domain": "searchplus.ai",
     "official_url": "https://searchplus.ai/?ref=futuretools.io",
     "official_domain": "searchplus.ai",

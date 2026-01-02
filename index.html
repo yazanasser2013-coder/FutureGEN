@@ -462,6 +462,15 @@
       color: #e5e7eb;
     }
 
+    body.rtl-mode .hero-subtitle {
+      font-size: 1.25rem;
+      color: #512594;
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     .hero-subtitle {
       font-size: 1.25rem;
       color: #512594;
@@ -469,6 +478,7 @@
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
+      unicode-bidi: plaintext;
     }
 
     html[data-theme="dark"] .hero-subtitle {
@@ -2843,6 +2853,7 @@
       background: rgba(255, 255, 255, 0.1);
       border-radius: 12px;
       backdrop-filter: blur(10px);
+      width: 1250px;
     }
 
     .footer-newsletter h5 {
@@ -6299,18 +6310,10 @@
           data-en="Discover the Best AI Tools for Your Needs">
           Discover the Best AI Tools for Your Needs
         </h1>
-        <p class="hero-subtitle">
-          <span class="counter" data-count="4000">
-            0
-          </span>
-          +
-          <span data-ar="أداة ذكاء اصطناعي وموارد وتقنيات لتعزيز سير عملك."
-            data-en="AI tools, resources, and technologies to enhance your workflow.">
-            AI tools, resources, and
-            technologies to enhance
-            your workflow.
-          </span>
-        </p>
+        <p class="hero-subtitle" id="heroSubtitle"
+          data-ar="تصفح مجموعتنا المتنامية من أدوات الذكاء الاصطناعي للعثور على الحلول المثالية لمشاريعك"
+          data-en="Browse our growing collection of AI tools to find the perfect solutions for your projects">Browse our
+          growing collection of AI tools to find the perfect solutions for your projects</p>
         <div class="hero-buttons">
           <a class="btn btn-primary btn-lg smooth-scroll" data-ar="استكشف الأدوات" data-en="Explore Tools"
             href="#featured" id="exploreToolsBtn">
@@ -6452,13 +6455,13 @@
 
           <script
             src="https://www.paypal.com/sdk/js?client-id=BAA-380vJWCTc40BMW9RsF0XuRIlID4x2if0n3Tn9_4Z_ylcSG57ijRCUX-nM5LQ2PW5UflPtw85-UqsqA&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
-            
-            <div class="support-box" id="paypal-container-WB25CBYK6274N"></div>
-            <script>
-              paypal.HostedButtons({
-                hostedButtonId: "WB25CBYK6274N",
-              }).render("#paypal-container-WB25CBYK6274N")
-            </script>
+
+          <div class="support-box" id="paypal-container-WB25CBYK6274N"></div>
+          <script>
+            paypal.HostedButtons({
+              hostedButtonId: "WB25CBYK6274N",
+            }).render("#paypal-container-WB25CBYK6274N")
+          </script>
 
           <div class="footer-newsletter">
             <h5 data-ar="اشترك في الجريدة البريدية" data-en="Subscribe to the Newsletter">
@@ -7004,6 +7007,19 @@ We believe in the power of community and collaboration, and we welcome users and
           if (typeof updateAllFavoriteButtons === 'function') updateAllFavoriteButtons();
         });
       })();
+
+    const heroSubtitleContent = {
+      ar: 'اكثر من <span dir="ltr">4000+</span> اداة لتعزيز وتطوير سير عملك.',
+      en: 'More than <span dir="ltr">4000+</span> tools to enhance and optimize your workflow.'
+    };
+
+    function updateHeroSubtitle(lang) {
+      const subtitle = document.getElementById('heroSubtitle');
+      if (!subtitle) return;
+
+      subtitle.innerHTML = heroSubtitleContent[lang] || heroSubtitleContent.en;
+      subtitle.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+    }
   </script>
 
   <!-- Google tag (gtag.js) -->
