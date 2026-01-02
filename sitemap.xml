@@ -1,0 +1,22 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://futuregen.space/</loc>
+<lastmod>2025-12-29</lastmod>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://futuregen.space/tools</loc>
+<lastmod>2025-12-29</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://futuregen.space/about</loc>
+<lastmod>2025-12-29</lastmod>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://futuregen.space/contact</loc>
+<lastmod>2025-12-29</lastmod>
+<priority>0.5</priority>
+</url>
+</urlset>
