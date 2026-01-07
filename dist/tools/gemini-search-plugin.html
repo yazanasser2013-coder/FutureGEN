@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+  
+  <title>gemini-search-plugin – Generative Code AI Tool | FutureGen</title>
+  <meta name="description" content="Advanced Claude Code plugin for web search using Gemini CLI with caching, analytics, and validation. Includes comprehensive skills for plugin development.">
+  <meta name="keywords" content="gemini-search-plugin, Generative Code, AI tool, artificial intelligence, FutureGen">
+
+  <link rel="canonical" href="https://futuregen.space/tools/gemini-search-plugin">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://futuregen.space/tools/gemini-search-plugin">
+  <meta property="og:title" content="gemini-search-plugin – Generative Code AI Tool">
+  <meta property="og:description" content="Advanced Claude Code plugin for web search using Gemini CLI with caching, analytics, and validation. Includes comprehensive skills for plugin development.">
+  <meta property="og:image" content="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+CiAgICAgICAgPGRlZnM+CiAgICAgICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRjU5RTBCIi8+CiAgICAgICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNGNTlFMEJkZCIvPgogICAgICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICAgICAgICA8ZmlsdGVyIGlkPSJzaGFkb3ciPgogICAgICAgICAgICAgICAgPGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjQiIHN0ZERldmlhdGlvbj0iOCIgZmxvb2Qtb3BhY2l0eT0iMC4zIi8+CiAgICAgICAgICAgIDwvZmlsdGVyPgogICAgICAgIDwvZGVmcz4KICAgICAgICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjEwMCIgZmlsbD0idXJsKCNnKSIgZmlsdGVyPSJ1cmwoI3NoYWRvdykiLz4KICAgICAgICA8dGV4dCB4PSIyNTYiIHk9IjMzMCIgZm9udC1mYW1pbHk9Ii1hcHBsZS1zeXN0ZW0sQmxpbmtNYWNTeXN0ZW1Gb250LFNlZ29lIFVJLHNhbnMtc2VyaWYiIAogICAgICAgICAgICAgIGZvbnQtc2l6ZT0iMjAwIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgCiAgICAgICAgICAgICAgbGV0dGVyLXNwYWNpbmc9Ii04Ij4KICAgICAgICAgICAgR1AKICAgICAgICA8L3RleHQ+CiAgICA8L3N2Zz4=">
+  <meta property="og:site_name" content="FutureGen">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://futuregen.space/tools/gemini-search-plugin">
+  <meta name="twitter:title" content="gemini-search-plugin – Generative Code AI Tool">
+  <meta name="twitter:description" content="Advanced Claude Code plugin for web search using Gemini CLI with caching, analytics, and validation. Includes comprehensive skills for plugin development.">
+  <meta name="twitter:image" content="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+CiAgICAgICAgPGRlZnM+CiAgICAgICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRjU5RTBCIi8+CiAgICAgICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNGNTlFMEJkZCIvPgogICAgICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICAgICAgICA8ZmlsdGVyIGlkPSJzaGFkb3ciPgogICAgICAgICAgICAgICAgPGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjQiIHN0ZERldmlhdGlvbj0iOCIgZmxvb2Qtb3BhY2l0eT0iMC4zIi8+CiAgICAgICAgICAgIDwvZmlsdGVyPgogICAgICAgIDwvZGVmcz4KICAgICAgICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjEwMCIgZmlsbD0idXJsKCNnKSIgZmlsdGVyPSJ1cmwoI3NoYWRvdykiLz4KICAgICAgICA8dGV4dCB4PSIyNTYiIHk9IjMzMCIgZm9udC1mYW1pbHk9Ii1hcHBsZS1zeXN0ZW0sQmxpbmtNYWNTeXN0ZW1Gb250LFNlZ29lIFVJLHNhbnMtc2VyaWYiIAogICAgICAgICAgICAgIGZvbnQtc2l6ZT0iMjAwIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgCiAgICAgICAgICAgICAgbGV0dGVyLXNwYWNpbmc9Ii04Ij4KICAgICAgICAgICAgR1AKICAgICAgICA8L3RleHQ+CiAgICA8L3N2Zz4=">
+
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "gemini-search-plugin",
+    "description": "Advanced Claude Code plugin for web search using Gemini CLI with caching, analytics, and validation. Includes comprehensive skills for plugin development.",
+    "applicationCategory": "Generative Code",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+CiAgICAgICAgPGRlZnM+CiAgICAgICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRjU5RTBCIi8+CiAgICAgICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNGNTlFMEJkZCIvPgogICAgICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICAgICAgICA8ZmlsdGVyIGlkPSJzaGFkb3ciPgogICAgICAgICAgICAgICAgPGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjQiIHN0ZERldmlhdGlvbj0iOCIgZmxvb2Qtb3BhY2l0eT0iMC4zIi8+CiAgICAgICAgICAgIDwvZmlsdGVyPgogICAgICAgIDwvZGVmcz4KICAgICAgICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjEwMCIgZmlsbD0idXJsKCNnKSIgZmlsdGVyPSJ1cmwoI3NoYWRvdykiLz4KICAgICAgICA8dGV4dCB4PSIyNTYiIHk9IjMzMCIgZm9udC1mYW1pbHk9Ii1hcHBsZS1zeXN0ZW0sQmxpbmtNYWNTeXN0ZW1Gb250LFNlZ29lIFVJLHNhbnMtc2VyaWYiIAogICAgICAgICAgICAgIGZvbnQtc2l6ZT0iMjAwIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgCiAgICAgICAgICAgICAgbGV0dGVyLXNwYWNpbmc9Ii04Ij4KICAgICAgICAgICAgR1AKICAgICAgICA8L3RleHQ+CiAgICA8L3N2Zz4=",
+    "url": "https://futuregen.space/tools/gemini-search-plugin",
+    "operatingSystem": "Web",
+    "provider": {
+      "@type": "Organization",
+      "name": "FutureGen",
+      "url": "https://futuregen.space"
+    }
+  }
+  </script>
+
+  <link rel="icon" href="/Images/Favicon.ico" type="image/x-icon">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Tajawal', 'Inter', system-ui, sans-serif; background: #f8fafc; color: #101010; line-height: 1.6; }
+    .tool-page { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+    header { text-align: center; margin-bottom: 40px; }
+    header img { width: 120px; height: 120px; object-fit: contain; border-radius: 16px; background: #fff; padding: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); margin-bottom: 20px; }
+    header h1 { font-size: 2.5rem; color: #401F71; margin-bottom: 16px; }
+    header p { color: #6b7280; font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+    section { background: #fff; border-radius: 16px; padding: 24px; margin-bottom: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    section h2 { color: #401F71; margin-bottom: 16px; font-size: 1.4rem; }
+    ul { list-style: none; }
+    li { padding: 8px 0; border-bottom: 1px solid #e5e7eb; }
+    li:last-child { border-bottom: none; }
+    li strong { color: #401F71; }
+    a { color: #401F71; text-decoration: none; font-weight: 600; }
+    a:hover { text-decoration: underline; }
+    .back-link { display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: linear-gradient(135deg, #401F71, #be7b72); color: #fff; border-radius: 8px; }
+    .back-link:hover { text-decoration: none; opacity: 0.9; }
+    [lang="ar"] { direction: rtl; text-align: right; }
+  </style>
+</head>
+<body>
+
+<main class="tool-page">
+  <a href="https://futuregen.space/" class="back-link">← Back to FutureGen</a>
+
+  <header>
+    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+CiAgICAgICAgPGRlZnM+CiAgICAgICAgICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZyIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICAgICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjRjU5RTBCIi8+CiAgICAgICAgICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNGNTlFMEJkZCIvPgogICAgICAgICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgICAgICAgICA8ZmlsdGVyIGlkPSJzaGFkb3ciPgogICAgICAgICAgICAgICAgPGZlRHJvcFNoYWRvdyBkeD0iMCIgZHk9IjQiIHN0ZERldmlhdGlvbj0iOCIgZmxvb2Qtb3BhY2l0eT0iMC4zIi8+CiAgICAgICAgICAgIDwvZmlsdGVyPgogICAgICAgIDwvZGVmcz4KICAgICAgICA8cmVjdCB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgcng9IjEwMCIgZmlsbD0idXJsKCNnKSIgZmlsdGVyPSJ1cmwoI3NoYWRvdykiLz4KICAgICAgICA8dGV4dCB4PSIyNTYiIHk9IjMzMCIgZm9udC1mYW1pbHk9Ii1hcHBsZS1zeXN0ZW0sQmxpbmtNYWNTeXN0ZW1Gb250LFNlZ29lIFVJLHNhbnMtc2VyaWYiIAogICAgICAgICAgICAgIGZvbnQtc2l6ZT0iMjAwIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgCiAgICAgICAgICAgICAgbGV0dGVyLXNwYWNpbmc9Ii04Ij4KICAgICAgICAgICAgR1AKICAgICAgICA8L3RleHQ+CiAgICA8L3N2Zz4=" alt="gemini-search-plugin logo" width="120" height="120" loading="lazy">
+    <h1>gemini-search-plugin</h1>
+    <p>Advanced Claude Code plugin for web search using Gemini CLI with caching, analytics, and validation. Includes comprehensive skills for plugin development.</p>
+  </header>
+
+  <section>
+    <h2>Tool Information</h2>
+    <ul>
+      <li><strong>Category:</strong> Generative Code</li>
+      <li><strong>Pricing:</strong> Unknown</li>
+      <li><strong>Source:</strong> github_topics</li>
+      <li><strong>Domain:</strong> geminisearchplugin-ai-tool-placeholder.com</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Official Website</h2>
+    <a href="https://geminisearchplugin-ai-tool-placeholder.com" target="_blank" rel="noopener">
+      Visit geminisearchplugin-ai-tool-placeholder.com →
+    </a>
+  </section>
+
+  <section lang="ar">
+    <h2>وصف الأداة</h2>
+    <p>ملحقات متقدّمة رمز لـ ويب بحث استخدام مع مُثبّتة و مُثبّتة و مؤكّد مُتضمّن شامل لـ ملحق تطوير.</p>
+  </section>
+
+</main>
+
+</body>
+</html>
