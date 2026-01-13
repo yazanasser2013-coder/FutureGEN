@@ -139940,6 +139940,12 @@ function createToolCardFull(tool, index) {
           onerror="this.src='./Images/placeholder-logo.png'">
       </div>
 
+      <button class="btn btn-sm favorite-toggle position-absolute top-0 end-0 m-2 ${isFavorite(tool) ? 'active' : ''}" 
+                        onclick="toggleFavorite(event, ${JSON.stringify(tool).replace(/"/g, '&quot;')})">
+                    <i class="fas fa-heart ${isFavorite(tool) ? 'text-danger' : 'text-white'}"></i>
+                </button>
+                
+
       <div class="card-body d-flex flex-column">
         <div class="d-flex justify-content-between align-items-start mb-2">
           <h5 class="card-title fw-bold">${tool.name || ""}</h5>
@@ -139967,8 +139973,14 @@ function createToolCardFull(tool, index) {
     detailsBtn.addEventListener("click", (event) => {
       event.preventDefault();
       event.stopPropagation();
-      if (typeof hideSearchOverlay === "function") hideSearchOverlay();
-      showToolDetails(index);
+      // Generate slug from tool name and navigate to static page
+      const slug = (tool.name || "")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+      if (slug) {
+        window.location.href = `/tools/${slug}.html`;
+      }
     });
   }
 
@@ -140355,3 +140367,91 @@ document.addEventListener("click", function (e) {
   const index = btn.dataset.toolIndex;
   toggleFavoriteByIndex(index, btn);
 }, true);
+// ===== PATCH: Redirect Details buttons to static tool pages =====
+(function() {
+  document.addEventListener('click', function(e) {
+    const btn = e.target.closest('.view-details-btn');
+    if (!btn) return;
+    
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+    
+    // Get the tool from the card
+    const card = btn.closest('.card, [data-tool-id]');
+    const container = btn.closest('[data-tool-id]');
+    
+    let toolIndex = btn.dataset.toolId;
+    if (!toolIndex && container) toolIndex = container.dataset.toolId;
+    
+    const tools = window.aiTools || [];
+    const tool = tools[toolIndex];
+    
+    if (tool && tool.name) {
+      const slug = tool.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+      if (slug) {
+        window.location.href = '/tools/' + slug + '.html';
+        return;
+      }
+    }
+    
+    // Fallback: try showToolDetails
+    if (typeof showToolDetails === 'function' && toolIndex) {
+      showToolDetails(parseInt(toolIndex, 10));
+    }
+  }, true);
+  
+  console.log('✅ Static tool pages redirect enabled');
+})();
+
+// ===== AGGRESSIVE FIX: Force Details buttons to navigate to static pages =====
+(function() {
+  // Override at the earliest possible moment
+  document.addEventListener('click', function(e) {
+    const btn = e.target.closest('.view-details-btn');
+    if (!btn) return;
+    
+    // Stop everything else
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+    
+    // Get tool index
+    let toolIndex = btn.dataset.toolId;
+    if (!toolIndex) {
+      const container = btn.closest('[data-tool-id]');
+      if (container) toolIndex = container.dataset.toolId;
+    }
+    
+    const tools = window.aiTools || [];
+    const tool = tools[parseInt(toolIndex, 10)];
+    
+    if (tool && tool.name) {
+      const slug = tool.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+      if (slug) {
+        // Force navigation to static page
+        window.location.assign('/tools/' + slug + '.html');
+        return false;
+      }
+    }
+    return false;
+  }, true); // capture phase
+  
+  // Also override showToolDetails to redirect instead
+  const originalShowToolDetails = window.showToolDetails;
+  window.showToolDetails = function(index) {
+    const tools = window.aiTools || [];
+    const tool = tools[index];
+    if (tool && tool.name) {
+      const slug = tool.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+      if (slug) {
+        window.location.assign('/tools/' + slug + '.html');
+        return;
+      }
+    }
+    // Fallback to original
+    if (originalShowToolDetails) originalShowToolDetails(index);
+  };
+  
+  console.log('✅ Static pages redirect v2 enabled');
+})();
