@@ -139939,13 +139939,6 @@ function createToolCardFull(tool, index) {
           style="object-fit: contain; background: white;"
           onerror="this.src='./Images/placeholder-logo.png'">
       </div>
-
-      <button class="btn btn-sm favorite-toggle position-absolute top-0 end-0 m-2 ${isFavorite(tool) ? 'active' : ''}" 
-                        onclick="toggleFavorite(event, ${JSON.stringify(tool).replace(/"/g, '&quot;')})">
-                    <i class="fas fa-heart ${isFavorite(tool) ? 'text-danger' : 'text-white'}"></i>
-                </button>
-                
-
       <div class="card-body d-flex flex-column">
         <div class="d-flex justify-content-between align-items-start mb-2">
           <h5 class="card-title fw-bold">${tool.name || ""}</h5>
