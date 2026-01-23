@@ -1,13 +1,16 @@
-# Allow all crawlers to access the site
+# FutureGen AI Tools Directory - Robots.txt
+# Updated: 2026-01-23
+
+# Allow all search engines
 User-agent: *
 Allow: /
 
-# Disallow crawling of admin or sensitive folders (optional)
+# Block admin areas (if you have them)
 # Disallow: /admin/
-# Disallow: /private/
+# Disallow: /api/
 
-# Link to sitemap for better discovery
-Sitemap: https://futuregen.space/sitemap.xml
+# Main sitemap index
+Sitemap: https://futuregen.space/sitemap-index.xml
 
-# Crawl delay (optional, prevents server overload)
-# Crawl-delay: 1
+# Optimal crawl delay (1 second between requests)
+Crawl-delay: 1

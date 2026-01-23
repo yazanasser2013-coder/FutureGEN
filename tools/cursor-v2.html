@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta name="robots" content="index, follow">
+
+  <title>Cursor v2 – Generative Code AI Tool | FutureGen</title>
+  <meta name="description" content="Cursor is an AI-powered code editor that helps engineers build software faster.">
+  <meta name="keywords" content="Cursor v2, Generative Code, AI tool, artificial intelligence, FutureGen">
+  <meta content="#401F71" name="theme-color" />
+
+  <link rel="canonical" href="https://futuregen.space/tools/cursor-v2.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://futuregen.space/tools/cursor-v2.html">
+  <meta property="og:title" content="Cursor v2 – Generative Code AI Tool | FutureGen">
+  <meta property="og:description" content="Cursor is an AI-powered code editor that helps engineers build software faster.">
+  <meta property="og:image" content="https://cursor.sh/marketing-static/icon-512x512.png">
+  <meta property="og:site_name" content="FutureGen">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://futuregen.space/tools/cursor-v2.html">
+  <meta name="twitter:title" content="Cursor v2 – Generative Code AI Tool | FutureGen">
+  <meta name="twitter:description" content="Cursor is an AI-powered code editor that helps engineers build software faster.">
+  <meta name="twitter:image" content="https://cursor.sh/marketing-static/icon-512x512.png">
+
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Cursor v2",
+    "description": "Cursor is an AI-powered code editor that helps engineers build software faster.",
+    "applicationCategory": "Generative Code",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "image": "https://cursor.sh/marketing-static/icon-512x512.png",
+    "url": "https://futuregen.space/tools/cursor-v2.html",
+    "operatingSystem": "Web",
+    "provider": {
+      "@type": "Organization",
+      "name": "FutureGen",
+      "url": "https://futuregen.space"
+    }
+  }
+  </script>
+
+  <link rel="icon" href="https://futuregen.space/Images/Favicon.ico" type="image/x-icon">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" rel="stylesheet"
+    type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" rel="stylesheet"
+    type="text/css">
+
+  <style>
+    /* ========== THEME TOKENS ========== */
+    :root {
+      --primary-color: #401F71;
+      --secondary-color: #be7b72;
+      --accent-color: #fdaf7b;
+      --bg-page: #f8fafc;
+      --bg-white: #ffffff;
+      --text-dark: #101010;
+      --text-muted: #6b7280;
+      --border: #e5e7eb;
+      --radius-xs: 8px;
+      --radius-sm: 25px;
+      --radius-md: 16px;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.06);
+      --shadow-md: 0 8px 20px -6px rgb(0 0 0 / 0.15);
+      --shadow-lg: 0 20px 40px -12px rgb(0 0 0 / 0.25);
+      --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      --easing: cubic-bezier(0.2, 0.8, 0.2, 1);
+      --header-h: 68px;
+      --footer-bg-light: linear-gradient(135deg, #be7b72 0%, #633d5c 100%);
+      --footer-bg-dark: linear-gradient(135deg, #2a1a4a 0%, #8a5a52 100%);
+      --footer-text-light: #ffffff;
+      --footer-text-dark: #e5e7eb;
+    }
+
+    html[data-theme="dark"] {
+      --bg-page: #0b0f1a;
+      --bg-white: #1a2238;
+      --text-dark: #e5e7eb;
+      --text-muted: #9ca3af;
+      --border: #455683;
+      --shadow-sm: 0 1px 2px 0 rgb(255 255 255 / 0.04);
+      --shadow-md: 0 8px 20px -6px rgb(0 0 0 / 0.4);
+      --shadow-lg: 0 20px 40px -12px rgb(0 0 0 / 0.6);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+      font-family: 'Tajawal', sans-serif !important;
+      font-weight: 700;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Tajawal", "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      font-weight: 700;
+      background-color: var(--bg-page);
+      color: var(--text-dark);
+      line-height: 1.65;
+      margin: 0;
+      scroll-behavior: smooth;
+      transition: background-color 0.3s ease;
+      overflow-x: hidden;
+      direction: ltr;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* ========== NAVBAR ========== */
+    nav {
+      position: relative;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 48px;
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(12px);
+      border-radius: 40px;
+      width: 1450px;
+      max-width: calc(100% - 32px);
+      z-index: 99999999;
+      margin-bottom: 80px;
+    }
+
+    html[data-theme="dark"] nav {
+      background: rgba(26, 34, 56, 0.6) !important;
+      box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+
+    .navbar-brand:hover {
+      transform: scale(1.1);
+    }
+
+    .navbar-brand img {
+      height: 36px;
+      width: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-link {
+      font-family: "Tajawal", "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      font-weight: 700;
+      color: var(--text-dark) !important;
+      opacity: 0.8;
+      transition: all 0.2s ease;
+      padding: 0.5rem 1rem !important;
+      border-radius: var(--radius-xs);
+      position: relative;
+      text-decoration: none;
+    }
+
+    html[data-theme="dark"] .nav-link {
+      color: #e5e7eb !important;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--gradient);
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+      opacity: 0;
+    }
+
+    .nav-link:hover::after {
+      width: 80%;
+      opacity: 1;
+    }
+
+    .nav-link:hover {
+      opacity: 1;
+      color: var(--primary-color) !important;
+    }
+
+    html[data-theme="dark"] .nav-link:hover {
+      color: var(--accent-color) !important;
+    }
+
+    .theme-toggle {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xs);
+      padding: 0.5rem 0.75rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      color: var(--text-dark);
+    }
+
+    .theme-toggle:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* ========== MAIN CONTENT ========== */
+    .main-content {
+      flex: 1;
+      padding: 40px 20px 60px;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    /* ========== TOOL DETAILS HERO ========== */
+    .tool-details-hero {
+      padding: 60px 0 60px;
+      background: linear-gradient(135deg, rgba(64, 31, 113, 0.05), rgba(190, 123, 114, 0.05));
+      margin-top: 0px;
+      border-radius: var(--radius-sm);
+      margin-bottom: 30px;
+    }
+
+    html[data-theme="dark"] .tool-details-hero {
+      background: linear-gradient(135deg, rgba(64, 31, 113, 0.1), rgba(190, 123, 114, 0.1));
+    }
+
+    .tool-logo-large {
+      width: 120px;
+      height: 120px;
+      border-radius: var(--radius-md);
+      object-fit: cover;
+      background: #fff;
+      padding: 12px;
+      box-shadow: var(--shadow-md);
+    }
+
+    /* ========== CARDS ========== */
+    .card {
+      border: none;
+      border-radius: var(--radius-sm);
+      background: var(--bg-white);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.35s var(--easing), box-shadow 0.35s var(--easing);
+      overflow: hidden;
+      position: relative;
+      height: 100%;
+      will-change: transform;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .details-card {
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      margin-bottom: 1.5rem;
+      background: var(--bg-white);
+      padding: 1.5rem;
+    }
+
+    .details-card h2 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    html[data-theme="dark"] .details-card h2 {
+      color: var(--accent-color);
+    }
+
+    /* ========== BUTTONS ========== */
+    .btn {
+      box-shadow: var(--shadow-md);
+      border-radius: var(--radius-xs);
+      font-weight: 600;
+      transition: transform 0.2s var(--easing), box-shadow 0.2s var(--easing);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .btn-primary {
+      background: var(--gradient);
+      border: none;
+    }
+
+    .btn-primary:hover {
+      color: #ffffff;
+    }
+
+    .btn-outline-primary {
+      border-color: var(--primary-color);
+      color: var(--primary-color);
+    }
+
+    .btn-outline-primary:hover {
+      background: var(--primary-color);
+      color: #fff;
+    }
+
+    html[data-theme="dark"] .btn-outline-primary {
+      color: var(--accent-color);
+      border-color: var(--accent-color);
+    }
+
+    html[data-theme="dark"] .btn-outline-primary:hover {
+      background: var(--accent-color);
+      color: var(--text-dark);
+    }
+
+    /* ========== BACK BUTTON ========== */
+    .back-button {
+      background: var(--gradient);
+      border: none;
+      border-radius: var(--radius-xs);
+      color: white;
+      padding: 0.5rem 1rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      text-decoration: none;
+    }
+
+    .back-button:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      color: white;
+    }
+
+    /* ========== TOOL INFO ========== */
+    .tool-info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .tool-info-item {
+      display: flex;
+      align-items: center;
+      padding: 0.75rem;
+      background: var(--bg-page);
+      border-radius: var(--radius-xs);
+      border: 1px solid var(--border);
+    }
+
+    .tool-info-item i {
+      color: var(--primary-color);
+      margin-right: 0.75rem;
+      font-size: 1.1rem;
+      width: 20px;
+    }
+
+    html[data-theme="dark"] .tool-info-item {
+      background: var(--bg-page);
+      border-color: var(--border);
+    }
+
+    strong {
+      font-weight: 700;
+      color: var(--secondary-color);
+    }
+
+    /* ========== PRICING BADGE ========== */
+    .pricing-badge {
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      padding: 0.45rem 0.7rem;
+      border-radius: 999px;
+    }
+
+    /* ========== SPECS SECTION ========== */
+    .specs-section {
+      background: linear-gradient(135deg, rgba(64, 31, 113, 0.05), rgba(190, 123, 114, 0.05));
+      border-radius: var(--radius-sm);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    html[data-theme="dark"] .specs-section {
+      background: linear-gradient(135deg, rgba(64, 31, 113, 0.1), rgba(190, 123, 114, 0.1));
+    }
+
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .spec-item {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+      background: var(--bg-white);
+      border-radius: var(--radius-xs);
+      border: 1px solid var(--border);
+    }
+
+    .spec-label {
+      font-weight: 600;
+      color: var(--primary-color);
+      font-size: 0.9rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .spec-value {
+      color: var(--text-dark);
+      font-size: 1rem;
+    }
+
+    html[data-theme="dark"] .spec-item {
+      background: var(--bg-page);
+      border-color: var(--border);
+    }
+
+    /* ========== ARABIC SECTION ========== */
+    [lang="ar"] {
+      direction: rtl;
+      text-align: right;
+    }
+
+    /* ========== FOOTER ========== */
+    .site-footer {
+      background: var(--footer-bg-light) !important;
+      color: var(--footer-text-light);
+      font-family: 'Tajawal', sans-serif;
+      padding: 40px 20px 20px;
+      margin-top: auto;
+      text-align: center;
+    }
+
+    html[data-theme="dark"] .site-footer {
+      background: var(--footer-bg-dark) !important;
+      color: var(--footer-text-dark);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.25);
+      padding-top: 16px;
+      font-weight: 500;
+    }
+
+    .social-links a {
+      color: var(--footer-text-light);
+      font-size: 1.5rem;
+      margin: 0 10px;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #FFD700;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 992px) {
+      nav {
+        width: calc(100% - 20px) !important;
+        padding: 10px 20px !important;
+        top: 20px !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .tool-details-hero {
+        padding: 40px 20px;
+      }
+
+      .tool-logo-large {
+        width: 80px;
+        height: 80px;
+      }
+
+      .main-content {
+        padding: 20px 15px 40px;
+      }
+
+      .tool-info-grid,
+      .specs-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 576px) {
+      nav {
+        padding: 8px 15px !important;
+        border-radius: 20px !important;
+        top: 15px !important;
+      }
+
+      .navbar-brand img {
+        height: 30px;
+      }
+
+      .tool-details-hero {
+        padding: 30px 15px;
+      }
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+      height: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg-page);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--gradient);
+      border-radius: 999px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav>
+    <a class="navbar-brand" href="https://futuregen.space/">
+      <img src="https://futuregen.space/Images/logo-futuregen.png" alt="FutureGen Logo" id="nav-logo">
+    </a>
+    <div class="d-flex align-items-center gap-3">
+      <a class="nav-link" href="https://futuregen.space/">Home</a>
+      <a class="nav-link" href="https://futuregen.space/about.html">About</a>
+      <a class="nav-link" href="https://futuregen.space/contact.html">Contact</a>
+      <button class="theme-toggle" onclick="toggleTheme()" id="themeToggle">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <a href="https://futuregen.space/" class="back-button">
+      <i class="fas fa-arrow-left"></i> Back to FutureGen
+    </a>
+
+    <!-- Tool Hero -->
+    <div class="tool-details-hero text-center">
+      <img src="https://cursor.sh/marketing-static/icon-512x512.png" alt="Cursor v2 logo" class="tool-logo-large mb-4"
+        onerror="this.src='https://futuregen.space/Images/placeholder-logo.png'">
+      <h1 class="mb-3" style="color: var(--primary-color); font-weight: 700;">Cursor v2</h1>
+      <p class="mb-4" style="color: var(--text-muted); max-width: 700px; margin: 0 auto;">Cursor is an AI-powered code editor that helps engineers build software faster.</p>
+      <span class="badge"
+        style="background: var(--gradient); color: #fff; padding: 8px 20px; font-size: 0.9rem;">Generative Code</span>
+    </div>
+
+    <!-- Tool Information Card -->
+    <div class="details-card">
+      <h2><i class="fas fa-info-circle me-2"></i>Tool Information</h2>
+      <div class="tool-info-grid">
+        <div class="tool-info-item">
+          <i class="fas fa-folder"></i>
+          <div><strong>Category:</strong> Generative Code</div>
+        </div>
+        <div class="tool-info-item">
+          <i class="fas fa-tag"></i>
+          <div><strong>Pricing:</strong> Unknown</div>
+        </div>
+        <div class="tool-info-item">
+          <i class="fas fa-database"></i>
+          <div><strong>Source:</strong> futuretools</div>
+        </div>
+        <div class="tool-info-item">
+          <i class="fas fa-globe"></i>
+          <div><strong>Domain:</strong> cursor.sh</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Official Website Card -->
+    <div class="details-card">
+      <h2><i class="fas fa-external-link-alt me-2"></i>Official Website</h2>
+      <p style="color: var(--text-muted); margin-bottom: 20px;">Visit the official website to learn more and get started
+        with Cursor v2.</p>
+      <div class="d-flex gap-3 flex-wrap">
+        <a href="https://cursor.sh" target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fas fa-external-link-alt me-2"></i>Visit cursor.sh
+        </a>
+        <a href="https://futuregen.space/" class="btn btn-outline-primary">
+          <i class="fas fa-home me-2"></i>Back to Home
+        </a>
+      </div>
+    </div>
+
+    <!-- Arabic Description Card -->
+    <div class="details-card" lang="ar">
+      <h2><i class="fas fa-language me-2"></i>وصف الأداة بالعربية</h2>
+      <p style="color: var(--text-muted); line-height: 1.8;">Coursor هو محرر شفرات يعمل بقوة الذكاء الذاتي الذي يساعد المهندسين على بناء البرمجيات بشكل أسرع.</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="social-links mb-3">
+      <a href="https://twitter.com/futuregen_space" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/company/futuregen-space" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/futuregen-space" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 FutureGen. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Theme Toggle Script -->
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const currentTheme = html.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+
+      const icon = document.querySelector('#themeToggle i');
+      icon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+
+      // Update logo for dark mode
+      const logo = document.getElementById('nav-logo');
+      if (newTheme === 'dark') {
+        logo.src = 'https://futuregen.space/Images/logo-dark-futuregen.png';
+      } else {
+        logo.src = 'https://futuregen.space/Images/logo-futuregen.png';
+      }
+    }
+
+    // Load saved theme
+    (function () {
+      const savedTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+
+      // Wait for DOM
+      document.addEventListener('DOMContentLoaded', function () {
+        if (savedTheme === 'dark') {
+          const icon = document.querySelector('#themeToggle i');
+          if (icon) icon.className = 'fas fa-sun';
+
+          const logo = document.getElementById('nav-logo');
+          if (logo) logo.src = 'https://futuregen.space/Images/logo-dark-futuregen.png';
+        }
+      });
+    })();
+  </script>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MCC6Z07PBK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-MCC6Z07PBK');
+  </script>
+</body>
+
+</html>
