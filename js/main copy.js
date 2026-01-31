@@ -1,5 +1,83 @@
 const aiTools = [
   {
+    "name": "Punchd",
+    "directory_url": "https://punchd.ai/",
+    "url": "https://synthare.com/",
+    "description": "A tool to generate and score marketing headlines.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6967bacfe0159ecd4dde2e6b_punchd-logo.png",
+    "domain": "punchd.ai",
+    "official_url": "https://punchd.ai/",
+    "official_domain": "stripo.email",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6967bacfe0159ecd4dde2e6b_punchd-logo.png",
+    "logo_reason": "fixed_broken: logo: Not a valid image file",
+    "category": "Copywriting",
+    "desc_ar": "أداة لتوليد عناوين تسويقية وتقييم أدائها.",
+    "featured": false,
+    "logo_source": "website_deep",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep"
+    ],
+    "logo_updated": "2025-12-07 16:39:03",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "Synthare",
+    "directory_url": "https://synthare.com/",
+    "url": "https://synthare.com/",
+    "description": "A tool to generate on-brand marketing campaigns copy.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/695e897648e2449276f2a8b5_synthare-logo.png",
+    "domain": "synthare.com",
+    "official_url": "https://synthare.com/",
+    "official_domain": "stripo.email",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/695e897648e2449276f2a8b5_synthare-logo.png",
+    "logo_reason": "fixed_broken: logo: Not a valid image file",
+    "category": "Copywriting",
+    "desc_ar": "أداة لإنشاء نصوص حملات تسويقية متوافقة مع هوية العلامة التجارية.",
+    "featured": false,
+    "logo_source": "website_deep",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep"
+    ],
+    "logo_updated": "2025-12-07 16:39:03",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "Agentive SEO",
+    "directory_url": "https://futuretools.link/agentive-seo-hm6wn8",
+    "url": "https://futuretools.link/agentive-seo-hm6wn8",
+    "description": "A platform for end-to-end SEO content production and publishing.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6931c1a0c39404bb7bdf5a3d_agentive-seo-logo.png",
+    "domain": "agentiveseo.com",
+    "official_url": "https://futuretools.link/agentive-seo-hm6wn8",
+    "official_domain": "stripo.email",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6931c1a0c39404bb7bdf5a3d_agentive-seo-logo.png",
+    "logo_reason": "fixed_broken: logo: Not a valid image file",
+    "category": "Copywriting",
+    "desc_ar": "منصة متكاملة لإنتاج محتوى تحسين محركات البحث (SEO) من البداية إلى النشر.",
+    "featured": false,
+    "logo_source": "website_deep",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep"
+    ],
+    "logo_updated": "2025-12-07 16:39:03",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
     "name": "Email Template Builder",
     "directory_url": "https://www.futuretools.io/tools/email-template-builder",
     "url": "https://www.stripo.email",
@@ -56,6 +134,93 @@ const aiTools = [
     "original_url": "https://discord.gg/WBk4ZDW6A9",
     "url_fix_date": "2025-12-19T20:24:58.365173",
     "original_bad_url": "https://www.futuretools.io/tools/youware"
+  },
+  {
+    "name": "IQuest Coder",
+    "directory_url": "https://iquestcoder.ai/",
+    "url": "https://iquestcoder.ai/",
+    "description": "A platform that generates and maintains code documentation from a GitHub repository.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/696a59c7161b5c32bc01f53e_iquest-coder-logo.png",
+    "domain": "everdone.io",
+    "official_url": "https://iquestcoder.ai/",
+    "official_domain": "everdone.io",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/696a59c7161b5c32bc01f53e_iquest-coder-logo.png",
+    "logo_reason": "patched_fast:faviconkit",
+    "category": "Generative Code",
+    "desc_ar": "منصة تقوم بإنشاء وصيانة توثيق الشيفرة البرمجية تلقائيًا انطلاقًا من مستودع GitHub.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "original_url_works",
+    "url_status": "already_ok"
+  },
+  {
+    "name": "Mowgli",
+    "directory_url": "https://diffray.ai/",
+    "url": "https://diffray.ai/",
+    "description": "A tool to generate product specs and export ready UI designs.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6973a3160472b1cff14d3d51_mowgli-logo.png",
+    "domain": "everdone.io",
+    "official_url": "https://diffray.ai/",
+    "official_domain": "everdone.io",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6973a3160472b1cff14d3d51_mowgli-logo.png",
+    "logo_reason": "patched_fast:faviconkit",
+    "category": "Generative Code",
+    "desc_ar": "أداة لتوليد مواصفات المنتجات وإنشاء تصاميم واجهات مستخدم جاهزة للتصدير.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "original_url_works",
+    "url_status": "already_ok"
+  },
+  {
+    "name": "diffray",
+    "directory_url": "https://diffray.ai/",
+    "url": "https://diffray.ai/",
+    "description": "A tool to generate product specs and export ready UI designs.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/695fd92467fb28bec7626524_diffray-logo.png",
+    "domain": "everdone.io",
+    "official_url": "https://diffray.ai/",
+    "official_domain": "everdone.io",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/695fd92467fb28bec7626524_diffray-logo.png",
+    "logo_reason": "patched_fast:faviconkit",
+    "category": "Generative Code",
+    "desc_ar": "أداة لتوليد مواصفات المنتجات وإنشاء تصاميم واجهات مستخدم جاهزة للتصدير.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "original_url_works",
+    "url_status": "already_ok"
   },
   {
     "name": "Everdone",
@@ -602,6 +767,93 @@ const aiTools = [
     "url_fix_reason": "original_url_works"
   },
   {
+    "name": "Deepgram",
+    "directory_url": "https://deepgram.com/",
+    "url": "https://deepgram.com/",
+    "description": "A platform for speech to text, voice data transcription and analysis.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/65eac6c35fbc6e4cce64e3ca_1699373666-open-graph-deepgram-speech-to-text-p-2000.jpeg",
+    "domain": "rootlenses.com",
+    "official_url": "https://deepgram.com/",
+    "official_domain": "rootlenses.com",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/65eac6c35fbc6e4cce64e3ca_1699373666-open-graph-deepgram-speech-to-text-p-2000.jpeg",
+    "logo_reason": "verified",
+    "category": "Text-To-Speech",
+    "desc_ar": "منصة لتحويل الكلام إلى نص، ونسخ البيانات الصوتية وتحليلها.",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "Noiz AI",
+    "directory_url": "https://noiz.ai/",
+    "url": "https://noiz.ai/",
+    "description": "A tool to query and visualize connected data and automate outreach with conversational voice agents.A platform for voice cloning, text-to-speech, API and multilingual dubbing.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/696a572bd328a91d21448a00_noiz-ai-logo.png",
+    "domain": "rootlenses.com",
+    "official_url": "https://noiz.ai/",
+    "official_domain": "rootlenses.com",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/696a572bd328a91d21448a00_noiz-ai-logo.png",
+    "logo_reason": "verified",
+    "category": "Text-To-Speech",
+    "desc_ar": "منصة لاستنساخ الصوت، وتحويل النص إلى كلام، وتوفير واجهات برمجة التطبيقات، والدبلجة متعددة اللغات.",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "SlideWhisper",
+    "directory_url": "https://www.slidewhisper.com/",
+    "url": "https://www.slidewhisper.com/",
+    "description": "A tool to create AI-narrated slide presentations with voice Q&A and engagement analytics.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6953efdac9a0db82018100ee_slidewhisper-logo.png",
+    "domain": "rootlenses.com",
+    "official_url": "https://www.slidewhisper.com/",
+    "official_domain": "rootlenses.com",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6953efdac9a0db82018100ee_slidewhisper-logo.png",
+    "logo_reason": "verified",
+    "category": "Text-To-Speech",
+    "desc_ar": "أداة لإنشاء عروض تقديمية بشرائح يتم سردها بالذكاء الاصطناعي، مع أسئلة وأجوبة صوتية وتحليلات لقياس التفاعل.",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
     "name": "Rootlenses",
     "directory_url": "https://www.futuretools.io/tools/rootlenses",
     "url": "https://rootlenses.com",
@@ -616,7 +868,7 @@ const aiTools = [
     "icon": "https://www.google.com/s2/favicons?domain=rootlenses.com&sz=128",
     "logo_reason": "verified",
     "category": "Text-To-Speech",
-    "desc_ar": "أداة للاستفسار عن البيانات المترابطة وتصويبها والاتصال الآلي مع وكلاء الصوت المحادثة.",
+    "desc_ar": "أداة للاستعلام عن البيانات المترابطة وتصويرها بصريًا، وأتمتة التواصل الخارجي باستخدام وكلاء صوتيين حواريين.",
     "featured": false,
     "logo_source": "google_favicon",
     "logo_strategies_tried": [
@@ -136750,10 +137002,10 @@ function createToolCard(tool) {
                     <span class="badge bg-primary">${tool.pricing}</span>
                 </div>
                 <p class="card-text flex-grow-1">${description}</p>
-                <div class="mt-auto">
+                <div class="mt-auto" style="direction: ltr !important; text-align: left !important;">
                     <span class="badge bg-secondary mb-2">${tool.category}</span>
-                    <div class="d-flex gap-2">
-                        <a href="${tool.url}" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+                    <div class="tool-card-buttons" style="display: flex; gap: 0.5rem; direction: rtl; width: fit-content; margin-left: 0; margin-right: auto; position: relative; left: 0; right: auto;">
+                        <a href="${tool.url}" class="btn btn-primary btn-sm" style="border-radius: 500px 0 0 500px;" target="_blank" rel="noopener" dir="rtl">
                             <i class="fas fa-external-link-alt me-1"></i>
                             ${visitText}
                         </a>
@@ -137222,7 +137474,7 @@ function viewBlogPostDetails(blogId) {
 // });
 
 
-function loadSameCategoryTools(category, currentToolName) {
+function loadSameCategoryTools(category, currentToolName, tool, index) {
   const sameCategoryContainer = document.getElementById('same-category-container');
   const onlyToolMessage = document.getElementById('only-tool-message');
   const sameCategoryTitle = document.getElementById('same-category-title');
@@ -137262,10 +137514,9 @@ function loadSameCategoryTools(category, currentToolName) {
                         <span class="badge bg-primary same-category-card-badge">${tool.category}</span>
                         <p class="same-category-card-text">${description}</p>
                         <div class="same-category-card-footer">
-                            <button class="btn btn-outline-primary same-category-details-btn"
-                                    onclick="showToolDetails(${aiTools.findIndex(t => t.name === tool.name)})">
-                                <span data-ar="التفاصيل" data-en="Details">Details</span>
-                            </button>
+                        <button class="btn btn-outline-primary btn-sm view-details-btn" data-tool-id="${index}">
+              details
+            </button>
                         </div>
                     </div>
                 </div>
@@ -139165,7 +139416,7 @@ document.addEventListener('click', function (e) {
           <div class="card tool-card h-100">
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">${toolName(tool) || 'Tool'}</h5>
-              <div class="mt-auto">
+              <div class="mt-auto" style="direction: ltr !important; text-align: left !important;">
                 <button class="btn btn-outline-primary btn-sm view-details-btn" data-tool-id="${idx}">Details</button>
               </div>
             </div>
@@ -139939,7 +140190,6 @@ function createToolCardFull(tool, index) {
           style="object-fit: contain; background: white;"
           onerror="this.src='./Images/placeholder-logo.png'">
       </div>
-
       <div class="card-body d-flex flex-column">
         <div class="d-flex justify-content-between align-items-start mb-2">
           <h5 class="card-title fw-bold">${tool.name || ""}</h5>
@@ -139948,11 +140198,11 @@ function createToolCardFull(tool, index) {
 
         <p class="card-text flex-grow-1">${description}</p>
 
-        <div class="mt-auto">
-          <div class="d-flex gap-2">
-            <a href="${tool.url || "#"}" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+        <div class="mt-auto" style="direction: ltr !important; text-align: left !important;">
+          <div style="display: flex; width: fit-content; position: relative; border-top-right-radius: 100px; border-bottom-right-radius: 100px;">
+            <button class="btn btn-primary btn-sm visit-website-btn" style="border-radius: 500px 0 0 500px;" dir="rtl" data-url="${tool.url || "#"}" onclick="event.preventDefault(); event.stopPropagation(); var url='${(tool.url || "#").replace(/'/g, "\\'")}'; if(url && url !== '#'){ window.open(url, '_blank'); window.focus(); }">
               ${visitText}
-            </a>
+            </button>
             <button class="btn btn-outline-primary btn-sm view-details-btn" data-tool-id="${index}">
               ${detailsText}
             </button>
@@ -139967,8 +140217,14 @@ function createToolCardFull(tool, index) {
     detailsBtn.addEventListener("click", (event) => {
       event.preventDefault();
       event.stopPropagation();
-      if (typeof hideSearchOverlay === "function") hideSearchOverlay();
-      showToolDetails(index);
+      // Generate slug from tool name and navigate to static page
+      const slug = (tool.name || "")
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+      if (slug) {
+        window.location.href = `/tools/${slug}.html`;
+      }
     });
   }
 
@@ -140355,7 +140611,171 @@ document.addEventListener("click", function (e) {
   const index = btn.dataset.toolIndex;
   toggleFavoriteByIndex(index, btn);
 }, true);
+// ===== PATCH: Redirect Details buttons to static tool pages =====
+(function () {
+  document.addEventListener('click', function (e) {
+    const btn = e.target.closest('.view-details-btn');
+    if (!btn) return;
 
-if (typeof module !== "undefined") {
-  module.exports = { aiTools };
-}
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+
+    // Get the tool from the card
+    const card = btn.closest('.card, [data-tool-id]');
+    const container = btn.closest('[data-tool-id]');
+
+    let toolIndex = btn.dataset.toolId;
+    if (!toolIndex && container) toolIndex = container.dataset.toolId;
+
+    const tools = window.aiTools || [];
+    const tool = tools[toolIndex];
+
+    if (tool && tool.name) {
+      const slug = tool.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+      if (slug) {
+        window.location.href = '/tools/' + slug + '.html';
+        return;
+      }
+    }
+
+    // Fallback: try showToolDetails
+    if (typeof showToolDetails === 'function' && toolIndex) {
+      showToolDetails(parseInt(toolIndex, 10));
+    }
+  }, true);
+
+  console.log('✅ Static tool pages redirect enabled');
+})();
+
+// ===== AGGRESSIVE FIX: Force Details buttons to navigate to static pages =====
+(function () {
+  // Override at the earliest possible moment
+  document.addEventListener('click', function (e) {
+    const btn = e.target.closest('.view-details-btn');
+    if (!btn) return;
+
+    // Stop everything else
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+
+    // Get tool index
+    let toolIndex = btn.dataset.toolId;
+    if (!toolIndex) {
+      const container = btn.closest('[data-tool-id]');
+      if (container) toolIndex = container.dataset.toolId;
+    }
+
+    const tools = window.aiTools || [];
+    const tool = tools[parseInt(toolIndex, 10)];
+
+    if (tool && tool.name) {
+      const slug = tool.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+      if (slug) {
+        // Force navigation to static page
+        window.location.assign('/tools/' + slug + '.html');
+        return false;
+      }
+    }
+    return false;
+  }, true); // capture phase
+
+  // Also override showToolDetails to redirect instead
+  const originalShowToolDetails = window.showToolDetails;
+  window.showToolDetails = function (index) {
+    const tools = window.aiTools || [];
+    const tool = tools[index];
+    if (tool && tool.name) {
+      const slug = tool.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+      if (slug) {
+        window.location.assign('/tools/' + slug + '.html');
+        return;
+      }
+    }
+    // Fallback to original
+    if (originalShowToolDetails) originalShowToolDetails(index);
+  };
+
+  console.log('✅ Static pages redirect v2 enabled');
+})();
+
+
+
+(function () {
+  'use strict';
+
+  // ✅ Save the original showToolDetails function from main.js
+  var originalShowToolDetails = window.showToolDetails;
+
+  // ✅ Override showToolDetails to redirect to static pages
+  window.showToolDetails = function (toolOrIndex) {
+    console.log('✅ showToolDetails v5 intercepted:', typeof toolOrIndex);
+
+    var tool = toolOrIndex;
+
+    // If it's an index number, get the tool from aiTools
+    if (typeof toolOrIndex === 'number') {
+      tool = (window.aiTools || [])[toolOrIndex];
+    }
+
+    // If the onclick passes the entire tool object (from createToolCard)
+    if (toolOrIndex && typeof toolOrIndex === 'object' && toolOrIndex.name) {
+      tool = toolOrIndex;
+    }
+
+    // Navigate to static page if we have a valid tool
+    if (tool && tool.name) {
+      var slug = tool.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+      if (slug) {
+        // Close search overlay
+        var overlay = document.getElementById('search-results-overlay');
+        if (overlay) overlay.style.display = 'none';
+        try { if (typeof hideSearchOverlay === 'function') hideSearchOverlay(); } catch (e) { }
+
+        window.location.href = '/tools/' + slug + '.html';
+        console.log('✅ Redirecting to /tools/' + slug + '.html');
+        return;
+      }
+    }
+
+    // Fallback to original function
+    console.log('⚠️ Fallback to original showToolDetails');
+    if (originalShowToolDetails) {
+      originalShowToolDetails.call(window, toolOrIndex);
+    }
+  };
+
+  // ✅ Handle Visit Website anchor clicks - open in background tab
+  document.addEventListener('click', function (e) {
+    // Find anchor with btn-primary class
+    var link = e.target.closest('a.btn-primary');
+    if (!link) return;
+
+    // Must have target="_blank" attribute (indicates external link)
+    if (link.getAttribute('target') !== '_blank') return;
+
+    // Must be inside a card
+    var card = link.closest('.card, .tool-card, .col-xl-4, .col-lg-6');
+    if (!card) return;
+
+    var url = link.href;
+    if (!url || url === '#' || url.includes('javascript:')) return;
+
+    // Prevent default navigation
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+
+    // Open in background tab
+    var win = window.open(url, '_blank');
+    if (win) {
+      win.blur();
+      window.focus();
+    }
+    console.log('✅ Opened in background tab:', url);
+    return false;
+  }, true); // capture phase
+
+  console.log('✅ Button fix v5 loaded (AFTER main.js) - showToolDetails overridden');
+})();

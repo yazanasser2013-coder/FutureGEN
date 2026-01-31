@@ -6200,7 +6200,20 @@
       transition: all 0.3s ease;
       width: 400px;
     }
-  </style>
+  
+  /* ===== FORCE BUTTONS LEFT - FINAL FIX ===== */
+  /* .tool-card-buttons {
+    width: fit-content !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    position: relative !important;
+    left: 0 !important;
+    right: auto !important;
+    gap: 0.5rem !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important; 
+  } */
+</style>
   <script>try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) { };</script>
 </head>
 
@@ -6938,32 +6951,214 @@ We believe in the power of community and collaboration, and we welcome users and
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./js/main.js?v=1"></script>
-  <script src="./js/news_loader.js?v=1"></script>
 
-  <!-- Favorites Modal Handler - Added to complete favorite button functionality -->
+  <!-- ✅ PRE-MAIN FIX v7: Must load BEFORE main.js so our handler runs first -->
   <script>
       (function () {
         'use strict';
 
-        // Show favorites modal when navbar button is clicked
-        function showFavoritesModal() {
-          const ids = getFavoritesIds(); // ✅ array مضمون
+        // ✅ This handler registers BEFORE main.js loads, so it runs FIRST
+        document.addEventListener('click', function (e) {
 
+          // Find if click is on Visit Website link (anchor with external icon)
+          var link = e.target.closest('a.btn-primary');
+          if (link) {
+            // Check for external link icon or visit text
+            var hasExtIcon = link.querySelector('.fa-external-link-alt');
+            var text = (link.textContent || '').toLowerCase();
+            var isVisitLink = hasExtIcon || text.includes('visit') || text.includes('زيارة');
 
-          if (!ids.length) {
-            showToast(currentLang === "ar" ? "لا توجد أدوات مفضلة" : "No favorites yet", "info");
-            return;
+            if (isVisitLink && link.href && !link.href.includes('javascript:') && link.href !== '#') {
+              console.log('✅ PRE-MAIN: Visit Website clicked:', link.href);
+
+              // STOP all other handlers immediately
+              e.preventDefault();
+              e.stopPropagation();
+              e.stopImmediatePropagation();
+
+              // Open in background tab
+              var win = window.open(link.href, '_blank');
+
+              // Aggressively try to keep focus on current tab
+              if (win) { try { win.blur(); } catch (e) { } }
+              window.focus();
+              setTimeout(function () { window.focus(); }, 0);
+              setTimeout(function () { window.focus(); }, 50);
+              setTimeout(function () { window.focus(); }, 100);
+
+              return false;
+            }
           }
 
+          // Find if click is on Visit Website button (button with visit-website-btn class)
+          var btn = e.target.closest('.visit-website-btn, button.btn-primary');
+          if (btn && btn.tagName === 'BUTTON') {
+            var url = btn.getAttribute('data-url') || btn.getAttribute('href');
+            var btnText = (btn.textContent || '').toLowerCase();
+            var isVisitBtn = btnText.includes('visit') || btnText.includes('زيارة');
 
-          // ✅ aiTools يجب أن تكون موجودة
-          const toolsArr = window.aiTools || [];
-          const tools = ids.map(id => toolsArr[id]).filter(Boolean);
+            if (isVisitBtn && url && url !== '#' && !url.includes('javascript:')) {
+              console.log('✅ PRE-MAIN: Visit button clicked:', url);
+
+              e.preventDefault();
+              e.stopPropagation();
+              e.stopImmediatePropagation();
+
+              var win = window.open(url, '_blank');
+              if (win) { win.blur(); window.focus(); }
+
+              return false;
+            }
+          }
+
+        }, true); // ✅ CAPTURE phase
+
+        console.log('✅ PRE-MAIN handler v7 registered (runs before main.js)');
+      })();
+  </script>
+
+  <script src="./js/main.js?v=5"></script>
+  <script src="./js/news_loader.js?v=1"></script>
+
+  <!-- ✅ CRITICAL FIX v5: Must load AFTER main.js to override functions -->
+  <script>
+    (function () {
+      'use strict';
+
+      // ✅ Save the original showToolDetails function from main.js
+      var originalShowToolDetails = window.showToolDetails;
+
+      // ✅ Override showToolDetails to redirect to static pages
+      window.showToolDetails = function (toolOrIndex) {
+        console.log('✅ showToolDetails v5 intercepted:', typeof toolOrIndex);
+
+        var tool = toolOrIndex;
+
+        // If it's an index number, get the tool from aiTools
+        if (typeof toolOrIndex === 'number') {
+          tool = (window.aiTools || [])[toolOrIndex];
+        }
+
+        // If the onclick passes the entire tool object (from createToolCard)
+        if (toolOrIndex && typeof toolOrIndex === 'object' && toolOrIndex.name) {
+          tool = toolOrIndex;
+        }
+
+        // Navigate to static page if we have a valid tool
+        if (tool && tool.name) {
+          var slug = tool.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+          if (slug) {
+            // Close search overlay
+            var overlay = document.getElementById('search-results-overlay');
+            if (overlay) overlay.style.display = 'none';
+            try { if (typeof hideSearchOverlay === 'function') hideSearchOverlay(); } catch (e) { }
+
+            window.location.href = '/tools/' + slug + '.html';
+            console.log('✅ Redirecting to /tools/' + slug + '.html');
+            return;
+          }
+        }
+
+        // Fallback to original function
+        console.log('⚠️ Fallback to original showToolDetails');
+        if (originalShowToolDetails) {
+          originalShowToolDetails.call(window, toolOrIndex);
+        }
+      };
+
+      // ✅ Handle Visit Website clicks - BOTH buttons (.visit-website-btn) and anchors
+      document.addEventListener('click', function (e) {
+
+        // DEBUG: Log all clicks inside cards to see what's being clicked
+        var anyCard = e.target.closest('.card, .tool-card');
+        if (anyCard) {
+          console.log('🔍 DEBUG Click target:', e.target.tagName, e.target.className);
+        }
+
+        // ===== HANDLE BUTTON with class .visit-website-btn =====
+        var btn = e.target.closest('.visit-website-btn');
+        if (btn) {
+          var url = btn.getAttribute('data-url') || btn.getAttribute('href');
+          console.log('🔍 DEBUG Visit-website-btn found, URL:', url);
+
+          if (url && url !== '#' && !url.includes('javascript:')) {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+
+            var win = window.open(url, '_blank');
+            if (win) { win.blur(); window.focus(); }
+            console.log('✅ Visit button opened in background:', url);
+            return false;
+          }
+        }
+
+        // ===== HANDLE ANY ANCHOR with external link icon inside (Visit Website) =====
+        var externalIcon = e.target.closest('.fa-external-link-alt');
+        if (externalIcon) {
+          var link = externalIcon.closest('a');
+          if (link && link.href) {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+
+            var win = window.open(link.href, '_blank');
+            if (win) { win.blur(); window.focus(); }
+            console.log('✅ Visit icon clicked, opened in background:', link.href);
+            return false;
+          }
+        }
+
+        // ===== HANDLE ANCHOR with btn-primary (Visit Website link) =====
+        var link = e.target.closest('a.btn-primary');
+        if (link) {
+          // Check if it has external link icon or visit text = Visit Website
+          var hasExtIcon = link.querySelector('.fa-external-link-alt');
+          var text = (link.textContent || '').toLowerCase();
+          var isVisit = hasExtIcon || text.includes('visit') || text.includes('زيارة');
+
+          console.log('🔍 DEBUG Link found:', link.href, 'isVisit:', isVisit);
+
+          if (isVisit && link.href && link.href !== '#' && !link.href.includes('javascript:')) {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+
+            var win = window.open(link.href, '_blank');
+            if (win) { win.blur(); window.focus(); }
+            console.log('✅ Visit link opened in background:', link.href);
+            return false;
+          }
+        }
+      }, true); // capture phase
+
+      console.log('✅ Button fix v5 loaded (AFTER main.js) - showToolDetails overridden');
+    })();
+  </script>
+
+  <!-- Favorites Modal Handler - Added to complete favorite button functionality -->
+  <script>
+    (function () {
+      'use strict';
+
+      // Show favorites modal when navbar button is clicked
+      function showFavoritesModal() {
+        const ids = getFavoritesIds(); // ✅ array مضمون
 
 
-          // ✅ بناء المودال
-          const favoritesModalHTML = `
+        if (!ids.length) {
+          showToast(currentLang === "ar" ? "لا توجد أدوات مفضلة" : "No favorites yet", "info");
+          return;
+        }
+
+
+        // ✅ aiTools يجب أن تكون موجودة
+        const toolsArr = window.aiTools || [];
+        const tools = ids.map(id => toolsArr[id]).filter(Boolean);
+
+
+        // ✅ بناء المودال
+        const favoritesModalHTML = `
     <div class="modal fade favorites-modal" id="favoritesModal" tabindex="-1">
       <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -6976,11 +7171,11 @@ We believe in the power of community and collaboration, and we welcome users and
           <div class="modal-body">
             <div class="row g-3" id="favoritesListContainer">
               ${tools.map((tool, idx) => {
-            const toolId = ids[idx]; // ✅ index الحقيقي
-            const description = currentLang === "ar" ? (tool.desc_ar || tool.description) : tool.description;
+          const toolId = ids[idx]; // ✅ index الحقيقي
+          const description = currentLang === "ar" ? (tool.desc_ar || tool.description) : tool.description;
 
 
-            return `
+          return `
                   <div class="col-md-6">
                     <div class="card h-100">
                       <div class="card-img-top position-relative" style="height:120px; overflow:hidden; background:linear-gradient(135deg, #401F71, #BE7B72);">
@@ -7008,7 +7203,7 @@ We believe in the power of community and collaboration, and we welcome users and
                     </div>
                   </div>
                 `;
-          }).join("")}
+        }).join("")}
             </div>
           </div>
 
@@ -7024,68 +7219,68 @@ We believe in the power of community and collaboration, and we welcome users and
   `;
 
 
-          // إزالة القديم إذا موجود
-          document.getElementById("favoritesModal")?.remove();
-          document.body.insertAdjacentHTML("beforeend", favoritesModalHTML);
+        // إزالة القديم إذا موجود
+        document.getElementById("favoritesModal")?.remove();
+        document.body.insertAdjacentHTML("beforeend", favoritesModalHTML);
 
 
-          const modal = new bootstrap.Modal(document.getElementById("favoritesModal"));
-          modal.show();
+        const modal = new bootstrap.Modal(document.getElementById("favoritesModal"));
+        modal.show();
 
 
-          // ✅ Bind events inside modal
-          document.getElementById("favoritesModal").addEventListener("shown.bs.modal", () => {
-            document.querySelectorAll("#favoritesListContainer .view-details-btn").forEach(btn => {
-              btn.addEventListener("click", () => {
-                const toolId = Number(btn.dataset.toolId);
+        // ✅ Bind events inside modal
+        document.getElementById("favoritesModal").addEventListener("shown.bs.modal", () => {
+          document.querySelectorAll("#favoritesListContainer .view-details-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+              const toolId = Number(btn.dataset.toolId);
+              modal.hide();
+              setTimeout(() => showToolDetails(toolId), 250);
+            });
+          });
+
+
+          document.querySelectorAll("#favoritesListContainer .remove-favorite-btn").forEach(btn => {
+            btn.addEventListener("click", (e) => {
+              e.preventDefault();
+              e.stopPropagation();
+
+
+              const toolId = Number(btn.dataset.toolId);
+              let ids = getFavoritesIds();
+              ids = ids.filter(id => id !== toolId);
+
+
+              saveFavoritesIds(ids);
+              updateFavoritesButton();
+
+
+              btn.closest(".col-md-6")?.remove();
+
+
+              if (!ids.length) {
                 modal.hide();
-                setTimeout(() => showToolDetails(toolId), 250);
-              });
+                showToast(currentLang === "ar" ? "تم حذف كل المفضلة" : "All favorites removed", "info");
+              }
             });
+          });
+        });
+      }
 
-
-            document.querySelectorAll("#favoritesListContainer .remove-favorite-btn").forEach(btn => {
-              btn.addEventListener("click", (e) => {
-                e.preventDefault();
-                e.stopPropagation();
-
-
-                const toolId = Number(btn.dataset.toolId);
-                let ids = getFavoritesIds();
-                ids = ids.filter(id => id !== toolId);
-
-
-                saveFavoritesIds(ids);
-                updateFavoritesButton();
-
-
-                btn.closest(".col-md-6")?.remove();
-
-
-                if (!ids.length) {
-                  modal.hide();
-                  showToast(currentLang === "ar" ? "تم حذف كل المفضلة" : "All favorites removed", "info");
-                }
-              });
-            });
+      // Attach to navbar favorites button
+      document.addEventListener('DOMContentLoaded', function () {
+        const favoritesBtn = document.getElementById('favoritesBtn');
+        if (favoritesBtn) {
+          favoritesBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            showFavoritesModal();
           });
         }
 
-        // Attach to navbar favorites button
-        document.addEventListener('DOMContentLoaded', function () {
-          const favoritesBtn = document.getElementById('favoritesBtn');
-          if (favoritesBtn) {
-            favoritesBtn.addEventListener('click', function (e) {
-              e.preventDefault();
-              showFavoritesModal();
-            });
-          }
-
-          // Initial update
-          if (typeof updateFavoritesButton === 'function') updateFavoritesButton();
-          if (typeof updateAllFavoriteButtons === 'function') updateAllFavoriteButtons();
-        });
-      })();
+        // Initial update
+        if (typeof updateFavoritesButton === 'function') updateFavoritesButton();
+        if (typeof updateAllFavoriteButtons === 'function') updateAllFavoriteButtons();
+      });
+    })();
 
     const heroSubtitleContent = {
       ar: 'اكثر من <span dir="ltr">4000+</span> اداة لتعزيز وتطوير سير عملك.',
@@ -7218,4 +7413,22 @@ We believe in the power of community and collaboration, and we welcome users and
   .card-img-top .badge {
     pointer-events: none;
   }
+
+  /* Force button containers to always be LTR aligned (left side) */
+  #search-results-overlay .d-flex.gap-2,
+  .search-results-overlay .d-flex.gap-2,
+  .tool-card .d-flex.gap-2,
+  .card .d-flex.gap-2 {
+    direction: ltr !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+  }
+
+  /* Force the mt-auto container to also be LTR */
+  #search-results-overlay .mt-auto,
+  .search-results-overlay .mt-auto {
+    direction: ltr !important;
+    text-align: left !important;
+  }
+
 </style>

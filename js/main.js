@@ -1,5 +1,83 @@
 const aiTools = [
   {
+    "name": "Punchd",
+    "directory_url": "https://punchd.ai/",
+    "url": "https://synthare.com/",
+    "description": "A tool to generate and score marketing headlines.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6967bacfe0159ecd4dde2e6b_punchd-logo.png",
+    "domain": "punchd.ai",
+    "official_url": "https://punchd.ai/",
+    "official_domain": "stripo.email",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6967bacfe0159ecd4dde2e6b_punchd-logo.png",
+    "logo_reason": "fixed_broken: logo: Not a valid image file",
+    "category": "Copywriting",
+    "desc_ar": "أداة لتوليد عناوين تسويقية وتقييم أدائها.",
+    "featured": false,
+    "logo_source": "website_deep",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep"
+    ],
+    "logo_updated": "2025-12-07 16:39:03",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "Synthare",
+    "directory_url": "https://synthare.com/",
+    "url": "https://synthare.com/",
+    "description": "A tool to generate on-brand marketing campaigns copy.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/695e897648e2449276f2a8b5_synthare-logo.png",
+    "domain": "synthare.com",
+    "official_url": "https://synthare.com/",
+    "official_domain": "stripo.email",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/695e897648e2449276f2a8b5_synthare-logo.png",
+    "logo_reason": "fixed_broken: logo: Not a valid image file",
+    "category": "Copywriting",
+    "desc_ar": "أداة لإنشاء نصوص حملات تسويقية متوافقة مع هوية العلامة التجارية.",
+    "featured": false,
+    "logo_source": "website_deep",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep"
+    ],
+    "logo_updated": "2025-12-07 16:39:03",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "Agentive SEO",
+    "directory_url": "https://futuretools.link/agentive-seo-hm6wn8",
+    "url": "https://futuretools.link/agentive-seo-hm6wn8",
+    "description": "A platform for end-to-end SEO content production and publishing.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6931c1a0c39404bb7bdf5a3d_agentive-seo-logo.png",
+    "domain": "agentiveseo.com",
+    "official_url": "https://futuretools.link/agentive-seo-hm6wn8",
+    "official_domain": "stripo.email",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6931c1a0c39404bb7bdf5a3d_agentive-seo-logo.png",
+    "logo_reason": "fixed_broken: logo: Not a valid image file",
+    "category": "Copywriting",
+    "desc_ar": "منصة متكاملة لإنتاج محتوى تحسين محركات البحث (SEO) من البداية إلى النشر.",
+    "featured": false,
+    "logo_source": "website_deep",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep"
+    ],
+    "logo_updated": "2025-12-07 16:39:03",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
     "name": "Email Template Builder",
     "directory_url": "https://www.futuretools.io/tools/email-template-builder",
     "url": "https://www.stripo.email",
@@ -58,6 +136,93 @@ const aiTools = [
     "original_bad_url": "https://www.futuretools.io/tools/youware"
   },
   {
+    "name": "IQuest Coder",
+    "directory_url": "https://iquestcoder.ai/",
+    "url": "https://iquestcoder.ai/",
+    "description": "A platform that generates and maintains code documentation from a GitHub repository.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/696a59c7161b5c32bc01f53e_iquest-coder-logo.png",
+    "domain": "everdone.io",
+    "official_url": "https://iquestcoder.ai/",
+    "official_domain": "everdone.io",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/696a59c7161b5c32bc01f53e_iquest-coder-logo.png",
+    "logo_reason": "patched_fast:faviconkit",
+    "category": "Generative Code",
+    "desc_ar": "منصة تقوم بإنشاء وصيانة توثيق الشيفرة البرمجية تلقائيًا انطلاقًا من مستودع GitHub.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "original_url_works",
+    "url_status": "already_ok"
+  },
+  {
+    "name": "Mowgli",
+    "directory_url": "https://diffray.ai/",
+    "url": "https://diffray.ai/",
+    "description": "A tool to generate product specs and export ready UI designs.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6973a3160472b1cff14d3d51_mowgli-logo.png",
+    "domain": "everdone.io",
+    "official_url": "https://diffray.ai/",
+    "official_domain": "everdone.io",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6973a3160472b1cff14d3d51_mowgli-logo.png",
+    "logo_reason": "patched_fast:faviconkit",
+    "category": "Generative Code",
+    "desc_ar": "أداة لتوليد مواصفات المنتجات وإنشاء تصاميم واجهات مستخدم جاهزة للتصدير.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "original_url_works",
+    "url_status": "already_ok"
+  },
+  {
+    "name": "diffray",
+    "directory_url": "https://diffray.ai/",
+    "url": "https://diffray.ai/",
+    "description": "A tool to generate product specs and export ready UI designs.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/695fd92467fb28bec7626524_diffray-logo.png",
+    "domain": "everdone.io",
+    "official_url": "https://diffray.ai/",
+    "official_domain": "everdone.io",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/695fd92467fb28bec7626524_diffray-logo.png",
+    "logo_reason": "patched_fast:faviconkit",
+    "category": "Generative Code",
+    "desc_ar": "أداة لتوليد مواصفات المنتجات وإنشاء تصاميم واجهات مستخدم جاهزة للتصدير.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "original_url_works",
+    "url_status": "already_ok"
+  },
+  {
     "name": "Everdone",
     "directory_url": "https://www.futuretools.io/tools/everdone",
     "url": "https://everdone.ai",
@@ -85,6 +250,93 @@ const aiTools = [
     "logo_updated": "2025-12-08",
     "url_fix_reason": "original_url_works",
     "url_status": "already_ok"
+  },
+  {
+    "name": "Sideconvo",
+    "directory_url": "https://www.sideconvo.ai/",
+    "url": "https://www.sideconvo.ai/",
+    "description": "A tool to add conversational AI to websites.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/697a4c7129234d8862b2c5dd_sideconvo-logo.png",
+    "domain": "cosupport.ai",
+    "official_url": "https://www.sideconvo.ai/",
+    "official_domain": "cosupport.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/697a4c7129234d8862b2c5dd_sideconvo-logo.png",
+    "logo_reason": "verified",
+    "category": "Chat",
+    "desc_ar": "أداة لإضافة ذكاء اصطناعي حواري إلى المواقع الإلكترونية.",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "Scaffold",
+    "directory_url": "https://www.scaffoldtool.com/",
+    "url": "https://www.scaffoldtool.com/",
+    "description": "A tool to add AI features to websites without APIs.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6974f9f08f08f25e4c8b8882_scaffold-logo.png",
+    "domain": "cosupport.ai",
+    "official_url": "https://www.scaffoldtool.com/",
+    "official_domain": "cosupport.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6974f9f08f08f25e4c8b8882_scaffold-logo.png",
+    "logo_reason": "verified",
+    "category": "Chat",
+    "desc_ar": "أداة لإضافة ميزات الذكاء الاصطناعي إلى المواقع الإلكترونية دون الحاجة إلى واجهات برمجة التطبيقات (API).",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "Coniva.ai",
+    "directory_url": "https://www.coniva.ai/",
+    "url": "https://www.coniva.ai/",
+    "description": "A customer-support platform that builds multi-channel chatbots to automate and optimize support.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/69498601348e70c8ba5223ee_og_image.png",
+    "domain": "cosupport.ai",
+    "official_url": "https://www.coniva.ai/",
+    "official_domain": "cosupport.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/69498601348e70c8ba5223ee_og_image.png",
+    "logo_reason": "verified",
+    "category": "Chat",
+    "desc_ar": "منصة لدعم العملاء تقوم بإنشاء روبوتات دردشة متعددة القنوات لأتمتة الدعم وتحسينه.",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
   },
   {
     "name": "CoSupport AI",
@@ -168,6 +420,93 @@ const aiTools = [
     "url_fix_reason": "original_url_works"
   },
   {
+    "name": "TikTask",
+    "directory_url": "https://tiktask.ai/",
+    "url": "https://tiktask.ai/",
+    "description": "A tool to draft, plan, and schedule social media content.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/69498531e4db5687a104c9c4_og_tiktask.jpeg",
+    "domain": "ordinal.io",
+    "official_url": "https://tiktask.ai/",
+    "official_domain": "ordinal.io",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/69498531e4db5687a104c9c4_og_tiktask.jpeg",
+    "logo_reason": "patched_fast:faviconkit",
+    "category": "Social Media",
+    "desc_ar": "أداة لصياغة وتخطيط وتحديد جدول محتوى وسائل التواصل الاجتماعي.",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "Xpoz MCP",
+    "directory_url": "https://www.xpoz.ai/",
+    "url": "https://www.xpoz.ai/",
+    "description": "A MCP server to query and analyze live social media.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6978e03ae24d83a773fb6a2e_xpoz-mcp-logo.png",
+    "domain": "ordinal.io",
+    "official_url": "https://www.xpoz.ai/",
+    "official_domain": "ordinal.io",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6978e03ae24d83a773fb6a2e_xpoz-mcp-logo.png",
+    "logo_reason": "patched_fast:faviconkit",
+    "category": "Social Media",
+    "desc_ar": "خادم MCP للاستعلام عن بيانات وسائل التواصل الاجتماعي المباشرة وتحليلها.",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "ReelBase",
+    "directory_url": "https://reelbase.io/",
+    "url": "https://reelbase.io/",
+    "description": "A tool to draft, plan, and schedule social media content.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6957ea9cf47648ced11f2900_reelbase-logo.png",
+    "domain": "ordinal.io",
+    "official_url": "https://reelbase.io/",
+    "official_domain": "ordinal.io",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6957ea9cf47648ced11f2900_reelbase-logo.png",
+    "logo_reason": "patched_fast:faviconkit",
+    "category": "Social Media",
+    "desc_ar": "أداة لصياغة وتخطيط وتحديد جدول محتوى وسائل التواصل الاجتماعي.",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
     "name": "Ordinal",
     "directory_url": "https://www.futuretools.io/tools/ordinal",
     "url": "https://www.ordinal.io",
@@ -195,6 +534,93 @@ const aiTools = [
     "logo_updated": "2025-12-08",
     "url_status": "already_ok",
     "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "Recomaze",
+    "directory_url": "https://recomaze.ai/",
+    "url": "https://recomaze.ai/",
+    "description": "A tool to prepare ecommerce catalogs for AI sales agents.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/697ba1e1fd9506904bb1cb19_recomaze-logo.png",
+    "domain": "evechange.ai",
+    "official_url": "https://recomaze.ai/",
+    "official_domain": "evechange.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/697ba1e1fd9506904bb1cb19_recomaze-logo.png",
+    "logo_reason": "patched_fast:faviconkit",
+    "category": "Marketing",
+    "desc_ar": "أداة لإعداد كتالوجات التجارة الإلكترونية لتكون جاهزة للاستخدام من قبل وكلاء المبيعات المعتمدين على الذكاء الاصطناعي.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "original_url_works",
+    "url_status": "already_ok"
+  },
+  {
+    "name": "Ad Agency",
+    "directory_url": "https://www.futuretools.io/tools/evechange",
+    "url": "https://www.evechange.com/",
+    "description": "A tool to create ads for multiple platforms.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/697a4e16bef1429d4aa59fb7_ad-agency-app-logo.png",
+    "domain": "evechange.ai",
+    "official_url": "https://evechange.ai",
+    "official_domain": "evechange.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/697a4e16bef1429d4aa59fb7_ad-agency-app-logo.png",
+    "logo_reason": "patched_fast:faviconkit",
+    "category": "Marketing",
+    "desc_ar": "أداة لإنشاء إعلانات لمنصات متعددة.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "original_url_works",
+    "url_status": "already_ok"
+  },
+  {
+    "name": "Stirling",
+    "directory_url": "https://trystirling.com/",
+    "url": "https://trystirling.com/",
+    "description": "A tool to create LinkedIn ads from URLs and landing pages.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6970f2083fcfd5ab199e29e2_stirling-logo-p-800.png",
+    "domain": "evechange.ai",
+    "official_url": "https://trystirling.com/",
+    "official_domain": "evechange.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6970f2083fcfd5ab199e29e2_stirling-logo-p-800.png",
+    "logo_reason": "patched_fast:faviconkit",
+    "category": "Marketing",
+    "desc_ar": "ومنصة تصوغ وتنقّح وتنشر مذكرات إصدار ونسخ تسويقية.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "original_url_works",
+    "url_status": "already_ok"
   },
   {
     "name": "EveChange",
@@ -253,6 +679,102 @@ const aiTools = [
     "logo_updated": "2025-12-08",
     "url_fix_reason": "original_url_works",
     "url_status": "already_ok"
+  },
+  {
+    "name": "Humata",
+    "directory_url": "https://www.humata.ai/",
+    "url": "https://www.humata.ai/",
+    "description": "Upload documents and then ask it questions",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/66ec4587bd023e1b41d8f1ed_humata-ai-logo1-p-800.png",
+    "domain": "gaffa.io",
+    "official_url": "https://www.humata.ai/",
+    "official_domain": "gaffa.io",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/66ec4587bd023e1b41d8f1ed_humata-ai-logo1-p-800.png",
+    "logo_reason": "patched_fast:faviconkit",
+    "category": "Productivity",
+    "desc_ar": "أداة تتيح رفع المستندات ثم طرح الأسئلة عليها للحصول على إجابات ذكية.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "guessed_from_name",
+    "url_status": "fixed",
+    "original_url": "https://discord.gg/WBk4ZDW6A9",
+    "url_fix_date": "2025-12-19T20:25:02.800116",
+    "original_bad_url": "https://www.futuretools.io/tools/gaffa"
+  },
+  {
+    "name": "Saner.AI",
+    "directory_url": "https://www.saner.ai/",
+    "url": "https://www.saner.ai/",
+    "description": "A tool to organize personal knowledge.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/65e25eb1e593257182de2c0e_Bia-ver-2-p-800.png",
+    "domain": "gaffa.io",
+    "official_url": "https://www.saner.ai/",
+    "official_domain": "gaffa.io",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/65e25eb1e593257182de2c0e_Bia-ver-2-p-800.png",
+    "logo_reason": "patched_fast:faviconkit",
+    "category": "Productivity",
+    "desc_ar": "أداة لتنظيم المعرفة الشخصية وإدارتها بكفاءة.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "guessed_from_name",
+    "url_status": "fixed",
+    "original_url": "https://discord.gg/WBk4ZDW6A9",
+    "url_fix_date": "2025-12-19T20:25:02.800116",
+    "original_bad_url": "https://www.futuretools.io/tools/gaffa"
+  },
+  {
+    "name": "Vimcal",
+    "directory_url": "https://www.vimcal.com/",
+    "url": "https://www.vimcal.com/",
+    "description": "An calendar app with social profiles and time zone support.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/646718a8b9fd543752a63807_vimcal-logo-p-800.png",
+    "domain": "gaffa.io",
+    "official_url": "https://www.vimcal.com/",
+    "official_domain": "gaffa.io",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/646718a8b9fd543752a63807_vimcal-logo-p-800.png",
+    "logo_reason": "patched_fast:faviconkit",
+    "category": "Productivity",
+    "desc_ar": "تطبيق تقويم يتضمن ملفات تعريف اجتماعية ويدعم المناطق الزمنية المختلفة.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "guessed_from_name",
+    "url_status": "fixed",
+    "original_url": "https://discord.gg/WBk4ZDW6A9",
+    "url_fix_date": "2025-12-19T20:25:02.800116",
+    "original_bad_url": "https://www.futuretools.io/tools/gaffa"
   },
   {
     "name": "Gaffa",
@@ -314,6 +836,93 @@ const aiTools = [
     "logo_updated": "2025-12-08",
     "url_status": "already_ok",
     "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "Pandada AI",
+    "directory_url": "https://www.futuretools.io/tools/velt",
+    "url": "https://velt.io",
+    "description": "A tool to analyze data with questions and visualization.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6973a19b5e02eb0ff6f4b27e_pandada-ai-logo.png",
+    "domain": "velt.ai",
+    "official_url": "https://velt.ai",
+    "official_domain": "velt.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6973a19b5e02eb0ff6f4b27e_pandada-ai-logo.png",
+    "logo_reason": "patched_fast:faviconkit",
+    "category": "Research",
+    "desc_ar": "أداة لتحليل البيانات من خلال طرح الأسئلة وعرض النتائج بشكل مرئي.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "original_url_works",
+    "url_status": "already_ok"
+  },
+  {
+    "name": "AyeWatch",
+    "directory_url": "https://ayewatch.ai/",
+    "url": "https://ayewatch.ai/",
+    "description": "A platform for monitoring and to get real-time, filtered alerts from news, social and research.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/696cf655d97f164233127a88_ayewatch-logo.png",
+    "domain": "velt.ai",
+    "official_url": "https://ayewatch.ai/",
+    "official_domain": "velt.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/696cf655d97f164233127a88_ayewatch-logo.png",
+    "logo_reason": "patched_fast:faviconkit",
+    "category": "Research",
+    "desc_ar": "منصة لمراقبة الأحداث والحصول على تنبيهات مفلترة وفورية من الأخبار ووسائل التواصل الاجتماعي والأبحاث.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "original_url_works",
+    "url_status": "already_ok"
+  },
+  {
+    "name": "Feynn",
+    "directory_url": "https://feynn.ai/",
+    "url": "https://feynn.ai/",
+    "description": "A strategic intelligence platform that researches companies and industries, runs scenario simulations, and recommends source-linked decisions.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/69690aca18e665d0b99522ae_feynn-logo-p-800.png",
+    "domain": "velt.ai",
+    "official_url": "https://feynn.ai/",
+    "official_domain": "velt.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/69690aca18e665d0b99522ae_feynn-logo-p-800.png",
+    "logo_reason": "patched_fast:faviconkit",
+    "category": "Research",
+    "desc_ar": "منصة استخبارات استراتيجية تقوم بالبحث في الشركات والصناعات، وتشغيل محاكاة للسيناريوهات، وتقديم توصيات بالقرارات مع روابط المصادر.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "original_url_works",
+    "url_status": "already_ok"
   },
   {
     "name": "Velt",
@@ -602,6 +1211,93 @@ const aiTools = [
     "url_fix_reason": "original_url_works"
   },
   {
+    "name": "Deepgram",
+    "directory_url": "https://deepgram.com/",
+    "url": "https://deepgram.com/",
+    "description": "A platform for speech to text, voice data transcription and analysis.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/65eac6c35fbc6e4cce64e3ca_1699373666-open-graph-deepgram-speech-to-text-p-2000.jpeg",
+    "domain": "rootlenses.com",
+    "official_url": "https://deepgram.com/",
+    "official_domain": "rootlenses.com",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/65eac6c35fbc6e4cce64e3ca_1699373666-open-graph-deepgram-speech-to-text-p-2000.jpeg",
+    "logo_reason": "verified",
+    "category": "Text-To-Speech",
+    "desc_ar": "منصة لتحويل الكلام إلى نص، ونسخ البيانات الصوتية وتحليلها.",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "Noiz AI",
+    "directory_url": "https://noiz.ai/",
+    "url": "https://noiz.ai/",
+    "description": "A tool to query and visualize connected data and automate outreach with conversational voice agents.A platform for voice cloning, text-to-speech, API and multilingual dubbing.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/696a572bd328a91d21448a00_noiz-ai-logo.png",
+    "domain": "rootlenses.com",
+    "official_url": "https://noiz.ai/",
+    "official_domain": "rootlenses.com",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/696a572bd328a91d21448a00_noiz-ai-logo.png",
+    "logo_reason": "verified",
+    "category": "Text-To-Speech",
+    "desc_ar": "منصة لاستنساخ الصوت، وتحويل النص إلى كلام، وتوفير واجهات برمجة التطبيقات، والدبلجة متعددة اللغات.",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "SlideWhisper",
+    "directory_url": "https://www.slidewhisper.com/",
+    "url": "https://www.slidewhisper.com/",
+    "description": "A tool to create AI-narrated slide presentations with voice Q&A and engagement analytics.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6953efdac9a0db82018100ee_slidewhisper-logo.png",
+    "domain": "rootlenses.com",
+    "official_url": "https://www.slidewhisper.com/",
+    "official_domain": "rootlenses.com",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6953efdac9a0db82018100ee_slidewhisper-logo.png",
+    "logo_reason": "verified",
+    "category": "Text-To-Speech",
+    "desc_ar": "أداة لإنشاء عروض تقديمية بشرائح يتم سردها بالذكاء الاصطناعي، مع أسئلة وأجوبة صوتية وتحليلات لقياس التفاعل.",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
     "name": "Rootlenses",
     "directory_url": "https://www.futuretools.io/tools/rootlenses",
     "url": "https://rootlenses.com",
@@ -616,7 +1312,7 @@ const aiTools = [
     "icon": "https://www.google.com/s2/favicons?domain=rootlenses.com&sz=128",
     "logo_reason": "verified",
     "category": "Text-To-Speech",
-    "desc_ar": "أداة للاستفسار عن البيانات المترابطة وتصويبها والاتصال الآلي مع وكلاء الصوت المحادثة.",
+    "desc_ar": "أداة للاستعلام عن البيانات المترابطة وتصويرها بصريًا، وأتمتة التواصل الخارجي باستخدام وكلاء صوتيين حواريين.",
     "featured": false,
     "logo_source": "google_favicon",
     "logo_strategies_tried": [
@@ -750,18 +1446,105 @@ const aiTools = [
     "original_bad_url": "https://www.futuretools.io/tools/2wai"
   },
   {
+    "name": "ModelMonkey",
+    "directory_url": "https://modelmonkey.io/",
+    "url": "https://modelmonkey.io/",
+    "description": "A tool to automate financial modeling in spreadsheets.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/69766077aa3b8c9fdf552a86_modelmonkey-logo-p-800.png",
+    "domain": "leni.ai",
+    "official_url": "https://modelmonkey.io/",
+    "official_domain": "leni.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/69766077aa3b8c9fdf552a86_modelmonkey-logo-p-800.png",
+    "logo_reason": "patched_fast:faviconkit",
+    "category": "Finance",
+    "desc_ar": "أداة لأتمتة النمذجة المالية في جداول البيانات.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "original_url_works",
+    "url_status": "already_ok"
+  },
+  {
+    "name": "Parserdata",
+    "directory_url": "https://parserdata.com/",
+    "url": "https://parserdata.com/",
+    "description": "A tool that extracts data from invoices, receipts and bank statements (including scanned PDFs and images) into Excel, JSON or XML.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/696a579a4b9bc4690b21665e_parserdata-logo-p-800.png",
+    "domain": "leni.ai",
+    "official_url": "https://parserdata.com/",
+    "official_domain": "leni.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/696a579a4b9bc4690b21665e_parserdata-logo-p-800.png",
+    "logo_reason": "patched_fast:faviconkit",
+    "category": "Finance",
+    "desc_ar": "أداة لاستخراج البيانات من الفواتير والإيصالات وكشوف الحسابات البنكية (بما في ذلك ملفات PDF الممسوحة ضوئيًا والصور) إلى Excel أو JSON أو XML.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "original_url_works",
+    "url_status": "already_ok"
+  },
+  {
+    "name": "InvoiceAgent.ai",
+    "directory_url": "https://invoiceagent.ai/",
+    "url": "https://invoiceagent.ai/",
+    "description": "A tool to automate invoice data extraction, management and analysis.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/695d2133e9b292729c56be31_invoiceagent-ai-logo.png",
+    "domain": "leni.ai",
+    "official_url": "https://invoiceagent.ai/",
+    "official_domain": "leni.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/695d2133e9b292729c56be31_invoiceagent-ai-logo.png",
+    "logo_reason": "patched_fast:faviconkit",
+    "category": "Finance",
+    "desc_ar": "أداة لأتمتة استخراج بيانات الفواتير وإدارتها وتحليلها.", 
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "original_url_works",
+    "url_status": "already_ok"
+  },
+  {
     "name": "Leni",
     "directory_url": "https://www.futuretools.io/tools/leni",
     "url": "https://leni.io",
     "description": "A platform for commercial real estate analytics, reporting, and KPI guidance.",
     "pricing": "Unknown",
-    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/691f328acfc283bbc284826a_leni-logo.png",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/691f328acfc283bbc284826a_leni-logo-p-800.png",
     "domain": "leni.ai",
     "official_url": "https://leni.ai",
     "official_domain": "leni.ai",
     "source": "futuretools",
     "tags": [],
-    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/691f328acfc283bbc284826a_leni-logo.png",
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/691f328acfc283bbc284826a_leni-logo-p-800.png",
     "logo_reason": "patched_fast:faviconkit",
     "category": "Finance",
     "desc_ar": "منصة لتحليل العقارات التجارية، والإبلاغ، وتوجيهات شركة KPI.",
@@ -1018,6 +1801,84 @@ const aiTools = [
     "original_bad_url": "https://www.futuretools.io/tools/vezlo"
   },
   {
+    "name": "PromptPanda",
+    "directory_url": "https://www.promptpanda.io/",
+    "url": "https://www.promptpanda.io/",
+    "description": "A tool that centralizes and optimizes prompts for teams to maintain a consistent brand voice and speed content and chatbot production.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6967ba01f4e1ea2a089f3933_promptpanda-logo-p-800.png",
+    "domain": "marble.ai",
+    "official_url": "https://www.promptpanda.io/",
+    "official_domain": "marble.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6967ba01f4e1ea2a089f3933_promptpanda-logo-p-800.png",
+    "logo_reason": "fixed_broken: logo: HTTP 500",
+    "category": "Prompt Guides",
+    "desc_ar": "أداة لتجميع وتحسين الأوامر (Prompts) للفرق بهدف الحفاظ على صوت علامة تجارية متسق وتسريع إنتاج المحتوى وروبوتات الدردشة.",
+    "featured": false,
+    "logo_source": "website_deep",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep"
+    ],
+    "logo_updated": "2025-12-07 16:28:43",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "EchoStash",
+    "directory_url": "https://www.echostash.app/",
+    "url": "https://www.echostash.app/",
+    "description": "A centralized prompts management platform for storing, organizing and searching prompts across multiple tools.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68713a76dd022eaef097ab79_echostash-app-logo-p-800.png",
+    "domain": "marble.ai",
+    "official_url": "https://www.echostash.app/",
+    "official_domain": "marble.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68713a76dd022eaef097ab79_echostash-app-logo-p-800.png",
+    "logo_reason": "fixed_broken: logo: HTTP 500",
+    "category": "Prompt Guides",
+    "desc_ar": "منصة مركزية لإدارة الأوامر تتيح تخزينها وتنظيمها والبحث فيها عبر أدوات متعددة.",
+    "featured": false,
+    "logo_source": "website_deep",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep"
+    ],
+    "logo_updated": "2025-12-07 16:28:43",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "Modeltion",
+    "directory_url": "https://modeltion.com/",
+    "url": "https://modeltion.com/",
+    "description": "A tool to build and test AI workflows with prompts, images and APIs.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68dad1ed00c09b245ee3e370_example-B_UVVCNr-p-800.png",
+    "domain": "marble.ai",
+    "official_url": "https://modeltion.com/",
+    "official_domain": "marble.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68dad1ed00c09b245ee3e370_example-B_UVVCNr-p-800.png",
+    "logo_reason": "fixed_broken: logo: HTTP 500",
+    "category": "Prompt Guides",
+    "desc_ar": "أداة لبناء واختبار سير عمل الذكاء الاصطناعي باستخدام الأوامر والصور وواجهات برمجة التطبيقات (API).",
+    "featured": false,
+    "logo_source": "website_deep",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep"
+    ],
+    "logo_updated": "2025-12-07 16:28:43",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
     "name": "Marble",
     "directory_url": "https://www.futuretools.io/tools/marble",
     "url": "https://marble.ai",
@@ -1213,6 +2074,93 @@ const aiTools = [
     "logo_updated": "2025-12-07 16:28:53",
     "url_status": "already_ok",
     "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "Bridgecall",
+    "directory_url": "https://www.bridgecall.app/",
+    "url": "https://www.bridgecall.app/",
+    "description": "A real-time AI voice and video translation for meetings in 50+ languages.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/69569c3d3f760159a6ce3969_bridgecall-logo-p-800.png",
+    "domain": "medo.ai",
+    "official_url": "https://www.bridgecall.app/",
+    "official_domain": "medo.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/69569c3d3f760159a6ce3969_bridgecall-logo-p-800.png",
+    "logo_reason": "verified",
+    "category": "Translation",
+    "desc_ar": "منصة مركزية لإدارة الأوامر تتيح تخزينها وتنظيمها والبحث فيها عبر أدوات متعددة.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "original_url_works",
+    "url_status": "already_ok"
+  },
+  {
+    "name": "Aview",
+    "directory_url": "https://aviewint.com/",
+    "url": "https://aviewint.com/",
+    "description": "A platform that translates and digital content into multiple languages while preserving creator authenticity.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/688baf144a804718e4580990_og-image-p-800.png",
+    "domain": "medo.ai",
+    "official_url": "https://aviewint.com/",
+    "official_domain": "medo.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/688baf144a804718e4580990_og-image-p-800.png",
+    "logo_reason": "verified",
+    "category": "Translation",
+    "desc_ar": "أداة لترجمة ودبلجة مقاطع الفيديو القصيرة إلى لغات متعددة.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "original_url_works",
+    "url_status": "already_ok"
+  },
+  {
+    "name": "Perso.ai",
+    "directory_url": "https://perso.ai/",
+    "url": "https://perso.ai/",
+    "description": "A tool to translate and lip-sync videos in multiple languages.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6871402f8ce77d829b65fee4_bVfbeVow6R9izQ3TMDcwDmM89U.png",
+    "domain": "medo.ai",
+    "official_url": "https://perso.ai/",
+    "official_domain": "medo.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6871402f8ce77d829b65fee4_bVfbeVow6R9izQ3TMDcwDmM89U.png",
+    "logo_reason": "verified",
+    "category": "Translation",
+    "desc_ar": "أداة لترجمة مقاطع الفيديو ومزامنة حركة الشفاه إلى لغات متعددة.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "original_url_works",
+    "url_status": "already_ok"
   },
   {
     "name": "Medo",
@@ -1982,6 +2930,84 @@ const aiTools = [
     "url_fix_reason": "original_url_works"
   },
   {
+    "name": "DrawMingo",
+    "directory_url": "https://drawmingo.com/",
+    "url": "https://drawmingo.com/",
+    "description": "A tool that transforms hand-drawn artwork into animated videos with music and effects.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68c3be8acde73136eff73fb3_drawmingo-com-logo.png",
+    "domain": "agenta.ai",
+    "official_url": "https://drawmingo.com/",
+    "official_domain": "agenta.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68c3be8acde73136eff73fb3_drawmingo-com-logo.png",
+    "logo_reason": "fixed_broken: logo: HTTP 500",
+    "category": "Education",
+    "desc_ar": "أداة تحوّل الرسومات اليدوية إلى مقاطع فيديو متحركة مرفقة بالموسيقى والمؤثرات.",
+    "featured": false,
+    "logo_source": "website_deep",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep"
+    ],
+    "logo_updated": "2025-12-07 16:29:43",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "Mexty AI",
+    "directory_url": "https://mexty.ai/",
+    "url": "https://mexty.ai/",
+    "description": "A tool to create personalized interactive learning and training content.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6880fbbfb308c5f0a9fc7ca3_mexty-ai-logo-p-800.png",
+    "domain": "agenta.ai",
+    "official_url": "https://mexty.ai/",
+    "official_domain": "agenta.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6880fbbfb308c5f0a9fc7ca3_mexty-ai-logo-p-800.png",
+    "logo_reason": "fixed_broken: logo: HTTP 500",
+    "category": "Education",
+    "desc_ar": "أداة لإنشاء محتوى تعليمي وتدريبي تفاعلي مخصص.",
+    "featured": false,
+    "logo_source": "website_deep",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep"
+    ],
+    "logo_updated": "2025-12-07 16:29:43",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "The Way of Code",
+    "directory_url": "https://www.thewayofcode.com/",
+    "url": "https://www.thewayofcode.com/",
+    "description": "A platform to personalize programming education with interactive tutorials and intelligent feedback.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/685c43ec6e7f100a1b414117_opengraph2-p-800.png",
+    "domain": "agenta.ai",
+    "official_url": "https://www.thewayofcode.com/",
+    "official_domain": "agenta.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/685c43ec6e7f100a1b414117_opengraph2-p-800.png",
+    "logo_reason": "fixed_broken: logo: HTTP 500",
+    "category": "Education",
+    "desc_ar": "منصة لتخصيص تعليم البرمجة من خلال دروس تفاعلية وتغذية راجعة ذكية.",
+    "featured": false,
+    "logo_source": "website_deep",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep"
+    ],
+    "logo_updated": "2025-12-07 16:29:43",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
     "name": "Agenta",
     "directory_url": "https://www.futuretools.io/tools/agenta",
     "url": "https://agenta.ai",
@@ -2156,18 +3182,96 @@ const aiTools = [
     "url_fix_reason": "original_url_works"
   },
   {
-    "name": "Vyrill",
-    "directory_url": "https://www.futuretools.io/tools/vyrill",
-    "url": "https://vyrill.com",
-    "description": "A tool that analyzes and organizes UGC videos and insights for e-commerce brands.",
+    "name": "Recomaze",
+    "directory_url": "https://recomaze.ai/",
+    "url": "https://recomaze.ai/",
+    "description": "A tool to prepare ecommerce catalogs for AI sales agents.",
     "pricing": "Unknown",
-    "logo": "https://cdn.prod.website-files.com/61a79b1f82e7eb0f0c62c637/6202b837d07023b1ab50a639_Asset%2012%201.png",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/697ba1e1fd9506904bb1cb19_recomaze-logo-p-800.png",
     "domain": "vyrill.com",
-    "official_url": "https://vyrill.com",
+    "official_url": "https://recomaze.ai/",
     "official_domain": "vyrill.com",
     "source": "futuretools",
     "tags": [],
-    "icon": "https://cdn.prod.website-files.com/61a79b1f82e7eb0f0c62c637/6202b837d07023b1ab50a639_Asset%2012%201.png",
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/697ba1e1fd9506904bb1cb19_recomaze-logo-p-800.png",
+    "logo_reason": "verified",
+    "category": "E-commerce",
+    "desc_ar": "أداة لإعداد كتالوجات التجارة الإلكترونية لتكون جاهزة لوكلاء المبيعات المعتمدين على الذكاء الاصطناعي.",
+    "featured": false,
+    "logo_source": "website_deep",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep"
+    ],
+    "logo_updated": "2025-12-07 16:29:52",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "Photostudio",
+    "directory_url": "https://photostudio.io/",
+    "url": "https://photostudio.io/",
+    "description": "A tool to create ecommerce product photos.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/697ba0bdb6b3131720a7823d_photostudio-logo.png",
+    "domain": "vyrill.com",
+    "official_url": "https://photostudio.io/",
+    "official_domain": "vyrill.com",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/697ba0bdb6b3131720a7823d_photostudio-logo.png",
+    "logo_reason": "verified",
+    "category": "E-commerce",
+    "desc_ar": "أداة لإنشاء صور احترافية لمنتجات التجارة الإلكترونية.",
+    "featured": false,
+    "logo_source": "website_deep",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep"
+    ],
+    "logo_updated": "2025-12-07 16:29:52",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "HoverBot",
+    "directory_url": "https://www.hoverbot.ai/",
+    "url": "https://www.hoverbot.ai/",
+    "description": "A chatbot platform for e-commerce that answers product questions, recommends products, captures purchase intent, and automates support.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/695a801c95e55223566aef05_hoverbot-logo-p-800.png",
+    "domain": "vyrill.com",
+    "official_url": "https://www.hoverbot.ai/",
+    "official_domain": "vyrill.com",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/695a801c95e55223566aef05_hoverbot-logo-p-800.png",
+    "logo_reason": "verified",
+    "category": "E-commerce",
+    "desc_ar": "منصة روبوت دردشة للتجارة الإلكترونية تجيب عن أسئلة المنتجات، وتقترح منتجات مناسبة، وتلتقط نية الشراء، وتؤتمت عمليات الدعم.",
+    "featured": false,
+    "logo_source": "website_deep",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep"
+    ],
+    "logo_updated": "2025-12-07 16:29:52",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "Vyrill",
+    "directory_url": "https://www.vyrill.com/",
+    "url": "https://www.vyrill.com/",
+    "description": "A tool that analyzes and organizes UGC videos and insights for e-commerce brands.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/69052687fa1dbdd459da3c6d_6202b837d07023b1ab50a639_Asset%252012%25201.png",
+    "domain": "vyrill.com",
+    "official_url": "https://www.vyrill.com/",
+    "official_domain": "vyrill.com",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/69052687fa1dbdd459da3c6d_6202b837d07023b1ab50a639_Asset%252012%25201.png",
     "logo_reason": "verified",
     "category": "E-commerce",
     "desc_ar": "أداة تحلل وتنظم أشرطة فيديو ورؤى لعلامات التجارة الإلكترونية.",
@@ -2304,6 +3408,93 @@ const aiTools = [
     "logo_updated": "2025-12-08",
     "url_fix_reason": "original_url_works",
     "url_status": "already_ok"
+  },
+  {
+    "name": "Sonura Studio",
+    "directory_url": "https://sonurastudio.com/",
+    "url": "https://sonurastudio.com/",
+    "description": "A tool to generate music, beats, and sound effects.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68f9289c118107ab445cb82a_demo-image-p-1600.jpeg",
+    "domain": "screenapp.io",
+    "official_url": "https://sonurastudio.com/",
+    "official_domain": "screenapp.io",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68f9289c118107ab445cb82a_demo-image-p-1600.jpeg",
+    "logo_reason": "verified",
+    "category": "Music",
+    "desc_ar": "أداة لتوليد الموسيقى والإيقاعات والمؤثرات الصوتية.",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "Vozart AI",
+    "directory_url": "https://vozart.ai/",
+    "url": "https://vozart.ai/",
+    "description": "A tool to generate royalty-free songs through prompts.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6856d549a85e9926d53ea61b_vozart-ai-logo.png",
+    "domain": "screenapp.io",
+    "official_url": "https://vozart.ai/",
+    "official_domain": "screenapp.io",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6856d549a85e9926d53ea61b_vozart-ai-logo.png",
+    "logo_reason": "verified",
+    "category": "Music",
+    "desc_ar": "أداة لتوليد أغانٍ خالية من حقوق الملكية من خلال الأوامر النصية.",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "MIDI Agent",
+    "directory_url": "https://www.midiagent.com",
+    "url": "https://www.midiagent.com",
+    "description": "A DAW Plugin to generate and manipulate MIDI data using within music production software.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/67e8115c180dbbd165ed148a_midiagent-com-logo.jpg",
+    "domain": "screenapp.io",
+    "official_url": "https://www.midiagent.com",
+    "official_domain": "screenapp.io",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/67e8115c180dbbd165ed148a_midiagent-com-logo.jpg",
+    "logo_reason": "verified",
+    "category": "Music",
+    "desc_ar": "إضافة (Plugin) لبرامج إنتاج الموسيقى لتوليد ومعالجة بيانات MIDI داخل البرنامج.",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
   },
   {
     "name": "ScreenApp",
@@ -2621,6 +3812,102 @@ const aiTools = [
     "logo_updated": "2025-12-07 16:30:29",
     "url_status": "already_ok",
     "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "Showrunner",
+    "directory_url": "https://www.showrunner.xyz/",
+    "url": "https://www.showrunner.xyz/",
+    "description": "A tool to make AITV Shows & Episodes.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/665ab38576805ab915754c24_ad632b_4fcfb276843d4caba9d186a80d990820%257Emv2-p-800.png",
+    "domain": "leonardo.ai",
+    "official_url": "https://www.showrunner.xyz/",
+    "official_domain": "leonardo.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/665ab38576805ab915754c24_ad632b_4fcfb276843d4caba9d186a80d990820%257Emv2-p-800.png",
+    "logo_reason": "verified",
+    "category": "For Fun",
+    "desc_ar": "أداة لإنشاء برامج وحلقات تلفزيونية باستخدام الذكاء الاصطناعي (AITV).",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "from_domain_field",
+    "url_status": "fixed",
+    "original_url": "https://discord.gg/WBk4ZDW6A9",
+    "url_fix_date": "2025-12-19T20:29:28.810822",
+    "original_bad_url": "https://www.futuretools.io/tools/leonardo-ai"
+  },
+  {
+    "name": "Colormind",
+    "directory_url": "http://colormind.io/",
+    "url": "http://colormind.io/",
+    "description": "A tool to generate color palettes with harmonious combinations.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/66582dc0b8de11fcb4a6252e_colormind-io-logo-p-800.png",
+    "domain": "leonardo.ai",
+    "official_url": "http://colormind.io/",
+    "official_domain": "leonardo.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/66582dc0b8de11fcb4a6252e_colormind-io-logo-p-800.png",
+    "logo_reason": "verified",
+    "category": "For Fun",
+    "desc_ar": "أداة لإنشاء برامج وحلقات تلفزيونية باستخدام الذكاء الاصطناعي (AITV).",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "from_domain_field",
+    "url_status": "fixed",
+    "original_url": "https://discord.gg/WBk4ZDW6A9",
+    "url_fix_date": "2025-12-19T20:29:28.810822",
+    "original_bad_url": "https://www.futuretools.io/tools/leonardo-ai"
+  },
+  {
+    "name": "Fontjoy",
+    "directory_url": "https://fontjoy.com/",
+    "url": "https://fontjoy.com/",
+    "description": "A tool to generate harmonious font pairings.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/663fab2fa2ded3096c69094b_fontjoy-com-logo-p-800.png",
+    "domain": "leonardo.ai",
+    "official_url": "https://fontjoy.com/",
+    "official_domain": "leonardo.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/663fab2fa2ded3096c69094b_fontjoy-com-logo-p-800.png",
+    "logo_reason": "verified",
+    "category": "For Fun",
+    "desc_ar": "أداة لتوليد مجموعات خطوط متناسقة وجذابة.",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "from_domain_field",
+    "url_status": "fixed",
+    "original_url": "https://discord.gg/WBk4ZDW6A9",
+    "url_fix_date": "2025-12-19T20:29:28.810822",
+    "original_bad_url": "https://www.futuretools.io/tools/leonardo-ai"
   },
   {
     "name": "Leonardo AI",
@@ -3618,6 +4905,84 @@ const aiTools = [
     "url_status": "already_ok"
   },
   {
+    "name": "Typeface",
+    "directory_url": "https://www.typeface.ai/",
+    "url": "https://www.typeface.ai/",
+    "description": "A tool to generate personalized content.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/63fe818d2c7a911122d2da60_typeface-opengraph-img-p-800.webp",
+    "domain": "resyfy.ai",
+    "official_url": "https://www.typeface.ai/",
+    "official_domain": "resyfy.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/63fe818d2c7a911122d2da60_typeface-opengraph-img-p-800.webp",
+    "logo_reason": "verified",
+    "category": "Career",
+    "desc_ar": "أداة لتوليد محتوى مخصص وشخصي.",
+    "featured": false,
+    "logo_source": "website_deep",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep"
+    ],
+    "logo_updated": "2025-12-07 16:31:37",
+    "url_fix_reason": "original_url_works",
+    "url_status": "already_ok"
+  },
+  {
+    "name": "resumecheck.net",
+    "directory_url": "https://resumecheck.net/",
+    "url": "https://resumecheck.net/",
+    "description": "Optimize resumes for specific job roles.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/63dc0dda63adce0c8400fac2_https%253A%252F%252Fs3.amazonaws.com%252Fappforest_uf%252Ff1674167799561x184445665434060700%252Fpage-facebook-image-p-800.jpeg",
+    "domain": "resyfy.ai",
+    "official_url": "https://resumecheck.net/",
+    "official_domain": "resyfy.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/63dc0dda63adce0c8400fac2_https%253A%252F%252Fs3.amazonaws.com%252Fappforest_uf%252Ff1674167799561x184445665434060700%252Fpage-facebook-image-p-800.jpeg",
+    "logo_reason": "verified",
+    "category": "Career",
+    "desc_ar": "أداة لتحسين السير الذاتية بما يتناسب مع الوظائف المحددة.",
+    "featured": false,
+    "logo_source": "website_deep",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep"
+    ],
+    "logo_updated": "2025-12-07 16:31:37",
+    "url_fix_reason": "original_url_works",
+    "url_status": "already_ok"
+  },
+  {
+    "name": "Adaptiv Academy",
+    "directory_url": "https://www.adaptiv.me/",
+    "url": "https://www.adaptiv.me/",
+    "description": "AI assisted career mentoring",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/63d02f7d9e8158c3d81c90f1_adaptiv.png",
+    "domain": "resyfy.ai",
+    "official_url": "https://www.adaptiv.me/",
+    "official_domain": "resyfy.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/63d02f7d9e8158c3d81c90f1_adaptiv.png",
+    "logo_reason": "verified",
+    "category": "Career",
+    "desc_ar": "إرشاد مهني مدعوم بالذكاء الاصطناعي لتوجيه التطور المهني واتخاذ القرارات الوظيفية.",
+    "featured": false,
+    "logo_source": "website_deep",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep"
+    ],
+    "logo_updated": "2025-12-07 16:31:37",
+    "url_fix_reason": "original_url_works",
+    "url_status": "already_ok"
+  },
+  {
     "name": "Resyfy AI",
     "directory_url": "https://www.futuretools.io/tools/resyfy-ai",
     "url": "https://www.resyfy.ai/",
@@ -4302,6 +5667,102 @@ const aiTools = [
     "original_bad_url": "https://www.futuretools.io/tools/everyday"
   },
   {
+    "name": "FastShort AI",
+    "directory_url": "https://fastshort.ai/",
+    "url": "https://fastshort.ai/",
+    "description": "A tool to generate short-form videos from text or URLs",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6974f9310f6a9df0c4ca53ff_fastshort-ai-logo.png",
+    "domain": "openai.com",
+    "official_url": "https://fastshort.ai/",
+    "official_domain": "openai.com",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6974f9310f6a9df0c4ca53ff_fastshort-ai-logo.png",
+    "logo_reason": "verified",
+    "category": "Generative Video",
+    "desc_ar": "أداة لتوليد مقاطع فيديو قصيرة من النصوص أو روابط الويب.",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "known_correct_url",
+    "url_status": "fixed_known_v22",
+    "original_url": "https://discord.gg/WBk4ZDW6A9",
+    "url_fix_date": "2025-12-20T14:26:09.983721",
+    "original_bad_url": "https://www.futuretools.io/tools/sora-app"
+  },
+  {
+    "name": "ListingHub",
+    "directory_url": "https://www.listinghub.ai",
+    "url": "https://www.listinghub.ai",
+    "description": "A tool to create real estate short listing videos.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/696fa62799cde6f0a4cc698c_listinghub-logo.png",
+    "domain": "openai.com",
+    "official_url": "https://www.listinghub.ai",
+    "official_domain": "openai.com",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/696fa62799cde6f0a4cc698c_listinghub-logo.png",
+    "logo_reason": "verified",
+    "category": "Generative Video",
+    "desc_ar": "أداة لإنشاء مقاطع فيديو قصيرة لإعلانات العقارات.",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "known_correct_url",
+    "url_status": "fixed_known_v22",
+    "original_url": "https://discord.gg/WBk4ZDW6A9",
+    "url_fix_date": "2025-12-20T14:26:09.983721",
+    "original_bad_url": "https://www.futuretools.io/tools/sora-app"
+  },
+  {
+    "name": "Snipin AI",
+    "directory_url": "https://snipin.ai/",
+    "url": "https://snipin.ai/",
+    "description": "A tool to summarize event videos into shareable clips.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/696fa523c4eae07218164e0b_snipin-ai-logo.png",
+    "domain": "openai.com",
+    "official_url": "https://snipin.ai/",
+    "official_domain": "openai.com",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/696fa523c4eae07218164e0b_snipin-ai-logo.png",
+    "logo_reason": "verified",
+    "category": "Generative Video",
+    "desc_ar": "أداة لتلخيص مقاطع فيديو الأحداث وتحويلها إلى مقاطع قابلة للمشاركة.",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "known_correct_url",
+    "url_status": "fixed_known_v22",
+    "original_url": "https://discord.gg/WBk4ZDW6A9",
+    "url_fix_date": "2025-12-20T14:26:09.983721",
+    "original_bad_url": "https://www.futuretools.io/tools/sora-app"
+  },
+  {
     "name": "Sora App",
     "directory_url": "https://www.futuretools.io/tools/sora-app",
     "url": "https://openai.com/sora",
@@ -4429,13 +5890,13 @@ const aiTools = [
     "url": "https://cavya.ai",
     "description": "A tool for translation preparation by generating glossaries and style guides for content localization.",
     "pricing": "Unknown",
-    "logo": "https://cavya.ai/wp-content/uploads/2025/09/Icons-for-Cavya-Landing-Page-4-1.png",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68dc1054d75c3789ee0a8fd8_Cavya-Feature-Image-p-800.png",
     "domain": "cavya.ai",
     "official_url": "https://cavya.ai",
     "official_domain": "cavya.ai",
     "source": "futuretools",
     "tags": [],
-    "icon": "https://cavya.ai/wp-content/uploads/2025/09/Icons-for-Cavya-Landing-Page-4-1.png",
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68dc1054d75c3789ee0a8fd8_Cavya-Feature-Image-p-800.png",
     "logo_reason": "verified",
     "category": "Translation",
     "desc_ar": "أداة لإعداد الترجمة عن طريق توليد المعاجم وأدلة أسلوبية لتحديد موقع المحتوى.",
@@ -5234,6 +6695,134 @@ const aiTools = [
     "url_fix_reason": "original_url_works"
   },
   {
+    "name": "Note67",
+    "directory_url": "https://note67.com/",
+    "url": "https://note67.com/",
+    "description": "A tool that captures audio and screen, transcribes on-device with speaker separation, and generates private AI summaries locally.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/69691dc3a3a84ac6b9050172_note67-logo.png",
+    "domain": "crossfade.ai",
+    "official_url": "https://note67.com/",
+    "official_domain": "crossfade.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/69691dc3a3a84ac6b9050172_note67-logo.png",
+    "logo_reason": "patched_fast:faviconkit",
+    "category": "Speech-To-Text",
+    "desc_ar": "أداة لتسجيل الصوت والشاشة، وتحويل الكلام إلى نص على الجهاز مع فصل المتحدثين، وتوليد ملخصات ذكية خاصة بالذكاء الاصطناعي محليًا.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "from_domain_field",
+    "url_status": "fixed",
+    "original_url": "https://discord.gg/WBk4ZDW6A9",
+    "url_fix_date": "2025-12-19T20:36:28.263667",
+    "original_bad_url": "https://www.futuretools.io/tools/crossfade"
+  },
+  {
+    "name": "Recallify",
+    "directory_url": "https://recallify.ai/",
+    "url": "https://recallify.ai/",
+    "description": "A tool to record, summarize, and recall tasks and study notes.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/695d222d3d2e2bd649cc997d_recallify-logo.png",
+    "domain": "crossfade.ai",
+    "official_url": "https://recallify.ai/",
+    "official_domain": "crossfade.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/695d222d3d2e2bd649cc997d_recallify-logo.png",
+    "logo_reason": "patched_fast:faviconkit",
+    "category": "Speech-To-Text",
+    "desc_ar": "أداة لتسجيل المهام والملاحظات الدراسية، تلخيصها، واسترجاعها عند الحاجة.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "from_domain_field",
+    "url_status": "fixed",
+    "original_url": "https://discord.gg/WBk4ZDW6A9",
+    "url_fix_date": "2025-12-19T20:36:28.263667",
+    "original_bad_url": "https://www.futuretools.io/tools/crossfade"
+  },
+  {
+    "name": "Vowen",
+    "directory_url": "https://vowen.ai/",
+    "url": "https://vowen.ai/",
+    "description": "A privacy-first desktop app that converts voice to text offline using on-device AI.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/694b0e07fc35d8b26ea14481_og-image-p-1600.png",
+    "domain": "crossfade.ai",
+    "official_url": "https://vowen.ai/",
+    "official_domain": "crossfade.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/694b0e07fc35d8b26ea14481_og-image-p-1600.png",
+    "logo_reason": "patched_fast:faviconkit",
+    "category": "Speech-To-Text",
+    "desc_ar": "تطبيق سطح مكتب يركز على الخصوصية، يحوّل الصوت إلى نص دون اتصال بالإنترنت باستخدام الذكاء الاصطناعي على الجهاز.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "from_domain_field",
+    "url_status": "fixed",
+    "original_url": "https://discord.gg/WBk4ZDW6A9",
+    "url_fix_date": "2025-12-19T20:36:28.263667",
+    "original_bad_url": "https://www.futuretools.io/tools/crossfade"
+  },
+  {
+    "name": "Crossfade",
+    "directory_url": "https://www.futuretools.io/tools/crossfade",
+    "url": "https://crossfade.ai",
+    "description": "An video editor to transcribe, highlight, and extract key video segments.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68d2b6a71d932c62d24f7351_usecrossfade-com-logo.png",
+    "domain": "crossfade.ai",
+    "official_url": "https://crossfade.ai",
+    "official_domain": "crossfade.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68d2b6a71d932c62d24f7351_usecrossfade-com-logo.png",
+    "logo_reason": "patched_fast:faviconkit",
+    "category": "Speech-To-Text",
+    "desc_ar": "محرّر فيديو لكتابة وتسليط الضوء وإستخراج الأجزاء الرئيسية من الفيديو.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "from_domain_field",
+    "url_status": "fixed",
+    "original_url": "https://discord.gg/WBk4ZDW6A9",
+    "url_fix_date": "2025-12-19T20:36:28.263667",
+    "original_bad_url": "https://www.futuretools.io/tools/crossfade"
+  },
+  {
     "name": "Crossfade",
     "directory_url": "https://www.futuretools.io/tools/crossfade",
     "url": "https://crossfade.ai",
@@ -5293,6 +6882,93 @@ const aiTools = [
     "logo_updated": "2025-12-08",
     "url_fix_reason": "original_url_works",
     "url_status": "already_ok"
+  },
+  {
+    "name": "ArchRender",
+    "directory_url": "https://www.archrender.ai",
+    "url": "https://www.archrender.ai",
+    "description": "A tool to generate photorealistic architectural renders from models photos.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/69779a0d9ad777bf01f13038_archrender-logo.png",
+    "domain": "lamatic.ai",
+    "official_url": "https://www.archrender.ai",
+    "official_domain": "lamatic.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/69779a0d9ad777bf01f13038_archrender-logo.png",
+    "logo_reason": "fixed_broken: logo: HTTP 500",
+    "category": "Generative Art",
+    "desc_ar": "أداة لتوليد عروض معمارية فوتوريالية من صور النماذج المعمارية.",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "Legnext",
+    "directory_url": "https://legnext.ai/",
+    "url": "https://legnext.ai/",
+    "description": "A nocode tool to access Midjourney image and video generation via API",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/69725695c99927649de7a4b4_legnext-logo.png",
+    "domain": "lamatic.ai",
+    "official_url": "https://legnext.ai/",
+    "official_domain": "lamatic.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/69725695c99927649de7a4b4_legnext-logo.png",
+    "logo_reason": "fixed_broken: logo: HTTP 500",
+    "category": "Generative Art",
+    "desc_ar": "أداة بدون كود للوصول إلى توليد الصور والفيديوهات عبر Midjourney باستخدام واجهة برمجة التطبيقات (API).",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "AcaDraw",
+    "directory_url": "https://www.acadraw.com/",
+    "url": "https://www.acadraw.com/",
+    "description": "A tool that converts prompts into scientific illustrations and editable SVGs.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6967ba5a8af6e43b9202a4e2_acadraw-logo.png",
+    "domain": "lamatic.ai",
+    "official_url": "https://www.acadraw.com/",
+    "official_domain": "lamatic.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6967ba5a8af6e43b9202a4e2_acadraw-logo.png",
+    "logo_reason": "fixed_broken: logo: HTTP 500",
+    "category": "Generative Art",
+    "desc_ar": "أداة لتحويل الأوامر النصية إلى رسومات علمية وصور SVG قابلة للتعديل.",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
   },
   {
     "name": "Lamatic",
@@ -6852,6 +8528,105 @@ const aiTools = [
     "url_fix_reason": "original_url_works"
   },
   {
+    "name": "PodManager.AI",
+    "directory_url": "https://www.podmanager.ai",
+    "url": "https://www.podmanager.ai",
+    "description": "A tool that turns recordings into ready-to-publish podcast episodes with production, editing, and distribution.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/69554ef9b6f204003ce73cc1_podmanager-ai-logo.png",
+    "domain": "fonts.googleapis.com",
+    "official_url": "https://www.podmanager.ai",
+    "official_domain": "fonts.googleapis.com",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/69554ef9b6f204003ce73cc1_podmanager-ai-logo.png",
+    "logo_reason": "fixed_broken: logo: HTTP 500",
+    "category": "Podcasting",
+    "desc_ar": "أداة لتحويل التسجيلات الصوتية إلى حلقات بودكاست جاهزة للنشر، مع الإنتاج والتحرير والتوزيع.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "needs_review": false,
+    "url_fix_reason": "guessed_from_name",
+    "url_status": "fixed",
+    "original_url": "https://discord.gg/WBk4ZDW6A9",
+    "url_fix_date": "2025-12-19T20:41:34.490951",
+    "original_bad_url": "https://www.futuretools.io/tools/informed"
+  },
+  {
+    "name": "Sonofa",
+    "directory_url": "https://sonofa.ai/",
+    "url": "https://sonofa.ai/",
+    "description": "A tool to convert written content into conversational podcasts.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/67a7993020f88a823a9f6d9c_sonofa-ai-logo.png",
+    "domain": "fonts.googleapis.com",
+    "official_url": "https://sonofa.ai/",
+    "official_domain": "fonts.googleapis.com",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/67a7993020f88a823a9f6d9c_sonofa-ai-logo.png",
+    "logo_reason": "fixed_broken: logo: HTTP 500",
+    "category": "Podcasting",
+    "desc_ar": "أداة لتحويل المحتوى المكتوب إلى حلقات بودكاست حوارية.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "needs_review": false,
+    "url_fix_reason": "guessed_from_name",
+    "url_status": "fixed",
+    "original_url": "https://discord.gg/WBk4ZDW6A9",
+    "url_fix_date": "2025-12-19T20:41:34.490951",
+    "original_bad_url": "https://www.futuretools.io/tools/informed"
+  },
+  {
+    "name": "Retellio",
+    "directory_url": "https://www.retellio.com",
+    "url": "https://www.retellio.com",
+    "description": "A tool to transform customer call recordings into podcasts for business insights.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/679b0f6cd4e359bf6ebaf66a_6749ddffb8a44ed826e13132_opengraphimg.png",
+    "domain": "fonts.googleapis.com",
+    "official_url": "https://www.retellio.com",
+    "official_domain": "fonts.googleapis.com",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/679b0f6cd4e359bf6ebaf66a_6749ddffb8a44ed826e13132_opengraphimg.png",
+    "logo_reason": "fixed_broken: logo: HTTP 500",
+    "category": "Podcasting",
+    "desc_ar": "أداة لتحويل تسجيلات مكالمات العملاء إلى حلقات بودكاست لاستخلاص رؤى تجارية.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "needs_review": false,
+    "url_fix_reason": "guessed_from_name",
+    "url_status": "fixed",
+    "original_url": "https://discord.gg/WBk4ZDW6A9",
+    "url_fix_date": "2025-12-19T20:41:34.490951",
+    "original_bad_url": "https://www.futuretools.io/tools/informed"
+  },
+  {
     "name": "Informed",
     "directory_url": "https://www.futuretools.io/tools/informed",
     "url": "https://informed.ai",
@@ -7771,6 +9546,105 @@ const aiTools = [
     "original_bad_url": "https://www.futuretools.io/tools/open-lovable"
   },
   {
+    "name": "ShootSolo",
+    "directory_url": "https://shootsolo.com/",
+    "url": "https://shootsolo.com/",
+    "description": "An app to record videos hands-free using voice commands.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68cbc2b7aed072172a8276a9_shootsolo-com-logo.png",
+    "domain": "fonts.googleapis.com",
+    "official_url": "https://shootsolo.com/",
+    "official_domain": "fonts.googleapis.com",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68cbc2b7aed072172a8276a9_shootsolo-com-logo.png",
+    "logo_reason": "fixed_broken: logo: HTTP 500",
+    "category": "Inspiration",
+    "desc_ar": "تطبيق لتسجيل مقاطع الفيديو بدون استخدام اليدين عن طريق أوامر صوتية.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "needs_review": false,
+    "url_fix_reason": "guessed_from_name",
+    "url_status": "fixed",
+    "original_url": "https://discord.gg/WBk4ZDW6A9",
+    "url_fix_date": "2025-12-19T20:47:34.179076",
+    "original_bad_url": "https://www.futuretools.io/tools/framezero"
+  },
+  {
+    "name": "Snaptrude",
+    "directory_url": "https://aihomedesign.com/",
+    "url": "https://aihomedesign.com/",
+    "description": "A cloud-based architectural design platform that automates building documentation and modeling.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/688baf168769bced80a9ffde_6870fefecf3df417ce4d4be1_92ce8e39aa6cd28262683a4d500a82b6_snaptrude-website.png",
+    "domain": "fonts.googleapis.com",
+    "official_url": "https://aihomedesign.com/",
+    "official_domain": "fonts.googleapis.com",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/688baf168769bced80a9ffde_6870fefecf3df417ce4d4be1_92ce8e39aa6cd28262683a4d500a82b6_snaptrude-website.png",
+    "logo_reason": "fixed_broken: logo: HTTP 500",
+    "category": "Inspiration",
+    "desc_ar": "منصة تصميم معماري سحابية تعمل على أتمتة توثيق المباني ونمذجتها.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "needs_review": false,
+    "url_fix_reason": "guessed_from_name",
+    "url_status": "fixed",
+    "original_url": "https://discord.gg/WBk4ZDW6A9",
+    "url_fix_date": "2025-12-19T20:47:34.179076",
+    "original_bad_url": "https://www.futuretools.io/tools/framezero"
+  },
+  {
+    "name": "AI HomeDesign",
+    "directory_url": "https://aihomedesign.com",
+    "url": "https://aihomedesign.com",
+    "description": "A tool to transform room photos into customized interior design concepts.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68713c97c83a0e3ca83ffc68_aihomedesign-com-logo.png",
+    "domain": "fonts.googleapis.com",
+    "official_url": "https://aihomedesign.com",
+    "official_domain": "fonts.googleapis.com",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68713c97c83a0e3ca83ffc68_aihomedesign-com-logo.png",
+    "logo_reason": "fixed_broken: logo: HTTP 500",
+    "category": "Inspiration",
+    "desc_ar": "أداة لتحويل صور الغرف إلى مفاهيم تصميم داخلي مخصصة.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "needs_review": false,
+    "url_fix_reason": "guessed_from_name",
+    "url_status": "fixed",
+    "original_url": "https://discord.gg/WBk4ZDW6A9",
+    "url_fix_date": "2025-12-19T20:47:34.179076",
+    "original_bad_url": "https://www.futuretools.io/tools/framezero"
+  },
+  {
     "name": "FrameZero",
     "directory_url": "https://www.futuretools.io/tools/framezero",
     "url": "https://framezero.com",
@@ -8185,6 +10059,72 @@ const aiTools = [
     "original_url": "https://discord.gg/WBk4ZDW6A9",
     "url_fix_date": "2025-12-19T20:51:18.298707",
     "original_bad_url": "https://www.futuretools.io/tools/ten"
+  },
+  {
+    "name": "Extraction.app",
+    "directory_url": "https://extraction.app",
+    "url": "https://extraction.app",
+    "description": "A platform that converts PDFs, images and Office files into structured JSON/CSV/Excel outputs.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/696e53209cebd1b824c9c58e_extraction-app-logo.png",
+    "domain": "fonts.googleapis.com",
+    "official_url": "https://extraction.app/",
+    "official_domain": "fonts.googleapis.com",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/696e53209cebd1b824c9c58e_extraction-app-logo.png",
+    "logo_reason": "fixed_broken: logo: HTTP 500",
+    "category": "Image Scanning",
+    "desc_ar": "منصة لتحويل ملفات PDF والصور وملفات Office إلى مخرجات منظمة بصيغ JSON أو CSV أو Excel.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "needs_review": false,
+    "url_fix_reason": "guessed_from_name",
+    "url_status": "fixed",
+    "original_url": "https://discord.gg/WBk4ZDW6A9",
+    "url_fix_date": "2025-12-19T20:51:23.095827",
+    "original_bad_url": "https://www.futuretools.io/tools/vibescan"
+  },
+  {
+    "name": "Calton Datx",
+    "directory_url": "https://caltondatx.com",
+    "url": "https://caltondatx.com",
+    "description": "A tool that measures digital signage audiences in real time using computer vision.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/69569ec4aab2dfe23357a402_calton-datx-logo.png",
+    "domain": "fonts.googleapis.com",
+    "official_url": "https://caltondatx.com",
+    "official_domain": "fonts.googleapis.com",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/69569ec4aab2dfe23357a402_calton-datx-logo.png",
+    "logo_reason": "fixed_broken: logo: HTTP 500",
+    "category": "Image Scanning",
+    "desc_ar": "أداة لقياس جمهور الشاشات الرقمية في الوقت الفعلي باستخدام رؤية الحاسوب (Computer Vision)",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "needs_review": false,
+    "url_fix_reason": "guessed_from_name",
+    "url_status": "fixed",
+    "original_url": "https://discord.gg/WBk4ZDW6A9",
+    "url_fix_date": "2025-12-19T20:51:23.095827",
+    "original_bad_url": "https://www.futuretools.io/tools/vibescan"
   },
   {
     "name": "VibeScan",
@@ -15125,6 +17065,102 @@ const aiTools = [
     "original_url": "https://discord.gg/WBk4ZDW6A9"
   },
   {
+    "name": "Photostudio",
+    "directory_url": "https://photostudio.io/",
+    "url": "https://photostudio.io/",
+    "description": "A tool to create ecommerce product photos.A tool to analyze websites and suggest performance improvements.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/697ba0bdb6b3131720a7823d_photostudio-logo.png",
+    "domain": "manja.ai",
+    "official_url": "https://photostudio.io/",
+    "official_domain": "manja.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/697ba0bdb6b3131720a7823d_photostudio-logo.png",
+    "logo_reason": "fixed_broken: logo: HTTP 500",
+    "category": "Image Improvement",
+    "desc_ar": "أداة لإنشاء صور احترافية لمنتجات التجارة الإلكترونية.",
+    "featured": false,
+    "logo_source": "futuretools_manja_fix",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-09",
+    "url_fix_reason": "guessed_from_name",
+    "url_status": "fixed",
+    "original_url": "https://discord.gg/WBk4ZDW6A9",
+    "url_fix_date": "2025-12-19T21:30:53.162239",
+    "original_bad_url": "https://www.futuretools.io/tools/web-gremlin"
+  },
+  {
+    "name": "HouseGPTs",
+    "directory_url": "https://archiquill.com/?ref=futuretools.io",
+    "url": "https://archiquill.com/?ref=futuretools.io",
+    "description": "A tool to generate home interior and exterior designs.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6974fe5830fbcf10bdfeedba_housegpts-logo.png",
+    "domain": "manja.ai",
+    "official_url": "https://archiquill.com/?ref=futuretools.io",
+    "official_domain": "manja.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/6974fe5830fbcf10bdfeedba_housegpts-logo.png",
+    "logo_reason": "fixed_broken: logo: HTTP 500",
+    "category": "Image Improvement",
+    "desc_ar": "أداة لتوليد تصميمات داخلية وخارجية للمنازل.",
+    "featured": false,
+    "logo_source": "futuretools_manja_fix",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-09",
+    "url_fix_reason": "guessed_from_name",
+    "url_status": "fixed",
+    "original_url": "https://discord.gg/WBk4ZDW6A9",
+    "url_fix_date": "2025-12-19T21:30:53.162239",
+    "original_bad_url": "https://www.futuretools.io/tools/web-gremlin"
+  },
+  {
+    "name": "ArchiQuill",
+    "directory_url": "https://archiquill.com/",
+    "url": "https://archiquill.com/",
+    "description": "A tool that converts sketches, CAD, or 3D screenshots into architectural renderings.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/69501f923facbdb53150c2b3_archiquill-logo.png",
+    "domain": "manja.ai",
+    "official_url": "https://archiquill.com/",
+    "official_domain": "manja.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/69501f923facbdb53150c2b3_archiquill-logo.png",
+    "logo_reason": "fixed_broken: logo: HTTP 500",
+    "category": "Image Improvement",
+    "desc_ar": "أداة لتحويل الرسومات اليدوية، وملفات CAD، أو لقطات الشاشة ثلاثية الأبعاد إلى عروض معمارية (Architectural Renderings).",
+    "featured": false,
+    "logo_source": "futuretools_manja_fix",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-09",
+    "url_fix_reason": "guessed_from_name",
+    "url_status": "fixed",
+    "original_url": "https://discord.gg/WBk4ZDW6A9",
+    "url_fix_date": "2025-12-19T21:30:53.162239",
+    "original_bad_url": "https://www.futuretools.io/tools/web-gremlin"
+  },
+  {
     "name": "Web Gremlin",
     "directory_url": "https://www.futuretools.io/tools/web-gremlin",
     "url": "https://webgremlin.ai",
@@ -16940,6 +18976,105 @@ const aiTools = [
     "original_bad_url": "https://www.futuretools.io/tools/factory-ai"
   },
   {
+    "name": "OneRouter",
+    "directory_url": "https://infron.ai/",
+    "url": "https://infron.ai/",
+    "description": "A single API to route and manage multiple AI models.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/696fa8ee220685ce591cf5f7_onerouter-logo.png",
+    "domain": "fonts.googleapis.com",
+    "official_url": "https://infron.ai/",
+    "official_domain": "fonts.googleapis.com",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/696fa8ee220685ce591cf5f7_onerouter-logo.png",
+    "logo_reason": "fixed_broken: logo: HTTP 500",
+    "category": "Aggregators",
+    "desc_ar": "واجهة برمجة تطبيقات (API) واحدة لتوجيه وإدارة نماذج الذكاء الاصطناعي المتعددة.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "needs_review": false,
+    "url_fix_reason": "guessed_from_name",
+    "url_status": "fixed",
+    "original_url": "https://discord.gg/WBk4ZDW6A9",
+    "url_fix_date": "2025-12-19T21:39:35.226750",
+    "original_bad_url": "https://www.futuretools.io/tools/retool"
+  },
+  {
+    "name": "Retool",
+    "directory_url": "https://whatllm.org/",
+    "url": "https://whatllm.org/",
+    "description": "A platform for LLM models comparisons and benchmarking.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/696cf5399632ee5f34ccf050_whatllm-org-logo.png",
+    "domain": "fonts.googleapis.com",
+    "official_url": "https://whatllm.org/",
+    "official_domain": "fonts.googleapis.com",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/696cf5399632ee5f34ccf050_whatllm-org-logo.png",
+    "logo_reason": "fixed_broken: logo: HTTP 500",
+    "category": "Aggregators",
+    "desc_ar": "منصة لمقارنة نماذج اللغة الكبيرة (LLM) وإجراء اختبارات قياس الأداء (Benchmarking).",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "needs_review": false,
+    "url_fix_reason": "guessed_from_name",
+    "url_status": "fixed",
+    "original_url": "https://discord.gg/WBk4ZDW6A9",
+    "url_fix_date": "2025-12-19T21:39:35.226750",
+    "original_bad_url": "https://www.futuretools.io/tools/retool"
+  },
+  {
+    "name": "Readless",
+    "directory_url": "https://www.readless.app",
+    "url": "https://www.readless.app",
+    "description": "A tool to summarize newsletters into one digest.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/695d237fda607f0758ab1237_readless-logo.png",
+    "domain": "fonts.googleapis.com",
+    "official_url": "https://www.readless.app",
+    "official_domain": "fonts.googleapis.com",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/695d237fda607f0758ab1237_readless-logo.png",
+    "logo_reason": "fixed_broken: logo: HTTP 500",
+    "category": "Aggregators",
+    "desc_ar": "أداة لتلخيص النشرات الإخبارية وتحويلها إلى ملخص واحد شامل.",
+    "featured": false,
+    "logo_source": "futuretools_page",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "needs_review": false,
+    "url_fix_reason": "guessed_from_name",
+    "url_status": "fixed",
+    "original_url": "https://discord.gg/WBk4ZDW6A9",
+    "url_fix_date": "2025-12-19T21:39:35.226750",
+    "original_bad_url": "https://www.futuretools.io/tools/retool"
+  },
+  {
     "name": "Retool",
     "directory_url": "https://www.futuretools.io/tools/retool",
     "url": "https://retool.com",
@@ -18410,20 +20545,76 @@ const aiTools = [
     "url_fix_reason": "original_url_works"
   },
   {
-    "name": "Adobe Speech Enhancer",
-    "url": "https://podcast.adobe.com/en/enhance",
-    "description": "Remove noise from voice recordings with speech enhancement. Speech enhancement makes voice recordings sound as if they were recorded in a professional studio.",
+    "name": "Loman AI",
+    "url": "https://loman.ai/",
+    "description": "An AI voice phone agent for restaurants that answers calls, takes orders and reservations.",
     "pricing": "Unknown",
-    "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo1ybJf0ecm9KPSkZfsRlNE4L_zxs-eeyNZg&s",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68f9289850a04657a1d42cc6_68a8885a3cf0666c660dc65b_lomanai.jpeg",
     "domain": "searchplus.ai",
-    "official_url": "https://stitch.withgoogle.com/",
+    "official_url": "https://loman.ai/",
     "official_domain": "searchplus.ai",
     "source": "futuretools",
     "tags": [],
-    "icon": "https://www.google.com/s2/favicons?domain=searchplus.ai&sz=128",
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68f9289850a04657a1d42cc6_68a8885a3cf0666c660dc65b_lomanai.jpeg",
     "logo_reason": "fixed_broken: logo: HTTP 500",
     "category": "Voice Modulation",
-    "desc_ar": "اداة إزالة الضوضاء من التسجيلات الصوتية باستخدام تحسين الكلام. يجعل تحسين الكلام التسجيلات الصوتية تبدو وكأنها سُجِّلت في استوديو احترافي..",
+    "desc_ar": "وكيل صوتي ذكي بالذكاء الاصطناعي للمطاعم يجيب على المكالمات، ويستقبل الطلبات والحجوزات.",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "VoiceDrop",
+    "url": "https://www.voicedrop.ai/",
+    "description": "A tool that creates and delivers personalized ringless voicemails using voice cloning.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68d6f0262c634602cc1ff459_voicedrop_ringless_voicemail_sharing.png",
+    "domain": "searchplus.ai",
+    "official_url": "https://www.voicedrop.ai/",
+    "official_domain": "searchplus.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68d6f0262c634602cc1ff459_voicedrop_ringless_voicemail_sharing.png",
+    "logo_reason": "fixed_broken: logo: HTTP 500",
+    "category": "Voice Modulation",
+    "desc_ar": "أداة لإنشاء وإرسال رسائل صوتية شخصية بدون رنين باستخدام استنساخ الصوت.",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
+    "name": "Rounded",
+    "url": "http://callrounded.com/en",
+    "description": "An AI voice platform that automates phone interactions through customizable virtual assistants.",
+    "pricing": "Unknown",
+    "logo": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68d5c9cd33f47c3310dfbd62_og-image.png",
+    "domain": "searchplus.ai",
+    "official_url": "http://callrounded.com/en",
+    "official_domain": "searchplus.ai",
+    "source": "futuretools",
+    "tags": [],
+    "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/68d5c9cd33f47c3310dfbd62_og-image.png",
+    "logo_reason": "fixed_broken: logo: HTTP 500",
+    "category": "Voice Modulation",
+    "desc_ar": "منصة صوتية بالذكاء الاصطناعي لأتمتة المكالمات الهاتفية عبر مساعدين افتراضيين قابلين للتخصيص.",
     "featured": false,
     "logo_source": "google_favicon",
     "logo_strategies_tried": [
@@ -18985,6 +21176,39 @@ const aiTools = [
     "original_bad_url": "https://www.futuretools.io/tools/betterstudio"
   },
   {
+    "name": "AIShowcaseForGames",
+    "directory_url": "https://github.com/Goldenlion5648/AIShowcaseForGames",
+    "url": "https://lumalabs.ai/genie",
+    "description": "A list of AI tools to help with game development (showcased in a Godot project)",
+    "pricing": "Unknown",
+    "logo": "https://www.google.com/s2/favicons?domain=lumalabs.ai&sz=128",
+    "domain": "lumalabs.ai",
+    "official_url": "https://lumalabs.ai/genie",
+    "official_domain": "lumalabs.ai",
+    "source": "github_topics",
+    "tags": [
+      "ai",
+      "ai-tools",
+      "godot"
+    ],
+    "icon": "https://www.google.com/s2/favicons?domain=lumalabs.ai&sz=128",
+    "logo_reason": "verified",
+    "category": "Gaming",
+    "desc_ar": "قائمة بالأدوات التي تساعد على تطوير الألعاب (معروضة في مشروع غودو)",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
     "name": "Submarine Player",
     "directory_url": "https://www.futuretools.io/tools/submarine-player",
     "url": "https://submarineplayer.com",
@@ -19363,6 +21587,54 @@ const aiTools = [
     "original_url": "https://discord.gg/WBk4ZDW6A9",
     "url_fix_date": "2025-12-19T21:56:09.102825",
     "original_bad_url": "https://www.futuretools.io/tools/aviator"
+  },
+  {
+    "name": "Skill_Seekers",
+    "directory_url": "https://github.com/yusufkaraaslan/Skill_Seekers",
+    "url": "https://claude.app/",
+    "description": "Convert documentation websites, GitHub repositories, and PDFs into Claude AI skills with automatic conflict detection",
+    "pricing": "Unknown",
+    "logo": "https://www.google.com/s2/favicons?domain=claude.ai&sz=128",
+    "domain": "claude.ai",
+    "official_url": "https://claude.ai/skills\\n#",
+    "official_domain": "claude.ai",
+    "source": "github_topics",
+    "tags": [
+      "ai-tools",
+      "ast-parser",
+      "automation",
+      "claude-ai",
+      "claude-skills",
+      "code-analysis",
+      "conflict-detection",
+      "documentation",
+      "documentation-generator",
+      "github",
+      "github-scraper",
+      "mcp",
+      "mcp-server",
+      "multi-source",
+      "ocr",
+      "pdf",
+      "python",
+      "web-scraping"
+    ],
+    "icon": "https://www.google.com/s2/favicons?domain=claude.ai&sz=128",
+    "logo_reason": "fixed_broken: logo: HTTP 500",
+    "category": "AI Detection",
+    "desc_ar": "مواقع وثائق تحويل الوثائق على الإنترنت، ومخازن GigtHub، وقوات الدفاع الشعبي إلى كلود",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_fix_reason": "original_url_works",
+    "url_status": "already_ok"
   },
   {
     "name": "Polygraf AI",
@@ -20761,6 +23033,36 @@ const aiTools = [
     "original_url": "https://discord.gg/WBk4ZDW6A9",
     "url_fix_date": "2025-12-19T22:01:12.575668",
     "original_bad_url": "https://www.futuretools.io/tools/codespell-ai"
+  },
+  {
+    "name": "Adobe Premiere Pro 25.2 Smarter search & generative AI for video #Video Editing",
+    "directory_url": "https://www.myaihub.ai/tools/adobe-premiere-pro-25-2",
+    "url": "https://adobe.io/",
+    "description": "Smarter search & generative AI for video",
+    "pricing": "Unknown",
+    "logo": "https://ph-files.imgix.net/95edfbba-c287-48f2-a167-6c56464d3346.avif?auto=format",
+    "domain": "adobepremierepro252smartersearchgenerativeaiforvideovideoediting-ai-tool-placeholder.com",
+    "official_url": "https://adobepremierepro252smartersearchgenerativeaiforvideovideoediting-ai-tool-placeholder.com",
+    "official_domain": "adobepremierepro252smartersearchgenerativeaiforvideovideoediting-ai-tool-placeholder.com",
+    "source": "aihub",
+    "tags": [],
+    "icon": "https://ph-files.imgix.net/95edfbba-c287-48f2-a167-6c56464d3346.avif?auto=format",
+    "logo_reason": "ultra:faviconkit_logo",
+    "category": "Video Editing",
+    "desc_ar": "البحث عن الأذكر و التعريف AI للفيديو",
+    "featured": false,
+    "logo_source": "aihub_v2",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-09",
+    "needs_review": true,
+    "url_fix_reason": "original_url_works",
+    "url_status": "already_ok"
   },
   {
     "name": "Eddie AI",
@@ -62091,6 +64393,40 @@ const aiTools = [
     "url_status": "already_ok"
   },
   {
+    "name": "mcp-zen",
+    "directory_url": "https://github.com/199-mcp/mcp-zen",
+    "url": "https://openrouter.ai/\\",
+    "description": "Enhanced Zen MCP Server with 'zen' default tool and improvements",
+    "pricing": "Unknown",
+    "logo": "https://www.google.com/s2/favicons?domain=openrouter.ai&sz=128",
+    "domain": "openrouter.ai",
+    "official_url": "https://openrouter.ai/\\",
+    "official_domain": "openrouter.ai",
+    "source": "github_topics",
+    "tags": [
+      "ai-tools",
+      "claude-mcp",
+      "mcp",
+      "mcp-server"
+    ],
+    "icon": "https://www.google.com/s2/favicons?domain=openrouter.ai&sz=128",
+    "logo_reason": "verified",
+    "category": "Self-Improvement",
+    "desc_ar": "& مُعزّز خادم MCP مُززِن مع و افتراضي أداة و تحسينات",
+    "featured": false,
+    "logo_source": "google_favicon",
+    "logo_strategies_tried": [
+      "serp_aggressive",
+      "website_deep",
+      "brandfetch",
+      "logodev",
+      "clearbit_validated"
+    ],
+    "logo_updated": "2025-12-08",
+    "url_status": "already_ok",
+    "url_fix_reason": "original_url_works"
+  },
+  {
     "name": "Max Fitness AI AI, Fitness, Trainer, Workout Coach, Personal Trainer #Fitness",
     "directory_url": "https://www.myaihub.ai/tools/max-fitness-ai",
     "url": "https://fitness.com/",
@@ -86804,36 +89140,7 @@ const aiTools = [
     "url_status": "fixed",
     "original_url": "https://agents.com/"
   },
-  {
-    "name": "Adobe Premiere Pro 25.2 Smarter search & generative AI for video #Video Editing",
-    "directory_url": "https://www.myaihub.ai/tools/adobe-premiere-pro-25-2",
-    "url": "https://adobe.io/",
-    "description": "Smarter search & generative AI for video",
-    "pricing": "Unknown",
-    "logo": "https://ph-files.imgix.net/95edfbba-c287-48f2-a167-6c56464d3346.avif?auto=format",
-    "domain": "adobepremierepro252smartersearchgenerativeaiforvideovideoediting-ai-tool-placeholder.com",
-    "official_url": "https://adobepremierepro252smartersearchgenerativeaiforvideovideoediting-ai-tool-placeholder.com",
-    "official_domain": "adobepremierepro252smartersearchgenerativeaiforvideovideoediting-ai-tool-placeholder.com",
-    "source": "aihub",
-    "tags": [],
-    "icon": "https://ph-files.imgix.net/95edfbba-c287-48f2-a167-6c56464d3346.avif?auto=format",
-    "logo_reason": "ultra:faviconkit_logo",
-    "category": "Video Editing",
-    "desc_ar": "البحث عن الأذكر و التعريف AI للفيديو",
-    "featured": false,
-    "logo_source": "aihub_v2",
-    "logo_strategies_tried": [
-      "serp_aggressive",
-      "website_deep",
-      "brandfetch",
-      "logodev",
-      "clearbit_validated"
-    ],
-    "logo_updated": "2025-12-09",
-    "needs_review": true,
-    "url_fix_reason": "original_url_works",
-    "url_status": "already_ok"
-  },
+ 
   {
     "name": "CloneMyTrips AI Travel Buddy #Travel",
     "directory_url": "https://www.myaihub.ai/tools/clonemytrips-2",
@@ -106212,54 +108519,7 @@ const aiTools = [
     "url_fix_reason": "original_url_works",
     "url_status": "already_ok"
   },
-  {
-    "name": "Skill_Seekers",
-    "directory_url": "https://github.com/yusufkaraaslan/Skill_Seekers",
-    "url": "https://claude.app/",
-    "description": "Convert documentation websites, GitHub repositories, and PDFs into Claude AI skills with automatic conflict detection",
-    "pricing": "Unknown",
-    "logo": "https://www.google.com/s2/favicons?domain=claude.ai&sz=128",
-    "domain": "claude.ai",
-    "official_url": "https://claude.ai/skills\\n#",
-    "official_domain": "claude.ai",
-    "source": "github_topics",
-    "tags": [
-      "ai-tools",
-      "ast-parser",
-      "automation",
-      "claude-ai",
-      "claude-skills",
-      "code-analysis",
-      "conflict-detection",
-      "documentation",
-      "documentation-generator",
-      "github",
-      "github-scraper",
-      "mcp",
-      "mcp-server",
-      "multi-source",
-      "ocr",
-      "pdf",
-      "python",
-      "web-scraping"
-    ],
-    "icon": "https://www.google.com/s2/favicons?domain=claude.ai&sz=128",
-    "logo_reason": "fixed_broken: logo: HTTP 500",
-    "category": "AI Detection",
-    "desc_ar": "مواقع وثائق تحويل الوثائق على الإنترنت، ومخازن GigtHub، وقوات الدفاع الشعبي إلى كلود",
-    "featured": false,
-    "logo_source": "google_favicon",
-    "logo_strategies_tried": [
-      "serp_aggressive",
-      "website_deep",
-      "brandfetch",
-      "logodev",
-      "clearbit_validated"
-    ],
-    "logo_updated": "2025-12-08",
-    "url_fix_reason": "original_url_works",
-    "url_status": "already_ok"
-  },
+  
   {
     "name": "awesome-ai-tools",
     "directory_url": "https://github.com/mahseema/awesome-ai-tools",
@@ -111631,40 +113891,7 @@ const aiTools = [
     "url_fix_reason": "original_url_works",
     "url_status": "already_ok"
   },
-  {
-    "name": "mcp-zen",
-    "directory_url": "https://github.com/199-mcp/mcp-zen",
-    "url": "https://openrouter.ai/\\",
-    "description": "Enhanced Zen MCP Server with 'zen' default tool and improvements",
-    "pricing": "Unknown",
-    "logo": "https://www.google.com/s2/favicons?domain=openrouter.ai&sz=128",
-    "domain": "openrouter.ai",
-    "official_url": "https://openrouter.ai/\\",
-    "official_domain": "openrouter.ai",
-    "source": "github_topics",
-    "tags": [
-      "ai-tools",
-      "claude-mcp",
-      "mcp",
-      "mcp-server"
-    ],
-    "icon": "https://www.google.com/s2/favicons?domain=openrouter.ai&sz=128",
-    "logo_reason": "verified",
-    "category": "Self-Improvement",
-    "desc_ar": "& مُعزّز خادم MCP مُززِن مع و افتراضي أداة و تحسينات",
-    "featured": false,
-    "logo_source": "google_favicon",
-    "logo_strategies_tried": [
-      "serp_aggressive",
-      "website_deep",
-      "brandfetch",
-      "logodev",
-      "clearbit_validated"
-    ],
-    "logo_updated": "2025-12-08",
-    "url_status": "already_ok",
-    "url_fix_reason": "original_url_works"
-  },
+  
   {
     "name": "prompt-decorators",
     "directory_url": "https://github.com/synaptiai/prompt-decorators",
@@ -120507,39 +122734,7 @@ const aiTools = [
     "url_fix_date": "2025-12-20T02:13:40.512155",
     "original_bad_url": "https://github.com/prodypanda/copytabs"
   },
-  {
-    "name": "AIShowcaseForGames",
-    "directory_url": "https://github.com/Goldenlion5648/AIShowcaseForGames",
-    "url": "https://lumalabs.ai/genie",
-    "description": "A list of AI tools to help with game development (showcased in a Godot project)",
-    "pricing": "Unknown",
-    "logo": "https://www.google.com/s2/favicons?domain=lumalabs.ai&sz=128",
-    "domain": "lumalabs.ai",
-    "official_url": "https://lumalabs.ai/genie",
-    "official_domain": "lumalabs.ai",
-    "source": "github_topics",
-    "tags": [
-      "ai",
-      "ai-tools",
-      "godot"
-    ],
-    "icon": "https://www.google.com/s2/favicons?domain=lumalabs.ai&sz=128",
-    "logo_reason": "verified",
-    "category": "Gaming",
-    "desc_ar": "قائمة بالأدوات التي تساعد على تطوير الألعاب (معروضة في مشروع غودو)",
-    "featured": false,
-    "logo_source": "google_favicon",
-    "logo_strategies_tried": [
-      "serp_aggressive",
-      "website_deep",
-      "brandfetch",
-      "logodev",
-      "clearbit_validated"
-    ],
-    "logo_updated": "2025-12-08",
-    "url_status": "already_ok",
-    "url_fix_reason": "original_url_works"
-  },
+  
   {
     "name": "BrushStroke",
     "directory_url": "https://github.com/Enderjua/BrushStroke",
@@ -135341,8 +137536,8 @@ const categories = [
     "icon": "bi bi-megaphone"
   },
   {
-    "name": "Music",
-    "name_ar": "الموسيقى",
+    "name": "Sounds",
+    "name_ar": "الأصوات",
     "icon": "bi bi-music-note"
   },
   {
@@ -136750,10 +138945,10 @@ function createToolCard(tool) {
                     <span class="badge bg-primary">${tool.pricing}</span>
                 </div>
                 <p class="card-text flex-grow-1">${description}</p>
-                <div class="mt-auto">
+                <div class="mt-auto" style="direction: ltr !important; text-align: left !important;">
                     <span class="badge bg-secondary mb-2">${tool.category}</span>
-                    <div class="d-flex gap-2">
-                        <a href="${tool.url}" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+                    <div class="tool-card-buttons" style="display: flex; gap: 0.5rem; direction: rtl; width: fit-content; margin-left: 0; margin-right: auto; position: relative; left: 0; right: auto;">
+                        <a href="${tool.url}" class="btn btn-primary btn-sm" style="border-radius: 500px 0 0 500px;" target="_blank" rel="noopener" dir="rtl">
                             <i class="fas fa-external-link-alt me-1"></i>
                             ${visitText}
                         </a>
@@ -137222,7 +139417,7 @@ function viewBlogPostDetails(blogId) {
 // });
 
 
-function loadSameCategoryTools(category, currentToolName) {
+function loadSameCategoryTools(category, currentToolName, tool, index) {
   const sameCategoryContainer = document.getElementById('same-category-container');
   const onlyToolMessage = document.getElementById('only-tool-message');
   const sameCategoryTitle = document.getElementById('same-category-title');
@@ -137262,10 +139457,9 @@ function loadSameCategoryTools(category, currentToolName) {
                         <span class="badge bg-primary same-category-card-badge">${tool.category}</span>
                         <p class="same-category-card-text">${description}</p>
                         <div class="same-category-card-footer">
-                            <button class="btn btn-outline-primary same-category-details-btn"
-                                    onclick="showToolDetails(${aiTools.findIndex(t => t.name === tool.name)})">
-                                <span data-ar="التفاصيل" data-en="Details">Details</span>
-                            </button>
+                        <button class="btn btn-outline-primary btn-sm view-details-btn" data-tool-id="${index}">
+              details
+            </button>
                         </div>
                     </div>
                 </div>
@@ -139165,7 +141359,7 @@ document.addEventListener('click', function (e) {
           <div class="card tool-card h-100">
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">${toolName(tool) || 'Tool'}</h5>
-              <div class="mt-auto">
+              <div class="mt-auto" style="direction: ltr !important; text-align: left !important;">
                 <button class="btn btn-outline-primary btn-sm view-details-btn" data-tool-id="${idx}">Details</button>
               </div>
             </div>
@@ -139947,11 +142141,11 @@ function createToolCardFull(tool, index) {
 
         <p class="card-text flex-grow-1">${description}</p>
 
-        <div class="mt-auto">
-          <div class="d-flex gap-2">
-            <a href="${tool.url || "#"}" class="btn btn-primary btn-sm" target="_blank" rel="noopener">
+        <div class="mt-auto" style="direction: ltr !important; text-align: left !important;">
+          <div style="display: flex; width: fit-content; position: relative; border-top-right-radius: 100px; border-bottom-right-radius: 100px;">
+            <button class="btn btn-primary btn-sm visit-website-btn" style="border-radius: 500px 0 0 500px;" dir="rtl" data-url="${tool.url || "#"}" onclick="event.preventDefault(); event.stopPropagation(); var url='${(tool.url || "#").replace(/'/g, "\\'")}'; if(url && url !== '#'){ window.open(url, '_blank'); window.focus(); }">
               ${visitText}
-            </a>
+            </button>
             <button class="btn btn-outline-primary btn-sm view-details-btn" data-tool-id="${index}">
               ${detailsText}
             </button>
@@ -140361,25 +142555,25 @@ document.addEventListener("click", function (e) {
   toggleFavoriteByIndex(index, btn);
 }, true);
 // ===== PATCH: Redirect Details buttons to static tool pages =====
-(function() {
-  document.addEventListener('click', function(e) {
+(function () {
+  document.addEventListener('click', function (e) {
     const btn = e.target.closest('.view-details-btn');
     if (!btn) return;
-    
+
     e.preventDefault();
     e.stopPropagation();
     e.stopImmediatePropagation();
-    
+
     // Get the tool from the card
     const card = btn.closest('.card, [data-tool-id]');
     const container = btn.closest('[data-tool-id]');
-    
+
     let toolIndex = btn.dataset.toolId;
     if (!toolIndex && container) toolIndex = container.dataset.toolId;
-    
+
     const tools = window.aiTools || [];
     const tool = tools[toolIndex];
-    
+
     if (tool && tool.name) {
       const slug = tool.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
       if (slug) {
@@ -140387,38 +142581,38 @@ document.addEventListener("click", function (e) {
         return;
       }
     }
-    
+
     // Fallback: try showToolDetails
     if (typeof showToolDetails === 'function' && toolIndex) {
       showToolDetails(parseInt(toolIndex, 10));
     }
   }, true);
-  
+
   console.log('✅ Static tool pages redirect enabled');
 })();
 
 // ===== AGGRESSIVE FIX: Force Details buttons to navigate to static pages =====
-(function() {
+(function () {
   // Override at the earliest possible moment
-  document.addEventListener('click', function(e) {
+  document.addEventListener('click', function (e) {
     const btn = e.target.closest('.view-details-btn');
     if (!btn) return;
-    
+
     // Stop everything else
     e.preventDefault();
     e.stopPropagation();
     e.stopImmediatePropagation();
-    
+
     // Get tool index
     let toolIndex = btn.dataset.toolId;
     if (!toolIndex) {
       const container = btn.closest('[data-tool-id]');
       if (container) toolIndex = container.dataset.toolId;
     }
-    
+
     const tools = window.aiTools || [];
     const tool = tools[parseInt(toolIndex, 10)];
-    
+
     if (tool && tool.name) {
       const slug = tool.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
       if (slug) {
@@ -140429,10 +142623,10 @@ document.addEventListener("click", function (e) {
     }
     return false;
   }, true); // capture phase
-  
+
   // Also override showToolDetails to redirect instead
   const originalShowToolDetails = window.showToolDetails;
-  window.showToolDetails = function(index) {
+  window.showToolDetails = function (index) {
     const tools = window.aiTools || [];
     const tool = tools[index];
     if (tool && tool.name) {
@@ -140445,6 +142639,86 @@ document.addEventListener("click", function (e) {
     // Fallback to original
     if (originalShowToolDetails) originalShowToolDetails(index);
   };
-  
+
   console.log('✅ Static pages redirect v2 enabled');
+})();
+
+
+
+(function () {
+  'use strict';
+
+  // ✅ Save the original showToolDetails function from main.js
+  var originalShowToolDetails = window.showToolDetails;
+
+  // ✅ Override showToolDetails to redirect to static pages
+  window.showToolDetails = function (toolOrIndex) {
+    console.log('✅ showToolDetails v5 intercepted:', typeof toolOrIndex);
+
+    var tool = toolOrIndex;
+
+    // If it's an index number, get the tool from aiTools
+    if (typeof toolOrIndex === 'number') {
+      tool = (window.aiTools || [])[toolOrIndex];
+    }
+
+    // If the onclick passes the entire tool object (from createToolCard)
+    if (toolOrIndex && typeof toolOrIndex === 'object' && toolOrIndex.name) {
+      tool = toolOrIndex;
+    }
+
+    // Navigate to static page if we have a valid tool
+    if (tool && tool.name) {
+      var slug = tool.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+      if (slug) {
+        // Close search overlay
+        var overlay = document.getElementById('search-results-overlay');
+        if (overlay) overlay.style.display = 'none';
+        try { if (typeof hideSearchOverlay === 'function') hideSearchOverlay(); } catch (e) { }
+
+        window.location.href = '/tools/' + slug + '.html';
+        console.log('✅ Redirecting to /tools/' + slug + '.html');
+        return;
+      }
+    }
+
+    // Fallback to original function
+    console.log('⚠️ Fallback to original showToolDetails');
+    if (originalShowToolDetails) {
+      originalShowToolDetails.call(window, toolOrIndex);
+    }
+  };
+
+  // ✅ Handle Visit Website anchor clicks - open in background tab
+  document.addEventListener('click', function (e) {
+    // Find anchor with btn-primary class
+    var link = e.target.closest('a.btn-primary');
+    if (!link) return;
+
+    // Must have target="_blank" attribute (indicates external link)
+    if (link.getAttribute('target') !== '_blank') return;
+
+    // Must be inside a card
+    var card = link.closest('.card, .tool-card, .col-xl-4, .col-lg-6');
+    if (!card) return;
+
+    var url = link.href;
+    if (!url || url === '#' || url.includes('javascript:')) return;
+
+    // Prevent default navigation
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+
+    // Open in background tab
+    var win = window.open(url, '_blank');
+    if (win) {
+      win.blur();
+      window.focus();
+    }
+    console.log('✅ Opened in background tab:', url);
+    return false;
+  }, true); // capture phase
+
+  console.log('✅ Button fix v5 loaded (AFTER main.js) - showToolDetails overridden');
 })();
