@@ -1,4 +1,4 @@
-﻿const aiTools = [
+const aiTools = [
   {
     "name": "Punchd",
     "directory_url": "https://punchd.ai/",
@@ -1518,7 +1518,7 @@
     "icon": "https://cdn.prod.website-files.com/63994dae1033718bee6949ce/695d2133e9b292729c56be31_invoiceagent-ai-logo.png",
     "logo_reason": "patched_fast:faviconkit",
     "category": "Finance",
-    "desc_ar": "أداة لأتمتة استخراج بيانات الفواتير وإدارتها وتحليلها.",
+    "desc_ar": "أداة لأتمتة استخراج بيانات الفواتير وإدارتها وتحليلها.", 
     "featured": false,
     "logo_source": "futuretools_page",
     "logo_strategies_tried": [
@@ -89140,7 +89140,7 @@
     "url_status": "fixed",
     "original_url": "https://agents.com/"
   },
-
+ 
   {
     "name": "CloneMyTrips AI Travel Buddy #Travel",
     "directory_url": "https://www.myaihub.ai/tools/clonemytrips-2",
@@ -108519,7 +108519,7 @@
     "url_fix_reason": "original_url_works",
     "url_status": "already_ok"
   },
-
+  
   {
     "name": "awesome-ai-tools",
     "directory_url": "https://github.com/mahseema/awesome-ai-tools",
@@ -113891,7 +113891,7 @@
     "url_fix_reason": "original_url_works",
     "url_status": "already_ok"
   },
-
+  
   {
     "name": "prompt-decorators",
     "directory_url": "https://github.com/synaptiai/prompt-decorators",
@@ -122734,7 +122734,7 @@
     "url_fix_date": "2025-12-20T02:13:40.512155",
     "original_bad_url": "https://github.com/prodypanda/copytabs"
   },
-
+  
   {
     "name": "BrushStroke",
     "directory_url": "https://github.com/Enderjua/BrushStroke",
@@ -137985,8 +137985,137 @@ function backToHome() {
 
 
 
+// دالة التحقق من كون الأداة مفضلة
+function isFavorite(tool) {
+  const favorites = getFavoritesArray();
+  return favorites.some(fav => fav.name === tool.name);
+}
 
-/* Old favorites block removed */
+// =========================================================
+// ✅ FAVORITES STORAGE (Per-user + Never undefined)
+// =========================================================
+
+
+function getUserIdSafe() {
+  try {
+    const user = JSON.parse(localStorage.getItem("currentUser") || "null");
+    return user?.email || user?.id || "guest"; // ✅ لا يوجد undefined أبدًا
+  } catch (e) {
+    return "guest";
+  }
+}
+
+
+function getFavoritesRaw() {
+  try {
+    return JSON.parse(localStorage.getItem("favorites") || "{}");
+  } catch (e) {
+    return {};
+  }
+}
+
+
+function getFavoritesIds() {
+  const raw = getFavoritesRaw();
+  const uid = getUserIdSafe();
+
+
+  // ✅ لو تخزين قديم كان array
+  if (Array.isArray(raw)) return raw;
+
+
+  // ✅ التخزين الحالي object per-user
+  if (raw && typeof raw === "object") {
+    const list = raw[uid];
+    return Array.isArray(list) ? list : [];
+  }
+
+
+  return [];
+}
+
+
+function saveFavoritesIds(ids) {
+  const raw = getFavoritesRaw();
+  const uid = getUserIdSafe();
+
+
+  const store = (raw && typeof raw === "object" && !Array.isArray(raw)) ? raw : {};
+  store[uid] = ids;
+
+
+  localStorage.setItem("favorites", JSON.stringify(store));
+}
+
+// دالة تبديل المفضلة
+// function toggleFavorite(event, tool) {
+//   event.preventDefault();
+//   event.stopPropagation();
+
+//   const favorites = getFavoritesArray();
+//   const existingIndex = favorites.findIndex(fav => fav.name === tool.name);
+
+//   if (existingIndex > -1) {
+//     // إزالة من المفضلة
+//     favorites.splice(existingIndex, 1);
+//     event.target.classList.remove('active');
+//     event.target.querySelector('i').classList.remove('text-danger');
+//     event.target.querySelector('i').classList.add('text-white');
+//     showToast(currentLanguage === 'ar' ? 'تمت الإزالة من المفضلة' : 'Removed from favorites', 'info');
+//   } else {
+//     // إضافة إلى المفضلة
+//     favorites.push(tool);
+//     event.target.classList.add('active');
+//     event.target.querySelector('i').classList.add('text-danger');
+//     event.target.querySelector('i').classList.remove('text-white');
+//     showToast(currentLanguage === 'ar' ? 'تمت الإضافة إلى المفضلة' : 'Added to favorites', 'success');
+//   }
+
+//   localStorage.setItem('favorites', JSON.stringify(favorites));
+//   updateFavoritesButton();
+// }
+
+
+function saveFavoritesArray(arr) {
+  localStorage.setItem("favorites", JSON.stringify(arr));
+}
+
+
+function toggleFavoriteByIndex(btn, idx) {
+  // ✅ تأكد aiTools موجود
+  const list = window.aiTools || [];
+  const tool = list[idx];
+  if (!tool) return;
+
+
+  const favs = getFavoritesArray();
+  const exists = favs.includes(idx);
+
+
+  const icon = btn.querySelector("i");
+
+
+  if (exists) {
+    // إزالة
+    const next = favs.filter(x => x !== idx);
+    saveFavoritesArray(next);
+
+
+    btn.classList.remove("active");
+    if (icon) icon.style.color = "#ffffff";
+  } else {
+    // إضافة
+    favs.push(idx);
+    saveFavoritesArray(favs);
+
+
+    btn.classList.add("active");
+    if (icon) icon.style.color = "#f4cf55ff";
+  }
+
+
+  updateFavoritesButton?.();
+}
 
 // دالة تحديث زر المفضلة
 function updateFavoritesButton() {
@@ -138319,147 +138448,64 @@ function updateDynamicContent() {
 // RENDER FUNCTIONS
 // =================================================================================
 
-function displayToolsByCategories(sortMode) {
-    const container = document.getElementById('featured-tools-container');
-    container.innerHTML = '';
+function displayToolsByCategories() {
+  const container = document.getElementById('featured-tools-container');
+  container.innerHTML = '';
 
-    // Sorting Filter Bar
-    const isArLang = (localStorage.getItem('lang') === 'ar');
-    const filterBar = document.createElement('div');
-    filterBar.className = 'sorting-filter-bar d-flex flex-wrap justify-content-center mb-4';
-    filterBar.style.cssText = 'padding: 15px 0; gap: 12px; align-items: center;';
-    const sortOptions = [
-        { key: 'newest', labelEn: 'Newest', labelAr: 'الأحدث' },
-        { key: 'oldest', labelEn: 'Oldest', labelAr: 'الأقدم' },
-        { key: 'rated', labelEn: 'Most Rated', labelAr: 'الأكثر تقييماً' }
-    ];
-    sortOptions.forEach(function (opt) {
-        const btn = document.createElement('button');
-        btn.className = 'btn shadow-sm ' + (sortMode === opt.key ? 'btn-primary' : 'btn-outline-primary');
-        // Unify padding, line-height, and height
-        btn.style.cssText = 'border-radius: 25px; padding: 10px 24px; font-size: 15px; font-weight: 600; font-family: inherit; display: inline-flex; align-items: center; justify-content: center; height: 44px; transition: all 0.3s ease; letter-spacing: 0.3px;';
-        
-        btn.textContent = isArLang ? opt.labelAr : opt.labelEn;
-        btn.addEventListener('click', function () { displayToolsByCategories(opt.key); });
-        filterBar.appendChild(btn);
+  // تجميع الأدوات حسب الفئة
+  const toolsByCategory = {};
+  aiTools.forEach(tool => {
+    if (!toolsByCategory[tool.category]) {
+      toolsByCategory[tool.category] = [];
+    }
+    toolsByCategory[tool.category].push(tool);
+  });
+
+  // إنشاء قسم لكل فئة
+  Object.keys(toolsByCategory).forEach(category => {
+    const categoryTools = toolsByCategory[category];
+
+    const categorySection = document.createElement('div');
+    categorySection.className = 'category-section mb-5';
+    categorySection.id = `category-${category.replace(/\s+/g, '-').toLowerCase()}`;
+
+    // عنوان القسم
+    const sectionHeader = document.createElement('div');
+    sectionHeader.className = 'category-header';
+    sectionHeader.innerHTML = `
+            <h3 class="fw-bold">${category}</h3>
+            <span class="badge bg-secondary">${categoryTools.length} أدوات</span>
+        `;
+
+    // شبكة الأدوات (نعرض 6 أدوات فقط في البداية)
+    const toolsGrid = document.createElement('div');
+    toolsGrid.className = 'row g-4';
+
+    // عرض أول 6 أدوات فقط
+    const toolsToShow = categoryTools.slice(0, 6);
+
+    toolsToShow.forEach(tool => {
+      const toolCard = createToolCard(tool);
+      toolsGrid.appendChild(toolCard);
     });
 
-    // Add Back / Reset Filter button
-    if (sortMode) {
-        const resetBtn = document.createElement('button');
-        // Remove 'back-button' and 'btn-danger' to drop any interfering CSS that shrinks it / breaks gradient
-        resetBtn.className = 'btn shadow-sm';
-        // Add a nice dark gradient or soft dark grey
-        resetBtn.style.cssText = 'border-radius: 25px; padding: 10px 24px; font-size: 15px; font-weight: 600; font-family: inherit; display: inline-flex; align-items: center; justify-content: center; height: 44px; transition: all 0.3s ease; letter-spacing: 0.3px; background: linear-gradient(135deg, #4b5563, #374151); color: #ffffff; border: none; margin-inline-start: 10px;';
-        
-        resetBtn.innerHTML = '<i class="fas fa-arrow-left me-2"></i> ' + (isArLang ? 'العودة' : 'Back');
-        resetBtn.addEventListener('click', function () { displayToolsByCategories(null); });
-        
-        // Hover effect helper for inline background
-        resetBtn.onmouseover = function() { this.style.opacity = '0.85'; this.style.transform = 'translateY(-2px)'; };
-        resetBtn.onmouseout = function() { this.style.opacity = '1'; this.style.transform = 'translateY(0)'; };
-        
-        filterBar.appendChild(resetBtn);
-    }
-    
-    container.appendChild(filterBar);
+    // زر "عرض المزيد" إذا كان هناك أكثر من 6 أدوات
+    const showMoreBtn = document.createElement('button');
+    showMoreBtn.className = 'btn btn-primary show-more-btn';
+    showMoreBtn.innerHTML = currentLanguage === 'ar' ? 'عرض المزيد' : 'Show More';
+    showMoreBtn.onclick = () => showAllCategoryTools(category);
 
-    // Build sorted tools list
-    let sortedTools = typeof aiTools !== 'undefined' ? aiTools.slice() : [];
-    if (sortMode === 'oldest') {
-        sortedTools.reverse(); 
-    } else if (sortMode === 'rated') {
-        sortedTools.sort(function (a, b) {
-            var rA = getUserRating(typeof aiTools !== 'undefined' ? aiTools.indexOf(a) : 0) || a.rating || 0;
-            var rB = getUserRating(typeof aiTools !== 'undefined' ? aiTools.indexOf(b) : 0) || b.rating || 0;
-            return rB - rA;
-        });
+    // إضافة العناصر إلى القسم
+    categorySection.appendChild(sectionHeader);
+    categorySection.appendChild(toolsGrid);
+
+    // إضافة زر "عرض المزيد" فقط إذا كان هناك أكثر من 6 أدوات
+    if (categoryTools.length > 6) {
+      categorySection.appendChild(showMoreBtn);
     }
 
-    if (!sortMode) {
-        // DEFAULT: Show grouped by category
-        const toolsByCategory = {};
-        sortedTools.forEach(function (tool) {
-            if (!toolsByCategory[tool.category]) {
-                toolsByCategory[tool.category] = [];
-            }
-            toolsByCategory[tool.category].push(tool);
-        });
-
-        Object.keys(toolsByCategory).forEach(function (category) {
-            const categoryTools = toolsByCategory[category];
-            const categorySection = document.createElement('div');
-            categorySection.className = 'category-section mb-5';
-            categorySection.id = 'category-' + category.replace(/\s+/g, '-').toLowerCase();
-
-            const sectionHeader = document.createElement('div');
-            sectionHeader.className = 'category-header mt-4 mb-3';
-            sectionHeader.innerHTML = '<h3 class="fw-bold">' + category + '</h3>' +
-                '<span class="badge bg-secondary">' + categoryTools.length + ' ' + (isArLang ? 'أداة' : 'tools') + '</span>';
-
-            const toolsGrid = document.createElement('div');
-            toolsGrid.className = 'row g-4';
-
-            const toolsToShow = categoryTools.slice(0, 6);
-            toolsToShow.forEach(function (tool) {
-                const toolCard = createToolCard(tool);
-                toolsGrid.appendChild(toolCard);
-            });
-
-            const showMoreBtn = document.createElement('button');
-            showMoreBtn.className = 'btn btn-outline-primary show-more-btn mt-3';
-            showMoreBtn.innerHTML = isArLang ? 'عرض المزيد' : 'Show More';
-            showMoreBtn.onclick = function () { showAllCategoryTools(category); };
-
-            categorySection.appendChild(sectionHeader);
-            categorySection.appendChild(toolsGrid);
-
-            if (categoryTools.length > 6) {
-                categorySection.appendChild(showMoreBtn);
-            }
-
-            container.appendChild(categorySection);
-        });
-    } else {
-        // FILTER APPLIED: Show ALL tools without truncation
-        const toolsGrid = document.createElement('div');
-        toolsGrid.className = 'row g-4 mb-5';
-        container.appendChild(toolsGrid);
-
-        let currentIndex = 0;
-        const chunkSize = 40; // Render 40 tools at a time
-        
-        function renderNextChunk() {
-            const end = Math.min(currentIndex + chunkSize, sortedTools.length);
-            for (let i = currentIndex; i < end; i++) {
-                const toolCard = createToolCard(sortedTools[i]);
-                toolsGrid.appendChild(toolCard);
-            }
-            currentIndex = end;
-        }
-
-        // Initial render
-        renderNextChunk();
-
-        // Infinite scroll
-        if (currentIndex < sortedTools.length) {
-            const sentinel = document.createElement('div');
-            sentinel.style.height = '20px';
-            sentinel.style.width = '100%';
-            container.appendChild(sentinel);
-
-            const observer = new IntersectionObserver(function(entries) {
-                if (entries[0].isIntersecting) {
-                    renderNextChunk();
-                    if (currentIndex >= sortedTools.length) {
-                        observer.disconnect();
-                        sentinel.remove();
-                    }
-                }
-            }, { rootMargin: '400px' }); 
-            observer.observe(sentinel);
-        }
-    }
+    container.appendChild(categorySection);
+  });
 }
 
 // دالة لعرض جميع أدوات قسم معين
@@ -138871,101 +138917,50 @@ function backToHomeFromDetails() {
   document.getElementById('home-page').style.display = 'block';
 }
 
-// ========== PER-ACCOUNT HELPERS ==========
-
-// Get the current user's email key for localStorage
-function _getUserKey() {
-  try {
-    var u = JSON.parse(localStorage.getItem('currentUser'));
-    if (u && u.isLoggedIn && u.email) return u.email;
-  } catch (e) { }
-  return '__guest__';
-}
-
-// Get the user's rating for a specific tool index
-function getUserRating(toolIndex) {
-  var key = 'ratings_' + _getUserKey();
-  try {
-    var data = JSON.parse(localStorage.getItem(key));
-    if (data && typeof data === 'object') return data[toolIndex] || 0;
-  } catch (e) { }
-  return 0;
-}
-
-// Save a user's rating for a specific tool index
-function saveUserRating(toolIndex, rating) {
-  var key = 'ratings_' + _getUserKey();
-  var data = {};
-  try { data = JSON.parse(localStorage.getItem(key)) || {}; } catch (e) { }
-  data[toolIndex] = rating;
-  localStorage.setItem(key, JSON.stringify(data));
-}
-
-// Generate interactive star rating HTML
-function generateStars(toolIndex) {
-  var saved = getUserRating(toolIndex);
-  var r = saved || 0;
-  var html = '<span class="interactive-stars" data-tool-idx="' + toolIndex + '">';
-  for (var i = 1; i <= 5; i++) {
-    var cls = (i <= r) ? 'fas fa-star' : 'far fa-star';
-    var color = (i <= r) ? '#f4cf55' : '#ccc';
-    html += '<i class="' + cls + ' star-click" data-star="' + i + '" data-tool-idx="' + toolIndex + '" style="color:' + color + ';font-size:14px;cursor:pointer;padding:1px;"></i>';
-  }
-  html += '</span>';
-  return html;
-}
-
+// دالة لإنشاء بطاقة الأداة (نفس الدالة السابقة مع تحسينات)
+// دالة لإنشاء بطاقة الأداة
 // دالة لإنشاء بطاقة الأداة
 function createToolCard(tool) {
   const col = document.createElement('div');
   col.className = 'col-xl-4 col-lg-6 mb-4';
 
-  // Find tool index in master array
-  const toolIndex = (window.aiTools || []).indexOf(tool);
-  const safeIndex = toolIndex !== -1 ? toolIndex : (window.aiTools || []).findIndex(function (t) { return t.name === tool.name; });
-  const idx = safeIndex !== -1 ? safeIndex : 0;
-  col.dataset.toolId = idx;
+  const description = (localStorage.getItem('lang') === 'ar') ? (tool.desc_ar || tool.description) : tool.description;
+  const visitText = (localStorage.getItem('lang') === 'ar') ? 'زيارة الموقع' : 'Visit Website';
+  const detailsText = (localStorage.getItem('lang') === 'ar') ? 'التفاصيل' : 'Details';
 
-  const isAr = (localStorage.getItem('lang') === 'ar');
-  const description = isAr ? (tool.desc_ar || tool.description) : tool.description;
-  const visitText = isAr ? '\u0632\u064a\u0627\u0631\u0629 \u0627\u0644\u0645\u0648\u0642\u0639' : 'Visit Website';
-  const detailsText = isAr ? '\u0627\u0644\u062a\u0641\u0627\u0635\u064a\u0644' : 'Details';
-
-  const favActive = (typeof isFavoriteIndex === 'function') ? isFavoriteIndex(idx) : false;
-  const starHtml = generateStars(idx);
-
-  col.innerHTML = '<div class="card tool-card h-100">' +
-    '<div class="card-img-top position-relative">' +
-    '<img src="' + (tool.logo || '') + '" class="card-img-top" alt="' + (tool.name || '') + '" ' +
-    'style="height: 200px; object-fit: contain; padding: 20px;" ' +
-    "onerror=\"this.src='./Images/placeholder-logo.png'\">" +
-    '<button class="btn btn-sm favorite-toggle position-absolute top-0 end-0 m-2 ' + (favActive ? 'active' : '') + '" ' +
-    'data-tool-index="' + idx + '">' +
-    '<i class="' + (favActive ? 'fas' : 'far') + ' fa-heart" style="color: ' + (favActive ? '#f4cf55' : '#ffffff') + '"></i>' +
-    '</button>' +
-    '</div>' +
-    '<div class="card-body d-flex flex-column">' +
-    '<div class="d-flex justify-content-between align-items-start mb-1">' +
-    '<h5 class="card-title">' + (tool.name || '') + '</h5>' +
-    '<span class="badge bg-primary">' + (tool.pricing || '') + '</span>' +
-    '</div>' +
-    '<div class="mb-2">' + starHtml + '</div>' +
-    '<p class="card-text flex-grow-1">' + (description || '') + '</p>' +
-    '<div class="mt-auto" style="direction: ltr !important; text-align: left !important;">' +
-    '<span class="badge bg-secondary mb-2">' + (tool.category || '') + '</span>' +
-    '<div class="tool-card-buttons" style="display: flex; gap: 0.5rem; direction: rtl; width: fit-content; margin-left: 0; margin-right: auto; position: relative; left: 0; right: auto;">' +
-    '<a href="' + (tool.url || '#') + '" class="btn btn-primary btn-sm" style="border-radius: 500px 0 0 500px;" target="_blank" rel="noopener" dir="rtl">' +
-    '<i class="fas fa-external-link-alt me-1"></i>' +
-    visitText +
-    '</a>' +
-    '<button class="btn btn-outline-primary btn-sm view-details-btn" data-tool-id="' + idx + '">' +
-    '<i class="fas fa-info-circle me-1"></i>' +
-    detailsText +
-    '</button>' +
-    '</div>' +
-    '</div>' +
-    '</div>' +
-    '</div>';
+  col.innerHTML = `
+        <div class="card tool-card h-100">
+            <div class="card-img-top position-relative">
+                <img src="${tool.logo}" class="card-img-top" alt="${tool.name}" 
+                     style="height: 200px; object-fit: contain; padding: 20px;" 
+                     onerror="this.src='./Images/placeholder-logo.png'">
+                <button class="btn btn-sm favorite-toggle position-absolute top-0 end-0 m-2 ${isFavorite(tool) ? 'active' : ''}" 
+                        onclick="toggleFavorite(event, ${JSON.stringify(tool).replace(/"/g, '&quot;')})">
+                    <i class="fas fa-heart ${isFavorite(tool) ? 'text-danger' : 'text-white'}"></i>
+                </button>
+            </div>
+            <div class="card-body d-flex flex-column">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                    <h5 class="card-title">${tool.name}</h5>
+                    <span class="badge bg-primary">${tool.pricing}</span>
+                </div>
+                <p class="card-text flex-grow-1">${description}</p>
+                <div class="mt-auto" style="direction: ltr !important; text-align: left !important;">
+                    <span class="badge bg-secondary mb-2">${tool.category}</span>
+                    <div class="tool-card-buttons" style="display: flex; gap: 0.5rem; direction: rtl; width: fit-content; margin-left: 0; margin-right: auto; position: relative; left: 0; right: auto;">
+                        <a href="${tool.url}" class="btn btn-primary btn-sm" style="border-radius: 500px 0 0 500px;" target="_blank" rel="noopener" dir="rtl">
+                            <i class="fas fa-external-link-alt me-1"></i>
+                            ${visitText}
+                        </a>
+                        <button class="btn btn-outline-primary btn-sm" onclick="showToolDetails(${JSON.stringify(tool).replace(/"/g, '&quot;')})">
+                            <i class="fas fa-info-circle me-1"></i>
+                            ${detailsText}
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
 
   return col;
 }
@@ -139474,155 +139469,203 @@ function loadSameCategoryTools(category, currentToolName, tool, index) {
 }
 
 // =================================================================================
-// FAVORITES SYSTEM — Unified Per-Account
+// FAVORITES SYSTEM
 // =================================================================================
 
 function toggleFavorite(toolId, button) {
-  // Redirect to the unified per-account toggleFavoriteByIndex
-  if (typeof toggleFavoriteByIndex === 'function') {
-    toggleFavoriteByIndex(toolId, button);
+  const userData = JSON.parse(localStorage.getItem('currentUser'));
+
+  if (!userData || !userData.isLoggedIn) {
+    showToast(
+      currentLang === 'en' ? 'Please login to add tools to favorites' : 'يرجى تسجيل الدخول لإضافة الأدوات إلى المفضلة',
+      'info'
+    );
+    return;
   }
+
+  const userId = userData.email;
+  if (!favorites[userId]) {
+    favorites[userId] = [];
+  }
+
+  const userFavorites = favorites[userId];
+  const icon = button.querySelector('i');
+
+  if (userFavorites.includes(toolId)) {
+    const index = userFavorites.indexOf(toolId);
+    userFavorites.splice(index, 1);
+    icon.classList.remove('fas', 'text-danger');
+    icon.classList.add('far');
+    button.classList.remove('active');
+    showToast(
+      currentLang === 'en' ? 'Removed from favorites' : 'تمت الإزالة من المفضلة',
+      'success'
+    );
+  } else {
+    userFavorites.push(toolId);
+    icon.classList.remove('far');
+    icon.classList.add('fas', 'text-danger');
+    button.classList.add('active');
+    showToast(
+      currentLang === 'en' ? 'Added to favorites' : 'تمت الإضافة إلى المفضلة',
+      'success'
+    );
+  }
+
+  localStorage.setItem('favorites', JSON.stringify(favorites));
 }
 
 function updateFavoriteButtonState(button, toolId) {
-  var fav = isFavoriteIndex(toolId);
-  var icon = button.querySelector('i');
-  if (!icon) return;
-  if (fav) {
+  const userData = JSON.parse(localStorage.getItem('currentUser'));
+  if (!userData || !userData.isLoggedIn) return;
+
+  const userId = userData.email;
+  const userFavorites = favorites[userId] || [];
+  const icon = button.querySelector('i');
+
+  if (userFavorites.includes(toolId)) {
     icon.classList.remove('far');
-    icon.classList.add('fas');
-    icon.style.color = '#f4cf55';
+    icon.classList.add('fas', 'text-danger');
     button.classList.add('active');
   } else {
-    icon.classList.remove('fas');
+    icon.classList.remove('fas', 'text-danger');
     icon.classList.add('far');
-    icon.style.color = '#ffffff';
     button.classList.remove('active');
   }
 }
 
 function updateAllFavoriteButtons() {
-  document.querySelectorAll('.favorite-toggle').forEach(function (button) {
-    var toolId = parseInt(button.dataset.toolIndex || button.dataset.toolId);
-    if (!isNaN(toolId)) updateFavoriteButtonState(button, toolId);
+  document.querySelectorAll('.favorite-toggle').forEach(button => {
+    const toolId = parseInt(button.dataset.toolId);
+    updateFavoriteButtonState(button, toolId);
   });
 }
 
 function showFavorites() {
-  var userData;
-  try { userData = JSON.parse(localStorage.getItem('currentUser')); } catch (e) { }
+  const userData = JSON.parse(localStorage.getItem('currentUser'));
   if (!userData || !userData.isLoggedIn) {
     showToast(
-      currentLang === 'en' ? 'Please login to view favorites' : '\u064a\u0631\u062c\u0649 \u062a\u0633\u062c\u064a\u0644 \u0627\u0644\u062f\u062e\u0648\u0644 \u0644\u0639\u0631\u0636 \u0627\u0644\u0645\u0641\u0636\u0644\u0629',
+      currentLang === 'en' ? 'Please login to view favorites' : 'يرجى تسجيل الدخول لعرض المفضلة',
       'info'
     );
     return;
   }
 
-  // Use the unified per-account getFavoritesArray
-  var userFavorites = getFavoritesArray();
+  const userId = userData.email;
+  const userFavorites = favorites[userId] || [];
 
   if (userFavorites.length === 0) {
     showToast(
-      currentLang === 'en' ? 'No favorite tools yet' : '\u0644\u0627 \u062a\u0648\u062c\u062f \u0623\u062f\u0648\u0627\u062a \u0645\u0641\u0636\u0644\u0629 \u0628\u0639\u062f',
+      currentLang === 'en' ? 'No favorite tools yet' : 'لا توجد أدوات مفضلة بعد',
       'info'
     );
     return;
   }
 
-  var isEn = (currentLang === 'en');
-  var favCardsHtml = '';
-  for (var fi = 0; fi < userFavorites.length; fi++) {
-    var toolId = userFavorites[fi];
-    var tool = aiTools[toolId];
-    if (!tool) continue;
-    var desc = isEn ? (tool.description || '') : (tool.desc_ar || tool.description || '');
-    var detText = isEn ? 'Details' : '\u062a\u0641\u0627\u0635\u064a\u0644';
-    var remText = isEn ? 'Remove' : '\u0625\u0632\u0627\u0644\u0629';
+  const favoritesModalHTML = `
+            <div class="modal fade favorites-modal" id="favoritesModal" tabindex="-1">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">${currentLang === 'en' ? 'Favorite Tools' : 'الأدوات المفضلة'}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row g-3" id="favoritesListContainer">
+                                ${userFavorites.map(toolId => {
+    const tool = aiTools[toolId];
+    if (!tool) return '';
 
-    favCardsHtml += '<div class="col-md-6">' +
-      '<div class="card h-100">' +
-      '<div class="card-img-top position-relative" style="height: 120px; overflow: hidden; background: linear-gradient(135deg, #401F71, #BE7B72);">' +
-      '<img src="' + (tool.logo || '') + '" alt="' + (tool.name || '') + '" class="w-100 h-100 object-fit-contain p-2" style="object-fit: contain; background: white;">' +
-      '<button class="btn btn-sm btn-danger position-absolute top-0 start-0 m-2 remove-favorite-btn" data-tool-id="' + toolId + '" title="' + remText + '">' +
-      '<i class="fas fa-times"></i>' +
-      '</button>' +
-      '</div>' +
-      '<div class="card-body">' +
-      '<h6 class="card-title">' + (tool.name || '') + '</h6>' +
-      '<p class="card-text small">' + desc + '</p>' +
-      '<div class="d-flex justify-content-between align-items-center">' +
-      '<button class="btn btn-sm btn-outline-primary view-details-btn" data-tool-id="' + toolId + '">' + detText + '</button>' +
-      '<span class="badge bg-secondary">' + (tool.pricing || '') + '</span>' +
-      '</div>' +
-      '</div>' +
-      '</div>' +
-      '</div>';
+    const description = currentLang === 'en' ? tool.description : (tool.desc_ar || tool.description);
+    const detailsText = currentLang === 'en' ? 'Details' : 'تفاصيل';
+    const removeText = currentLang === 'en' ? 'Remove' : 'إزالة';
+
+    return `
+                                        <div class="col-md-6">
+                                            <div class="card h-100">
+                                                <div class="card-img-top position-relative" style="height: 120px; overflow: hidden; background: linear-gradient(135deg, #401F71, #BE7B72);">
+                                                    <img src="${tool.logo}" alt="${tool.name}" class="w-100 h-100 object-fit-contain p-2" style="object-fit: contain; background: white;">
+                                                    <button class="btn btn-sm btn-danger position-absolute top-0 start-0 m-2 remove-favorite-btn" data-tool-id="${toolId}" title="${removeText}">
+                                                        <i class="fas fa-times"></i>
+                                                    </button>
+                                                </div>
+                                                <div class="card-body">
+                                                    <h6 class="card-title">${tool.name}</h6>
+                                                    <p class="card-text small">${description}</p>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <button class="btn btn-sm btn-outline-primary view-details-btn" data-tool-id="${toolId}">
+                                                            ${detailsText}
+                                                        </button>
+                                                        <span class="badge bg-secondary">${tool.pricing}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    `;
+  }).join('')}
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                ${currentLang === 'en' ? 'Close' : 'إغلاق'}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+  const existingModal = document.getElementById('favoritesModal');
+  if (existingModal) {
+    existingModal.remove();
   }
 
-  var modalTitle = isEn ? 'Favorite Tools' : '\u0627\u0644\u0623\u062f\u0648\u0627\u062a \u0627\u0644\u0645\u0641\u0636\u0644\u0629';
-  var closeText = isEn ? 'Close' : '\u0625\u063a\u0644\u0627\u0642';
+  document.body.insertAdjacentHTML('beforeend', favoritesModalHTML);
 
-  var modalHtml = '<div class="modal fade favorites-modal" id="favoritesModal" tabindex="-1">' +
-    '<div class="modal-dialog modal-lg">' +
-    '<div class="modal-content">' +
-    '<div class="modal-header">' +
-    '<h5 class="modal-title">' + modalTitle + '</h5>' +
-    '<button type="button" class="btn-close" data-bs-dismiss="modal"></button>' +
-    '</div>' +
-    '<div class="modal-body">' +
-    '<div class="row g-3" id="favoritesListContainer">' + favCardsHtml + '</div>' +
-    '</div>' +
-    '<div class="modal-footer">' +
-    '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">' + closeText + '</button>' +
-    '</div>' +
-    '</div>' +
-    '</div>' +
-    '</div>';
-
-  var existingModal = document.getElementById('favoritesModal');
-  if (existingModal) existingModal.remove();
-
-  document.body.insertAdjacentHTML('beforeend', modalHtml);
-
-  var favoritesModal = new bootstrap.Modal(document.getElementById('favoritesModal'));
+  const favoritesModal = new bootstrap.Modal(document.getElementById('favoritesModal'));
   favoritesModal.show();
 
   document.getElementById('favoritesModal').addEventListener('shown.bs.modal', function () {
-    document.querySelectorAll('#favoritesListContainer .view-details-btn').forEach(function (btn) {
+    document.querySelectorAll('#favoritesListContainer .view-details-btn').forEach(btn => {
       btn.addEventListener('click', function () {
-        var tid = parseInt(this.dataset.toolId);
+        const toolId = parseInt(this.dataset.toolId);
         favoritesModal.hide();
-        setTimeout(function () { showToolDetails(tid); }, 300);
+        setTimeout(() => {
+          showToolDetails(toolId);
+        }, 300);
       });
     });
 
-    document.querySelectorAll('#favoritesListContainer .remove-favorite-btn').forEach(function (btn) {
+    document.querySelectorAll('#favoritesListContainer .remove-favorite-btn').forEach(btn => {
       btn.addEventListener('click', function (event) {
         event.stopPropagation();
-        var tid = parseInt(this.dataset.toolId);
-        // Remove using unified system
-        var favs = getFavoritesArray();
-        var newFavs = favs.filter(function (x) { return x !== tid; });
-        saveFavoritesArray(newFavs);
-        this.closest('.col-md-6').remove();
-        updateAllFavoriteButtons();
-        showToast(
-          currentLang === 'en' ? 'Removed from favorites' : '\u062a\u0645\u062a \u0627\u0644\u0625\u0632\u0627\u0644\u0629 \u0645\u0646 \u0627\u0644\u0645\u0641\u0636\u0644\u0629',
-          'success'
-        );
+        const toolId = parseInt(this.dataset.toolId);
+
+        const index = userFavorites.indexOf(toolId);
+        if (index > -1) {
+          userFavorites.splice(index, 1);
+          localStorage.setItem('favorites', JSON.stringify(favorites));
+
+          this.closest('.col-md-6').remove();
+
+          updateAllFavoriteButtons();
+
+          showToast(
+            currentLang === 'en' ? 'Removed from favorites' : 'تمت الإزالة من المفضلة',
+            'success'
+          );
+        }
 
         if (document.querySelectorAll('#favoritesListContainer .col-md-6').length === 0) {
-          var emptyEn = 'No favorite tools';
-          var emptyAr = '\u0644\u0627 \u062a\u0648\u062c\u062f \u0623\u062f\u0648\u0627\u062a \u0645\u0641\u0636\u0644\u0629';
-          var emptyMsgEn = 'Start adding tools to your favorites!';
-          var emptyMsgAr = '\u0627\u0628\u062f\u0623 \u0628\u0625\u0636\u0627\u0641\u0629 \u0627\u0644\u0623\u062f\u0648\u0627\u062a \u0625\u0644\u0649 \u0645\u0641\u0636\u0644\u062a\u0643!';
-          document.getElementById('favoritesListContainer').innerHTML =
-            '<div class="col-12"><div class="empty-favorites text-center py-5">' +
-            '<i class="fas fa-heart fa-3x text-muted mb-3"></i>' +
-            '<h4 class="text-muted">' + (currentLang === 'en' ? emptyEn : emptyAr) + '</h4>' +
-            '<p class="text-muted">' + (currentLang === 'en' ? emptyMsgEn : emptyMsgAr) + '</p>' +
-            '</div></div>';
+          document.getElementById('favoritesListContainer').innerHTML = `
+                            <div class="col-12">
+                                <div class="empty-favorites text-center py-5">
+                                    <i class="fas fa-heart fa-3x text-muted mb-3"></i>
+                                    <h4 class="text-muted">${currentLang === 'en' ? 'No favorite tools' : 'لا توجد أدوات مفضلة'}</h4>
+                                    <p class="text-muted">${currentLang === 'en' ? 'Start adding tools to your favorites!' : 'ابدأ بإضافة الأدوات إلى مفضلتك!'}</p>
+                                </div>
+                            </div>
+                        `;
         }
       });
     });
@@ -140352,23 +140395,39 @@ function setupEventListeners() {
 // =================================================================================
 // TOOL EVENT LISTENERS SETUP
 // =================================================================================
+
 function setupToolEventListeners() {
-  // Details buttons only - favorite click is handled by capture-phase listener at bottom of file
+  // أزرار التفاصيل في البطاقات
   document.addEventListener('click', function (e) {
     if (e.target.classList.contains('view-details-btn') ||
       e.target.closest('.view-details-btn')) {
-      var button = e.target.classList.contains('view-details-btn') ?
+      const button = e.target.classList.contains('view-details-btn') ?
         e.target : e.target.closest('.view-details-btn');
 
       if (button && button.dataset.toolId) {
-        var toolId = parseInt(button.dataset.toolId);
-        console.log('View details button clicked for tool ID:', toolId);
+        const toolId = parseInt(button.dataset.toolId);
+        console.log('🔍 View details button clicked for tool ID:', toolId);
         showToolDetails(toolId);
       }
     }
   });
-  // NOTE: Favorite toggle click is NOT here — it's handled by the capture-phase
-  // handler at the bottom of the file (toggleFavoriteByIndex) to avoid conflicts.
+
+  // أزرار المفضلة
+  document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('favorite-toggle') ||
+      e.target.closest('.favorite-toggle')) {
+      const button = e.target.classList.contains('favorite-toggle') ?
+        e.target : e.target.closest('.favorite-toggle');
+
+      if (button && button.dataset.toolId) {
+        e.preventDefault();
+        e.stopPropagation();
+        const toolId = parseInt(button.dataset.toolId);
+        console.log('❤️ Favorite button clicked for tool ID:', toolId);
+        toggleFavorite(toolId, button);
+      }
+    }
+  });
 }
 
 // =================================================================================
@@ -140427,7 +140486,23 @@ function showFullArticle(title, summary, img) {
   alert(title + "\n\n" + summary + "\n\n" + img);
 }
 
-// removed duplicate favorite handler
+
+// أزرار المفضلة
+document.addEventListener('click', function (e) {
+  if (e.target.classList.contains('favorite-toggle') ||
+    e.target.closest('.favorite-toggle')) {
+    const button = e.target.classList.contains('favorite-toggle') ?
+      e.target : e.target.closest('.favorite-toggle');
+
+    if (button && button.dataset.toolId) {
+      e.preventDefault();
+      e.stopPropagation();
+      const toolId = parseInt(button.dataset.toolId);
+      console.log('❤️ Favorite button clicked for tool ID:', toolId);
+      toggleFavorite(toolId, button);
+    }
+  }
+});
 
 
 // Scroll Switch Button
@@ -140535,11 +140610,13 @@ function initEventListeners() {
       showStaticPage(page);
     });
   });
-  // Favorites button
+
+  // زر المفضلة
   const favoritesBtn = document.getElementById('favoritesBtn');
   if (favoritesBtn) {
     favoritesBtn.addEventListener('click', function () {
-      showFavorites();
+      // يمكنك إضافة منطق عرض المفضلة هنا
+      showToast(currentLanguage === 'ar' ? 'عرض المفضلة قريباً' : 'Favorites coming soon', 'info');
     });
   }
 
@@ -141327,18 +141404,8 @@ document.addEventListener('click', function (e) {
 
   // Delegated details click (survives any re-render)
   document.addEventListener('click', function (e) {
-    // Add exclusions for stars, favorite, and general interactive elements so they don't jump to the details page
-    if (e.target.closest('.favorite-toggle, .star-click, .visit-website-btn, a[target="_blank"]')) return;
-    
-    // Check if the element has one of the specific action classes as well
-    const closestFav = e.target.closest('.favorite-toggle');
-    const closestStar = e.target.closest('.star-click');
-    if (closestFav || closestStar) return;
-
     const btn = e.target.closest('.view-details-btn, .details-btn, [data-tool-id], [data-id]');
     if (!btn) return;
-    
-    if (btn.classList.contains('favorite-toggle') || btn.classList.contains('star-click')) return;
 
     const raw = btn.dataset.toolId || btn.dataset.id || btn.getAttribute('data-tool-id') || btn.getAttribute('data-id');
     if (raw == null) return;
@@ -141973,22 +142040,24 @@ function toolNameForSearch(tool) {
 (function () {
   'use strict';
   document.addEventListener('click', function (e) {
+    // Check if the click is on a favorite button or any element inside it
     var favBtn = e.target.closest('.favorite-toggle');
     if (!favBtn) return;
 
+    // Stop ALL propagation immediately
     e.preventDefault();
     e.stopPropagation();
     e.stopImmediatePropagation();
 
-    var toolIdStr = favBtn.getAttribute('data-tool-id') || favBtn.getAttribute('data-tool-index');
-    var toolId = parseInt(toolIdStr, 10);
-    if (!isNaN(toolId) && typeof window.toggleFavoriteByIndex === 'function') {
-      window.toggleFavoriteByIndex(toolId, favBtn);
+    // Get the tool ID and call toggleFavorite
+    var toolId = parseInt(favBtn.getAttribute('data-tool-id'), 10);
+    if (!isNaN(toolId) && typeof window.toggleFavorite === 'function') {
+      window.toggleFavorite(toolId, favBtn);
     } else if (!isNaN(toolId)) {
+      // Backup: queue for when toggleFavorite becomes available
+      console.log('Favorite clicked for tool ID:', toolId);
       setTimeout(function () {
-        if (typeof window.toggleFavoriteByIndex === 'function') {
-          window.toggleFavoriteByIndex(toolId, favBtn);
-        } else if (typeof window.toggleFavorite === 'function') {
+        if (typeof window.toggleFavorite === 'function') {
           window.toggleFavorite(toolId, favBtn);
         }
       }, 0);
@@ -142021,7 +142090,9 @@ window.handleFavoriteClick = function (index, btn) {
 // Returns favorites ALWAYS as Array
 
 
-// saveFavoritesArray stub removed - real one is at end of file
+function saveFavoritesArray(arr) {
+  saveFavoritesArray(favorites);
+}
 
 function createToolCardFull(tool, index) {
   const col = document.createElement("div");
@@ -142046,15 +142117,13 @@ function createToolCardFull(tool, index) {
 
   const visitText =
     isAr
-      ? "\u0632\u064a\u0627\u0631\u0629 \u0627\u0644\u0645\u0648\u0642\u0639"
+      ? "زيارة الموقع"
       : "Visit Website";
 
   const detailsText =
     isAr
-      ? "\u0627\u0644\u062a\u0641\u0627\u0635\u064a\u0644"
+      ? "التفاصيل"
       : "Details";
-
-  const starHtml = (typeof generateStars === 'function') ? generateStars(tool.rating || (3 + Math.random() * 2)) : '';
 
   col.innerHTML = `
     <div class="card tool-card card-3d tilt enhanced-card h-100">
@@ -142063,23 +142132,18 @@ function createToolCardFull(tool, index) {
           class="w-100 h-100 object-fit-contain p-3"
           style="object-fit: contain; background: white;"
           onerror="this.src='./Images/placeholder-logo.png'">
-        <button class="btn btn-sm favorite-toggle position-absolute top-0 end-0 m-2 ${isFav ? 'active' : ''}"
-                data-tool-index="${index}">
-            <i class="${isFav ? 'fas' : 'far'} fa-heart" style="color: ${isFav ? '#f4cf55' : '#ffffff'}"></i>
-        </button>
       </div>
       <div class="card-body d-flex flex-column">
-        <div class="d-flex justify-content-between align-items-start mb-1">
+        <div class="d-flex justify-content-between align-items-start mb-2">
           <h5 class="card-title fw-bold">${tool.name || ""}</h5>
           <span class="badge bg-secondary mb-2">${tool.category || ""}</span>
         </div>
-        <div class="mb-2">${starHtml}</div>
 
         <p class="card-text flex-grow-1">${description}</p>
 
         <div class="mt-auto" style="direction: ltr !important; text-align: left !important;">
-          <div style="display: flex; width: fit-content; position: relative; ">
-            <button class="btn btn-primary btn-sm visit-website-btn" dir="rtl" data-url="${tool.url || "#"}" onclick="event.preventDefault(); event.stopPropagation(); var url='${(tool.url || "#").replace(/'/g, "\\'")}'; if(url && url !== '#'){ window.open(url, '_blank'); window.focus(); }">
+          <div style="display: flex; width: fit-content; position: relative; border-top-right-radius: 100px; border-bottom-right-radius: 100px;">
+            <button class="btn btn-primary btn-sm visit-website-btn" style="border-radius: 500px 0 0 500px;" dir="rtl" data-url="${tool.url || "#"}" onclick="event.preventDefault(); event.stopPropagation(); var url='${(tool.url || "#").replace(/'/g, "\\'")}'; if(url && url !== '#'){ window.open(url, '_blank'); window.focus(); }">
               ${visitText}
             </button>
             <button class="btn btn-outline-primary btn-sm view-details-btn" data-tool-id="${index}">
@@ -142110,138 +142174,395 @@ function createToolCardFull(tool, index) {
   return col;
 }
 
+document.addEventListener("click", function (e) {
+  const favBtn = e.target.closest(".favorite-toggle");
+  if (!favBtn) return;
+
+
+  e.preventDefault();
+  e.stopPropagation();
+  e.stopImmediatePropagation?.();
+
+
+  const index = Number(favBtn.dataset.toolIndex);
+  if (Number.isNaN(index)) return;
+
+
+  toggleFavorite(e, index);
+}, true);
+
+document.addEventListener("click", function (e) {
+  const btn = e.target.closest(".favorite-toggle");
+  if (!btn) return;
+
+
+  // ✅ امنع أي فتح تفاصيل أو أي click فوقه
+  e.preventDefault();
+  e.stopPropagation();
+  e.stopImmediatePropagation?.();
+
+
+  const idx = Number(btn.dataset.toolIndex);
+  if (Number.isNaN(idx)) {
+    console.warn("Favorite clicked but data-tool-index missing");
+    return;
+  }
+
+
+  toggleFavoriteByIndex(btn, idx);
+}, true);
+
 // =================================================================================
-// FAVORITES - Per-Account Unified Storage
+// ✅ FAVORITES - FINAL SYSTEM (One Source of Truth)
 // =================================================================================
 
+
+// ✅ 1) اقرأ المفضلة بطريقة آمنة مهما كان التخزين قديم/خربان
 function getFavoritesArray() {
-  var userKey = 'favorites_' + _getUserKey();
+  const raw = localStorage.getItem("favorites");
+  let data;
+
+
   try {
-    var raw = localStorage.getItem(userKey);
-    var data = raw ? JSON.parse(raw) : [];
-    if (Array.isArray(data)) return data;
+    data = JSON.parse(raw || "[]");
+  } catch (e) {
+    data = [];
+  }
+
+
+  // ✅ إذا كانت Object مثل {"undefined":[8,0,27]} حولها إلى Array
+  if (!Array.isArray(data)) {
+    const firstKey = Object.keys(data || {})[0];
+    data = Array.isArray(data?.[firstKey]) ? data[firstKey] : [];
+  }
+
+
+  // ✅ تأكد أنها أرقام صحيحة
+  return data.map(Number).filter(n => !Number.isNaN(n));
+}
+
+
+// ✅ 2) حفظ المفضلة
+function saveFavoritesArray(arr) {
+  localStorage.setItem("favorites", JSON.stringify(arr));
+}
+
+
+// ✅ 3) هل هذه الأداة مفضلة؟
+function isFavoriteIndex(idx) {
+  const favs = getFavoritesArray();
+  return favs.includes(Number(idx));
+}
+
+
+// ✅ 4) تحديث شكل زر القلب
+function updateFavoriteButtonUI(btn, isFav) {
+  if (!btn) return;
+  const icon = btn.querySelector("i");
+  btn.classList.toggle("active", isFav);
+  if (icon) icon.style.color = isFav ? "#f4cf55ff" : "#ffffff";
+}
+
+
+// ✅ 5) تبديل المفضلة
+function toggleFavoriteByIndex(btn, idx) {
+  idx = Number(idx);
+  if (Number.isNaN(idx)) return;
+
+
+  const favs = getFavoritesArray();
+  const exists = favs.includes(idx);
+
+
+  if (exists) {
+    // إزالة
+    const next = favs.filter(x => x !== idx);
+    saveFavoritesArray(next);
+    updateFavoriteButtonUI(btn, false);
+  } else {
+    // إضافة
+    favs.push(idx);
+    saveFavoritesArray(favs);
+    updateFavoriteButtonUI(btn, true);
+  }
+
+
+  // ✅ تحديث زر المفضلة في الناف بار إذا موجود
+  if (typeof updateFavoritesButton === "function") {
+    updateFavoritesButton();
+  }
+}
+
+
+// ✅ 6) Event Delegation (مرة واحدة) يجعل كل القلوب تعمل دائمًا
+(function initFavoritesDelegation() {
+  if (window.__favDelegationInited) return;
+  window.__favDelegationInited = true;
+
+
+  document.addEventListener("click", function (e) {
+    const btn = e.target.closest(".favorite-toggle");
+    if (!btn) return;
+
+
+    // ✅ امنع فتح تفاصيل أو أي click للكرت
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation?.();
+
+
+    const idx = btn.dataset.toolIndex;
+    if (idx === undefined) {
+      console.warn("favorite-toggle missing data-tool-index");
+      return;
+    }
+
+
+    toggleFavoriteByIndex(btn, idx);
+  }, true);
+})();
+
+window.createToolCard = createToolCardFull;
+
+// ===============================
+// ✅ FAVORITES: FINAL ROOT FIX
+// ===============================
+
+
+// ✅ احصل على قائمة مفضلة صحيحة دائماً (حتى لو المخزن كان خراب)
+function getFavoritesArray() {
+  try {
+    const raw = localStorage.getItem("favorites");
+    if (!raw) return [];
+
+
+    const parsed = JSON.parse(raw);
+
+
+    // ✅ إذا كانت Array مباشرة
+    if (Array.isArray(parsed)) return parsed;
+
+
+    // ✅ إذا كانت Object مثل {"undefined":[8,0,27]} أو {"user@email":[...]}
+    if (parsed && typeof parsed === "object") {
+      const keys = Object.keys(parsed);
+      if (!keys.length) return [];
+      const first = parsed[keys[0]];
+      return Array.isArray(first) ? first : [];
+    }
+
+
     return [];
   } catch (e) {
     return [];
   }
 }
 
+
+// ✅ احفظ المفضلة كـ Array فقط (نظيف)
 function saveFavoritesArray(arr) {
-  var userKey = 'favorites_' + _getUserKey();
-  localStorage.setItem(userKey, JSON.stringify(arr));
+  localStorage.setItem("favorites", JSON.stringify(arr));
 }
 
+
+// ✅ تحقق: هل index في المفضلة
 function isFavoriteIndex(index) {
-  var favs = getFavoritesArray();
+  const favs = getFavoritesArray();
   return favs.includes(Number(index));
 }
 
-function isFavorite(tool) {
-  var master = (typeof toolsArray === 'function') ? toolsArray() : (window.aiTools || []);
-  var index = master.findIndex(function (t) { return t.name === tool.name || (t.id && t.id === tool.id); });
-  return isFavoriteIndex(index);
-}
 
-function updateFavButtonUI(btn, isFav) {
+// ✅ تحديث شكل زر القلب
+function setFavButtonUI(btn, isFav) {
   if (!btn) return;
-  var icon = btn.querySelector("i");
-  if (!icon) return;
+  const icon = btn.querySelector("i");
+
+
   if (isFav) {
     btn.classList.add("active");
-    icon.classList.remove("far");
-    icon.classList.add("fas");
-    icon.style.color = "#f4cf55ff";
+    if (icon) icon.style.color = "#f4cf55ff"; // ✅ ذهبي
   } else {
     btn.classList.remove("active");
-    icon.classList.remove("fas");
-    icon.classList.add("far");
-    icon.style.color = "#ffffff";
+    if (icon) icon.style.color = "#ffffff"; // ✅ أبيض
   }
 }
 
+
+// ✅ زر المفضلة الرئيسي أعلى الصفحة
 function updateFavoritesButton() {
-  var favoritesBtn = document.getElementById("favoritesBtn");
+  const favoritesBtn = document.getElementById("favoritesBtn");
+  if (!favoritesBtn) return;
+
+
+  const favs = getFavoritesArray();
+  favoritesBtn.style.display = favs.length ? "inline-block" : "none";
+}
+
+
+// ✅ تشغيل Event Delegation مرة واحدة فقط
+(function initFavoritesDelegation() {
+  if (window.__favoritesDelegationInit) return;
+  window.__favoritesDelegationInit = true;
+
+
+  document.addEventListener(
+    "click",
+    function (e) {
+      const favBtn = e.target.closest(".favorite-toggle");
+      if (!favBtn) return;
+
+
+      // ✅ منع أي شيء آخر (تفاصيل / كارد)
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation?.();
+
+
+      // ✅ جلب index من data-tool-index
+      const index = Number(favBtn.dataset.toolIndex);
+      if (Number.isNaN(index)) {
+        console.warn("❌ favorite-toggle missing data-tool-index");
+        return;
+      }
+
+
+      // ✅ تأكد أن aiTools موجود
+      const tools = window.aiTools || [];
+      if (!Array.isArray(tools) || !tools[index]) {
+        console.warn("❌ aiTools not found OR tool missing at index:", index);
+        return;
+      }
+
+
+      // ✅ toggle
+      let favs = getFavoritesArray();
+      const exists = favs.includes(index);
+
+
+      if (exists) {
+        favs = favs.filter((x) => x !== index);
+        setFavButtonUI(favBtn, false);
+      } else {
+        favs.push(index);
+        setFavButtonUI(favBtn, true);
+      }
+
+
+      saveFavoritesArray(favs);
+      updateFavoritesButton();
+    },
+    true // ✅ capture (مهم جداً حتى لو كان عندك click handlers أخرى)
+  );
+
+
+  console.log("✅ Favorites delegation initialized");
+})();
+
+// ===============================
+// ✅ FAVORITES - SINGLE SOURCE OF TRUTH
+// ===============================
+
+
+function getFavoritesArray() {
+  try {
+    const raw = localStorage.getItem("favorites");
+    const data = raw ? JSON.parse(raw) : [];
+    return Array.isArray(data) ? data : [];
+  } catch (e) {
+    return [];
+  }
+}
+
+
+function saveFavoritesArray(arr) {
+  localStorage.setItem("favorites", JSON.stringify(arr));
+}
+
+
+function isFavoriteIndex(index) {
+  const favs = getFavoritesArray();
+  return favs.includes(Number(index));
+}
+
+
+function updateFavoritesButton() {
+  const favoritesBtn = document.getElementById("favoritesBtn");
   if (!favoritesBtn) return;
   favoritesBtn.style.display = getFavoritesArray().length ? "inline-block" : "none";
 }
 
-window.toggleFavoriteByIndex = function (index, _btn) {
+
+function updateFavButtonUI(btn, isFav) {
+  if (!btn) return;
+  const icon = btn.querySelector("i");
+  if (!icon) return;
+
+
+  if (isFav) {
+    icon.classList.remove("far");
+    icon.classList.add("fas");
+    icon.style.color = "#f4cf55ff"; // ✅ ذهبي
+  } else {
+    icon.classList.remove("fas");
+    icon.classList.add("far");
+    icon.style.color = "#ffffff";   // ✅ أبيض
+  }
+}
+
+
+function toggleFavoriteByIndex(index, btn) {
   index = Number(index);
   if (Number.isNaN(index)) return;
 
-  var favs = getFavoritesArray();
-  var exists = favs.includes(index);
+
+  const favs = getFavoritesArray();
+  const exists = favs.includes(index);
+
 
   if (exists) {
-    var newFavs = favs.filter(function (x) { return x !== index; });
+    const newFavs = favs.filter(x => x !== index);
     saveFavoritesArray(newFavs);
-    document.querySelectorAll('.favorite-toggle[data-tool-index="' + index + '"], .favorite-toggle[data-tool-id="' + index + '"]').forEach(function (b) { updateFavButtonUI(b, false); });
-    if (typeof showToast !== "undefined") showToast(currentLang === "ar" ? "\u062a\u0645\u062a \u0627\u0644\u0625\u0632\u0627\u0644\u0629 \u0645\u0646 \u0627\u0644\u0645\u0641\u0636\u0644\u0629" : "Removed from favorites", "info");
+    updateFavButtonUI(btn, false);
+    showToast?.((currentLang === "ar" ? "تمت الإزالة من المفضلة" : "Removed from favorites"), "info");
   } else {
     favs.push(index);
     saveFavoritesArray(favs);
-    document.querySelectorAll('.favorite-toggle[data-tool-index="' + index + '"], .favorite-toggle[data-tool-id="' + index + '"]').forEach(function (b) { updateFavButtonUI(b, true); });
-    if (typeof showToast !== "undefined") showToast(currentLang === "ar" ? "\u062a\u0645\u062a \u0627\u0644\u0625\u0636\u0627\u0641\u0629 \u0625\u0644\u0649 \u0627\u0644\u0645\u0641\u0636\u0644\u0629" : "Added to favorites", "success");
+    updateFavButtonUI(btn, true);
+    showToast?.((currentLang === "ar" ? "تمت الإضافة إلى المفضلة" : "Added to favorites"), "success");
   }
+
 
   updateFavoritesButton();
+}
 
-  if (typeof renderFavoritesModal === "function") {
-    var modal = document.getElementById("favoritesModal");
-    if (modal && modal.classList.contains("show")) {
-      renderFavoritesModal();
-    }
-  }
-};
 
-window.isFavorite = isFavorite;
 
-// Removed duplicate capture-phase favorite toggle handler
 
-// Star click handler (capture phase)
+// ===============================
+// ✅ FAVORITES EVENT DELEGATION (ONE LISTENER ONLY)
+// ===============================
 document.addEventListener("click", function (e) {
-  if (!e.target.classList.contains('star-click')) return;
+  const btn = e.target.closest(".favorite-toggle");
+  if (!btn) return;
+
 
   e.preventDefault();
   e.stopPropagation();
+  e.stopImmediatePropagation?.();
 
-  var starVal = parseInt(e.target.dataset.star);
-  var toolIdx = parseInt(e.target.dataset.toolIdx);
-  if (isNaN(starVal) || isNaN(toolIdx)) return;
 
-  // Allow rating regardless of login
-  saveUserRating(toolIdx, starVal);
-  saveUserRating(toolIdx, starVal);
-
-  // Update all star displays for this tool
-  document.querySelectorAll('.interactive-stars[data-tool-idx="' + toolIdx + '"]').forEach(function (container) {
-    var stars = container.querySelectorAll('.star-click');
-    stars.forEach(function (s) {
-      var sv = parseInt(s.dataset.star);
-      if (sv <= starVal) {
-        s.classList.remove('far');
-        s.classList.add('fas');
-        s.style.color = '#f4cf55';
-      } else {
-        s.classList.remove('fas');
-        s.classList.add('far');
-        s.style.color = '#ccc';
-      }
-    });
-  });
-
-  showToast(currentLang === 'en' ? 'Rating saved!' : '\u062a\u0645 \u062d\u0641\u0638 \u0627\u0644\u062a\u0642\u064a\u064a\u0645!', 'success');
+  const index = btn.dataset.toolIndex;
+  toggleFavoriteByIndex(index, btn);
 }, true);
-
 // ===== PATCH: Redirect Details buttons to static tool pages =====
 (function () {
   document.addEventListener('click', function (e) {
-    if (e.target.closest('.favorite-toggle, .star-click, .visit-website-btn')) return;
     const btn = e.target.closest('.view-details-btn');
     if (!btn) return;
+
     e.preventDefault();
     e.stopPropagation();
-    try { e.stopImmediatePropagation(); } catch(err) {}
+    e.stopImmediatePropagation();
 
     // Get the tool from the card
     const card = btn.closest('.card, [data-tool-id]');
@@ -142274,7 +142595,6 @@ document.addEventListener("click", function (e) {
 (function () {
   // Override at the earliest possible moment
   document.addEventListener('click', function (e) {
-    if (e.target.closest('.favorite-toggle, .star-click, .visit-website-btn, a[target="_blank"]')) return;
     const btn = e.target.closest('.view-details-btn');
     if (!btn) return;
 
