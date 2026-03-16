@@ -1,4 +1,4 @@
-﻿const aiTools = [
+const aiTools = [
   {
     "name": "Punchd",
     "directory_url": "https://punchd.ai/",
@@ -138205,7 +138205,9 @@ function toggleLanguage() {
 
   // إعادة تحميل الأدوات لتحديث الوصف باللغة الجديدة
   if (typeof displayToolsByCategories === 'function') {
-    displayToolsByCategories();
+    setTimeout(function() {
+      displayToolsByCategories();
+    }, 50);
   }
 }
 
@@ -138883,7 +138885,15 @@ function _getUserKey() {
 }
 
 // Get the user's rating for a specific tool index
+window.globalRatings = {};
+
 function getUserRating(toolIndex) {
+  if (window.globalRatings && window.globalRatings[toolIndex]) {
+    var toolData = window.globalRatings[toolIndex];
+    if (toolData.count > 0) {
+      return Math.round(toolData.sum / toolData.count);
+    }
+  }
   var key = 'ratings_' + _getUserKey();
   try {
     var data = JSON.parse(localStorage.getItem(key));
@@ -138892,13 +138902,43 @@ function getUserRating(toolIndex) {
   return 0;
 }
 
-// Save a user's rating for a specific tool index
-function saveUserRating(toolIndex, rating) {
+if(window.firebaseDB) {
+  window.firebaseDB.ref('ratings').on('value', function(snap) {
+    window.globalRatings = snap.val() || {};
+    document.querySelectorAll('.interactive-stars').forEach(function(container) {
+      var toolIdx = container.dataset.toolIdx;
+      var stars = container.querySelectorAll('.star-click');
+      var r = getUserRating(toolIdx);
+      stars.forEach(function(s) {
+        var sv = parseInt(s.dataset.star);
+        if (sv <= r) {
+           s.classList.remove('far'); s.classList.add('fas'); s.style.color = '#f4cf55';
+        } else {
+           s.classList.remove('fas'); s.classList.add('far'); s.style.color = '#ccc';
+        }
+      });
+    });
+  });
+}
+
+function saveUserRating(toolIndex, rating) {        
   var key = 'ratings_' + _getUserKey();
   var data = {};
   try { data = JSON.parse(localStorage.getItem(key)) || {}; } catch (e) { }
+  var oldRating = data[toolIndex] || 0;
   data[toolIndex] = rating;
   localStorage.setItem(key, JSON.stringify(data));
+
+  var diff = rating - oldRating;
+  var countDiff = oldRating === 0 ? 1 : 0;
+  
+  if (window.firebaseDB && (diff !== 0 || countDiff !== 0)) {
+    var ref = window.firebaseDB.ref('ratings/' + toolIndex);
+    ref.transaction(function(current) {
+       if (!current) { return { sum: diff, count: countDiff }; }
+       return { sum: (current.sum || 0) + diff, count: (current.count || 0) + countDiff };
+    });
+  }
 }
 
 // Generate interactive star rating HTML
@@ -139686,7 +139726,7 @@ function initAuth() {
 
   if (favoritesBtn && !favoritesBtn.dataset.inited) {
     favoritesBtn.dataset.inited = '1';
-    favoritesBtn.addEventListener('click', showFavorites);
+    // // // favoritesBtn.addEventListener('click', showFavorites);
   }
 
   // Attach submit handlers once
@@ -139727,7 +139767,7 @@ function handleLogin(e) {
     return;
   }
 
-  const email = emailEl.value.trim();
+  const email = emailEl.value.trim().toLowerCase();
   const password = passEl.value;
 
   if (!email || !password) {
@@ -139777,7 +139817,7 @@ function handleLogin(e) {
 function handleSignup(e) {
   e.preventDefault();
   const name = document.getElementById('signupName') && document.getElementById('signupName').value.trim();
-  const email = document.getElementById('signupEmail') && document.getElementById('signupEmail').value.trim();
+  const email = document.getElementById('signupEmail') && document.getElementById('signupEmail').value.trim().toLowerCase();
   const password = document.getElementById('signupPassword') && document.getElementById('signupPassword').value;
   const confirmPassword = document.getElementById('confirmPassword') && document.getElementById('confirmPassword').value;
 
@@ -140322,9 +140362,7 @@ function setupEventListeners() {
 
   // Favorites button
   const favoritesBtn = document.getElementById('favoritesBtn');
-  if (favoritesBtn) {
-    favoritesBtn.addEventListener('click', showFavorites);
-  }
+  // Event listener handled in initAuth to prevent duplicates
 
   // Auth button
   const authButton = document.getElementById('authButton');
@@ -140537,11 +140575,7 @@ function initEventListeners() {
   });
   // Favorites button
   const favoritesBtn = document.getElementById('favoritesBtn');
-  if (favoritesBtn) {
-    favoritesBtn.addEventListener('click', function () {
-      showFavorites();
-    });
-  }
+  // Event listener handled in initAuth to prevent duplicates
 
   // زر المصادقة
   const authButton = document.getElementById('authButton');
