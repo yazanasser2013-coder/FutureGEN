@@ -983,7 +983,8 @@
       background: var(--bg-page);
       z-index: 1040;
       overflow-y: auto;
-      padding-top: 15px; /* Reduced from 100px */
+      padding-top: 15px;
+      /* Reduced from 100px */
     }
 
     .blog-details-content p {
@@ -6232,7 +6233,9 @@
       direction: rtl;
     }
 
-    .card-title, .card-text, .card-text .blog-content {
+    .card-title,
+    .card-text,
+    .card-text .blog-content {
       unicode-bidi: plaintext;
       text-align: start;
     }
@@ -6378,37 +6381,67 @@
             <div aria-labelledby="signup-tab" class="tab-pane fade" id="signup" role="tabpanel">
               <form id="signupForm">
                 <div class="mb-3">
-                  <label class="form-label" for="signupName">
-                    الاسم
-                  </label>
-                  <input class="form-control" id="signupName" required="" type="text" />
+                  <label class="form-label" for="signupName">الاسم الكامل</label>
+                  <input class="form-control" id="signupName" required="" type="text" placeholder="أدخل اسمك الكامل" />
                 </div>
                 <div class="mb-3">
-                  <label class="form-label" for="signupEmail">
-                    البريد الإلكتروني
-                  </label>
-                  <input class="form-control" id="signupEmail" required="" type="email" />
+                  <label class="form-label" for="signupUsername">اسم المستخدم</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-at"></i></span>
+                    <input class="form-control" id="signupUsername" required="" type="text" placeholder="مثال: ahmed123"
+                      autocomplete="username" />
+                  </div>
+                  <div id="usernameAvailability" class="form-text mt-1" style="display:none;font-weight:600;"></div>
                 </div>
                 <div class="mb-3">
-                  <label class="form-label" for="signupPassword">
-                    كلمة المرور
-                  </label>
-                  <input class="form-control" id="signupPassword" required="" type="password" />
+                  <label class="form-label" for="signupEmail">البريد الإلكتروني</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                    <input class="form-control" id="signupEmail" required="" type="email"
+                      placeholder="example@email.com" />
+                  </div>
+                  <div id="emailAvailability" class="form-text mt-1" style="display:none;font-weight:600;"></div>
                 </div>
                 <div class="mb-3">
-                  <label class="form-label" for="confirmPassword">
-                    تأكيد كلمة المرور
-                  </label>
-                  <input class="form-control" id="confirmPassword" required="" type="password" />
+                  <label class="form-label" for="signupPassword">كلمة المرور</label>
+                  <div class="input-group">
+                    <input class="form-control" id="signupPassword" required="" type="password"
+                      placeholder="8+ أحرف، أرقام ورموز" autocomplete="new-password" />
+                    <button class="btn btn-outline-secondary" type="button" id="toggleSignupPassword" tabindex="-1"><i
+                        class="fas fa-eye"></i></button>
+                  </div>
+                  <div id="passwordStrengthBar" style="display:none;margin-top:8px;">
+                    <div style="height:6px;border-radius:4px;background:#e5e7eb;overflow:hidden;">
+                      <div id="passwordStrengthFill"
+                        style="height:100%;width:0;transition:width 0.3s,background 0.3s;border-radius:4px;"></div>
+                    </div>
+                    <small id="passwordStrengthText" style="font-weight:600;display:block;margin-top:4px;"></small>
+                    <div style="font-size:0.78rem;line-height:1.8;margin-top:4px;">
+                      <div id="req-length" style="color:#aaa;"><i class="fas fa-circle me-1"
+                          style="font-size:0.45rem;vertical-align:middle;"></i>8 أحرف على الأقل</div>
+                      <div id="req-upper" style="color:#aaa;"><i class="fas fa-circle me-1"
+                          style="font-size:0.45rem;vertical-align:middle;"></i>حرف كبير (A-Z)</div>
+                      <div id="req-number" style="color:#aaa;"><i class="fas fa-circle me-1"
+                          style="font-size:0.45rem;vertical-align:middle;"></i>رقم (0-9)</div>
+                      <div id="req-special" style="color:#aaa;"><i class="fas fa-circle me-1"
+                          style="font-size:0.45rem;vertical-align:middle;"></i>رمز خاص (!@#...)</div>
+                    </div>
+                  </div>
                 </div>
-                <button class="btn btn-primary w-100" type="submit">
-                  إنشاء حساب
-                </button>
+                <div class="mb-3">
+                  <label class="form-label" for="confirmPassword">تأكيد كلمة المرور</label>
+                  <div class="input-group">
+                    <input class="form-control" id="confirmPassword" required="" type="password"
+                      placeholder="أعد كتابة كلمة المرور" autocomplete="new-password" />
+                    <button class="btn btn-outline-secondary" type="button" id="toggleConfirmPassword" tabindex="-1"><i
+                        class="fas fa-eye"></i></button>
+                  </div>
+                  <div id="passwordMatchMsg" class="form-text mt-1" style="display:none;font-weight:600;"></div>
+                </div>
+                <button class="btn btn-primary w-100" type="submit">إنشاء حساب</button>
               </form>
-              <div class="alert alert-danger mt-3" id="signupError" role="alert" style="display: none;">
-              </div>
-              <div class="alert alert-success mt-3" id="signupSuccess" role="alert" style="display: none;">
-              </div>
+              <div class="alert alert-danger mt-3" id="signupError" role="alert" style="display: none;"></div>
+              <div class="alert alert-success mt-3" id="signupSuccess" role="alert" style="display: none;"></div>
             </div>
           </div>
         </div>
@@ -6571,7 +6604,7 @@
 
           <div class="support-box" id="paypal-container-WB25CBYK6274N"></div>
           <script>
-            window.addEventListener('DOMContentLoaded', function() {
+            window.addEventListener('DOMContentLoaded', function () {
               if (window.paypal) {
                 paypal.HostedButtons({
                   hostedButtonId: "WB25CBYK6274N",
@@ -6950,8 +6983,8 @@ We believe in the power of community and collaboration, and we welcome users and
               </div>
             </div>
 
-            <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Blog Post Image" class="img-fluid rounded mb-5 w-100" id="blog-post-image"
-              style="height: 400px; object-fit: cover;">
+            <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Blog Post Image"
+              class="img-fluid rounded mb-5 w-100" id="blog-post-image" style="height: 400px; object-fit: cover;">
 
             <div class="blog-content fs-5 lh-base" id="blog-post-body-container">
               <!-- Blog content will be inserted here -->
@@ -6979,69 +7012,140 @@ We believe in the power of community and collaboration, and we welcome users and
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+  <!-- ✅ FIREBASE: Global ratings across all accounts -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+  <script>
+    (function () {
+      'use strict';
+
+      var firebaseConfig = {
+        apiKey: "AIzaSyBmTdYQcLAJxhrWpqRaFFWqy4uSlRVVLIE",
+        authDomain: "futuregen-ba172.firebaseapp.com",
+        databaseURL: "https://futuregen-ba172-default-rtdb.firebaseio.com",
+        projectId: "futuregen-ba172",
+        storageBucket: "futuregen-ba172.firebasestorage.app",
+        messagingSenderId: "607353543902",
+        appId: "1:607353543902:web:40267390fa4bf2053db64f",
+        measurementId: "G-Y49MRHCFRT"
+      };
+
+      // Initialise only once (guard against double-load)
+      if (!firebase.apps.length) {
+        firebase.initializeApp(firebaseConfig);
+      }
+
+      var db = firebase.database();
+      window._firebaseDb = db;
+
+      // Cache: { toolIndex: { average, count, total } }
+      window.globalRatings = {};
+
+      // ✅ Real-time listener — fires for ALL users instantly when any rating changes
+      db.ref('ratings').on('value', function (snap) {
+        window.globalRatings = snap.val() || {};
+      });
+
+      /**
+       * Call this after saving a personal rating to localStorage.
+       * Uses a Firebase transaction so concurrent updates from different users
+       * never overwrite each other.
+       *
+       * @param {number} toolIndex  - array index of the tool
+       * @param {number} newRating  - 1-5 stars chosen now
+       * @param {number} oldRating  - what this user previously rated (0 = first time)
+       */
+      window.updateGlobalRating = function (toolIndex, newRating, oldRating) {
+        oldRating = oldRating || 0;
+        db.ref('ratings/' + toolIndex).transaction(function (current) {
+          if (current === null) {
+            // No rating exists yet for this tool
+            return { total: newRating, count: 1, average: newRating };
+          }
+          var total = current.total || 0;
+          var count = current.count || 0;
+          if (oldRating > 0) {
+            // User is changing their existing rating — swap old for new
+            total = total - oldRating + newRating;
+            // count stays the same
+          } else {
+            // First time this user rates this tool
+            total = total + newRating;
+            count = count + 1;
+          }
+          var average = count > 0 ? (total / count) : newRating;
+          return { total: total, count: count, average: average };
+        }, function (err) {
+          if (err) console.warn('Firebase rating update failed:', err);
+        });
+      };
+
+    })();
+  </script>
+
   <!-- ✅ PRE-MAIN FIX v7: Must load BEFORE main.js so our handler runs first -->
   <script>
-      (function () {
-        'use strict';
+    (function () {
+      'use strict';
 
-        // ✅ This handler registers BEFORE main.js loads, so it runs FIRST
-        document.addEventListener('click', function (e) {
+      // ✅ This handler registers BEFORE main.js loads, so it runs FIRST
+      document.addEventListener('click', function (e) {
 
-          // Find if click is on Visit Website link (anchor with external icon)
-          var link = e.target.closest('a.btn-primary');
-          if (link) {
-            // Check for external link icon or visit text
-            var hasExtIcon = link.querySelector('.fa-external-link-alt');
-            var text = (link.textContent || '').toLowerCase();
-            var isVisitLink = hasExtIcon || text.includes('visit') || text.includes('زيارة');
+        // Find if click is on Visit Website link (anchor with external icon)
+        var link = e.target.closest('a.btn-primary');
+        if (link) {
+          // Check for external link icon or visit text
+          var hasExtIcon = link.querySelector('.fa-external-link-alt');
+          var text = (link.textContent || '').toLowerCase();
+          var isVisitLink = hasExtIcon || text.includes('visit') || text.includes('زيارة');
 
-            if (isVisitLink && link.href && !link.href.includes('javascript:') && link.href !== '#') {
-              console.log('✅ PRE-MAIN: Visit Website clicked:', link.href);
+          if (isVisitLink && link.href && !link.href.includes('javascript:') && link.href !== '#') {
+            console.log('✅ PRE-MAIN: Visit Website clicked:', link.href);
 
-              // STOP all other handlers immediately
-              e.preventDefault();
-              e.stopPropagation();
-              e.stopImmediatePropagation();
+            // STOP all other handlers immediately
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
 
-              // Open in background tab
-              var win = window.open(link.href, '_blank');
+            // Open in background tab
+            var win = window.open(link.href, '_blank');
 
-              // Aggressively try to keep focus on current tab
-              if (win) { try { win.blur(); } catch (e) { } }
-              window.focus();
-              setTimeout(function () { window.focus(); }, 0);
-              setTimeout(function () { window.focus(); }, 50);
-              setTimeout(function () { window.focus(); }, 100);
+            // Aggressively try to keep focus on current tab
+            if (win) { try { win.blur(); } catch (e) { } }
+            window.focus();
+            setTimeout(function () { window.focus(); }, 0);
+            setTimeout(function () { window.focus(); }, 50);
+            setTimeout(function () { window.focus(); }, 100);
 
-              return false;
-            }
+            return false;
           }
+        }
 
-          // Find if click is on Visit Website button (button with visit-website-btn class)
-          var btn = e.target.closest('.visit-website-btn, button.btn-primary');
-          if (btn && btn.tagName === 'BUTTON') {
-            var url = btn.getAttribute('data-url') || btn.getAttribute('href');
-            var btnText = (btn.textContent || '').toLowerCase();
-            var isVisitBtn = btnText.includes('visit') || btnText.includes('زيارة');
+        // Find if click is on Visit Website button (button with visit-website-btn class)
+        var btn = e.target.closest('.visit-website-btn, button.btn-primary');
+        if (btn && btn.tagName === 'BUTTON') {
+          var url = btn.getAttribute('data-url') || btn.getAttribute('href');
+          var btnText = (btn.textContent || '').toLowerCase();
+          var isVisitBtn = btnText.includes('visit') || btnText.includes('زيارة');
 
-            if (isVisitBtn && url && url !== '#' && !url.includes('javascript:')) {
-              console.log('✅ PRE-MAIN: Visit button clicked:', url);
+          if (isVisitBtn && url && url !== '#' && !url.includes('javascript:')) {
+            console.log('✅ PRE-MAIN: Visit button clicked:', url);
 
-              e.preventDefault();
-              e.stopPropagation();
-              e.stopImmediatePropagation();
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
 
-              var win = window.open(url, '_blank');
-              if (win) { win.blur(); window.focus(); }
+            var win = window.open(url, '_blank');
+            if (win) { win.blur(); window.focus(); }
 
-              return false;
-            }
+            return false;
           }
+        }
 
-        }, true); // ✅ CAPTURE phase
+      }, true); // ✅ CAPTURE phase
 
-        console.log('✅ PRE-MAIN handler v7 registered (runs before main.js)');
-      })();
+      console.log('✅ PRE-MAIN handler v7 registered (runs before main.js)');
+    })();
   </script>
 
   <script src="./js/main.js?v=7"></script>
@@ -7118,21 +7222,59 @@ We believe in the power of community and collaboration, and we welcome users and
     (function () {
       'use strict';
 
+      // ✅ Per-user key helpers — null means not logged in (no guest bleed)
       function getFavKey() {
-        try { var u = JSON.parse(localStorage.getItem('currentUser')); if (u && u.isLoggedIn && u.email) return 'favorites_' + u.email; } catch (e) { }
-        return 'favorites___guest__';
+        try {
+          var u = JSON.parse(localStorage.getItem('currentUser'));
+          if (u && u.isLoggedIn && u.email) return 'favorites_' + u.email.toLowerCase();
+        } catch (e) { }
+        return null; // ✅ null = not logged in
       }
-      function getFavs() { try { var f = JSON.parse(localStorage.getItem(getFavKey())); return Array.isArray(f) ? f : []; } catch (e) { return []; } }
-      function saveFavs(arr) { localStorage.setItem(getFavKey(), JSON.stringify(arr)); }
+      function getFavs() {
+        var k = getFavKey();
+        if (!k) return []; // ✅ not logged in — return empty, never read guest storage
+        try { var f = JSON.parse(localStorage.getItem(k)); return Array.isArray(f) ? f : []; } catch (e) { return []; }
+      }
+      function saveFavs(arr) {
+        var k = getFavKey();
+        if (!k) return; // ✅ not logged in — never write to guest storage
+        localStorage.setItem(k, JSON.stringify(arr));
+      }
 
       function getRatingKey() {
-        try { var u = JSON.parse(localStorage.getItem('currentUser')); if (u && u.isLoggedIn && u.email) return 'ratings_' + u.email; } catch (e) { }
-        return 'ratings___guest__';
+        try {
+          var u = JSON.parse(localStorage.getItem('currentUser'));
+          if (u && u.isLoggedIn && u.email) return 'ratings_' + u.email.toLowerCase();
+        } catch (e) { }
+        return null; // ✅ null = not logged in
       }
-      function getMyRating(idx) { try { var d = JSON.parse(localStorage.getItem(getRatingKey())); return (d && d[idx]) || 0; } catch (e) { return 0; } }
+      function getMyRating(idx) {
+        var k = getRatingKey();
+        if (!k) return 0; // ✅ not logged in — no rating
+        try { var d = JSON.parse(localStorage.getItem(k)); return (d && d[idx]) || 0; } catch (e) { return 0; }
+      }
       function saveRating(idx, val) {
-        try { var d = JSON.parse(localStorage.getItem(getRatingKey())) || {}; d[idx] = val; localStorage.setItem(getRatingKey(), JSON.stringify(d)); } catch (e) { }
+        // Read old personal rating BEFORE saving new one (needed for Firebase transaction)
+        var oldRating = getMyRating(idx);
+        var k = getRatingKey();
+        if (!k) return; // ✅ not logged in — don't save
+        try { var d = JSON.parse(localStorage.getItem(k)) || {}; d[idx] = val; localStorage.setItem(k, JSON.stringify(d)); } catch (e) { }
         if (typeof saveUserRating === 'function') saveUserRating(idx, val);
+        // ✅ Push to Firebase so ALL users see updated global average
+        if (typeof window.updateGlobalRating === 'function') {
+          window.updateGlobalRating(idx, val, oldRating);
+        }
+      }
+
+      // ✅ Helper: show login modal prompt
+      function promptLogin(msgEn, msgAr) {
+        if (typeof showToast === 'function') {
+          showToast(typeof currentLang !== 'undefined' && currentLang === 'ar' ? msgAr : msgEn, 'info');
+        }
+        try {
+          var _modal = bootstrap.Modal.getOrCreateInstance(document.getElementById('authModal'));
+          if (_modal) { var lt = document.getElementById('login-tab'); if (lt) lt.click(); _modal.show(); }
+        } catch (e) { }
       }
 
       window.generateStars = function (toolIdx) {
@@ -7169,19 +7311,31 @@ We believe in the power of community and collaboration, and we welcome users and
 
         col.querySelector('.fav-btn').addEventListener('click', function (e) {
           e.preventDefault(); e.stopPropagation(); e.stopImmediatePropagation();
+          // ✅ Require login before toggling
+          if (!getFavKey()) {
+            promptLogin('Please login to add to favorites', 'يرجى تسجيل الدخول لإضافة إلى المفضلة');
+            return;
+          }
           var i = parseInt(this.getAttribute('data-fidx'), 10);
           var favs = getFavs(), on = favs.includes(i);
           if (on) favs = favs.filter(function (x) { return x !== i; }); else favs.push(i);
           saveFavs(favs); on = !on;
           this.classList.toggle('on', on);
           var ic = this.querySelector('i'); if (ic) ic.className = (on ? 'fas' : 'far') + ' fa-heart';
-          if (typeof showToast === 'function') showToast(on ? 'Added to favorites' : 'Removed from favorites', on ? 'success' : 'info');
+          if (typeof showToast === 'function') showToast(on ? (isAr ? 'تمت الإضافة إلى المفضلة' : 'Added to favorites') : (isAr ? 'تمت الإزالة من المفضلة' : 'Removed from favorites'), on ? 'success' : 'info');
           if (typeof updateFavoritesButton === 'function') updateFavoritesButton();
+          // ✅ Keep main.js in sync
+          if (typeof saveFavoritesArray === 'function') saveFavoritesArray(getFavs());
         }, false);
 
         col.querySelectorAll('.star-click').forEach(function (star) {
           star.addEventListener('click', function (e) {
             e.preventDefault(); e.stopPropagation(); e.stopImmediatePropagation();
+            // ✅ Require login before rating
+            if (!getRatingKey()) {
+              promptLogin('Please login to rate tools', 'يرجى تسجيل الدخول لتقييم الأدوات');
+              return;
+            }
             var sv = parseInt(this.getAttribute('data-star'), 10);
             var ti = parseInt(this.getAttribute('data-tool-idx'), 10);
             saveRating(ti, sv);
@@ -7224,7 +7378,14 @@ We believe in the power of community and collaboration, and we welcome users and
         container.appendChild(filterBar);
         var tools = (typeof aiTools !== 'undefined') ? aiTools.slice() : [];
         if (sortMode === 'oldest') tools.reverse();
-        else if (sortMode === 'rated') tools.sort(function (a, b) { return getMyRating(aiTools.indexOf(b)) - getMyRating(aiTools.indexOf(a)); });
+        else if (sortMode === 'rated') tools.sort(function (a, b) {
+          var idxA = aiTools.indexOf(a);
+          var idxB = aiTools.indexOf(b);
+          // ✅ Use global average from Firebase (visible to ALL users worldwide)
+          var avgA = (window.globalRatings && window.globalRatings[idxA]) ? (window.globalRatings[idxA].average || 0) : 0;
+          var avgB = (window.globalRatings && window.globalRatings[idxB]) ? (window.globalRatings[idxB].average || 0) : 0;
+          return avgB - avgA;
+        });
         if (!sortMode) {
           var bycat = {};
           tools.forEach(function (t) { if (!bycat[t.category]) bycat[t.category] = []; bycat[t.category].push(t); });
@@ -7256,37 +7417,73 @@ We believe in the power of community and collaboration, and we welcome users and
       window.showFavorites = function () {
         /* Prevent any concurrent call from opening a second modal */
         if (document.getElementById('favoritesModal')) return;
-        var favs = getFavs(), isEn = (typeof currentLang === 'undefined' || currentLang === 'en');
-        if (!favs.length) { if (typeof showToast === 'function') showToast(isEn ? 'No favorites yet' : 'لا توجد أدوات مفضلة بعد', 'info'); return; }
-        var tools = window.aiTools || [], html = '';
-        favs.forEach(function (id) {
-          var t = tools[id]; if (!t) return;
-          var d = isEn ? (t.description || '') : (t.desc_ar || t.description || '');
-          html += '<div class="col-md-6 mb-3"><div class="card h-100">' +
-            '<div style="height:100px;overflow:hidden;background:#f8f9fa;"><img src="' + (t.logo || '') + '" style="width:100%;height:100px;object-fit:contain;padding:10px;" onerror="this.src=\'./Images/placeholder-logo.png\'"></div>' +
-            '<div class="card-body"><h6 class="card-title">' + (t.name || '') + '</h6><p class="card-text small text-muted">' + d.substring(0, 90) + '...</p>' +
-            '<div class="d-flex gap-2"><a href="' + (t.url || '#') + '" target="_blank" class="btn btn-sm btn-primary">' + (isEn ? 'Visit' : 'زيارة') + '</a>' +
-            '<button class="btn btn-sm btn-outline-danger remove-fav-modal" data-fidx="' + id + '">' + (isEn ? 'Remove' : 'إزالة') + '</button></div></div></div></div>';
-        });
-        var wrap = document.createElement('div');
-        wrap.innerHTML = '<div class="modal fade" id="favoritesModal" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-scrollable"><div class="modal-content">' +
-          '<div class="modal-header"><h5 class="modal-title">' + (isEn ? 'Favorite Tools' : 'الأدوات المفضلة') + '</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>' +
-          '<div class="modal-body"><div class="row">' + html + '</div></div>' +
-          '<div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">' + (isEn ? 'Close' : 'إغلاق') + '</button></div>' +
-          '</div></div></div>';
-        document.body.appendChild(wrap.firstChild);
-        var mel = document.getElementById('favoritesModal'), bsm = new bootstrap.Modal(mel, { backdrop: true });
-        bsm.show();
-        mel.addEventListener('hidden.bs.modal', function () { bsm.dispose(); mel.remove(); });
-        mel.addEventListener('click', function (e) {
-          var b = e.target.closest('.remove-fav-modal'); if (!b) return;
-          var i = parseInt(b.getAttribute('data-fidx'), 10);
-          saveFavs(getFavs().filter(function (x) { return x !== i; }));
-          var cb = document.querySelector('.fav-btn[data-fidx="' + i + '"]');
-          if (cb) { cb.classList.remove('on'); var ic = cb.querySelector('i'); if (ic) ic.className = 'far fa-heart'; }
-          if (typeof updateFavoritesButton === 'function') updateFavoritesButton();
-          bsm.hide(); setTimeout(function () { window.showFavorites(); }, 350);
-        });
+
+        // ✅ Require login
+        if (!getFavKey()) {
+          promptLogin('Please login to view your favorites', 'يرجى تسجيل الدخول لعرض المفضلة');
+          return;
+        }
+
+        var isEn = (typeof currentLang === 'undefined' || currentLang === 'en');
+
+        function renderModal() {
+          var currentFavs = getFavs(); // ✅ fresh read every render
+          var favs = currentFavs.slice(); // local copy
+          if (!favs.length) {
+            if (typeof showToast === 'function') showToast(isEn ? 'No favorites yet' : 'لا توجد أدوات مفضلة بعد', 'info');
+            return;
+          }
+          var tools = window.aiTools || [], html = '';
+          favs.forEach(function (id) {
+            var t = tools[id]; if (!t) return;
+            var d = isEn ? (t.description || '') : (t.desc_ar || t.description || '');
+            var slug = (t.name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+            html += '<div class="col-md-6 mb-3"><div class="card h-100" style="position:relative;">' +
+              '<button class="remove-fav-modal" data-fidx="' + id + '" title="' + (isEn ? 'Remove from favorites' : 'إزالة من المفضلة') + '" style="position:absolute;top:8px;right:8px;z-index:10;width:32px;height:32px;border-radius:50%;border:none;background:rgba(220,38,38,0.85);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.25);transition:background 0.2s,transform 0.15s;" onmouseover="this.style.background=\'rgba(185,28,28,1)\';this.style.transform=\'scale(1.12)\'" onmouseout="this.style.background=\'rgba(220,38,38,0.85)\';this.style.transform=\'scale(1)\'">' +
+              '<i class="fas fa-trash-alt" style="font-size:13px;pointer-events:none;"></i></button>' +
+              '<div style="height:100px;overflow:hidden;background:#f8f9fa;"><img src="' + (t.logo || '') + '" style="width:100%;height:100px;object-fit:contain;padding:10px;" onerror="this.src=\'./Images/placeholder-logo.png\'"></div>' +
+              '<div class="card-body"><h6 class="card-title">' + (t.name || '') + '</h6><p class="card-text small text-muted">' + d.substring(0, 90) + '...</p>' +
+              '<div class="d-flex gap-2">' +
+              '<a href="' + (t.url || '#') + '" target="_blank" class="btn btn-sm btn-primary">' + (isEn ? 'Visit' : 'زيارة') + '</a>' +
+              '<a href="/tools/' + slug + '.html" class="btn btn-sm btn-outline-primary fav-details-btn">' + (isEn ? 'Details' : 'التفاصيل') + '</a>' +
+              '</div></div></div></div>';
+          });
+          var wrap = document.createElement('div');
+          wrap.innerHTML = '<div class="modal fade" id="favoritesModal" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-scrollable"><div class="modal-content">' +
+            '<div class="modal-header"><h5 class="modal-title">' + (isEn ? 'Favorite Tools' : 'الأدوات المفضلة') + '</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>' +
+            '<div class="modal-body"><div class="row">' + html + '</div></div>' +
+            '<div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">' + (isEn ? 'Close' : 'إغلاق') + '</button></div>' +
+            '</div></div></div>';
+          document.body.appendChild(wrap.firstChild);
+          var mel = document.getElementById('favoritesModal'), bsm = new bootstrap.Modal(mel, { backdrop: true });
+          bsm.show();
+          mel.addEventListener('hidden.bs.modal', function () { bsm.dispose(); mel.remove(); });
+          mel.addEventListener('click', function (e) {
+            // Details button — close modal then navigate
+            var det = e.target.closest('.fav-details-btn');
+            if (det) {
+              e.preventDefault();
+              var href = det.getAttribute('href');
+              bsm.hide();
+              setTimeout(function () { window.location.href = href; }, 200);
+              return;
+            }
+            var b = e.target.closest('.remove-fav-modal'); if (!b) return;
+            var i = parseInt(b.getAttribute('data-fidx'), 10);
+            var updated = getFavs().filter(function (x) { return x !== i; }); // ✅ fresh read
+            saveFavs(updated);
+            // ✅ Keep main.js in sync
+            if (typeof saveFavoritesArray === 'function') saveFavoritesArray(updated);
+            var cb = document.querySelector('.fav-btn[data-fidx="' + i + '"]');
+            if (cb) { cb.classList.remove('on'); var ic = cb.querySelector('i'); if (ic) ic.className = 'far fa-heart'; }
+            if (typeof updateFavoritesButton === 'function') updateFavoritesButton();
+            if (typeof updateAllFavoriteButtons === 'function') updateAllFavoriteButtons();
+            bsm.hide();
+            setTimeout(function () { renderModal(); }, 350); // ✅ re-render with fresh data
+          });
+        }
+
+        renderModal();
       };
 
       window.addEventListener('load', function () {
@@ -7413,147 +7610,28 @@ We believe in the power of community and collaboration, and we welcome users and
     })();
   </script>
 
-  <!-- Favorites Modal Handler - Added to complete favorite button functionality -->
+  <!-- Favorites Modal Handler -->
   <script>
     (function () {
       'use strict';
 
-      // Show favorites modal when navbar button is clicked
-      function showFavoritesModal() {
-        const ids = getFavoritesArray(); // ✅ array مضمون
-
-
-        if (!ids.length) {
-          showToast(currentLang === "ar" ? "لا توجد أدوات مفضلة" : "No favorites yet", "info");
-          return;
-        }
-
-
-        // ✅ aiTools يجب أن تكون موجودة
-        const toolsArr = window.aiTools || [];
-        const tools = ids.map(id => toolsArr[id]).filter(Boolean);
-
-
-        // ✅ بناء المودال
-        const favoritesModalHTML = `
-    <div class="modal fade favorites-modal" id="favoritesModal" tabindex="-1">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">${currentLang === "ar" ? "الأدوات المفضلة" : "Favorite Tools"}</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-          </div>
-
-
-          <div class="modal-body">
-            <div class="row g-3" id="favoritesListContainer">
-              ${tools.map((tool, idx) => {
-          const toolId = ids[idx]; // ✅ index الحقيقي
-          const description = currentLang === "ar" ? (tool.desc_ar || tool.description) : tool.description;
-
-
-          return `
-                  <div class="col-md-6">
-                    <div class="card h-100">
-                      <div class="card-img-top position-relative" style="height:120px; overflow:hidden; background:linear-gradient(135deg, #401F71, #BE7B72);">
-                        <img src="${tool.logo}" alt="${tool.name}" class="w-100 h-100 object-fit-contain p-2" style="background:white;" onerror="this.src='./Images/placeholder-logo.png'">
-
-
-                        <button class="btn btn-sm btn-danger position-absolute top-0 start-0 m-2 remove-favorite-btn" data-tool-id="${toolId}">
-                          <i class="fas fa-times"></i>
-                        </button>
-                      </div>
-
-
-                      <div class="card-body">
-                        <h6 class="card-title">${tool.name}</h6>
-                        <p class="card-text small">${description || ""}</p>
-
-
-                        <div class="d-flex justify-content-between align-items-center">
-                          <button class="btn btn-sm btn-outline-primary view-details-btn" data-tool-id="${toolId}">
-                            ${currentLang === "ar" ? "تفاصيل" : "Details"}
-                          </button>
-                          <span class="badge bg-secondary">${tool.pricing || ""}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                `;
-        }).join("")}
-            </div>
-          </div>
-
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-              ${currentLang === "ar" ? "إغلاق" : "Close"}
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  `;
-
-
-        // إزالة القديم إذا موجود
-        document.getElementById("favoritesModal")?.remove();
-        document.body.insertAdjacentHTML("beforeend", favoritesModalHTML);
-
-
-        const modal = new bootstrap.Modal(document.getElementById("favoritesModal"));
-        modal.show();
-
-
-        // ✅ Bind events inside modal
-        document.getElementById("favoritesModal").addEventListener("shown.bs.modal", () => {
-          document.querySelectorAll("#favoritesListContainer .view-details-btn").forEach(btn => {
-            btn.addEventListener("click", () => {
-              const toolId = Number(btn.dataset.toolId);
-              modal.hide();
-              setTimeout(() => showToolDetails(toolId), 250);
-            });
-          });
-
-
-          document.querySelectorAll("#favoritesListContainer .remove-favorite-btn").forEach(btn => {
-            btn.addEventListener("click", (e) => {
-              e.preventDefault();
-              e.stopPropagation();
-
-
-              const toolId = Number(btn.dataset.toolId);
-              let ids = getFavoritesArray();
-              ids = ids.filter(id => id !== toolId);
-
-
-              saveFavoritesArray(ids);
-              updateFavoritesButton();
-
-
-              btn.closest(".col-md-6")?.remove();
-
-
-              if (!ids.length) {
-                modal.hide();
-                showToast(currentLang === "ar" ? "تم حذف كل المفضلة" : "All favorites removed", "info");
-              }
-            });
-          });
-        });
-      }
-
-      // Attach to navbar favorites button
+      // ✅ Navbar favorites button — delegate to the unified window.showFavorites
       document.addEventListener('DOMContentLoaded', function () {
-        const favoritesBtn = document.getElementById('favoritesBtn');
-        if (favoritesBtn) {
+        var favoritesBtn = document.getElementById('favoritesBtn');
+        if (favoritesBtn && !favoritesBtn.dataset.modalInited) {
+          favoritesBtn.dataset.modalInited = '1';
           favoritesBtn.addEventListener('click', function (e) {
             e.preventDefault();
-            showFavoritesModal();
+            e.stopPropagation();
+            if (typeof window.showFavorites === 'function') {
+              window.showFavorites();
+            } else if (typeof showFavorites === 'function') {
+              showFavorites();
+            }
           });
         }
 
-        // Initial update
+        // Initial state sync
         if (typeof updateFavoritesButton === 'function') updateFavoritesButton();
         if (typeof updateAllFavoriteButtons === 'function') updateAllFavoriteButtons();
       });
@@ -7745,4 +7823,5 @@ We believe in the power of community and collaboration, and we welcome users and
   }
 </style>
 </body>
+
 </html>

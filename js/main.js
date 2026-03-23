@@ -137671,7 +137671,7 @@ contactContent = {
 // GLOBAL VARIABLES
 // =================================================================================
 
-let favorites = JSON.parse(localStorage.getItem('favorites')) || {};
+let favorites = {}; // Per-account favorites are stored under 'favorites_<email>' — never use the shared 'favorites' key
 let currentLang = 'en';
 let currentPage = 'home';
 let isSearchActive = false;
@@ -137990,16 +137990,12 @@ function backToHome() {
 
 // دالة تحديث زر المفضلة
 function updateFavoritesButton() {
-  const favoritesBtn = document.getElementById('favoritesBtn');
-  const favorites = getFavoritesArray();
-
-  if (favoritesBtn) {
-    if (favorites.length > 0) {
-      favoritesBtn.style.display = 'inline-block';
-    } else {
-      favoritesBtn.style.display = 'none';
-    }
-  }
+  var favoritesBtn = document.getElementById('favoritesBtn');
+  if (!favoritesBtn) return;
+  try {
+    var u = JSON.parse(localStorage.getItem('currentUser'));
+    favoritesBtn.style.display = (u && u.isLoggedIn) ? 'inline-block' : 'none';
+  } catch (e) { favoritesBtn.style.display = 'none'; }
 }
 
 // دالة عرض الإشعارات
@@ -138320,146 +138316,149 @@ function updateDynamicContent() {
 // =================================================================================
 
 function displayToolsByCategories(sortMode) {
-    const container = document.getElementById('featured-tools-container');
-    container.innerHTML = '';
+  const container = document.getElementById('featured-tools-container');
+  container.innerHTML = '';
 
-    // Sorting Filter Bar
-    const isArLang = (localStorage.getItem('lang') === 'ar');
-    const filterBar = document.createElement('div');
-    filterBar.className = 'sorting-filter-bar d-flex flex-wrap justify-content-center mb-4';
-    filterBar.style.cssText = 'padding: 15px 0; gap: 12px; align-items: center;';
-    const sortOptions = [
-        { key: 'newest', labelEn: 'Newest', labelAr: 'الأحدث' },
-        { key: 'oldest', labelEn: 'Oldest', labelAr: 'الأقدم' },
-        { key: 'rated', labelEn: 'Most Rated', labelAr: 'الأكثر تقييماً' }
-    ];
-    sortOptions.forEach(function (opt) {
-        const btn = document.createElement('button');
-        btn.className = 'btn shadow-sm ' + (sortMode === opt.key ? 'btn-primary' : 'btn-outline-primary');
-        // Unify padding, line-height, and height
-        btn.style.cssText = 'border-radius: 25px; padding: 10px 24px; font-size: 15px; font-weight: 600; font-family: inherit; display: inline-flex; align-items: center; justify-content: center; height: 44px; transition: all 0.3s ease; letter-spacing: 0.3px;';
-        
-        btn.textContent = isArLang ? opt.labelAr : opt.labelEn;
-        btn.addEventListener('click', function () { displayToolsByCategories(opt.key); });
-        filterBar.appendChild(btn);
+  // Sorting Filter Bar
+  const isArLang = (localStorage.getItem('lang') === 'ar');
+  const filterBar = document.createElement('div');
+  filterBar.className = 'sorting-filter-bar d-flex flex-wrap justify-content-center mb-4';
+  filterBar.style.cssText = 'padding: 15px 0; gap: 12px; align-items: center;';
+  const sortOptions = [
+    { key: 'newest', labelEn: 'Newest', labelAr: 'الأحدث' },
+    { key: 'oldest', labelEn: 'Oldest', labelAr: 'الأقدم' },
+    { key: 'rated', labelEn: 'Most Rated', labelAr: 'الأكثر تقييماً' }
+  ];
+  sortOptions.forEach(function (opt) {
+    const btn = document.createElement('button');
+    btn.className = 'btn shadow-sm ' + (sortMode === opt.key ? 'btn-primary' : 'btn-outline-primary');
+    // Unify padding, line-height, and height
+    btn.style.cssText = 'border-radius: 25px; padding: 10px 24px; font-size: 15px; font-weight: 600; font-family: inherit; display: inline-flex; align-items: center; justify-content: center; height: 44px; transition: all 0.3s ease; letter-spacing: 0.3px;';
+
+    btn.textContent = isArLang ? opt.labelAr : opt.labelEn;
+    btn.addEventListener('click', function () { displayToolsByCategories(opt.key); });
+    filterBar.appendChild(btn);
+  });
+
+  // Add Back / Reset Filter button
+  if (sortMode) {
+    const resetBtn = document.createElement('button');
+    // Remove 'back-button' and 'btn-danger' to drop any interfering CSS that shrinks it / breaks gradient
+    resetBtn.className = 'btn shadow-sm';
+    // Add a nice dark gradient or soft dark grey
+    resetBtn.style.cssText = 'border-radius: 25px; padding: 10px 24px; font-size: 15px; font-weight: 600; font-family: inherit; display: inline-flex; align-items: center; justify-content: center; height: 44px; transition: all 0.3s ease; letter-spacing: 0.3px; background: linear-gradient(135deg, #4b5563, #374151); color: #ffffff; border: none; margin-inline-start: 10px;';
+
+    resetBtn.innerHTML = '<i class="fas fa-arrow-left me-2"></i> ' + (isArLang ? 'العودة' : 'Back');
+    resetBtn.addEventListener('click', function () { displayToolsByCategories(null); });
+
+    // Hover effect helper for inline background
+    resetBtn.onmouseover = function () { this.style.opacity = '0.85'; this.style.transform = 'translateY(-2px)'; };
+    resetBtn.onmouseout = function () { this.style.opacity = '1'; this.style.transform = 'translateY(0)'; };
+
+    filterBar.appendChild(resetBtn);
+  }
+
+  container.appendChild(filterBar);
+
+  // Build sorted tools list
+  let sortedTools = typeof aiTools !== 'undefined' ? aiTools.slice() : [];
+  if (sortMode === 'oldest') {
+    sortedTools.reverse();
+  } else if (sortMode === 'rated') {
+    sortedTools.sort(function (a, b) {
+      var idxA = typeof aiTools !== 'undefined' ? aiTools.indexOf(a) : 0;
+      var idxB = typeof aiTools !== 'undefined' ? aiTools.indexOf(b) : 0;
+      // ✅ Use global average from Firebase (visible to ALL users worldwide)
+      var avgA = (window.globalRatings && window.globalRatings[idxA]) ? (window.globalRatings[idxA].average || 0) : 0;
+      var avgB = (window.globalRatings && window.globalRatings[idxB]) ? (window.globalRatings[idxB].average || 0) : 0;
+      return avgB - avgA;
+    });
+  }
+
+  if (!sortMode) {
+    // DEFAULT: Show grouped by category
+    const toolsByCategory = {};
+    sortedTools.forEach(function (tool) {
+      if (!toolsByCategory[tool.category]) {
+        toolsByCategory[tool.category] = [];
+      }
+      toolsByCategory[tool.category].push(tool);
     });
 
-    // Add Back / Reset Filter button
-    if (sortMode) {
-        const resetBtn = document.createElement('button');
-        // Remove 'back-button' and 'btn-danger' to drop any interfering CSS that shrinks it / breaks gradient
-        resetBtn.className = 'btn shadow-sm';
-        // Add a nice dark gradient or soft dark grey
-        resetBtn.style.cssText = 'border-radius: 25px; padding: 10px 24px; font-size: 15px; font-weight: 600; font-family: inherit; display: inline-flex; align-items: center; justify-content: center; height: 44px; transition: all 0.3s ease; letter-spacing: 0.3px; background: linear-gradient(135deg, #4b5563, #374151); color: #ffffff; border: none; margin-inline-start: 10px;';
-        
-        resetBtn.innerHTML = '<i class="fas fa-arrow-left me-2"></i> ' + (isArLang ? 'العودة' : 'Back');
-        resetBtn.addEventListener('click', function () { displayToolsByCategories(null); });
-        
-        // Hover effect helper for inline background
-        resetBtn.onmouseover = function() { this.style.opacity = '0.85'; this.style.transform = 'translateY(-2px)'; };
-        resetBtn.onmouseout = function() { this.style.opacity = '1'; this.style.transform = 'translateY(0)'; };
-        
-        filterBar.appendChild(resetBtn);
+    Object.keys(toolsByCategory).forEach(function (category) {
+      const categoryTools = toolsByCategory[category];
+      const categorySection = document.createElement('div');
+      categorySection.className = 'category-section mb-5';
+      categorySection.id = 'category-' + category.replace(/\s+/g, '-').toLowerCase();
+
+      const sectionHeader = document.createElement('div');
+      sectionHeader.className = 'category-header mt-4 mb-3';
+      sectionHeader.innerHTML = '<h3 class="fw-bold">' + category + '</h3>' +
+        '<span class="badge bg-secondary">' + categoryTools.length + ' ' + (isArLang ? 'أداة' : 'tools') + '</span>';
+
+      const toolsGrid = document.createElement('div');
+      toolsGrid.className = 'row g-4';
+
+      const toolsToShow = categoryTools.slice(0, 6);
+      toolsToShow.forEach(function (tool) {
+        const toolCard = createToolCard(tool);
+        toolsGrid.appendChild(toolCard);
+      });
+
+      const showMoreBtn = document.createElement('button');
+      showMoreBtn.className = 'btn btn-outline-primary show-more-btn mt-3';
+      showMoreBtn.innerHTML = isArLang ? 'عرض المزيد' : 'Show More';
+      showMoreBtn.onclick = function () { showAllCategoryTools(category); };
+
+      categorySection.appendChild(sectionHeader);
+      categorySection.appendChild(toolsGrid);
+
+      if (categoryTools.length > 6) {
+        categorySection.appendChild(showMoreBtn);
+      }
+
+      container.appendChild(categorySection);
+    });
+  } else {
+    // FILTER APPLIED: Show ALL tools without truncation
+    const toolsGrid = document.createElement('div');
+    toolsGrid.className = 'row g-4 mb-5';
+    container.appendChild(toolsGrid);
+
+    let currentIndex = 0;
+    const chunkSize = 40; // Render 40 tools at a time
+
+    function renderNextChunk() {
+      const end = Math.min(currentIndex + chunkSize, sortedTools.length);
+      for (let i = currentIndex; i < end; i++) {
+        const toolCard = createToolCard(sortedTools[i]);
+        toolsGrid.appendChild(toolCard);
+      }
+      currentIndex = end;
     }
-    
-    container.appendChild(filterBar);
 
-    // Build sorted tools list
-    let sortedTools = typeof aiTools !== 'undefined' ? aiTools.slice() : [];
-    if (sortMode === 'oldest') {
-        sortedTools.reverse(); 
-    } else if (sortMode === 'rated') {
-        sortedTools.sort(function (a, b) {
-            var rA = getUserRating(typeof aiTools !== 'undefined' ? aiTools.indexOf(a) : 0) || a.rating || 0;
-            var rB = getUserRating(typeof aiTools !== 'undefined' ? aiTools.indexOf(b) : 0) || b.rating || 0;
-            return rB - rA;
-        });
-    }
+    // Initial render
+    renderNextChunk();
 
-    if (!sortMode) {
-        // DEFAULT: Show grouped by category
-        const toolsByCategory = {};
-        sortedTools.forEach(function (tool) {
-            if (!toolsByCategory[tool.category]) {
-                toolsByCategory[tool.category] = [];
-            }
-            toolsByCategory[tool.category].push(tool);
-        });
+    // Infinite scroll
+    if (currentIndex < sortedTools.length) {
+      const sentinel = document.createElement('div');
+      sentinel.style.height = '20px';
+      sentinel.style.width = '100%';
+      container.appendChild(sentinel);
 
-        Object.keys(toolsByCategory).forEach(function (category) {
-            const categoryTools = toolsByCategory[category];
-            const categorySection = document.createElement('div');
-            categorySection.className = 'category-section mb-5';
-            categorySection.id = 'category-' + category.replace(/\s+/g, '-').toLowerCase();
-
-            const sectionHeader = document.createElement('div');
-            sectionHeader.className = 'category-header mt-4 mb-3';
-            sectionHeader.innerHTML = '<h3 class="fw-bold">' + category + '</h3>' +
-                '<span class="badge bg-secondary">' + categoryTools.length + ' ' + (isArLang ? 'أداة' : 'tools') + '</span>';
-
-            const toolsGrid = document.createElement('div');
-            toolsGrid.className = 'row g-4';
-
-            const toolsToShow = categoryTools.slice(0, 6);
-            toolsToShow.forEach(function (tool) {
-                const toolCard = createToolCard(tool);
-                toolsGrid.appendChild(toolCard);
-            });
-
-            const showMoreBtn = document.createElement('button');
-            showMoreBtn.className = 'btn btn-outline-primary show-more-btn mt-3';
-            showMoreBtn.innerHTML = isArLang ? 'عرض المزيد' : 'Show More';
-            showMoreBtn.onclick = function () { showAllCategoryTools(category); };
-
-            categorySection.appendChild(sectionHeader);
-            categorySection.appendChild(toolsGrid);
-
-            if (categoryTools.length > 6) {
-                categorySection.appendChild(showMoreBtn);
-            }
-
-            container.appendChild(categorySection);
-        });
-    } else {
-        // FILTER APPLIED: Show ALL tools without truncation
-        const toolsGrid = document.createElement('div');
-        toolsGrid.className = 'row g-4 mb-5';
-        container.appendChild(toolsGrid);
-
-        let currentIndex = 0;
-        const chunkSize = 40; // Render 40 tools at a time
-        
-        function renderNextChunk() {
-            const end = Math.min(currentIndex + chunkSize, sortedTools.length);
-            for (let i = currentIndex; i < end; i++) {
-                const toolCard = createToolCard(sortedTools[i]);
-                toolsGrid.appendChild(toolCard);
-            }
-            currentIndex = end;
+      const observer = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) {
+          renderNextChunk();
+          if (currentIndex >= sortedTools.length) {
+            observer.disconnect();
+            sentinel.remove();
+          }
         }
-
-        // Initial render
-        renderNextChunk();
-
-        // Infinite scroll
-        if (currentIndex < sortedTools.length) {
-            const sentinel = document.createElement('div');
-            sentinel.style.height = '20px';
-            sentinel.style.width = '100%';
-            container.appendChild(sentinel);
-
-            const observer = new IntersectionObserver(function(entries) {
-                if (entries[0].isIntersecting) {
-                    renderNextChunk();
-                    if (currentIndex >= sortedTools.length) {
-                        observer.disconnect();
-                        sentinel.remove();
-                    }
-                }
-            }, { rootMargin: '400px' }); 
-            observer.observe(sentinel);
-        }
+      }, { rootMargin: '400px' });
+      observer.observe(sentinel);
     }
+  }
 }
 
 // دالة لعرض جميع أدوات قسم معين
@@ -138879,7 +138878,7 @@ function _getUserKey() {
     var u = JSON.parse(localStorage.getItem('currentUser'));
     if (u && u.isLoggedIn && u.email) return u.email;
   } catch (e) { }
-  return '__guest__';
+  return 'guest';
 }
 
 // Get the user's rating for a specific tool index
@@ -138894,11 +138893,19 @@ function getUserRating(toolIndex) {
 
 // Save a user's rating for a specific tool index
 function saveUserRating(toolIndex, rating) {
-  var key = 'ratings_' + _getUserKey();
+  var uKey = _getUserKey();
+  if (!uKey) return; // not logged in
+  var key = 'ratings_' + uKey;
   var data = {};
   try { data = JSON.parse(localStorage.getItem(key)) || {}; } catch (e) { }
+  // Read old rating BEFORE overwriting (needed for accurate Firebase transaction)
+  var oldRating = data[toolIndex] || 0;
   data[toolIndex] = rating;
   localStorage.setItem(key, JSON.stringify(data));
+  // ✅ Push to Firebase so ALL users worldwide see updated global average
+  if (typeof window.updateGlobalRating === 'function') {
+    window.updateGlobalRating(toolIndex, rating, oldRating);
+  }
 }
 
 // Generate interactive star rating HTML
@@ -139502,31 +139509,48 @@ function updateFavoriteButtonState(button, toolId) {
 }
 
 function updateAllFavoriteButtons() {
+  // ✅ Update .favorite-toggle buttons (main.js createToolCard)
   document.querySelectorAll('.favorite-toggle').forEach(function (button) {
     var toolId = parseInt(button.dataset.toolIndex || button.dataset.toolId);
     if (!isNaN(toolId)) updateFavoriteButtonState(button, toolId);
   });
+  // ✅ Also update .fav-btn buttons (index.html createToolCard)
+  document.querySelectorAll('.fav-btn[data-fidx]').forEach(function (button) {
+    var toolId = parseInt(button.getAttribute('data-fidx'));
+    if (isNaN(toolId)) return;
+    var isFav = (typeof isFavoriteIndex === 'function') ? isFavoriteIndex(toolId) : false;
+    button.classList.toggle('on', isFav);
+    var ic = button.querySelector('i');
+    if (ic) ic.className = (isFav ? 'fas' : 'far') + ' fa-heart';
+  });
+  // ✅ Also refresh star displays to match current user's ratings
+  document.querySelectorAll('.interactive-stars[data-tool-idx]').forEach(function (container) {
+    var toolIdx = parseInt(container.getAttribute('data-tool-idx'));
+    if (isNaN(toolIdx)) return;
+    var saved = (typeof getUserRating === 'function') ? getUserRating(toolIdx) : 0;
+    container.querySelectorAll('.star-click').forEach(function (s) {
+      var sv = parseInt(s.getAttribute('data-star'));
+      s.className = (sv <= saved ? 'fas' : 'far') + ' fa-star star-click';
+      s.style.color = sv <= saved ? '#f4cf55' : '#ccc';
+    });
+  });
 }
 
 function showFavorites() {
+  // Always delegate to showFavoritesModal which uses the correct getFavKey()
+  if (typeof showFavoritesModal === 'function') { showFavoritesModal(); return; }
   var userData;
   try { userData = JSON.parse(localStorage.getItem('currentUser')); } catch (e) { }
   if (!userData || !userData.isLoggedIn) {
-    showToast(
-      currentLang === 'en' ? 'Please login to view favorites' : '\u064a\u0631\u062c\u0649 \u062a\u0633\u062c\u064a\u0644 \u0627\u0644\u062f\u062e\u0648\u0644 \u0644\u0639\u0631\u0636 \u0627\u0644\u0645\u0641\u0636\u0644\u0629',
-      'info'
-    );
+    showToast(currentLang === 'en' ? 'Please login to view favorites' : 'يرجى تسجيل الدخول لعرض المفضلة', 'info');
     return;
   }
-
-  // Use the unified per-account getFavoritesArray
-  var userFavorites = getFavoritesArray();
-
+  var email = userData.email || '';
+  var userFavorites = [];
+  try { var raw = localStorage.getItem('favorites_' + email); userFavorites = raw ? JSON.parse(raw) : []; } catch (e) { }
+  if (!Array.isArray(userFavorites)) userFavorites = [];
   if (userFavorites.length === 0) {
-    showToast(
-      currentLang === 'en' ? 'No favorite tools yet' : '\u0644\u0627 \u062a\u0648\u062c\u062f \u0623\u062f\u0648\u0627\u062a \u0645\u0641\u0636\u0644\u0629 \u0628\u0639\u062f',
-      'info'
-    );
+    showToast(currentLang === 'en' ? 'No favorite tools yet' : 'لا توجد أدوات مفضلة بعد', 'info');
     return;
   }
 
@@ -139727,7 +139751,7 @@ function handleLogin(e) {
     return;
   }
 
-  const email = emailEl.value.trim();
+  const email = emailEl.value.trim().toLowerCase();
   const password = passEl.value;
 
   if (!email || !password) {
@@ -139742,13 +139766,29 @@ function handleLogin(e) {
     return;
   }
 
-  // Simulate authentication (replace with real API call as needed)
   // Temporarily disable submit to prevent double submissions
   const submitBtn = e.target.querySelector('button[type="submit"]');
   if (submitBtn) submitBtn.disabled = true;
 
+  // Check against registered accounts
+  var registeredAccounts = {};
+  try { registeredAccounts = JSON.parse(localStorage.getItem('registeredAccounts') || '{}'); } catch (ex) { registeredAccounts = {}; }
+
+  var accountData = registeredAccounts[email];
+  if (!accountData) {
+    showAlert(currentLang === 'en' ? 'Account not found. Please sign up first.' : 'الحساب غير موجود. يرجى التسجيل أولاً.', 'error', 'loginError');
+    if (submitBtn) submitBtn.disabled = false;
+    return;
+  }
+
+  if (accountData.password !== password) {
+    showAlert(currentLang === 'en' ? 'Incorrect password' : 'كلمة المرور غير صحيحة', 'error', 'loginError');
+    if (submitBtn) submitBtn.disabled = false;
+    return;
+  }
+
   const user = {
-    name: email.split('@')[0],
+    name: accountData.name || email.split('@')[0],
     email: email,
     isLoggedIn: true,
     loginTime: new Date().toISOString()
@@ -139759,7 +139799,6 @@ function handleLogin(e) {
   try {
     localStorage.setItem('currentUser', JSON.stringify(user));
     if (!remember) {
-      // store session-only by also storing fallback (no strong session API here)
       sessionStorage.setItem('currentUser_session', JSON.stringify(user));
     }
   } catch (err) {
@@ -139771,61 +139810,158 @@ function handleLogin(e) {
   setTimeout(() => {
     if (authModalInstance) authModalInstance.hide();
     updateUserInterface();
+    // ✅ Re-render ALL cards so hearts + stars reflect this user's data
+    if (typeof window.displayToolsByCategories === 'function') {
+      window.displayToolsByCategories();
+    }
   }, 700);
 }
 
 function handleSignup(e) {
   e.preventDefault();
-  const name = document.getElementById('signupName') && document.getElementById('signupName').value.trim();
-  const email = document.getElementById('signupEmail') && document.getElementById('signupEmail').value.trim();
-  const password = document.getElementById('signupPassword') && document.getElementById('signupPassword').value;
-  const confirmPassword = document.getElementById('confirmPassword') && document.getElementById('confirmPassword').value;
+  var isAr = (currentLang !== 'en');
+  var nameVal = (document.getElementById('signupName') || { value: '' }).value.trim();
+  var username = (document.getElementById('signupUsername') || { value: '' }).value.trim().toLowerCase();
+  var emailRaw = (document.getElementById('signupEmail') || { value: '' }).value.trim();
+  var email = emailRaw.toLowerCase();
+  var password = (document.getElementById('signupPassword') || { value: '' }).value;
+  var confirmPw = (document.getElementById('confirmPassword') || { value: '' }).value;
 
-  if (!name || !email || !password || !confirmPassword) {
-    showAlert(currentLang === 'en' ? 'Please fill in all fields' : 'يرجى ملء جميع الحقول', 'error', 'signupError');
-    return;
+  if (!nameVal || !username || !email || !password || !confirmPw) {
+    showAlert(isAr ? 'يرجى ملء جميع الحقول' : 'Please fill in all fields', 'error', 'signupError'); return;
+  }
+  if (!/^[a-zA-Z0-9_]{3,20}$/.test(username)) {
+    showAlert(isAr ? 'اسم المستخدم: 3-20 حرفاً (أحرف، أرقام، _)' : 'Username: 3–20 chars (letters, numbers, _)', 'error', 'signupError'); return;
+  }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    showAlert(isAr ? 'بريد إلكتروني غير صالح' : 'Invalid email address', 'error', 'signupError'); return;
+  }
+  var pwCheck = _checkPasswordStrength(password);
+  if (pwCheck.score < 3) {
+    showAlert(isAr ? 'كلمة المرور ضعيفة — يجب: 8+ أحرف، حرف كبير، رقم، ورمز خاص' : 'Weak password — need: 8+ chars, uppercase, number, special character', 'error', 'signupError'); return;
+  }
+  if (password !== confirmPw) {
+    showAlert(isAr ? 'كلمتا المرور غير متطابقتين' : 'Passwords do not match', 'error', 'signupError'); return;
   }
 
-  if (password !== confirmPassword) {
-    showAlert(currentLang === 'en' ? 'Passwords do not match' : 'كلمات المرور غير متطابقة', 'error', 'signupError');
-    return;
+  var accounts = {};
+  try { accounts = JSON.parse(localStorage.getItem('registeredAccounts') || '{}'); } catch (ex) { }
+
+  if (accounts[email]) {
+    showAlert(isAr ? 'البريد مسجل مسبقاً — يرجى تسجيل الدخول' : 'Email already registered — please login', 'error', 'signupError'); return;
+  }
+  var usernameTaken = Object.values(accounts).some(function (a) { return a.username && a.username.toLowerCase() === username; });
+  if (usernameTaken) {
+    showAlert(isAr ? 'اسم المستخدم مأخوذ — اختر اسماً آخر' : 'Username taken — choose another', 'error', 'signupError'); return;
   }
 
-  // Basic email check
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    showAlert(currentLang === 'en' ? 'Please enter a valid email' : 'يرجى إدخال بريد إلكتروني صالح', 'error', 'signupError');
-    return;
-  }
+  accounts[email] = { name: nameVal, username: username, email: email, password: password, createdAt: new Date().toISOString() };
+  localStorage.setItem('registeredAccounts', JSON.stringify(accounts));
+  // Init isolated empty storage — key matches getFavKey() exactly
+  if (!localStorage.getItem('favorites_' + email)) localStorage.setItem('favorites_' + email, JSON.stringify([]));
+  if (!localStorage.getItem('ratings_' + email)) localStorage.setItem('ratings_' + email, JSON.stringify({}));
 
-  // simulate account creation
-  const user = {
-    name: name,
-    email: email,
-    isLoggedIn: true,
-    loginTime: new Date().toISOString()
-  };
+  var user = { name: nameVal, username: username, email: email, isLoggedIn: true, loginTime: new Date().toISOString() };
+  localStorage.setItem('currentUser', JSON.stringify(user));
 
-  try {
-    localStorage.setItem('currentUser', JSON.stringify(user));
-  } catch (err) {
-    console.warn('Local storage write failed', err);
-  }
-
-  showAlert(currentLang === 'en' ? 'Account created successfully!' : 'تم إنشاء الحساب بنجاح!', 'success', 'signupSuccess');
-
-  setTimeout(() => {
+  showAlert(isAr ? 'تم إنشاء الحساب بنجاح!' : 'Account created successfully!', 'success', 'signupSuccess');
+  setTimeout(function () {
     if (authModalInstance) authModalInstance.hide();
     updateUserInterface();
+    // ✅ Re-render ALL cards so new account starts with empty hearts + stars
+    if (typeof window.displayToolsByCategories === 'function') {
+      window.displayToolsByCategories();
+    }
   }, 700);
 }
 
+function _checkPasswordStrength(pw) {
+  var c = { length: pw.length >= 8, upper: /[A-Z]/.test(pw), number: /[0-9]/.test(pw), special: /[^A-Za-z0-9]/.test(pw) };
+  return { score: [c.length, c.upper, c.number, c.special].filter(Boolean).length, checks: c };
+}
+
+(function setupSignupLiveValidation() {
+  function init() {
+    var pwEl = document.getElementById('signupPassword');
+    var cfEl = document.getElementById('confirmPassword');
+    var unEl = document.getElementById('signupUsername');
+    var emEl = document.getElementById('signupEmail');
+    if (!pwEl) return;
+
+    pwEl.addEventListener('input', function () {
+      var pw = pwEl.value, bar = document.getElementById('passwordStrengthBar');
+      if (!pw) { if (bar) bar.style.display = 'none'; return; }
+      if (bar) bar.style.display = 'block';
+      var r = _checkPasswordStrength(pw);
+      var clrs = ['', '#ef4444', '#f97316', '#eab308', '#22c55e'];
+      var labs = currentLang === 'en' ? ['', 'Weak', 'Fair', 'Strong', 'Very Strong'] : ['', 'ضعيفة', 'متوسطة', 'قوية', 'قوية جداً'];
+      var fill = document.getElementById('passwordStrengthFill');
+      var txt = document.getElementById('passwordStrengthText');
+      if (fill) { fill.style.width = (r.score * 25) + '%'; fill.style.background = clrs[r.score] || '#22c55e'; }
+      if (txt) { txt.textContent = labs[r.score] || ''; txt.style.color = clrs[r.score] || '#22c55e'; }
+      function setReq(id, ok) { var el = document.getElementById(id); if (!el) return; el.style.color = ok ? '#22c55e' : '#aaa'; var ic = el.querySelector('i'); if (ic) { ic.className = ok ? 'fas fa-check-circle me-1' : 'fas fa-circle me-1'; ic.style.fontSize = ok ? '0.7rem' : '0.45rem'; } }
+      setReq('req-length', r.checks.length); setReq('req-upper', r.checks.upper);
+      setReq('req-number', r.checks.number); setReq('req-special', r.checks.special);
+    });
+
+    if (cfEl) cfEl.addEventListener('input', function () {
+      var msg = document.getElementById('passwordMatchMsg'); if (!msg) return;
+      if (!cfEl.value) { msg.style.display = 'none'; return; }
+      var ok = cfEl.value === pwEl.value;
+      msg.style.display = 'block'; msg.style.color = ok ? '#22c55e' : '#ef4444';
+      msg.textContent = ok ? (currentLang === 'en' ? '✓ Passwords match' : '✓ كلمتا المرور متطابقتان') : (currentLang === 'en' ? '✗ Passwords do not match' : '✗ كلمتا المرور غير متطابقتين');
+    });
+
+    var unTimer;
+    if (unEl) unEl.addEventListener('input', function () {
+      clearTimeout(unTimer);
+      var msg = document.getElementById('usernameAvailability'); if (!msg) return;
+      var val = unEl.value.trim().toLowerCase();
+      if (!val) { msg.style.display = 'none'; return; }
+      if (!/^[a-zA-Z0-9_]{3,20}$/.test(val)) { msg.style.display = 'block'; msg.style.color = '#ef4444'; msg.textContent = currentLang === 'en' ? '3–20 chars: letters, numbers, _' : '3-20 حرف: أحرف، أرقام، _'; return; }
+      unTimer = setTimeout(function () {
+        var a = {}; try { a = JSON.parse(localStorage.getItem('registeredAccounts') || '{}'); } catch (e) { }
+        var taken = Object.values(a).some(function (x) { return x.username && x.username.toLowerCase() === val; });
+        msg.style.display = 'block'; msg.style.color = taken ? '#ef4444' : '#22c55e';
+        msg.textContent = taken ? (currentLang === 'en' ? '✗ Username taken' : '✗ اسم المستخدم مأخوذ') : (currentLang === 'en' ? '✓ Username available' : '✓ اسم المستخدم متاح');
+      }, 400);
+    });
+
+    var emTimer;
+    if (emEl) emEl.addEventListener('input', function () {
+      clearTimeout(emTimer);
+      var msg = document.getElementById('emailAvailability'); if (!msg) return;
+      var val = emEl.value.trim().toLowerCase();
+      if (!val || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) { msg.style.display = 'none'; return; }
+      emTimer = setTimeout(function () {
+        var a = {}; try { a = JSON.parse(localStorage.getItem('registeredAccounts') || '{}'); } catch (e) { }
+        msg.style.display = 'block'; msg.style.color = a[val] ? '#ef4444' : '#22c55e';
+        msg.textContent = a[val] ? (currentLang === 'en' ? '✗ Email already registered' : '✗ البريد مسجل مسبقاً') : (currentLang === 'en' ? '✓ Email available' : '✓ البريد متاح');
+      }, 400);
+    });
+
+    var tPw = document.getElementById('toggleSignupPassword');
+    var tCf = document.getElementById('toggleConfirmPassword');
+    if (tPw) tPw.addEventListener('click', function () { var s = pwEl.type === 'password'; pwEl.type = s ? 'text' : 'password'; this.querySelector('i').className = s ? 'fas fa-eye-slash' : 'fas fa-eye'; });
+    if (tCf && cfEl) tCf.addEventListener('click', function () { var s = cfEl.type === 'password'; cfEl.type = s ? 'text' : 'password'; this.querySelector('i').className = s ? 'fas fa-eye-slash' : 'fas fa-eye'; });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else setTimeout(init, 300);
+}());
+
+
 function handleLogout() {
-  // Clear stored user data (both local and session)
+  // Clear current session WITHOUT deleting per-user favorites
+  // The user's favorites remain in localStorage under 'favorites_<email>'
   localStorage.removeItem('currentUser');
   sessionStorage.removeItem('currentUser_session');
   updateUserInterface();
   showToast(currentLang === 'en' ? 'Logged out successfully' : 'تم تسجيل الخروج بنجاح', 'success');
+  // ✅ Re-render ALL cards so hearts + stars are cleared for the logged-out state
+  setTimeout(function () {
+    if (typeof window.displayToolsByCategories === 'function') {
+      window.displayToolsByCategories();
+    }
+  }, 100);
 }
 
 // // Initialize auth on DOM ready (call from global init)
@@ -139838,22 +139974,7 @@ function handleLogout() {
 // });
 
 
-// محاكاة إنشاء حساب ناجح
-const user = {
-  isLoggedIn: true,
-  loginTime: new Date().toISOString()
-};
-
-localStorage.setItem('currentUser', JSON.stringify(user));
-
-showAlert(currentLang === 'en' ? 'Account created successfully!' : 'تم إنشاء الحساب بنجاح!', 'success', 'signupSuccess');
-
-setTimeout(() => {
-  const authModal = bootstrap.Modal.getInstance(document.getElementById('authModal'));
-  if (authModal) authModal.hide();
-  updateUserInterface();
-  document.getElementById('signupForm').reset();
-}, 1500);
+// (Rogue auto-login code removed — accounts are now properly managed)
 
 function updateUserInterface() {
   const userData = JSON.parse(localStorage.getItem('currentUser'));
@@ -139892,15 +140013,7 @@ function updateUserInterface() {
   }
 }
 
-function handleLogout() {
-  localStorage.removeItem('currentUser');
-  updateUserInterface();
-
-  showToast(
-    currentLang === 'en' ? 'Logged out successfully' : 'تم تسجيل الخروج بنجاح',
-    'success'
-  );
-}
+// (Duplicate handleLogout removed — using the one above)
 
 function checkLoginStatus() {
   const userData = localStorage.getItem('currentUser');
@@ -141329,7 +141442,7 @@ document.addEventListener('click', function (e) {
   document.addEventListener('click', function (e) {
     // Add exclusions for stars, favorite, and general interactive elements so they don't jump to the details page
     if (e.target.closest('.favorite-toggle, .star-click, .visit-website-btn, a[target="_blank"]')) return;
-    
+
     // Check if the element has one of the specific action classes as well
     const closestFav = e.target.closest('.favorite-toggle');
     const closestStar = e.target.closest('.star-click');
@@ -141337,7 +141450,7 @@ document.addEventListener('click', function (e) {
 
     const btn = e.target.closest('.view-details-btn, .details-btn, [data-tool-id], [data-id]');
     if (!btn) return;
-    
+
     if (btn.classList.contains('favorite-toggle') || btn.classList.contains('star-click')) return;
 
     const raw = btn.dataset.toolId || btn.dataset.id || btn.getAttribute('data-tool-id') || btn.getAttribute('data-id');
@@ -142114,8 +142227,21 @@ function createToolCardFull(tool, index) {
 // FAVORITES - Per-Account Unified Storage
 // =================================================================================
 
+// Returns the current user's email as storage key, or 'guest' if not logged in
+function _getUserKey() {
+  try {
+    var userData = JSON.parse(localStorage.getItem('currentUser'));
+    if (userData && userData.isLoggedIn && userData.email) {
+      return userData.email.toLowerCase();
+    }
+  } catch (e) { }
+  return 'guest';
+}
+
 function getFavoritesArray() {
-  var userKey = 'favorites_' + _getUserKey();
+  var uKey = _getUserKey();
+  if (!uKey) return []; // ✅ not logged in — return empty, never read shared storage
+  var userKey = 'favorites_' + uKey;
   try {
     var raw = localStorage.getItem(userKey);
     var data = raw ? JSON.parse(raw) : [];
@@ -142127,7 +142253,9 @@ function getFavoritesArray() {
 }
 
 function saveFavoritesArray(arr) {
-  var userKey = 'favorites_' + _getUserKey();
+  var uKey = _getUserKey();
+  if (!uKey) return; // ✅ not logged in — never write to shared storage
+  var userKey = 'favorites_' + uKey;
   localStorage.setItem(userKey, JSON.stringify(arr));
 }
 
@@ -142160,9 +142288,12 @@ function updateFavButtonUI(btn, isFav) {
 }
 
 function updateFavoritesButton() {
-  var favoritesBtn = document.getElementById("favoritesBtn");
+  var favoritesBtn = document.getElementById('favoritesBtn');
   if (!favoritesBtn) return;
-  favoritesBtn.style.display = getFavoritesArray().length ? "inline-block" : "none";
+  try {
+    var u = JSON.parse(localStorage.getItem('currentUser'));
+    favoritesBtn.style.display = (u && u.isLoggedIn) ? 'inline-block' : 'none';
+  } catch (e) { favoritesBtn.style.display = 'none'; }
 }
 
 window.toggleFavoriteByIndex = function (index, _btn) {
@@ -142209,8 +142340,7 @@ document.addEventListener("click", function (e) {
   var toolIdx = parseInt(e.target.dataset.toolIdx);
   if (isNaN(starVal) || isNaN(toolIdx)) return;
 
-  // Allow rating regardless of login
-  saveUserRating(toolIdx, starVal);
+  // Save rating (requires login — saveUserRating is a no-op for guests)
   saveUserRating(toolIdx, starVal);
 
   // Update all star displays for this tool
@@ -142241,7 +142371,7 @@ document.addEventListener("click", function (e) {
     if (!btn) return;
     e.preventDefault();
     e.stopPropagation();
-    try { e.stopImmediatePropagation(); } catch(err) {}
+    try { e.stopImmediatePropagation(); } catch (err) { }
 
     // Get the tool from the card
     const card = btn.closest('.card, [data-tool-id]');
