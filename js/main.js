@@ -94643,7 +94643,7 @@ const aiTools = [
     "name": "Reachfast.ai Find direct dials and emails of 385m+ professionals #Productivity",
     "directory_url": "https://www.myaihub.ai/tools/reachfast-ai",
     "url": "https://reachfast.ai/",
-    "description": "Find direct dials and emails of 385m+ professionals",
+    "description": "Find direct dials and emails of 385m+ professionals",
     "pricing": "Unknown",
     "logo": "https://www.google.com/s2/favicons?domain=reachfast.ai&sz=128",
     "domain": "reachfast.ai",
@@ -131653,7 +131653,7 @@ const aiTools = [
     "url_fix_reason": "original_url_works"
   },
   {
-    "name": "Octopi Tracker – SOL yield calculator",
+    "name": "Octopi Tracker – SOL yield calculator",
     "directory_url": "https://www.producthunt.com/products/octopi-tracker-sol-yield-calculator?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+FutureGEN+%28ID%3A+250433%29",
     "url": "https://octopi.com/",
     "description": "See what your Solana native staking is actually earning",
@@ -138205,9 +138205,7 @@ function toggleLanguage() {
 
   // إعادة تحميل الأدوات لتحديث الوصف باللغة الجديدة
   if (typeof displayToolsByCategories === 'function') {
-    setTimeout(function() {
-      displayToolsByCategories();
-    }, 50);
+    displayToolsByCategories();
   }
 }
 
@@ -138885,15 +138883,7 @@ function _getUserKey() {
 }
 
 // Get the user's rating for a specific tool index
-window.globalRatings = {};
-
 function getUserRating(toolIndex) {
-  if (window.globalRatings && window.globalRatings[toolIndex]) {
-    var toolData = window.globalRatings[toolIndex];
-    if (toolData.count > 0) {
-      return Math.round(toolData.sum / toolData.count);
-    }
-  }
   var key = 'ratings_' + _getUserKey();
   try {
     var data = JSON.parse(localStorage.getItem(key));
@@ -138902,43 +138892,13 @@ function getUserRating(toolIndex) {
   return 0;
 }
 
-if(window.firebaseDB) {
-  window.firebaseDB.ref('ratings').on('value', function(snap) {
-    window.globalRatings = snap.val() || {};
-    document.querySelectorAll('.interactive-stars').forEach(function(container) {
-      var toolIdx = container.dataset.toolIdx;
-      var stars = container.querySelectorAll('.star-click');
-      var r = getUserRating(toolIdx);
-      stars.forEach(function(s) {
-        var sv = parseInt(s.dataset.star);
-        if (sv <= r) {
-           s.classList.remove('far'); s.classList.add('fas'); s.style.color = '#f4cf55';
-        } else {
-           s.classList.remove('fas'); s.classList.add('far'); s.style.color = '#ccc';
-        }
-      });
-    });
-  });
-}
-
-function saveUserRating(toolIndex, rating) {        
+// Save a user's rating for a specific tool index
+function saveUserRating(toolIndex, rating) {
   var key = 'ratings_' + _getUserKey();
   var data = {};
   try { data = JSON.parse(localStorage.getItem(key)) || {}; } catch (e) { }
-  var oldRating = data[toolIndex] || 0;
   data[toolIndex] = rating;
   localStorage.setItem(key, JSON.stringify(data));
-
-  var diff = rating - oldRating;
-  var countDiff = oldRating === 0 ? 1 : 0;
-  
-  if (window.firebaseDB && (diff !== 0 || countDiff !== 0)) {
-    var ref = window.firebaseDB.ref('ratings/' + toolIndex);
-    ref.transaction(function(current) {
-       if (!current) { return { sum: diff, count: countDiff }; }
-       return { sum: (current.sum || 0) + diff, count: (current.count || 0) + countDiff };
-    });
-  }
 }
 
 // Generate interactive star rating HTML
@@ -139726,7 +139686,7 @@ function initAuth() {
 
   if (favoritesBtn && !favoritesBtn.dataset.inited) {
     favoritesBtn.dataset.inited = '1';
-    // // // favoritesBtn.addEventListener('click', showFavorites);
+    favoritesBtn.addEventListener('click', showFavorites);
   }
 
   // Attach submit handlers once
@@ -139767,7 +139727,7 @@ function handleLogin(e) {
     return;
   }
 
-  const email = emailEl.value.trim().toLowerCase();
+  const email = emailEl.value.trim();
   const password = passEl.value;
 
   if (!email || !password) {
@@ -139817,7 +139777,7 @@ function handleLogin(e) {
 function handleSignup(e) {
   e.preventDefault();
   const name = document.getElementById('signupName') && document.getElementById('signupName').value.trim();
-  const email = document.getElementById('signupEmail') && document.getElementById('signupEmail').value.trim().toLowerCase();
+  const email = document.getElementById('signupEmail') && document.getElementById('signupEmail').value.trim();
   const password = document.getElementById('signupPassword') && document.getElementById('signupPassword').value;
   const confirmPassword = document.getElementById('confirmPassword') && document.getElementById('confirmPassword').value;
 
@@ -139911,7 +139871,7 @@ function updateUserInterface() {
     if (favoritesBtn) {
       favoritesBtn.style.display = 'inline-block';
       favoritesBtn.innerHTML = '<i class="fas fa-heart me-2"></i>' + (currentLang === 'en' ? 'Favorites' : 'المفضلة');
-      favoritesBtn.onclick = showFavorites;
+      // favoritesBtn.onclick = showFavorites; // Removed duplicate click assignment
     }
 
     updateAllFavoriteButtons();
@@ -140362,7 +140322,9 @@ function setupEventListeners() {
 
   // Favorites button
   const favoritesBtn = document.getElementById('favoritesBtn');
-  // Event listener handled in initAuth to prevent duplicates
+  // if (favoritesBtn) {
+  //   favoritesBtn.addEventListener('click', showFavorites);
+  // } // removed duplicate listener
 
   // Auth button
   const authButton = document.getElementById('authButton');
@@ -140575,7 +140537,11 @@ function initEventListeners() {
   });
   // Favorites button
   const favoritesBtn = document.getElementById('favoritesBtn');
-  // Event listener handled in initAuth to prevent duplicates
+  // if (favoritesBtn) {
+  //   favoritesBtn.addEventListener('click', function () {
+  //     showFavorites();
+  //   });
+  // } // removed duplicate listener
 
   // زر المصادقة
   const authButton = document.getElementById('authButton');
@@ -142096,7 +142062,7 @@ function createToolCardFull(tool, index) {
         <img src="${tool.logo || ""}" alt="${tool.name || ""}"
           class="w-100 h-100 object-fit-contain p-3"
           style="object-fit: contain; background: white;"
-          onerror="this.src='./Images/placeholder-logo.png'">
+          onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmM2YzIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvZ28gTm90IEZvdW5kPC90ZXh0Pjwvc3ZnPg=='">
         <button class="btn btn-sm favorite-toggle position-absolute top-0 end-0 m-2 ${isFav ? 'active' : ''}"
                 data-tool-index="${index}">
             <i class="${isFav ? 'fas' : 'far'} fa-heart" style="color: ${isFav ? '#f4cf55' : '#ffffff'}"></i>

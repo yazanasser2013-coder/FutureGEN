@@ -248,8 +248,8 @@
 
 
         <div class="card-body d-flex flex-column">
-          <h5 class="card-title fw-bold">${esc(title)}</h5>
-          <p class="card-text text-muted flex-grow-1">${esc(summary)}</p>
+          <h5 class="card-title fw-normal">${esc(title)}</h5>
+          <p class="card-text text-muted flex-grow-1 fw-light">${esc(summary)}</p>
 
 
           <button class="btn btn-primary mt-auto" data-open="${esc(post.__id)}">
@@ -344,7 +344,7 @@
 
 
     const headerImg = el("blog-post-image");
-    headerImg.src = post.image || "";
+    headerImg.src = post.image || "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=";
     headerImg.style.display = post.image ? "block" : "none";
 
 

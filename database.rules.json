@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "ratings": {
+      ".read": true,
+      ".write": true
+    }
+  }
+}

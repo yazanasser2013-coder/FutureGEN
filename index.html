@@ -71,9 +71,7 @@
   <meta name="ICBM" content="21.543333, 39.172779" />
 
   <!-- ✅ FAVICON -->
-  <link rel="icon" href="Images/Favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="Images/Logo.png">
-  <link rel="shortcut icon" href="Images/Favicon.ico">
+  <link rel="icon" type="image/x-icon" href="./Images/favicon.ico">
 
   <!-- ✅ PRECONNECT FOR PERFORMANCE -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -985,14 +983,16 @@
       background: var(--bg-page);
       z-index: 1040;
       overflow-y: auto;
-      padding-top: 100px;
+      padding-top: 15px; /* Reduced from 100px */
     }
 
     .blog-details-content p {
       margin-bottom: 1.5rem;
+      line-height: 1.5;
     }
 
     .blog-details-content h3 {
+      line-height: 1.5;
       margin-top: 2rem;
       margin-bottom: 1rem;
       font-weight: 700;
@@ -3180,13 +3180,15 @@
 
     #blog-post-page .container,
     #blog-post-page .blog-post-container {
-      max-width: 900px;
+      max-width: 95%;
+      top: 120px;
     }
 
     #blog-post-image {
       width: 100%;
-      height: auto;
-      max-height: 520px;
+      max-width: 800px;
+      height: 520px;
+      max-height: 1000px;
       object-fit: cover;
       border-radius: 16px;
       display: block;
@@ -3196,7 +3198,7 @@
     /* body typography */
     #blog-post-body-container {
       font-size: 16px;
-      line-height: 1.9;
+      line-height: 1.5;
     }
 
     #blog-post-body-container img {
@@ -3213,6 +3215,7 @@
     #blog-post-body-container h3 {
       margin-top: 18px;
       margin-bottom: 10px;
+      line-height: 1.5;
     }
 
     /* =====================================================
@@ -6215,6 +6218,24 @@
     justify-content: flex-start !important;
     align-items: flex-start !important; 
   } */
+
+    .blog-content {
+      line-height: 1.5;
+      font-family: 'Tajawal', sans-serif !important;
+      font-weight: 400;
+      text-align: left;
+      direction: ltr;
+    }
+
+    html[dir="rtl"] .blog-content {
+      text-align: right;
+      direction: rtl;
+    }
+
+    .card-title, .card-text, .card-text .blog-content {
+      unicode-bidi: plaintext;
+      text-align: start;
+    }
   </style>
   <script>try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) { };</script>
 </head>
@@ -6248,8 +6269,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a id="news-link" class="nav-link" data-page="news-page" data-en="AI News"
-                href="#news-page">
+              <a id="news-link" class="nav-link" data-page="news-page" data-en="AI News" href="#news-page">
                 AI News
               </a>
             </li>
@@ -6546,14 +6566,20 @@
             </ul>
           </div>
 
-          <script
+          <script defer
             src="https://www.paypal.com/sdk/js?client-id=BAA-380vJWCTc40BMW9RsF0XuRIlID4x2if0n3Tn9_4Z_ylcSG57ijRCUX-nM5LQ2PW5UflPtw85-UqsqA&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
 
           <div class="support-box" id="paypal-container-WB25CBYK6274N"></div>
           <script>
-            paypal.HostedButtons({
-              hostedButtonId: "WB25CBYK6274N",
-            }).render("#paypal-container-WB25CBYK6274N")
+            window.addEventListener('DOMContentLoaded', function() {
+              if (window.paypal) {
+                paypal.HostedButtons({
+                  hostedButtonId: "WB25CBYK6274N",
+                }).render("#paypal-container-WB25CBYK6274N")
+              } else {
+                console.warn('PayPal API failed to load.');
+              }
+            });
           </script>
 
           <div class="footer-newsletter">
@@ -6904,18 +6930,18 @@ We believe in the power of community and collaboration, and we welcome users and
 
   <!-- Blog Post Details Page -->
   <div class="page blog-post-page" id="blog-post-page" style="display: none;">
-    <div class="container mt-5 pt-5">
+    <div class="container mt-4 pt-2">
       <button class="btn btn-outline-primary mb-4 back-button" id="back-to-home-from-blog">
         <i class="fas fa-arrow-left me-2"></i>
         <span data-ar="العودة إلى الأخبار" data-en="Back to News">Back to News</span>
       </button>
 
       <div class="row justify-content-center">
-        <div class="col-lg-8">
+        <div class="col-12">
           <article class="blog-details-content">
             <div class="text-center mb-5">
               <span class="badge bg-primary mb-3" id="blog-post-category">Category</span>
-              <h1 class="display-4 fw-bold mb-3" id="blog-post-title">Post Title</h1>
+              <h1 class="display-4 fw-thin mb-3" id="blog-post-title">Post Title</h1>
               <div class="text-muted mb-4">
                 <span data-en="Posted on" data-ar="بتاريخ">Posted on</span>
                 <span id="blog-post-date">2024-01-01</span>
@@ -6924,7 +6950,7 @@ We believe in the power of community and collaboration, and we welcome users and
               </div>
             </div>
 
-            <img loading="lazy" src="" alt="" class="img-fluid rounded mb-5 w-100" id="blog-post-image"
+            <img loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Blog Post Image" class="img-fluid rounded mb-5 w-100" id="blog-post-image"
               style="height: 400px; object-fit: cover;">
 
             <div class="blog-content fs-5 lh-base" id="blog-post-body-container">
@@ -7018,11 +7044,258 @@ We believe in the power of community and collaboration, and we welcome users and
       })();
   </script>
 
-  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
-  <script src="./firebase.js"></script>
-  <script src="./js/main.js?v=8"></script>
+  <script src="./js/main.js?v=7"></script>
   <script src="./js/news_loader.js"></script>
+
+  <!-- ===== COMPLETE FIX ===== -->
+  <style>
+    .card {
+      overflow: visible !important;
+    }
+
+    .card-img-top {
+      overflow: hidden !important;
+      border-radius: 12px 12px 0 0 !important;
+    }
+
+    .fav-btn {
+      position: absolute !important;
+      top: 8px !important;
+      right: 8px !important;
+      z-index: 999 !important;
+      width: 34px !important;
+      height: 34px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      background: rgba(0, 0, 0, 0.60) !important;
+      border: none !important;
+      border-radius: 8px !important;
+      cursor: pointer !important;
+      pointer-events: auto !important;
+      transition: transform 0.2s, background 0.2s !important;
+    }
+
+    .fav-btn:hover {
+      background: rgba(0, 0, 0, 0.85) !important;
+      transform: scale(1.12) !important;
+    }
+
+    .fav-btn i {
+      font-size: 15px !important;
+      color: #fff !important;
+      pointer-events: none !important;
+    }
+
+    .fav-btn.on i {
+      color: #f4cf55 !important;
+    }
+
+    .interactive-stars {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 6px;
+    }
+
+    .star-click {
+      font-size: 15px !important;
+      color: #d1d5db !important;
+      cursor: pointer !important;
+      pointer-events: auto !important;
+      transition: color 0.15s !important;
+    }
+
+    .star-click.fas {
+      color: #f4cf55 !important;
+    }
+
+    .star-click:hover {
+      color: #f4cf55 !important;
+    }
+  </style>
+
+  <script>
+    (function () {
+      'use strict';
+
+      function getFavKey() {
+        try { var u = JSON.parse(localStorage.getItem('currentUser')); if (u && u.isLoggedIn && u.email) return 'favorites_' + u.email; } catch (e) { }
+        return 'favorites___guest__';
+      }
+      function getFavs() { try { var f = JSON.parse(localStorage.getItem(getFavKey())); return Array.isArray(f) ? f : []; } catch (e) { return []; } }
+      function saveFavs(arr) { localStorage.setItem(getFavKey(), JSON.stringify(arr)); }
+
+      function getRatingKey() {
+        try { var u = JSON.parse(localStorage.getItem('currentUser')); if (u && u.isLoggedIn && u.email) return 'ratings_' + u.email; } catch (e) { }
+        return 'ratings___guest__';
+      }
+      function getMyRating(idx) { try { var d = JSON.parse(localStorage.getItem(getRatingKey())); return (d && d[idx]) || 0; } catch (e) { return 0; } }
+      function saveRating(idx, val) {
+        try { var d = JSON.parse(localStorage.getItem(getRatingKey())) || {}; d[idx] = val; localStorage.setItem(getRatingKey(), JSON.stringify(d)); } catch (e) { }
+        if (typeof saveUserRating === 'function') saveUserRating(idx, val);
+      }
+
+      window.generateStars = function (toolIdx) {
+        var r = getMyRating(toolIdx), h = '<div class="interactive-stars" data-tool-idx="' + toolIdx + '">';
+        for (var i = 1; i <= 5; i++) h += '<i class="' + (i <= r ? 'fas' : 'far') + ' fa-star star-click" data-star="' + i + '" data-tool-idx="' + toolIdx + '"></i>';
+        return h + '</div>';
+      };
+
+      window.createToolCard = function (tool) {
+        var tools = window.aiTools || [];
+        var idx = tools.indexOf(tool);
+        if (idx < 0) idx = tools.findIndex(function (t) { return t && t.name === tool.name; });
+        if (idx < 0) idx = 0;
+        var isAr = localStorage.getItem('lang') === 'ar';
+        var desc = isAr ? (tool.desc_ar || tool.description) : tool.description;
+        var visit = isAr ? '\u0632\u064a\u0627\u0631\u0629 \u0627\u0644\u0645\u0648\u0642\u0639' : 'Visit Website';
+        var det = isAr ? '\u0627\u0644\u062a\u0641\u0627\u0635\u064a\u0644' : 'Details';
+        var fav = getFavs().includes(idx);
+        var col = document.createElement('div');
+        col.className = 'col-xl-4 col-lg-6 mb-4';
+        col.innerHTML =
+          '<div class="card tool-card h-100" style="position:relative;">' +
+          '<button class="fav-btn' + (fav ? ' on' : '') + '" type="button" data-fidx="' + idx + '"><i class="' + (fav ? 'fas' : 'far') + ' fa-heart"></i></button>' +
+          '<div class="card-img-top" style="height:200px;"><img src="' + (tool.logo || '') + '" alt="' + (tool.name || '') + '" style="width:100%;height:200px;object-fit:contain;padding:20px;display:block;" onerror="this.src=\'./Images/placeholder-logo.png\'"></div>' +
+          '<div class="card-body d-flex flex-column">' +
+          '<div class="d-flex justify-content-between align-items-start mb-1"><h5 class="card-title">' + (tool.name || '') + '</h5><span class="badge bg-primary">' + (tool.pricing || '') + '</span></div>' +
+          window.generateStars(idx) +
+          '<p class="card-text flex-grow-1">' + (desc || '') + '</p>' +
+          '<div class="mt-auto"><span class="badge bg-secondary mb-2">' + (tool.category || '') + '</span>' +
+          '<div style="display:flex;gap:.5rem;">' +
+          '<a href="' + (tool.url || '#') + '" class="btn btn-primary btn-sm visit-website-btn" style="border-radius:500px 0 0 500px;" target="_blank" rel="noopener"><i class="fas fa-external-link-alt me-1"></i>' + visit + '</a>' +
+          '<button class="btn btn-outline-primary btn-sm view-details-btn" data-tool-id="' + idx + '"><i class="fas fa-info-circle me-1"></i>' + det + '</button>' +
+          '</div></div></div></div>';
+
+        col.querySelector('.fav-btn').addEventListener('click', function (e) {
+          e.preventDefault(); e.stopPropagation(); e.stopImmediatePropagation();
+          var i = parseInt(this.getAttribute('data-fidx'), 10);
+          var favs = getFavs(), on = favs.includes(i);
+          if (on) favs = favs.filter(function (x) { return x !== i; }); else favs.push(i);
+          saveFavs(favs); on = !on;
+          this.classList.toggle('on', on);
+          var ic = this.querySelector('i'); if (ic) ic.className = (on ? 'fas' : 'far') + ' fa-heart';
+          if (typeof showToast === 'function') showToast(on ? 'Added to favorites' : 'Removed from favorites', on ? 'success' : 'info');
+          if (typeof updateFavoritesButton === 'function') updateFavoritesButton();
+        }, false);
+
+        col.querySelectorAll('.star-click').forEach(function (star) {
+          star.addEventListener('click', function (e) {
+            e.preventDefault(); e.stopPropagation(); e.stopImmediatePropagation();
+            var sv = parseInt(this.getAttribute('data-star'), 10);
+            var ti = parseInt(this.getAttribute('data-tool-idx'), 10);
+            saveRating(ti, sv);
+            document.querySelectorAll('.interactive-stars[data-tool-idx="' + ti + '"] .star-click').forEach(function (s) {
+              var n = parseInt(s.getAttribute('data-star'), 10);
+              s.className = (n <= sv ? 'fas' : 'far') + ' fa-star star-click';
+              s.style.color = n <= sv ? '#f4cf55' : '#d1d5db';
+            });
+          }, false);
+        });
+        return col;
+      };
+
+      window.displayToolsByCategories = function (sortMode) {
+        var container = document.getElementById('featured-tools-container');
+        if (!container) return;
+        container.innerHTML = '';
+        var isArLang = (localStorage.getItem('lang') === 'ar');
+        var filterBar = document.createElement('div');
+        filterBar.className = 'sorting-filter-bar d-flex flex-wrap justify-content-center mb-4';
+        filterBar.style.cssText = 'padding:15px 0;gap:12px;align-items:center;';
+        [{ key: 'newest', en: 'Newest', ar: 'الأحدث' }, { key: 'oldest', en: 'Oldest', ar: 'الأقدم' }, { key: 'rated', en: 'Most Rated', ar: 'الأكثر تقييماً' }].forEach(function (opt) {
+          var btn = document.createElement('button');
+          btn.className = 'btn shadow-sm ' + (sortMode === opt.key ? 'btn-primary' : 'btn-outline-primary');
+          btn.style.cssText = 'border-radius:25px;padding:10px 24px;font-size:15px;font-weight:600;font-family:inherit;display:inline-flex;align-items:center;justify-content:center;height:44px;transition:all 0.3s ease;';
+          btn.textContent = isArLang ? opt.ar : opt.en;
+          btn.addEventListener('click', function () { window.displayToolsByCategories(opt.key); });
+          filterBar.appendChild(btn);
+        });
+        if (sortMode) {
+          var rb = document.createElement('button');
+          rb.className = 'btn shadow-sm';
+          rb.style.cssText = 'border-radius:25px;padding:10px 24px;font-size:15px;font-weight:600;font-family:inherit;display:inline-flex;align-items:center;justify-content:center;height:44px;background:linear-gradient(135deg,#4b5563,#374151);color:#fff;border:none;margin-inline-start:10px;';
+          rb.innerHTML = '<i class="fas fa-arrow-left me-2"></i>' + (isArLang ? 'العودة' : 'Back');
+          rb.addEventListener('click', function () { window.displayToolsByCategories(null); });
+          rb.onmouseover = function () { this.style.opacity = '0.85'; };
+          rb.onmouseout = function () { this.style.opacity = '1'; };
+          filterBar.appendChild(rb);
+        }
+        container.appendChild(filterBar);
+        var tools = (typeof aiTools !== 'undefined') ? aiTools.slice() : [];
+        if (sortMode === 'oldest') tools.reverse();
+        else if (sortMode === 'rated') tools.sort(function (a, b) { return getMyRating(aiTools.indexOf(b)) - getMyRating(aiTools.indexOf(a)); });
+        if (!sortMode) {
+          var bycat = {};
+          tools.forEach(function (t) { if (!bycat[t.category]) bycat[t.category] = []; bycat[t.category].push(t); });
+          Object.keys(bycat).forEach(function (cat) {
+            var sec = document.createElement('div'); sec.className = 'category-section mb-5'; sec.id = 'category-' + cat.replace(/\s+/g, '-').toLowerCase();
+            var hdr = document.createElement('div'); hdr.className = 'category-header mt-4 mb-3';
+            hdr.innerHTML = '<h3 class="fw-bold">' + cat + '</h3><span class="badge bg-secondary">' + bycat[cat].length + ' ' + (isArLang ? 'أداة' : 'tools') + '</span>';
+            var grid = document.createElement('div'); grid.className = 'row g-4';
+            bycat[cat].slice(0, 6).forEach(function (t) { grid.appendChild(window.createToolCard(t)); });
+            var smb = document.createElement('button'); smb.className = 'btn btn-outline-primary show-more-btn mt-3';
+            smb.innerHTML = isArLang ? 'عرض المزيد' : 'Show More';
+            smb.onclick = function () { if (typeof showAllCategoryTools === 'function') showAllCategoryTools(cat); };
+            sec.appendChild(hdr); sec.appendChild(grid);
+            if (bycat[cat].length > 6) sec.appendChild(smb);
+            container.appendChild(sec);
+          });
+        } else {
+          var grid = document.createElement('div'); grid.className = 'row g-4 mb-5'; container.appendChild(grid);
+          var ci = 0, cs = 40;
+          function chunk() { var end = Math.min(ci + cs, tools.length); for (var i = ci; i < end; i++) grid.appendChild(window.createToolCard(tools[i])); ci = end; }
+          chunk();
+          if (ci < tools.length) {
+            var sen = document.createElement('div'); sen.style.cssText = 'height:20px;width:100%;'; container.appendChild(sen);
+            new IntersectionObserver(function (e, o) { if (e[0].isIntersecting) { chunk(); if (ci >= tools.length) { o.disconnect(); sen.remove(); } } }, { rootMargin: '400px' }).observe(sen);
+          }
+        }
+      };
+
+      window.showFavorites = function () {
+        /* Prevent any concurrent call from opening a second modal */
+        if (document.getElementById('favoritesModal')) return;
+        var favs = getFavs(), isEn = (typeof currentLang === 'undefined' || currentLang === 'en');
+        if (!favs.length) { if (typeof showToast === 'function') showToast(isEn ? 'No favorites yet' : 'لا توجد أدوات مفضلة بعد', 'info'); return; }
+        var tools = window.aiTools || [], html = '';
+        favs.forEach(function (id) {
+          var t = tools[id]; if (!t) return;
+          var d = isEn ? (t.description || '') : (t.desc_ar || t.description || '');
+          html += '<div class="col-md-6 mb-3"><div class="card h-100">' +
+            '<div style="height:100px;overflow:hidden;background:#f8f9fa;"><img src="' + (t.logo || '') + '" style="width:100%;height:100px;object-fit:contain;padding:10px;" onerror="this.src=\'./Images/placeholder-logo.png\'"></div>' +
+            '<div class="card-body"><h6 class="card-title">' + (t.name || '') + '</h6><p class="card-text small text-muted">' + d.substring(0, 90) + '...</p>' +
+            '<div class="d-flex gap-2"><a href="' + (t.url || '#') + '" target="_blank" class="btn btn-sm btn-primary">' + (isEn ? 'Visit' : 'زيارة') + '</a>' +
+            '<button class="btn btn-sm btn-outline-danger remove-fav-modal" data-fidx="' + id + '">' + (isEn ? 'Remove' : 'إزالة') + '</button></div></div></div></div>';
+        });
+        var wrap = document.createElement('div');
+        wrap.innerHTML = '<div class="modal fade" id="favoritesModal" tabindex="-1"><div class="modal-dialog modal-lg modal-dialog-scrollable"><div class="modal-content">' +
+          '<div class="modal-header"><h5 class="modal-title">' + (isEn ? 'Favorite Tools' : 'الأدوات المفضلة') + '</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>' +
+          '<div class="modal-body"><div class="row">' + html + '</div></div>' +
+          '<div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">' + (isEn ? 'Close' : 'إغلاق') + '</button></div>' +
+          '</div></div></div>';
+        document.body.appendChild(wrap.firstChild);
+        var mel = document.getElementById('favoritesModal'), bsm = new bootstrap.Modal(mel, { backdrop: true });
+        bsm.show();
+        mel.addEventListener('hidden.bs.modal', function () { bsm.dispose(); mel.remove(); });
+        mel.addEventListener('click', function (e) {
+          var b = e.target.closest('.remove-fav-modal'); if (!b) return;
+          var i = parseInt(b.getAttribute('data-fidx'), 10);
+          saveFavs(getFavs().filter(function (x) { return x !== i; }));
+          var cb = document.querySelector('.fav-btn[data-fidx="' + i + '"]');
+          if (cb) { cb.classList.remove('on'); var ic = cb.querySelector('i'); if (ic) ic.className = 'far fa-heart'; }
+          if (typeof updateFavoritesButton === 'function') updateFavoritesButton();
+          bsm.hide(); setTimeout(function () { window.showFavorites(); }, 350);
+        });
+      };
+
+      window.addEventListener('load', function () {
+        window.displayToolsByCategories();
+      });
+
+    })();
+  </script>
+  <!-- ===== END FIX ===== -->
 
   <!-- ✅ CRITICAL FIX v5: Must load AFTER main.js to override functions -->
   <script>
@@ -7471,3 +7744,5 @@ We believe in the power of community and collaboration, and we welcome users and
     text-align: left !important;
   }
 </style>
+</body>
+</html>
