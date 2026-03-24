@@ -138910,8 +138910,10 @@ function saveUserRating(toolIndex, rating) {
 
 // Generate interactive star rating HTML
 function generateStars(toolIndex) {
-  var saved = getUserRating(toolIndex);
-  var r = saved || 0;
+  // Personal rating takes priority; global Firebase average as fallback
+  var personal = getUserRating(toolIndex);
+  var globalAvg = (window.globalRatings && window.globalRatings[toolIndex]) ? (window.globalRatings[toolIndex].average || 0) : 0;
+  var r = personal > 0 ? personal : Math.round(globalAvg);
   var html = '<span class="interactive-stars" data-tool-idx="' + toolIndex + '">';
   for (var i = 1; i <= 5; i++) {
     var cls = (i <= r) ? 'fas fa-star' : 'far fa-star';
@@ -139523,15 +139525,18 @@ function updateAllFavoriteButtons() {
     var ic = button.querySelector('i');
     if (ic) ic.className = (isFav ? 'fas' : 'far') + ' fa-heart';
   });
-  // ✅ Also refresh star displays to match current user's ratings
+  // ✅ Also refresh star displays to match current user's ratings (global avg as fallback)
   document.querySelectorAll('.interactive-stars[data-tool-idx]').forEach(function (container) {
     var toolIdx = parseInt(container.getAttribute('data-tool-idx'));
     if (isNaN(toolIdx)) return;
-    var saved = (typeof getUserRating === 'function') ? getUserRating(toolIdx) : 0;
+    var personal = (typeof getUserRating === 'function') ? getUserRating(toolIdx) : 0;
+    var globalAvg = (window.globalRatings && window.globalRatings[toolIdx]) ? (window.globalRatings[toolIdx].average || 0) : 0;
+    var display = personal > 0 ? personal : Math.round(globalAvg);
     container.querySelectorAll('.star-click').forEach(function (s) {
       var sv = parseInt(s.getAttribute('data-star'));
-      s.className = (sv <= saved ? 'fas' : 'far') + ' fa-star star-click';
-      s.style.color = sv <= saved ? '#f4cf55' : '#ccc';
+      var filled = sv <= display;
+      s.className = (filled ? 'fas' : 'far') + ' fa-star star-click';
+      s.style.color = filled ? '#f4cf55' : '#ccc';
     });
   });
 }
