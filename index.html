@@ -6243,6 +6243,10 @@
       unicode-bidi: plaintext;
       text-align: start;
     }
+
+    .visit-website-btn {
+      border-radius: 8px 8px 8px 8px;
+    }
   </style>
   <script>try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) { };</script>
 </head>
@@ -6678,7 +6682,7 @@
               analyzing and optimizing prompts.
             </p>
             <div class="d-flex gap-3">
-              <a class="btn btn-primary btn-lg" data-ar="زيارة الموقع" data-en="Visit Website" href="#"
+              <a class="btn btn-primary btn-lg visit-website-btn" data-ar="زيارة الموقع" data-en="Visit Website" href="#"
                 id="detail-tool-url" rel="noopener" target="_blank">
                 Visit Website
               </a>
@@ -7371,8 +7375,8 @@ We believe in the power of community and collaboration, and we welcome users and
           '<p class="card-text flex-grow-1">' + (desc || '') + '</p>' +
           '<div class="mt-auto"><span class="badge bg-secondary mb-2">' + (tool.category || '') + '</span>' +
           '<div style="display:flex;gap:.5rem;">' +
-          '<a href="' + (tool.url || '#') + '" class="btn btn-primary btn-sm visit-website-btn" style="border-radius:500px 0 0 500px;" target="_blank" rel="noopener"><i class="fas fa-external-link-alt me-1"></i>' + visit + '</a>' +
-          '<button class="btn btn-outline-primary btn-sm view-details-btn" data-tool-id="' + idx + '"><i class="fas fa-info-circle me-1"></i>' + det + '</button>' +
+          '<a href="' + (tool.url || '#') + '" class="btn btn-primary btn-sm visit-website-btn" style="border-radius:8px 8px 8px 8px;" target="_blank" rel="noopener"><i class="fas fa-external-link-alt me-1"></i>' + visit + '</a>' +
+          '<button style="border-radius:8px 8px 8px 8px; " class="btn btn-outline-primary btn-sm view-details-btn" data-tool-id="' + idx + '"><i class="fas fa-info-circle me-1"></i>' + det + '</button>' +
           '</div></div></div></div>';
 
         col.querySelector('.fav-btn').addEventListener('click', function (e) {

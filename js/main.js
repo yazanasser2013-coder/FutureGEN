@@ -142218,7 +142218,7 @@ function createToolCardFull(tool, index) {
 
         <div class="mt-auto" style="direction: ltr !important; text-align: left !important;">
           <div style="display: flex; width: fit-content; position: relative; ">
-            <button class="btn btn-primary btn-sm visit-website-btn" dir="rtl" data-url="${tool.url || "#"}" onclick="event.preventDefault(); event.stopPropagation(); var url='${(tool.url || "#").replace(/'/g, "\\'")}'; if(url && url !== '#'){ window.open(url, '_blank'); window.focus(); }">
+            <button style="border-radius: 8px 8px 8px 8px;" class="btn btn-primary btn-sm visit-website-btn" dir="rtl" data-url="${tool.url || "#"}" onclick="event.preventDefault(); event.stopPropagation(); var url='${(tool.url || "#").replace(/'/g, "\\'")}'; if(url && url !== '#'){ window.open(url, '_blank'); window.focus(); }">
               ${visitText}
             </button>
             <button class="btn btn-outline-primary btn-sm view-details-btn" data-tool-id="${index}">
