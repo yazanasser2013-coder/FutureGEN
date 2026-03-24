@@ -138316,6 +138316,7 @@ function updateDynamicContent() {
 // =================================================================================
 
 function displayToolsByCategories(sortMode) {
+  window.currentSortMode = sortMode || null;
   const container = document.getElementById('featured-tools-container');
   container.innerHTML = '';
 
@@ -138368,10 +138369,10 @@ function displayToolsByCategories(sortMode) {
     sortedTools.sort(function (a, b) {
       var idxA = typeof aiTools !== 'undefined' ? aiTools.indexOf(a) : 0;
       var idxB = typeof aiTools !== 'undefined' ? aiTools.indexOf(b) : 0;
-      // ✅ Use global average from Firebase (visible to ALL users worldwide)
-      var avgA = (window.globalRatings && window.globalRatings[idxA]) ? (window.globalRatings[idxA].average || 0) : 0;
-      var avgB = (window.globalRatings && window.globalRatings[idxB]) ? (window.globalRatings[idxB].average || 0) : 0;
-      return avgB - avgA;
+      // Sort by total stars sum (highest first, down to 0)
+      var totalA = (window.globalRatings && window.globalRatings[idxA]) ? (window.globalRatings[idxA].total || 0) : 0;
+      var totalB = (window.globalRatings && window.globalRatings[idxB]) ? (window.globalRatings[idxB].total || 0) : 0;
+      return totalB - totalA;
     });
   }
 
@@ -138910,18 +138911,24 @@ function saveUserRating(toolIndex, rating) {
 
 // Generate interactive star rating HTML
 function generateStars(toolIndex) {
-  // Personal rating takes priority; global Firebase average as fallback
-  var personal = getUserRating(toolIndex);
-  var globalAvg = (window.globalRatings && window.globalRatings[toolIndex]) ? (window.globalRatings[toolIndex].average || 0) : 0;
-  var r = personal > 0 ? personal : Math.round(globalAvg);
-  var html = '<span class="interactive-stars" data-tool-idx="' + toolIndex + '">';
-  for (var i = 1; i <= 5; i++) {
-    var cls = (i <= r) ? 'fas fa-star' : 'far fa-star';
-    var color = (i <= r) ? '#f4cf55' : '#ccc';
-    html += '<i class="' + cls + ' star-click" data-star="' + i + '" data-tool-idx="' + toolIndex + '" style="color:' + color + ';font-size:14px;cursor:pointer;padding:1px;"></i>';
+  if (window.currentSortMode === 'rated') {
+    var data = (window.globalRatings && window.globalRatings[toolIndex]) || {};
+    var total = Math.round(data.total || 0);
+    var badgeContent = total > 0 ? ('\u2605 ' + total) : 'No rating';
+    return '<span class="interactive-stars stars-locked" data-tool-idx="' + toolIndex + '" data-is-global="1">'
+         + '<span class="rating-badge">' + badgeContent + '</span></span>';
+  } else {
+    var personal = (typeof getMyRating === 'function') ? getMyRating(toolIndex) : getUserRating(toolIndex);
+    var html = '<span class="interactive-stars" data-tool-idx="' + toolIndex + '" data-is-global="0">';
+    for (var i = 1; i <= 5; i++) {
+      var filled = personal > 0 && i <= personal;
+      var cls = filled ? 'fas fa-star' : 'far fa-star';
+      var color = filled ? '#f4cf55' : '#ccc';
+      html += '<i class="' + cls + ' star-click" data-star="' + i + '" data-tool-idx="' + toolIndex + '" style="color:' + color + ';font-size:14px;cursor:pointer;padding:1px;"></i>';
+    }
+    html += '</span>';
+    return html;
   }
-  html += '</span>';
-  return html;
 }
 
 // دالة لإنشاء بطاقة الأداة
@@ -139525,19 +139532,33 @@ function updateAllFavoriteButtons() {
     var ic = button.querySelector('i');
     if (ic) ic.className = (isFav ? 'fas' : 'far') + ' fa-heart';
   });
-  // ✅ Also refresh star displays to match current user's ratings (global avg as fallback)
+  // Refresh: badge in Most Rated, personal/blank elsewhere
   document.querySelectorAll('.interactive-stars[data-tool-idx]').forEach(function (container) {
     var toolIdx = parseInt(container.getAttribute('data-tool-idx'));
     if (isNaN(toolIdx)) return;
-    var personal = (typeof getUserRating === 'function') ? getUserRating(toolIdx) : 0;
-    var globalAvg = (window.globalRatings && window.globalRatings[toolIdx]) ? (window.globalRatings[toolIdx].average || 0) : 0;
-    var display = personal > 0 ? personal : Math.round(globalAvg);
-    container.querySelectorAll('.star-click').forEach(function (s) {
-      var sv = parseInt(s.getAttribute('data-star'));
-      var filled = sv <= display;
-      s.className = (filled ? 'fas' : 'far') + ' fa-star star-click';
-      s.style.color = filled ? '#f4cf55' : '#ccc';
-    });
+    if (window.currentSortMode === 'rated') {
+      var data = (window.globalRatings && window.globalRatings[toolIdx]) || {};
+      var total = Math.round(data.total || 0);
+      var badgeContent = total > 0 ? ('\u2605 ' + total) : 'No rating';
+      container.setAttribute('data-is-global', '1');
+      container.classList.add('stars-locked');
+      var badge = container.querySelector('.rating-badge');
+      if (badge) { badge.textContent = badgeContent; }
+      else { container.innerHTML = '<span class="rating-badge">' + badgeContent + '</span>'; }
+    } else {
+      var personal = (typeof getMyRating === 'function') ? getMyRating(toolIdx) : ((typeof getUserRating === 'function') ? getUserRating(toolIdx) : 0);
+      container.setAttribute('data-is-global', '0');
+      container.classList.remove('stars-locked');
+      var badge2 = container.querySelector('.rating-badge');
+      if (badge2) badge2.remove();
+      container.querySelectorAll('.star-click').forEach(function (s) {
+        var sv = parseInt(s.getAttribute('data-star'));
+        var filled = personal > 0 && sv <= personal;
+        s.className = (filled ? 'fas' : 'far') + ' fa-star star-click';
+        s.style.color = filled ? '#f4cf55' : '#ccc';
+        s.style.cursor = 'pointer';
+      });
+    }
   });
 }
 

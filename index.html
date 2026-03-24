@@ -7010,7 +7010,7 @@ We believe in the power of community and collaboration, and we welcome users and
   <!-- ✅ FIREBASE: Global ratings across all accounts -->
   <script type="module">
     import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js';
-    import { getDatabase, ref, get, runTransaction } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js';
+    import { getDatabase, ref, get, onValue, runTransaction } from 'https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js';
 
     const firebaseConfig = {
       apiKey: "AIzaSyBmTdYQcLAJxhrWpqRaFFWqy4uSlRVVLIE",
@@ -7029,41 +7029,52 @@ We believe in the power of community and collaboration, and we welcome users and
       window._firebaseDb = db;
       window.globalRatings = {};
 
-      // ✅ Refresh stars after new data arrives
+      // Apply ratings to all visible star containers
       function applyGlobalRatings() {
+        var isAr = localStorage.getItem('lang') === 'ar';
+        var noRatingText = isAr ? '\u0644\u0627 \u062a\u0642\u064a\u064a\u0645' : 'No rating';
         document.querySelectorAll('.interactive-stars[data-tool-idx]').forEach(function (container) {
           var toolIdx = parseInt(container.getAttribute('data-tool-idx'));
           if (isNaN(toolIdx)) return;
-          var personal = (typeof getUserRating === 'function') ? getUserRating(toolIdx) : 0;
-          var globalAvg = (window.globalRatings[toolIdx] && window.globalRatings[toolIdx].average) || 0;
-          var display = personal > 0 ? personal : Math.round(globalAvg);
-          container.querySelectorAll('.star-click').forEach(function (s) {
-            var sv = parseInt(s.getAttribute('data-star'));
-            var filled = sv <= display;
-            s.className = (filled ? 'fas' : 'far') + ' fa-star star-click';
-            s.style.color = filled ? '#f4cf55' : '#ccc';
-          });
+          var personal = getMyRating(toolIdx);
+          if (window.currentSortMode === 'rated') {
+            // Most Rated: show badge with total stars, no editable stars
+            var data = window.globalRatings[toolIdx] || {};
+            var total = Math.round(data.total || 0);
+            var badgeContent = total > 0 ? ('\u2605 ' + total) : noRatingText;
+            container.setAttribute('data-is-global', '1');
+            container.classList.add('stars-locked');
+            var badge = container.querySelector('.rating-badge');
+            if (badge) {
+              badge.textContent = badgeContent;
+            } else {
+              container.innerHTML = '<span class="rating-badge">' + badgeContent + '</span>';
+            }
+          } else {
+            // Other views: personal rating or blank
+            container.setAttribute('data-is-global', '0');
+            container.classList.remove('stars-locked');
+            var badge2 = container.querySelector('.rating-badge');
+            if (badge2) badge2.remove();
+            container.querySelectorAll('.star-click').forEach(function (s) {
+              var sv = parseInt(s.getAttribute('data-star'));
+              var filled = personal > 0 && sv <= personal;
+              s.className = (filled ? 'fas' : 'far') + ' fa-star star-click';
+              s.style.color = filled ? '#f4cf55' : '#ccc';
+              s.style.cursor = 'pointer';
+            });
+          }
         });
       }
 
-      // ✅ One-time fetch — no persistent WebSocket, browser stops loading immediately
-      function fetchRatings() {
-        get(ref(db, 'ratings')).then(function (snap) {
-          window.globalRatings = snap.val() || {};
-          applyGlobalRatings();
-        }).catch(function (err) {
-          console.warn('Firebase ratings fetch failed:', err);
-        });
-      }
+      // Real-time listener: updates instantly when any user rates
+      onValue(ref(db, 'ratings'), function (snap) {
+        window.globalRatings = snap.val() || {};
+        applyGlobalRatings();
+      }, function (err) { console.warn('Firebase listener error:', err); });
 
-      // Fetch on page load
-      fetchRatings();
-
-      // ✅ Poll every 60s so ratings stay fresh without keeping a socket open
-      setInterval(fetchRatings, 60000);
-
-      // ✅ Also re-fetch immediately after THIS user submits a rating (so their card updates)
-      window._refetchRatings = fetchRatings;
+      // Keep for backward compat
+      window._refetchRatings = function () { };
 
       /**
        * Push a user's rating to Firebase using a transaction.
@@ -7213,6 +7224,7 @@ We believe in the power of community and collaboration, and we welcome users and
 
     .interactive-stars {
       display: flex;
+      align-items: center;
       gap: 3px;
       margin-bottom: 6px;
     }
@@ -7231,6 +7243,28 @@ We believe in the power of community and collaboration, and we welcome users and
 
     .star-click:hover {
       color: #f4cf55 !important;
+    }
+
+    /* Locked in Most Rated filter */
+    .stars-locked {
+      pointer-events: none !important;
+      cursor: default !important;
+    }
+
+    /* Total-stars badge */
+    .rating-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: linear-gradient(135deg, #f4cf55 0%, #f0a500 100%);
+      color: #1a1a1a;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 6px;
+      letter-spacing: 0.3px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+      white-space: nowrap;
     }
   </style>
 
@@ -7294,17 +7328,25 @@ We believe in the power of community and collaboration, and we welcome users and
       }
 
       window.generateStars = function (toolIdx) {
-        // Personal rating takes priority; global Firebase average as fallback
-        var personal = getMyRating(toolIdx);
-        var globalAvg = (window.globalRatings && window.globalRatings[toolIdx]) ? (window.globalRatings[toolIdx].average || 0) : 0;
-        var r = personal > 0 ? personal : Math.round(globalAvg); // show rounded global avg if no personal rating
-        var isGlobal = personal === 0 && globalAvg > 0; // flag so we can style differently if needed
-        var h = '<div class="interactive-stars" data-tool-idx="' + toolIdx + '" data-global="' + (isGlobal ? '1' : '0') + '">';
-        for (var i = 1; i <= 5; i++) {
-          var filled = i <= r;
-          h += '<i class="' + (filled ? 'fas' : 'far') + ' fa-star star-click" data-star="' + i + '" data-tool-idx="' + toolIdx + '" style="color:' + (filled ? '#f4cf55' : '#ccc') + ';"></i>';
+        var isAr = localStorage.getItem('lang') === 'ar';
+        if (window.currentSortMode === 'rated') {
+          // Most Rated: badge only showing total stars sum
+          var data = (window.globalRatings && window.globalRatings[toolIdx]) || {};
+          var total = Math.round(data.total || 0);
+          var noRatingText = isAr ? '\u0644\u0627 \u062a\u0642\u064a\u064a\u0645' : 'No rating';
+          var badgeContent = total > 0 ? ('\u2605 ' + total) : noRatingText;
+          return '<div class="interactive-stars stars-locked" data-tool-idx="' + toolIdx + '" data-is-global="1">'
+            + '<span class="rating-badge">' + badgeContent + '</span></div>';
+        } else {
+          // Other views: personal rating or blank editable stars
+          var personal = getMyRating(toolIdx);
+          var h = '<div class="interactive-stars" data-tool-idx="' + toolIdx + '" data-is-global="0">';
+          for (var i = 1; i <= 5; i++) {
+            var filled = personal > 0 && i <= personal;
+            h += '<i class="' + (filled ? 'fas' : 'far') + ' fa-star star-click" data-star="' + i + '" data-tool-idx="' + toolIdx + '" style="color:' + (filled ? '#f4cf55' : '#ccc') + ';"></i>';
+          }
+          return h + '</div>';
         }
-        return h + '</div>';
       };
 
       window.createToolCard = function (tool) {
@@ -7355,7 +7397,9 @@ We believe in the power of community and collaboration, and we welcome users and
         col.querySelectorAll('.star-click').forEach(function (star) {
           star.addEventListener('click', function (e) {
             e.preventDefault(); e.stopPropagation(); e.stopImmediatePropagation();
-            // ✅ Require login before rating
+            // Hard block in Most Rated filter
+            var sc = this.closest('.interactive-stars');
+            if (sc && sc.getAttribute('data-is-global') === '1') return;
             if (!getRatingKey()) {
               promptLogin('Please login to rate tools', 'يرجى تسجيل الدخول لتقييم الأدوات');
               return;
@@ -7374,6 +7418,7 @@ We believe in the power of community and collaboration, and we welcome users and
       };
 
       window.displayToolsByCategories = function (sortMode) {
+        window.currentSortMode = sortMode || null;
         var container = document.getElementById('featured-tools-container');
         if (!container) return;
         container.innerHTML = '';
@@ -7405,10 +7450,10 @@ We believe in the power of community and collaboration, and we welcome users and
         else if (sortMode === 'rated') tools.sort(function (a, b) {
           var idxA = aiTools.indexOf(a);
           var idxB = aiTools.indexOf(b);
-          // ✅ Use global average from Firebase (visible to ALL users worldwide)
-          var avgA = (window.globalRatings && window.globalRatings[idxA]) ? (window.globalRatings[idxA].average || 0) : 0;
-          var avgB = (window.globalRatings && window.globalRatings[idxB]) ? (window.globalRatings[idxB].average || 0) : 0;
-          return avgB - avgA;
+          // Sort by total stars sum: highest first, down to 0
+          var totalA = (window.globalRatings && window.globalRatings[idxA]) ? (window.globalRatings[idxA].total || 0) : 0;
+          var totalB = (window.globalRatings && window.globalRatings[idxB]) ? (window.globalRatings[idxB].total || 0) : 0;
+          return totalB - totalA;
         });
         if (!sortMode) {
           var bycat = {};
